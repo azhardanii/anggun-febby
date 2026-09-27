@@ -182,15 +182,15 @@ img {
   background-image: url('../assets/hero_bg.webp');
   background-size: cover;
   background-position: center right;
-  transform: scale(1.32);
+  transform: scale(1.30);
   transform-origin: 75% 45%;
-  filter: saturate(0.85) sepia(0.2) hue-rotate(15deg);
+  filter: saturate(0.95) sepia(0.12) hue-rotate(10deg);
 }
 
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(252, 255, 220, 0.74);
+  background: rgba(252, 255, 220, 0.48);
 }
 
 .hero-content {
@@ -207,7 +207,7 @@ img {
 
 .hero-text-wrap {
   position: relative;
-  max-width: 660px;
+  max-width: 680px;
 }
 
 .eyebrow {
@@ -231,22 +231,22 @@ img {
 }
 
 .hero h1 {
-  font-family: 'Akzidenz Grotesk Black', var(--headline), "DM Sans", Arial, sans-serif;
-  font-weight: 900;
-  letter-spacing: -.025em;
-  font-size: clamp(36px, 4.1vw, 58px);
-  line-height: 1.04;
-  margin: 14px 0 16px;
-  max-width: 660px;
+  font-family: var(--serif);
+  font-weight: 500;
+  letter-spacing: -.035em;
+  font-size: clamp(42px, 4.8vw, 72px);
+  line-height: 0.98;
+  margin: 16px 0 18px;
+  max-width: 720px;
   color: var(--ink);
   text-shadow: none;
 }
 
 .hero-sub {
-  font-size: clamp(14.5px, 1.1vw, 17.5px);
+  font-size: clamp(15.5px, 1.2vw, 19px);
   line-height: 1.5;
-  max-width: 460px;
-  margin: 0 0 26px;
+  max-width: 500px;
+  margin: 0 0 28px;
   color: #273835;
   font-weight: 450;
   text-shadow: none;
@@ -299,16 +299,17 @@ img {
 
 .scr2 {
   position: absolute;
-  left: calc(100% + 28px);
-  top: 14%;
+  right: 6%;
+  top: 16%;
   font-size: clamp(14px, 1.15vw, 17px);
   line-height: 1.25;
   transform: rotate(5deg);
   white-space: nowrap;
   pointer-events: none;
+  z-index: 4;
 }
 
-@media (max-width: 1180px) {
+@media (max-width: 1080px) {
   .scr2 {
     display: none !important;
   }
@@ -1251,16 +1252,16 @@ img {
   }
 
   .hero-bg {
-    background-position: 78% 85%;
+    background-position: 75% 70%;
     background-size: cover;
-    transform: scale(1.45);
-    transform-origin: 75% 80%;
+    transform: scale(1.35);
+    transform-origin: center center;
     opacity: 1;
-    filter: saturate(0.85) sepia(0.2) hue-rotate(15deg);
+    filter: saturate(0.95) sepia(0.12) hue-rotate(10deg);
   }
 
   .hero-overlay {
-    background: rgba(252, 255, 220, 0.88);
+    background: rgba(252, 255, 220, 0.35);
   }
 
   .hero-content {
@@ -1271,7 +1272,7 @@ img {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
+    align-items: stretch;
     padding: 0;
     position: relative;
     z-index: 3;
@@ -1280,6 +1281,14 @@ img {
   .hero-text-wrap {
     width: 100%;
     position: relative;
+    background: rgba(254, 255, 205, 0.88);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(42, 107, 92, 0.16);
+    border-radius: 22px;
+    padding: 26px 20px 24px;
+    box-shadow: 0 16px 36px -8px rgba(23, 50, 49, 0.10), 0 2px 6px rgba(23, 50, 49, 0.04);
+    box-sizing: border-box;
   }
 
   .hero .eyebrow {
@@ -1291,11 +1300,11 @@ img {
   }
 
   .hero h1 {
-    font-family: 'Akzidenz Grotesk Black', var(--headline), "DM Sans", Arial, sans-serif;
-    font-weight: 900;
-    font-size: clamp(28px, 7.5vw, 36px);
-    line-height: 1.08;
-    letter-spacing: -0.03em;
+    font-family: var(--serif);
+    font-weight: 500;
+    font-size: clamp(30px, 8.2vw, 42px);
+    line-height: 1.02;
+    letter-spacing: -0.035em;
     margin: 12px 0 14px;
     max-width: 100%;
     color: var(--ink);
