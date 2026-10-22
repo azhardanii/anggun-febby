@@ -6,367 +6,541 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Anggun Febby — Kerja Bebas. Hidup Lebih Luas.</title>
   <meta name="description"
-    content="Anggun Febby - Pekerja WFA Profesional & Digital Nomad. Panduan kerja remote bebas, karier global, dan penghasilan tanpa batas dari Indonesia untuk dunia.">
+    content="Anggun Febby - Pekerja WFA Profesional, Content Creator & Founder Sekolah WFA. Panduan kerja remote bebas, karier global, dan penghasilan tanpa batas dari Indonesia untuk dunia.">
   <meta name="theme-color" content="#feffcd">
 
   <!-- Preconnect to Font Origins -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap">
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Outfit:wght@600;700;800;900&display=swap">
 
-  <!-- Preload Akzidenz Grotesk Black & Critical LCP Hero Background -->
+  <!-- Preload Akzidenz Grotesk Black Font -->
   <link rel="preload" href="assets/font/akzidenzgrotesk-webfont/Akzidenz-grotesk-black.woff" as="font" type="font/woff"
     crossorigin>
-  <link rel="preload" as="image" href="assets/hero_bg.webp" type="image/webp" fetchpriority="high">
 
-  <!-- External Minified Stylesheets -->
+  <!-- External Stylesheets -->
   <link rel="stylesheet" href="css/aos.min.css">
-  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
   <div class="page">
-    <header class="nav">
-      <a class="brand" href="#">
-        <span class="brand-copy">ANGGUN FEBBY<small>Kerja Bebas, Penghasilan Tak Terbatas</small></span>
-      </a>
-      <nav class="navlinks">
-        <a href="#explore">Explore</a><a href="#learn">Learn</a><a href="#jobs">Jobs</a><a
-          href="https://chat.whatsapp.com/E3dPReLYer5AoXOJEF1KTr" target="_blank">Community</a>
-      </nav>
-      <div class="navright"><a class="join" href="#start">Join WFA</a></div>
+
+    <!-- FLOATING AESTHETIC PILL NAVIGATION -->
+    <header class="nav-wrap" id="top">
+      <div class="nav-container">
+        <a class="brand" href="#top">
+          <div class="brand-symbol">AF</div>
+          <div class="brand-info">
+            <span class="brand-name">ANGGUN FEBBY</span>
+            <span class="brand-tag">Pekerja WFA · Content Creator · Founder Sekolah WFA</span>
+          </div>
+        </a>
+
+        <ul class="nav-links">
+          <li><a class="nav-link" href="#explore">Explore</a></li>
+          <li><a class="nav-link" href="#learn">Mulai WFA</a></li>
+          <li><a class="nav-link" href="#products">Produk WFA</a></li>
+          <li><a class="nav-link" href="#community">Komunitas</a></li>
+          <li><a class="nav-link" href="#stories">Cerita Anggun</a></li>
+        </ul>
+
+        <div class="nav-cta-group">
+          <a class="btn-nav" href="https://chat.whatsapp.com/E3dPReLYer5AoXOJEF1KTr" target="_blank" rel="noopener">
+            <span>Join Komunitas WFA</span>
+            <span>→</span>
+          </a>
+          <button class="mobile-toggle" aria-label="Buka Menu Navigasi" type="button">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
     </header>
 
-    <section class="hero">
-      <div class="hero-bg" style="background-image:url('assets/hero_bg.webp');"></div>
-      <div class="hero-overlay"></div>
-      <div class="hero-content" data-aos="fade-up">
-        <div class="hero-text-wrap">
-          <div class="eyebrow"><span class="eyebrow-dot"></span>Anggun Febby · Pekerja WFA Profesional</div>
-          <h1>KERJA BEBAS.<br>HIDUP LEBIH LUAS.</h1>
-          <p class="hero-sub">Build a career &amp; income you can take<br>anywhere in the world.</p>
+    <!-- MOBILE NAVIGATION DRAWER -->
+    <div class="mobile-drawer" id="mobile-drawer">
+      <a href="#explore">Explore Destinasi</a>
+      <a href="#learn">Mulai Perjalanan WFA</a>
+      <a href="#products">Starter Kit &amp; Produk WFA</a>
+      <a href="#community">Komunitas WFA</a>
+      <a href="#stories">Cerita &amp; Reels Anggun</a>
+      <a href="https://chat.whatsapp.com/E3dPReLYer5AoXOJEF1KTr" target="_blank" class="btn-nav"
+        style="justify-content:center; margin-top:8px; padding:12px 20px;">
+        Join Komunitas WFA →
+      </a>
+    </div>
+
+    <!-- HERO SECTION — FULLSCREEN IMMERSIVE VIDEO (BACKGROUND VIDEO & SHARP VISIBILITY) -->
+    <section class="hero" id="hero">
+      <div class="hero-video-wrap">
+        <video class="hero-video" src="assets/videos/anggun-hero.webm" autoplay muted loop playsinline
+          poster="assets/hero_bg.webp"></video>
+      </div>
+
+      <!-- Cinematic Gradients & Overlays for Text Legibility -->
+      <div class="hero-overlay-dark"></div>
+      <div class="hero-overlay-left"></div>
+      <div class="hero-overlay-bottom"></div>
+
+      <div class="hero-inner">
+        <div class="hero-content" data-aos="fade-up" data-aos-duration="900">
+          <div class="eyebrow">
+            <span class="eyebrow-dot"></span>
+            <span>Anggun Febby · Pekerja WFA Profesional</span>
+          </div>
+
+          <h1 class="hero-title">
+            KERJA BEBAS.<br>
+            <span>HIDUP LEBIH LUAS.</span>
+          </h1>
+
+          <p class="hero-sub">
+            Build a career &amp; income you can take<br>anywhere in the world.
+          </p>
+
           <div class="hero-actions">
-            <a class="btn" href="#learn">Start Your WFA Journey <span>→</span></a>
-            <div class="scribble scr1"><span data-aos="fade-up" data-aos-delay="400" style="display:inline-block">Dari Indonesia<br>untuk dunia ♡</span></div>
+            <a class="btn-hero-primary" href="#learn">
+              <span>Start WFA</span>
+              <span>→</span>
+            </a>
+            <a class="btn-hero-secondary" href="#stories">
+              <span>Nonton Cerita Anggun</span>
+              <span>▶</span>
+            </a>
+
+            <!-- Playful Handwritten Scribble from Original Brand
+            <div class="scribble scr1" data-aos="fade-up" data-aos-delay="400">
+              <span>Dari Indonesia<br>untuk dunia ♡</span>
+            </div> -->
           </div>
         </div>
-        <div class="scribble scr2" data-aos="fade-up" data-aos-delay="600">
+
+        <!-- <div class="scribble scr2" data-aos="fade-up" data-aos-delay="600">
           <span>Same laptop,<br>new views ↘</span>
+        </div> -->
+
+        <div class="hero-scroll-indicator" data-aos="fade-up" data-aos-delay="500">
+          <div class="mouse-pill">
+            <div class="mouse-wheel"></div>
+          </div>
+          <span>Scroll untuk eksplorasi</span>
         </div>
       </div>
     </section>
 
-    <section class="start section" id="learn">
-      <div class="start-head" data-aos="fade-up">
-        <div>
-          <div class="eyebrow">Mulai di sini</div>
-          <h2 class="section-title">Mulai Perjalanan WFA-mu</h2>
-          <p class="start-copy">Kami hadir untuk membantumu membangun karier, penghasilan, dan gaya hidup yang bisa
-            dibawa ke mana saja.</p>
+    <!-- SECTION 1: MULAI PERJALANAN WFA (PATHWAYS WITH 3D TILT CARDS) -->
+    <section class="section start-section" id="learn">
+      <div class="container">
+        <div class="path-head-row" data-aos="fade-up">
+          <div>
+            <div class="eyebrow">Mulai di sini</div>
+            <h2 class="section-title">Mulai Perjalanan WFA-mu</h2>
+            <p class="section-subtitle">
+              Kami hadir untuk membantumu membangun karier, penghasilan, dan gaya hidup yang bisa dibawa ke mana saja.
+            </p>
+          </div>
+          <div class="head-note" data-aos="fade-left">Pilih jalurmu<br>sekarang! ↘</div>
         </div>
-        <div class="note">Pilih jalurmu<br>sekarang! ↘</div>
+
+        <div class="path-grid">
+          <!-- Pathway 1: WFA Job -->
+          <article class="path-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="path-photo">
+              <img src="assets/path_job.webp" alt="WFA Job Global Career Portal" loading="lazy">
+              <span class="path-badge">⚡ Update Mingguan</span>
+            </div>
+            <div class="path-body">
+              <div class="path-icon">⌂</div>
+              <h3 class="path-title">WFA JOB</h3>
+              <p class="path-desc">
+                Dapatkan update lowongan kerja remote global setiap pekannya.
+              </p>
+              <a href="https://job.sekolahwfa.com" target="_blank" rel="noopener" class="path-btn">
+                <span>Cek Lowongan WFA</span>
+                <span>→</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Pathway 2: Kolaborasi -->
+          <article class="path-card" data-aos="fade-up" data-aos-delay="200" id="jobs">
+            <div class="path-photo">
+              <img src="assets/collab-done.webp" alt="Kolaborasi Bersama Anggun Febby" loading="lazy">
+              <span class="path-badge">🤝 Partnership</span>
+            </div>
+            <div class="path-body">
+              <div class="path-icon">▣</div>
+              <h3 class="path-title">KOLABORASI</h3>
+              <p class="path-desc">
+                Mari bekerja sama untuk membangun solusi digital berskala global.
+              </p>
+              <a href="https://wa.me/6285163557107?text=Haloo%20kak%20Anggun%2C%20aku%20tertarik%20ingin%20berkolaborasi%20sama%20kakak%20niihh.."
+                target="_blank" rel="noopener" class="path-btn">
+                <span>Yuk Ngobrol di WhatsApp</span>
+                <span>→</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Pathway 3: WFA Coaching -->
+          <article class="path-card" data-aos="fade-up" data-aos-delay="300">
+            <div class="path-photo">
+              <img src="assets/coaching-done.webp" alt="Sekolah WFA Coaching & Mentorship" loading="lazy">
+              <span class="path-badge">🚀 Bimbingan Langsung</span>
+            </div>
+            <div class="path-body">
+              <div class="path-icon">◎</div>
+              <h3 class="path-title">WFA COACHING</h3>
+              <p class="path-desc">
+                Upgrade skill, bangun mindset, dan siapkan dirimu transisi WFA.
+              </p>
+              <a href="https://sekolahwfa.com" target="_blank" rel="noopener" class="path-btn">
+                <span>Belajar di Sekolah WFA</span>
+                <span>→</span>
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- NEW HIGHLIGHTED SECTION: LYNK.ID STARTER KIT (RAHASIA ANGGUN BISA KERJA DARI MANA AJA) -->
+    <section class="section lynkid-highlight-section" id="products">
+      <div class="container">
+        <div class="lynkid-bento" data-aos="zoom-in" data-aos-duration="800">
+          <div class="lynkid-content">
+            <span class="lynkid-spotlight-tag">
+              <span>🔥 Starter Kit &amp; Tools WFA</span>
+            </span>
+
+            <h2 class="lynkid-title">
+              Rahasia Bisa Kerja Bebas dari Mana Aja
+            </h2>
+
+            <p class="lynkid-desc">
+              Kumpulan panduan, template kerja, dan tools praktis yang Anggun pakai sehari-hari biar bisa kerja fleksibel
+              sambil keliling tempat baru. Cocok banget buat kamu yang mau mulai dari nol!
+            </p>
+
+            <ul class="lynkid-features">
+              <li class="lynkid-item">
+                <span class="lynkid-item-icon">✓</span>
+                <span>Template CV &amp; Portofolio ATS yang lolos rekruter internasional</span>
+              </li>
+              <li class="lynkid-item">
+                <span class="lynkid-item-icon">✓</span>
+                <span>Panduan praktis cara cari &amp; lamar kerja remote bergaji dollar</span>
+              </li>
+              <li class="lynkid-item">
+                <span class="lynkid-item-icon">✓</span>
+                <span>Checklist setup laptop &amp; tools harian agar tetap produktif di mana pun</span>
+              </li>
+            </ul>
+
+            <a href="https://lynk.id/febbyanggun" target="_blank" rel="noopener noreferrer" class="btn-lynkid">
+              <span>Cek Starter Kit di Lynk.id</span>
+              <span>↗</span>
+            </a>
+          </div>
+
+          <div class="lynkid-visual">
+            <div class="lynkid-photo-wrap">
+              <img src="assets/foto-anggun (1).webp" alt="Anggun Febby Bekerja Santai di Kafe dengan Laptop" loading="lazy">
+              <div class="lynkid-corner-badge">
+                <span>📍 Kafe Santai · Laptop &amp; Kopi</span>
+                <span style="color:var(--forest); font-weight:800;">WFA Ready</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: DESTINATION GUIDE (WHERE DO YOU WANT TO WORK FROM?) -->
+    <section class="section dest-section" id="explore">
+      <div class="container">
+        <div class="dest-grid-layout">
+          <div class="dest-sidebar" data-aos="fade-right">
+            <div class="eyebrow">Destination guide</div>
+            <h2 class="section-title">WHERE DO YOU WANT<br>TO WORK FROM?</h2>
+            <p class="section-subtitle">
+              Cari tahu destinasi terbaik untuk WFA, lengkap dengan informasi biaya hidup, kualitas internet, visa, dan
+              komunitas.
+            </p>
+
+            <div class="dest-search-box">
+              <input type="text" class="dest-search-input" id="dest-search-box" placeholder="Cari negara atau kota...">
+              <span style="font-size:18px;">⌕</span>
+            </div>
+
+            <div class="dest-chips">
+              <span style="font-size:0.85rem; font-weight:700; color:var(--muted); margin-right:4px;">Popular:</span>
+              <button type="button" class="dest-chip active" data-filter="all">Semua</button>
+              <button type="button" class="dest-chip" data-filter="bali">Bali</button>
+              <button type="button" class="dest-chip" data-filter="tokyo">Tokyo</button>
+              <button type="button" class="dest-chip" data-filter="new york">New York</button>
+              <button type="button" class="dest-chip" data-filter="new zealand">New Zealand</button>
+            </div>
+          </div>
+
+          <div class="dest-cards" data-aos="fade-left">
+            <!-- Dest 1: Bali -->
+            <article class="dest-card" data-city="bali">
+              <div class="dest-photo">
+                <img src="assets/bali.webp" alt="Pura Bali Indonesia" loading="lazy">
+              </div>
+              <div class="dest-body">
+                <h4>Bali</h4>
+                <div class="dest-country">🇮🇩 Indonesia</div>
+                <div class="dest-facts">
+                  <div class="dest-fact"><span>WFA</span><span>8/10</span></div>
+                  <div class="dest-fact"><span>Cost of Living</span><span>$600–1,000</span></div>
+                  <div class="dest-fact"><span>Visa</span><span>Easy</span></div>
+                </div>
+              </div>
+            </article>
+
+            <!-- Dest 2: Tokyo -->
+            <article class="dest-card" data-city="tokyo">
+              <div class="dest-photo">
+                <img src="assets/tokyo.webp" alt="Tokyo Shinjuku Japan" loading="lazy">
+              </div>
+              <div class="dest-body">
+                <h4>Tokyo</h4>
+                <div class="dest-country">🇯🇵 Japan</div>
+                <div class="dest-facts">
+                  <div class="dest-fact"><span>WFA</span><span>9/10</span></div>
+                  <div class="dest-fact"><span>Cost of Living</span><span>$1,200+</span></div>
+                  <div class="dest-fact"><span>Visa</span><span>Moderate</span></div>
+                </div>
+              </div>
+            </article>
+
+            <!-- Dest 3: New York -->
+            <article class="dest-card" data-city="new york">
+              <div class="dest-photo">
+                <img src="assets/new_york.webp" alt="Times Square New York" loading="lazy">
+              </div>
+              <div class="dest-body">
+                <h4>New York</h4>
+                <div class="dest-country">🇺🇸 United States</div>
+                <div class="dest-facts">
+                  <div class="dest-fact"><span>WFA</span><span>8.5/10</span></div>
+                  <div class="dest-fact"><span>Cost of Living</span><span>$2,500+</span></div>
+                  <div class="dest-fact"><span>Visa</span><span>Moderate</span></div>
+                </div>
+              </div>
+            </article>
+
+            <!-- Dest 4: New Zealand -->
+            <article class="dest-card" data-city="new zealand">
+              <div class="dest-photo">
+                <img src="assets/new_zealand.webp" alt="Danau dan Pegunungan New Zealand" loading="lazy">
+              </div>
+              <div class="dest-body">
+                <h4>New Zealand</h4>
+                <div class="dest-country">🇳🇿 New Zealand</div>
+                <div class="dest-facts">
+                  <div class="dest-fact"><span>WFA</span><span>9/10</span></div>
+                  <div class="dest-fact"><span>Cost of Living</span><span>$1,000+</span></div>
+                  <div class="dest-fact"><span>Visa</span><span>Moderate</span></div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: WFA COMMUNITY (SEAMLESS CONTINUOUS MARQUEE LOOP) -->
+    <section class="section community-section" id="community">
+      <div class="community-header-box" data-aos="fade-up">
+        <div class="eyebrow">WFA Community</div>
+        <h2 class="section-title">You don't have to build<br>your WFA life alone.</h2>
+        <p class="section-subtitle">
+          Bergabung dengan komunitas yang sama-sama berjuang, berbagi pengalaman, dan saling mendukung dalam perjalanan WFA
+          mereka.
+        </p>
+
+        <div class="community-tags">
+          <span class="community-tag">🏕️ Bromo Meetup</span>
+          <span class="community-tag">⛷️ Winter Ski Trip</span>
+          <span class="community-tag">💻 Coworking &amp; Coffee</span>
+          <span class="community-tag">🏞️ Waterfall Escapes</span>
+          <span class="community-tag">🧺 Outdoor Work Picnic</span>
+          <span class="community-tag">🌐 Jaringan Komunitas Luas</span>
+        </div>
       </div>
 
-      <div class="path-grid">
-        <a class="path" href="https://job.sekolahwfa.com" data-aos="fade-up">
-          <div class="path-content">
-            <div class="icon">⌂</div>
-            <h3>WFA JOB</h3>
-            <p>Dapatkan update lowongan kerja remote global setiap pekannya.</p>
-            <div class="arrow">Cari Lowongan <span>→</span></div>
+      <!-- SEAMLESS ZERO-GAP DUAL TRACK MARQUEE -->
+      <div class="marquee-container">
+        <!-- Row 1: Leftward Infinite Marquee -->
+        <div class="marquee-row">
+          <div class="community-photo-card"><img src="assets/Community (1).webp" alt="WFA Community Waterfall Meetup" loading="lazy"></div>
+          <div class="community-photo-card"><img src="assets/Community (2).webp" alt="Bromo Savanna Gathering" loading="lazy"></div>
+          <div class="community-photo-card"><img src="assets/Community (3).webp" alt="Coworking Coffee Session" loading="lazy"></div>
+          <div class="community-photo-card"><img src="assets/Community (5).webp" alt="Outdoor Picnic Work Session" loading="lazy"></div>
+          <div class="community-photo-card"><img src="assets/Community (7).webp" alt="Winter Ski Trip" loading="lazy"></div>
+          <!-- Seamless Duplicate Set 1 -->
+          <div class="community-photo-card"><img src="assets/Community (1).webp" alt="WFA Community Waterfall Meetup" loading="lazy"></div>
+          <div class="community-photo-card"><img src="assets/Community (2).webp" alt="Bromo Savanna Gathering" loading="lazy"></div>
+          <div class="community-photo-card"><img src="assets/Community (3).webp" alt="Coworking Coffee Session" loading="lazy"></div>
+          <div class="community-photo-card"><img src="assets/Community (5).webp" alt="Outdoor Picnic Work Session" loading="lazy"></div>
+          <div class="community-photo-card"><img src="assets/Community (7).webp" alt="Winter Ski Trip" loading="lazy"></div>
+          <!-- Seamless Duplicate Set 2 -->
+          <div class="community-photo-card"><img src="assets/Community (1).webp" alt="WFA Community Waterfall Meetup" loading="lazy"></div>
+          <div class="community-photo-card"><img src="assets/Community (2).webp" alt="Bromo Savanna Gathering" loading="lazy"></div>
+          <div class="community-photo-card"><img src="assets/Community (3).webp" alt="Coworking Coffee Session" loading="lazy"></div>
+          <div class="community-photo-card"><img src="assets/Community (5).webp" alt="Outdoor Picnic Work Session" loading="lazy"></div>
+          <div class="community-photo-card"><img src="assets/Community (7).webp" alt="Winter Ski Trip" loading="lazy"></div>
+        </div>
+
+        <!-- Row 2: Rightward Infinite Marquee -->
+        <div class="marquee-row reverse">
+          <div class="community-photo-card"><img src="assets/Community (8).webp" alt="Hillside Sharing Circle" loading="lazy"></div>
+          <div class="community-photo-card"><img src="assets/Community (9).webp" alt="Bromo Crater Trekking" loading="lazy"></div>
+          <div class="community-photo-card"><img src="assets/Community (10).webp" alt="Multicultural Picnic" loading="lazy"></div>
+          <div class="community-photo-card"><img src="assets/foto-anggun (3).webp" alt="Anggun Febby Bersama Komunitas WFA" loading="lazy"></div>
+          <div class="community-photo-card"><img src="assets/bali.webp" alt="Komunitas WFA di Bali" loading="lazy"></div>
+          <!-- Seamless Duplicate Set 1 -->
+          <div class="community-photo-card"><img src="assets/Community (8).webp" alt="Hillside Sharing Circle" loading="lazy"></div>
+          <div class="community-photo-card"><img src="assets/Community (9).webp" alt="Bromo Crater Trekking" loading="lazy"></div>
+          <div class="community-photo-card"><img src="assets/Community (10).webp" alt="Multicultural Picnic" loading="lazy"></div>
+          <div class="community-photo-card"><img src="assets/foto-anggun (3).webp" alt="Anggun Febby Bersama Komunitas WFA" loading="lazy"></div>
+          <div class="community-photo-card"><img src="assets/bali.webp" alt="Komunitas WFA di Bali" loading="lazy"></div>
+          <!-- Seamless Duplicate Set 2 -->
+          <div class="community-photo-card"><img src="assets/Community (8).webp" alt="Hillside Sharing Circle" loading="lazy"></div>
+          <div class="community-photo-card"><img src="assets/Community (9).webp" alt="Bromo Crater Trekking" loading="lazy"></div>
+          <div class="community-photo-card"><img src="assets/Community (10).webp" alt="Multicultural Picnic" loading="lazy"></div>
+          <div class="community-photo-card"><img src="assets/foto-anggun (3).webp" alt="Anggun Febby Bersama Komunitas WFA" loading="lazy"></div>
+          <div class="community-photo-card"><img src="assets/bali.webp" alt="Komunitas WFA di Bali" loading="lazy"></div>
+        </div>
+      </div>
+
+      <div class="community-stats-bar" data-aos="fade-up">
+        <div class="community-stats-group">
+          <div class="community-stat-item">
+            <strong>50K+</strong>
+            <span>Anggota Komunitas</span>
           </div>
-          <div class="photo">
-            <img src="assets/path_job.webp" alt="WFA Job Global Career" width="720" height="964" loading="eager"
-              decoding="async">
+          <div class="community-stat-item">
+            <strong>1K+</strong>
+            <span>Event &amp; Meetup</span>
           </div>
+          <div class="community-stat-item">
+            <strong>100+</strong>
+            <span>Negara Tujuan</span>
+          </div>
+        </div>
+
+        <a class="btn-hero-primary" href="https://chat.whatsapp.com/E3dPReLYer5AoXOJEF1KTr" target="_blank"
+          rel="noopener">
+          <span>Join Komunitas WFA</span>
+          <span>→</span>
         </a>
-        <a class="path" id="jobs"
-          href="https://wa.me/6285163557107?text=Haloo%20kak%20Anggun%2C%20aku%20tertarik%20ingin%20berkolaborasi%20sama%20kakak%20niihh.."
-          data-aos="fade-up" target="_blank">
-          <div class="path-content">
-            <div class="icon">▣</div>
-            <h3>KOLABORASI</h3>
-            <p>Mari bekerja sama untuk membangun solusi digital berskala global.</p>
-            <div class="arrow">Hubungi via WhatsApp <span>→</span></div>
-          </div>
-          <div class="photo">
-            <img src="assets/collab-done.webp" alt="Kolaborasi Tim Remote Digital" width="720" height="964"
-              loading="eager" decoding="async">
-          </div>
-        </a>
-        <a class="path" href="https://sekolahwfa.com" target="_blank" data-aos="fade-up">
-          <div class="path-content">
-            <div class="icon">◎</div>
-            <h3>WFA COACHING</h3>
-            <p>Upgrade skill, bangun mindset, dan siapkan dirimu transisi WFA.</p>
-            <div class="arrow">Jelajahi Sekolah WFA <span>→</span></div>
-          </div>
-          <div class="photo">
-            <img src="assets/coaching-done.webp" alt="Belajar Skill Remote WFA" width="720" height="964" loading="eager"
-              decoding="async">
-          </div>
-        </a>
       </div>
     </section>
 
-    <section class="dest" id="explore">
-      <div class="section dest-grid">
-        <div class="dest-left" data-aos="fade-right">
-          <div class="eyebrow">Destination guide</div>
-          <h2 class="section-title">WHERE DO YOU WANT<br>TO WORK FROM?</h2>
-          <p class="dest-desc">Cari tahu destinasi terbaik untuk WFA, lengkap dengan informasi biaya hidup, kualitas
-            internet, visa, dan komunitas.</p>
-          <div class="search"><span>Cari negara atau kota...</span><span class="mag">⌕</span></div>
-          <div class="chips"><span class="chip">Popular:</span><span class="chip">Bali</span><span
-              class="chip">Tokyo</span><span class="chip">New York</span><span class="chip">New Zealand</span><span
-              class="chip">USA</span></div>
-        </div>
-        <div class="dest-cards" data-aos="fade-left">
-          <article class="dest-card">
-            <div class="dest-photo"><img src="assets/bali.webp" alt="Bali" width="400" height="260" loading="lazy"
-                decoding="async"></div>
-            <div class="dest-body">
-              <h4>Bali</h4>
-              <div class="country">🇮🇩 Indonesia</div>
-              <div class="facts">
-                <div class="fact"><span>WFA</span><span>8/10</span></div>
-                <div class="fact"><span>Cost of Living</span><span>$600–1,000</span></div>
-                <div class="fact"><span>Visa</span><span>Easy</span></div>
+    <!-- SECTION 4: REAL STORIES & REELS (AUTO SOUND ON CLICK PLAY) -->
+    <section class="section story-section" id="stories">
+      <div class="container">
+        <div class="story-grid">
+          <div data-aos="fade-right">
+            <div class="eyebrow">Stories ✦</div>
+            <h2 class="section-title">Dari anak desa →<br>kerja sambil keliling dunia.</h2>
+            <p class="section-subtitle" style="margin-bottom:28px;">
+              Dulu cuma anak desa yang berjuang untuk bisa sekolah. Sekarang, aku bisa kerja dari berbagai negara,
+              membangun penghasilan sendiri, dan mewujudkan mimpi yang dulu hanya bisa aku doakan.
+            </p>
+
+            <a class="btn-hero-primary" href="http://instagram.com/anggunfebby.s" target="_blank" rel="noopener">
+              <span>Follow Instagram @anggunfebby.s</span>
+              <span>↗</span>
+            </a>
+          </div>
+
+          <div class="story-cards-wrap" data-aos="fade-left">
+            <!-- Story Reel 1 -->
+            <div class="story-card" data-reel="1">
+              <video class="story-video" src="assets/videos/reel1.mp4" poster="assets/videos/reel1.webp" playsinline
+                loop preload="none"></video>
+
+              <div class="story-overlay">
+                <div class="story-top-badge">
+                  <a href="https://www.instagram.com/reel/DM7ldABJTZD/" target="_blank" rel="noopener noreferrer"
+                    class="ig-badge" title="Lihat di Instagram">
+                    <span>Reel ↗</span>
+                  </a>
+                  <span class="sound-toggle-status">Audio On Click</span>
+                </div>
+
+                <div class="play-center-btn" aria-label="Putar Video Reel">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M8 5v14l11-7z" />
+                  </svg>
+                </div>
+
+                <div class="story-caption-box">
+                  <div class="story-caption">Dari anak desa,<br>kini keliling dunia.</div>
+                  <div class="story-sound-hint">▶ Klik untuk putar suara</div>
+                </div>
               </div>
             </div>
-          </article>
-          <article class="dest-card">
-            <div class="dest-photo"><img src="assets/tokyo.webp" alt="Tokyo" width="400" height="260" loading="lazy"
-                decoding="async"></div>
-            <div class="dest-body">
-              <h4>Tokyo</h4>
-              <div class="country">🇯🇵 Japan</div>
-              <div class="facts">
-                <div class="fact"><span>WFA</span><span>9/10</span></div>
-                <div class="fact"><span>Cost of Living</span><span>$1,200+</span></div>
-                <div class="fact"><span>Visa</span><span>Moderate</span></div>
+
+            <!-- Story Reel 2 -->
+            <div class="story-card" data-reel="2">
+              <video class="story-video" src="assets/videos/reel2.mp4" poster="assets/videos/reel2.webp" playsinline
+                loop preload="none"></video>
+
+              <div class="story-overlay">
+                <div class="story-top-badge">
+                  <a href="https://www.instagram.com/reel/DPBhW11CSBb/" target="_blank" rel="noopener noreferrer"
+                    class="ig-badge" title="Lihat di Instagram">
+                    <span>Reel ↗</span>
+                  </a>
+                  <span class="sound-toggle-status">Audio On Click</span>
+                </div>
+
+                <div class="play-center-btn" aria-label="Putar Video Reel">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M8 5v14l11-7z" />
+                  </svg>
+                </div>
+
+                <div class="story-caption-box">
+                  <div class="story-caption">WFA bukan cuma mimpi,<br>tapi pilihan hidup.</div>
+                  <div class="story-sound-hint">▶ Klik untuk putar suara</div>
+                </div>
               </div>
             </div>
-          </article>
-          <article class="dest-card">
-            <div class="dest-photo"><img src="assets/new_york.webp" alt="New York" width="400" height="260"
-                loading="lazy" decoding="async"></div>
-            <div class="dest-body">
-              <h4>New York</h4>
-              <div class="country">🇺🇸 United States</div>
-              <div class="facts">
-                <div class="fact"><span>WFA</span><span>8.5/10</span></div>
-                <div class="fact"><span>Cost of Living</span><span>$2,500+</span></div>
-                <div class="fact"><span>Visa</span><span>Moderate</span></div>
-              </div>
-            </div>
-          </article>
-          <article class="dest-card">
-            <div class="dest-photo"><img src="assets/new_zealand.webp" alt="New Zealand" width="400" height="260"
-                loading="lazy" decoding="async"></div>
-            <div class="dest-body">
-              <h4>New Zealand</h4>
-              <div class="country">🇳🇿 New Zealand</div>
-              <div class="facts">
-                <div class="fact"><span>WFA</span><span>9/10</span></div>
-                <div class="fact"><span>Cost of Living</span><span>$1,000+</span></div>
-                <div class="fact"><span>Visa</span><span>Moderate</span></div>
-              </div>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
 
-    <section class="community" id="community">
-      <div class="section community-grid">
-        <div class="community-mosaic" data-aos="fade-right">
-          <div class="community-card m1" title="Waterfall Adventure Meetup">
-            <img src="assets/Community (1).webp" alt="WFA Community Waterfall Trip" width="384" height="230"
-              loading="lazy" decoding="async">
-          </div>
-          <div class="community-card m2" title="Bromo Savanna Gathering">
-            <img src="assets/Community (2).webp" alt="WFA Community Savanna Gathering" width="384" height="230"
-              loading="lazy" decoding="async">
-          </div>
-          <div class="community-card m3" title="Co-working & Coffee Session">
-            <img src="assets/Community (3).webp" alt="WFA Community Coworking Session" width="384" height="230"
-              loading="lazy" decoding="async">
-          </div>
-          <div class="community-card m4" title="Outdoor Picnic Work">
-            <img src="assets/Community (5).webp" alt="Outdoor Picnic Working Session" width="384" height="230"
-              loading="lazy" decoding="async">
-          </div>
-          <div class="community-card m6" title="Winter Ski Adventure">
-            <img src="assets/Community (7).webp" alt="Winter Ski Trip With Community" width="384" height="230"
-              loading="lazy" decoding="async">
-          </div>
-          <div class="community-card m7" title="Hillside Sharing Circle">
-            <img src="assets/Community (8).webp" alt="Hillside Sharing Circle Discussion" width="384" height="230"
-              loading="lazy" decoding="async">
-          </div>
-          <div class="community-card m8" title="Bromo Crater Expedition">
-            <img src="assets/Community (9).webp" alt="Bromo Crater Trekking Expedition" width="384" height="230"
-              loading="lazy" decoding="async">
-          </div>
-          <div class="community-card m5" title="Multicultural Picnic Meetup">
-            <img src="assets/Community (10).webp" alt="Multicultural Remote Worker Picnic" width="384" height="230"
-              loading="lazy" decoding="async">
-          </div>
-        </div>
-        <div class="community-content" data-aos="fade-left">
-          <div class="eyebrow">WFA Community</div>
-          <h2>You don't have to build<br>your WFA life alone.</h2>
-          <p>Bergabung dengan komunitas yang sama-sama berjuang, berbagi pengalaman, dan saling mendukung dalam
-            perjalanan WFA mereka.</p>
-          <div class="community-tags">
-            <span class="community-tag">🏕️ Bromo Meetup</span>
-            <span class="community-tag">⛷️ Winter Ski Trip</span>
-            <span class="community-tag">💻 Coworking &amp; Coffee</span>
-            <span class="community-tag">🏞️ Waterfall Escapes</span>
-            <span class="community-tag">🧺 Outdoor Work Picnic</span>
-            <span class="community-tag">🌐 Global Remote Network</span>
-          </div>
-          <div class="stats">
-            <div class="stat"><strong>50K+</strong><span>Anggota Komunitas</span></div>
-            <div class="stat"><strong>1K+</strong><span>Event &amp; Meetup</span></div>
-            <div class="stat"><strong>100+</strong><span>Negara Tujuan</span></div>
-          </div>
-          <a class="btn" href="https://chat.whatsapp.com/E3dPReLYer5AoXOJEF1KTr" target="_blank">Gabung
-            Komunitas →</a>
-        </div>
-      </div>
-    </section>
+            <!-- Story Reel 3 -->
+            <div class="story-card" data-reel="3">
+              <video class="story-video" src="assets/videos/reel3.mp4" poster="assets/videos/reel3.webp" playsinline
+                loop preload="none"></video>
 
-    <section class="story section">
-      <div class="story-grid">
-        <div>
-          <div class="eyebrow">Stories ✦</div>
-          <h2>Dari anak desa →<br>kerja sambil keliling dunia.</h2>
-          <p>Dulu cuma anak desa yang berjuang untuk bisa sekolah. Sekarang, aku bisa kerja dari berbagai negara,
-            membangun penghasilan sendiri, dan mewujudkan mimpi yang dulu hanya bisa aku doakan.</p>
-        </div>
-        <div class="story-cards" data-aos="fade-left">
-          <!-- Story Card 1 -->
-          <div class="story-card" data-reel="1">
-            <video class="story-video" src="assets/videos/reel1.mp4" poster="assets/videos/reel1.webp" playsinline loop
-              preload="none"></video>
-            <div class="story-overlay">
-              <div class="story-top-badge">
-                <a href="https://www.instagram.com/reel/DM7ldABJTZD/" target="_blank" rel="noopener noreferrer"
-                  class="ig-badge" title="Lihat di Instagram">
-                  <svg viewBox="0 0 24 24" fill="currentColor" class="ig-icon">
-                    <path
-                      d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+              <div class="story-overlay">
+                <div class="story-top-badge">
+                  <a href="https://www.instagram.com/reel/DLmoeZPp7ow/" target="_blank" rel="noopener noreferrer"
+                    class="ig-badge" title="Lihat di Instagram">
+                    <span>Reel ↗</span>
+                  </a>
+                  <span class="sound-toggle-status">Audio On Click</span>
+                </div>
+
+                <div class="play-center-btn" aria-label="Putar Video Reel">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M8 5v14l11-7z" />
                   </svg>
-                  <span>Reel ↗</span>
-                </a>
-                <button type="button" class="sound-toggle" aria-label="Toggle Sound" title="Sound">
-                  <svg class="icon-mute" viewBox="0 0 24 24" fill="currentColor">
-                    <path
-                      d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z" />
-                  </svg>
-                  <svg class="icon-unmute" viewBox="0 0 24 24" fill="currentColor" style="display:none">
-                    <path
-                      d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z" />
-                  </svg>
-                </button>
-              </div>
+                </div>
 
-              <div class="play-btn-circle" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="currentColor" class="play-icon">
-                  <path d="M8 5v14l11-7z" />
-                </svg>
-                <svg viewBox="0 0 24 24" fill="currentColor" class="pause-icon" style="display:none">
-                  <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" />
-                </svg>
-              </div>
-
-              <div class="story-footer">
-                <div class="caption">Dari anak desa,<br>kini keliling dunia.</div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Story Card 2 -->
-          <div class="story-card" data-reel="2">
-            <video class="story-video" src="assets/videos/reel2.mp4" poster="assets/videos/reel2.webp" playsinline loop
-              preload="none"></video>
-            <div class="story-overlay">
-              <div class="story-top-badge">
-                <a href="https://www.instagram.com/reel/DPBhW11CSBb/" target="_blank" rel="noopener noreferrer"
-                  class="ig-badge" title="Lihat di Instagram">
-                  <svg viewBox="0 0 24 24" fill="currentColor" class="ig-icon">
-                    <path
-                      d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
-                  </svg>
-                  <span>Reel ↗</span>
-                </a>
-                <button type="button" class="sound-toggle" aria-label="Toggle Sound" title="Sound">
-                  <svg class="icon-mute" viewBox="0 0 24 24" fill="currentColor">
-                    <path
-                      d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z" />
-                  </svg>
-                  <svg class="icon-unmute" viewBox="0 0 24 24" fill="currentColor" style="display:none">
-                    <path
-                      d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z" />
-                  </svg>
-                </button>
-              </div>
-
-              <div class="play-btn-circle" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="currentColor" class="play-icon">
-                  <path d="M8 5v14l11-7z" />
-                </svg>
-                <svg viewBox="0 0 24 24" fill="currentColor" class="pause-icon" style="display:none">
-                  <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" />
-                </svg>
-              </div>
-
-              <div class="story-footer">
-                <div class="caption">WFA bukan cuma mimpi,<br>tapi pilihan hidup.</div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Story Card 3 -->
-          <div class="story-card" data-reel="3">
-            <video class="story-video" src="assets/videos/reel3.mp4" poster="assets/videos/reel3.webp" playsinline loop
-              preload="none"></video>
-            <div class="story-overlay">
-              <div class="story-top-badge">
-                <a href="https://www.instagram.com/reel/DLmoeZPp7ow/" target="_blank" rel="noopener noreferrer"
-                  class="ig-badge" title="Lihat di Instagram">
-                  <svg viewBox="0 0 24 24" fill="currentColor" class="ig-icon">
-                    <path
-                      d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
-                  </svg>
-                  <span>Reel ↗</span>
-                </a>
-                <button type="button" class="sound-toggle" aria-label="Toggle Sound" title="Sound">
-                  <svg class="icon-mute" viewBox="0 0 24 24" fill="currentColor">
-                    <path
-                      d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z" />
-                  </svg>
-                  <svg class="icon-unmute" viewBox="0 0 24 24" fill="currentColor" style="display:none">
-                    <path
-                      d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z" />
-                  </svg>
-                </button>
-              </div>
-
-              <div class="play-btn-circle" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="currentColor" class="play-icon">
-                  <path d="M8 5v14l11-7z" />
-                </svg>
-                <svg viewBox="0 0 24 24" fill="currentColor" class="pause-icon" style="display:none">
-                  <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" />
-                </svg>
-              </div>
-
-              <div class="story-footer">
-                <div class="caption">Bukan sekadar travelling,<br>tapi berkarya.</div>
+                <div class="story-caption-box">
+                  <div class="story-caption">Bukan sekadar travelling,<br>tapi berkarya.</div>
+                  <div class="story-sound-hint">▶ Klik untuk putar suara</div>
+                </div>
               </div>
             </div>
           </div>
@@ -374,56 +548,85 @@
       </div>
     </section>
 
-    <section class="socials" data-aos="fade-up">
-      <div class="social-grid">
-        <div class="social-left">
-          <h2>Let's Connect</h2>
-          <p>Mari terhubung dan berbagi inspirasi seputar work from anywhere, produktivitas, dan lifestyle digital
-            nomad.</p>
-        </div>
-        <div class="social-links">
-          <a href="http://instagram.com/anggunfebby.s" target="_blank" class="social-link" data-aos="zoom-in">
-            <svg viewBox="0 0 448 512" fill="currentColor" style="width:2vw;height:2vw;min-width:20px;min-height:20px">
-              <path
-                d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" />
-            </svg>
-            <span>Instagram</span>
-          </a>
-          <a href="https://youtube.com/@febbyanggun" target="_blank" class="social-link" data-aos="zoom-in">
-            <svg viewBox="0 0 576 512" fill="currentColor"
-              style="width:2.2vw;height:2.2vw;min-width:24px;min-height:24px">
-              <path
-                d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z" />
-            </svg>
-            <span>YouTube</span>
-          </a>
-          <a href="https://tiktok.com/@febbyanggun.s" target="_blank" class="social-link" data-aos="zoom-in">
-            <svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" fill="currentColor" class="bi bi-tiktok"
-              viewBox="0 0 16 16">
-              <path
-                d="M9 0h1.98c.144.715.54 1.617 1.235 2.512C12.895 3.389 13.797 4 15 4v2c-1.753 0-3.07-.814-4-1.829V11a5 5 0 1 1-5-5v2a3 3 0 1 0 3 3z" />
-            </svg>
-            <span>Tiktok</span>
-          </a>
+    <!-- SECTION 5: SOCIALS (LET'S CONNECT) -->
+    <section class="section socials-section" id="socials" data-aos="fade-up">
+      <div class="container">
+        <div class="social-grid">
+          <div>
+            <h2 class="section-title">Let's Connect</h2>
+            <p class="section-subtitle">
+              Mari terhubung dan berbagi inspirasi seputar work from anywhere, produktivitas, dan lifestyle kerja bebas.
+            </p>
+          </div>
+
+          <div class="social-links">
+            <a href="http://instagram.com/anggunfebby.s" target="_blank" rel="noopener noreferrer" class="social-link-btn">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+              </svg>
+              <span>Instagram</span>
+            </a>
+
+            <a href="https://youtube.com/@febbyanggun" target="_blank" rel="noopener noreferrer" class="social-link-btn">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+              </svg>
+              <span>YouTube</span>
+            </a>
+
+            <a href="https://tiktok.com/@febbyanggun.s" target="_blank" rel="noopener noreferrer" class="social-link-btn">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.97-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.24 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z" />
+              </svg>
+              <span>TikTok</span>
+            </a>
+          </div>
         </div>
       </div>
     </section>
 
-    <footer class="cta" data-aos="fade-up">
-      <div class="cta-bg" style="background-image:url('assets/cta_bg.webp');">
-      </div>
+    <!-- SECTION 6: CTA FOOTER -->
+    <footer class="cta-footer" id="start">
+      <div class="cta-bg" style="background-image:url('assets/cta_bg.webp');"></div>
       <div class="cta-overlay"></div>
-      <div class="cta-inner">
+
+      <div class="cta-inner" data-aos="fade-up">
         <div class="eyebrow">Your turn</div>
-        <h2>Kamu juga bisa.</h2>
-        <p>Karena mimpi bukan angan-angan. Saatnya mulai perjalanan WFA-mu sekarang.</p>
-        <a class="btn" href="#start">Start Your WFA Journey →</a>
+        <h2 class="cta-title">Kamu juga bisa.</h2>
+        <p class="cta-copy">Karena mimpi bukan angan-angan. Saatnya mulai perjalanan WFA-mu sekarang.</p>
+
+        <a class="btn-hero-primary" href="#learn" style="font-size:1.15rem; padding:18px 42px;">
+          <span>Mulai Perjalanan WFA</span>
+          <span>→</span>
+        </a>
+
+        <div class="footer-bottom-row">
+          <span>© 2026 Anggun Febby. Dari Indonesia untuk Dunia.</span>
+          <a href="#hero" id="back-to-top" class="back-to-top-btn">
+            <span>Kembali ke Atas</span>
+            <span>↑</span>
+          </a>
+        </div>
       </div>
     </footer>
+
+    <!-- COMPACT FLOATING JOIN WFA WIDGET -->
+    <a href="https://chat.whatsapp.com/E3dPReLYer5AoXOJEF1KTr" target="_blank" rel="noopener noreferrer"
+      class="floating-join-wfa" aria-label="Join WFA Community">
+      <div class="floating-avatar">
+        <img src="assets/foto-anggun (1).webp" alt="Anggun Febby Avatar">
+      </div>
+      <span>Join WFA Community 💬</span>
+    </a>
+
   </div>
+
   <!-- External Deferred Scripts -->
   <script src="js/aos.min.js" defer></script>
-  <script src="js/script.min.js" defer></script>
+  <script src="js/script.js" defer></script>
 </body>
 
 </html>

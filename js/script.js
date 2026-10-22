@@ -1,90 +1,174 @@
-// Anggun Febby Landing Page Core Scripts
+/**
+ * ANGGUN FEBBY — SIGNATURE INTERACTION & MOTION SCRIPTS
+ * Auto-unmute reels, 3D Tilt, Live Filter, Smooth Back-to-Top, Mobile Drawer
+ */
+
 document.addEventListener('DOMContentLoaded', function () {
-  // Initialize AOS smoothly if present
+  'use strict';
+
+  // 1. Initialize AOS Smooth Motion Animations
   if (typeof AOS !== 'undefined') {
     AOS.init({
       duration: 800,
       once: true,
-      offset: 40,
+      offset: 50,
       disable: window.innerWidth < 768 ? 'mobile' : false
     });
   }
 
-  // Story Cards Video Player Logic
-  var cards = document.querySelectorAll('.story-card');
+  // 2. Floating Navbar Scroll State
+  const navWrap = document.querySelector('.nav-wrap');
+  window.addEventListener('scroll', function () {
+    if (window.scrollY > 40) {
+      navWrap?.classList.add('nav-scrolled');
+    } else {
+      navWrap?.classList.remove('nav-scrolled');
+    }
+  }, { passive: true });
 
-  cards.forEach(function (card) {
-    var video = card.querySelector('.story-video');
-    var playIcon = card.querySelector('.play-icon');
-    var pauseIcon = card.querySelector('.pause-icon');
-    var soundToggle = card.querySelector('.sound-toggle');
-    var iconMute = card.querySelector('.icon-mute');
-    var iconUnmute = card.querySelector('.icon-unmute');
+  // 3. Mobile Navigation Drawer Toggle
+  const mobileToggle = document.querySelector('.mobile-toggle');
+  const mobileDrawer = document.querySelector('.mobile-drawer');
+  if (mobileToggle && mobileDrawer) {
+    mobileToggle.addEventListener('click', function () {
+      mobileDrawer.classList.toggle('active');
+    });
 
+    mobileDrawer.querySelectorAll('a').forEach(function (link) {
+      link.addEventListener('click', function () {
+        mobileDrawer.classList.remove('active');
+      });
+    });
+  }
+
+  // 4. Back to Top Button Smooth Scroll
+  const backToTop = document.getElementById('back-to-top');
+  if (backToTop) {
+    backToTop.addEventListener('click', function (e) {
+      e.preventDefault();
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  }
+
+  // 5. 3D Card Tilt Effect on Mouse Move
+  const tiltCards = document.querySelectorAll('.path-card, .dest-card, .lynkid-bento');
+  tiltCards.forEach(function (card) {
+    card.addEventListener('mousemove', function (e) {
+      if (window.innerWidth < 1024) return;
+      const rect = card.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      const centerX = rect.width / 2;
+      const centerY = rect.height / 2;
+
+      const rotateX = ((y - centerY) / centerY) * -5;
+      const rotateY = ((x - centerX) / centerX) * 5;
+
+      card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-6px)`;
+    });
+
+    card.addEventListener('mouseleave', function () {
+      card.style.transform = '';
+    });
+  });
+
+  // 6. Destination Search & Popular Filter Chips
+  const destSearchInput = document.getElementById('dest-search-box');
+  const destChips = document.querySelectorAll('.dest-chip');
+  const destCards = document.querySelectorAll('.dest-card');
+
+  function filterDestCards() {
+    const activeChip = document.querySelector('.dest-chip.active')?.getAttribute('data-filter') || 'all';
+    const query = (destSearchInput?.value || '').toLowerCase().trim();
+
+    destCards.forEach(function (card) {
+      const city = (card.getAttribute('data-city') || '').toLowerCase();
+      const text = card.textContent.toLowerCase();
+
+      const matchesChip = (activeChip === 'all' || city.includes(activeChip));
+      const matchesQuery = !query || text.includes(query);
+
+      if (matchesChip && matchesQuery) {
+        card.style.display = 'block';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  }
+
+  if (destChips) {
+    destChips.forEach(function (chip) {
+      chip.addEventListener('click', function () {
+        destChips.forEach(c => c.classList.remove('active'));
+        chip.classList.add('active');
+        filterDestCards();
+      });
+    });
+  }
+
+  if (destSearchInput) {
+    destSearchInput.addEventListener('input', filterDestCards);
+  }
+
+  // 7. Video Reels Player (AUTO SOUND ON CLICK PLAY, MUTE ON PAUSE)
+  const storyCards = document.querySelectorAll('.story-card');
+  storyCards.forEach(function (card) {
+    const video = card.querySelector('.story-video');
+    const soundStatus = card.querySelector('.sound-toggle-status');
+    const soundHint = card.querySelector('.story-sound-hint');
     if (!video) return;
 
-    // Default muted so autoplay/play works without browser block
-    video.muted = true;
-
-    function setPlayUI(playing) {
-      if (playing) {
-        card.classList.add('is-playing');
-        if (playIcon) playIcon.style.display = 'none';
-        if (pauseIcon) pauseIcon.style.display = 'block';
-      } else {
-        card.classList.remove('is-playing');
-        if (playIcon) playIcon.style.display = 'block';
-        if (pauseIcon) pauseIcon.style.display = 'none';
-      }
-    }
-
     card.addEventListener('click', function (e) {
-      if (e.target.closest('.ig-badge') || e.target.closest('.sound-toggle')) {
-        return;
-      }
+      if (e.target.closest('.ig-badge')) return;
 
       if (video.paused) {
-        document.querySelectorAll('.story-video').forEach(function (otherVideo) {
-          if (otherVideo !== video && !otherVideo.paused) {
-            otherVideo.pause();
-            var otherCard = otherVideo.closest('.story-card');
+        // Pause and mute other playing videos first
+        document.querySelectorAll('.story-video').forEach(function (other) {
+          if (other !== video) {
+            other.pause();
+            other.muted = true;
+            const otherCard = other.closest('.story-card');
             if (otherCard) {
               otherCard.classList.remove('is-playing');
-              var pI = otherCard.querySelector('.play-icon');
-              var paI = otherCard.querySelector('.pause-icon');
-              if (pI) pI.style.display = 'block';
-              if (paI) paI.style.display = 'none';
+              const oStatus = otherCard.querySelector('.sound-toggle-status');
+              const oHint = otherCard.querySelector('.story-sound-hint');
+              if (oStatus) oStatus.textContent = 'Audio On Click';
+              if (oHint) oHint.textContent = '▶ Klik untuk putar suara';
             }
           }
         });
 
+        // Auto-unmute and play with sound
+        video.muted = false;
         video.play().then(function () {
-          setPlayUI(true);
+          card.classList.add('is-playing');
+          if (soundStatus) soundStatus.textContent = '🔊 Audio Aktif';
+          if (soundHint) soundHint.textContent = '❚❚ Klik untuk pause';
         }).catch(function (err) {
-          console.warn('Video play prevented:', err);
+          // If browser policy blocks unmuted autoplay, play muted first
+          console.warn('Audio play restricted, trying muted:', err);
+          video.muted = true;
+          video.play();
+          card.classList.add('is-playing');
         });
       } else {
+        // Pause video & mute
         video.pause();
-        setPlayUI(false);
+        video.muted = true;
+        card.classList.remove('is-playing');
+        if (soundStatus) soundStatus.textContent = 'Audio On Click';
+        if (soundHint) soundHint.textContent = '▶ Klik untuk putar suara';
       }
     });
 
-    if (soundToggle) {
-      soundToggle.addEventListener('click', function (e) {
-        e.stopPropagation();
-        video.muted = !video.muted;
-        if (video.muted) {
-          if (iconMute) iconMute.style.display = 'block';
-          if (iconUnmute) iconUnmute.style.display = 'none';
-        } else {
-          if (iconMute) iconMute.style.display = 'none';
-          if (iconUnmute) iconUnmute.style.display = 'block';
-        }
-      });
-    }
-
-    video.addEventListener('play', function () { setPlayUI(true); });
-    video.addEventListener('pause', function () { setPlayUI(false); });
-    video.addEventListener('ended', function () { setPlayUI(false); });
+    video.addEventListener('ended', function () {
+      video.muted = true;
+      card.classList.remove('is-playing');
+      if (soundStatus) soundStatus.textContent = 'Audio On Click';
+      if (soundHint) soundHint.textContent = '▶ Klik untuk putar suara';
+    });
   });
 });
