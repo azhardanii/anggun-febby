@@ -1,6 +1,6 @@
 /**
  * ANGGUN FEBBY — SIGNATURE INTERACTION & MOTION SCRIPTS
- * Auto-unmute reels, 3D Tilt, Live Filter, Smooth Back-to-Top, Mobile Drawer
+ * Auto-unmute reels, 3D Tilt, Live Destination Filter, Smooth Navigation
  */
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   // 5. 3D Card Tilt Effect on Mouse Move
-  const tiltCards = document.querySelectorAll('.path-card, .dest-card, .lynkid-bento');
+  const tiltCards = document.querySelectorAll('.path-card, .dest-card, .tools-bento, .lynkid-bento, .database-bento');
   tiltCards.forEach(function (card) {
     card.addEventListener('mousemove', function (e) {
       if (window.innerWidth < 1024) return;
@@ -64,10 +64,10 @@ document.addEventListener('DOMContentLoaded', function () {
       const centerX = rect.width / 2;
       const centerY = rect.height / 2;
 
-      const rotateX = ((y - centerY) / centerY) * -5;
-      const rotateY = ((x - centerX) / centerX) * 5;
+      const rotateX = ((y - centerY) / centerY) * -4;
+      const rotateY = ((x - centerX) / centerX) * 4;
 
-      card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-6px)`;
+      card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-5px)`;
     });
 
     card.addEventListener('mouseleave', function () {
@@ -136,7 +136,7 @@ document.addEventListener('DOMContentLoaded', function () {
               const oStatus = otherCard.querySelector('.sound-toggle-status');
               const oHint = otherCard.querySelector('.story-sound-hint');
               if (oStatus) oStatus.textContent = 'Audio On Click';
-              if (oHint) oHint.textContent = '▶ Klik untuk putar suara';
+              if (oHint) oHint.textContent = '▶ Click to play with sound';
             }
           }
         });
@@ -145,8 +145,8 @@ document.addEventListener('DOMContentLoaded', function () {
         video.muted = false;
         video.play().then(function () {
           card.classList.add('is-playing');
-          if (soundStatus) soundStatus.textContent = '🔊 Audio Aktif';
-          if (soundHint) soundHint.textContent = '❚❚ Klik untuk pause';
+          if (soundStatus) soundStatus.textContent = '🔊 Audio Playing';
+          if (soundHint) soundHint.textContent = '❚❚ Click to pause';
         }).catch(function (err) {
           // If browser policy blocks unmuted autoplay, play muted first
           console.warn('Audio play restricted, trying muted:', err);
@@ -160,7 +160,7 @@ document.addEventListener('DOMContentLoaded', function () {
         video.muted = true;
         card.classList.remove('is-playing');
         if (soundStatus) soundStatus.textContent = 'Audio On Click';
-        if (soundHint) soundHint.textContent = '▶ Klik untuk putar suara';
+        if (soundHint) soundHint.textContent = '▶ Click to play with sound';
       }
     });
 
@@ -168,7 +168,7 @@ document.addEventListener('DOMContentLoaded', function () {
       video.muted = true;
       card.classList.remove('is-playing');
       if (soundStatus) soundStatus.textContent = 'Audio On Click';
-      if (soundHint) soundHint.textContent = '▶ Klik untuk putar suara';
+      if (soundHint) soundHint.textContent = '▶ Click to play with sound';
     });
   });
 });
