@@ -7,11 +7,11 @@
 
 :root {
   /* Signature Palette: Warm, Airy, Luminous & Organic */
-  --ink: #173231;              /* Deep botanical spruce ink for razor-sharp typography */
-  --ink-deep: #0E2423;         /* Deepest ink accent */
-  --ink-light: #25443E;        /* Readable secondary ink */
+  --ink: #1f6b58;              /* Signature Primary Forest Green for razor-sharp typography */
+  --ink-deep: #175344;         /* Rich forest green accent */
+  --ink-light: #257864;        /* Readable secondary green */
   --forest: #1f6b58;           /* Iconic pine teal */
-  --forest-dark: #1E4F44;      /* Deep forest */
+  --forest-dark: #175344;      /* Deep forest */
   --forest-light: #368270;     /* Fresh bright pine */
   --forest-subtle: rgba(31, 107, 88, 0.08);
 
@@ -27,23 +27,23 @@
   --cream2: #f2f4af;          /* Subtle butter border */
   --white: #ffffff;           /* Crisp card surface */
   --line: #e3e6ac;            /* Soft warm divider */
-  --line-strong: rgba(23, 50, 49, 0.16);
+  --line-strong: rgba(31, 107, 88, 0.16);
   --line-yellow: rgba(255, 252, 21, 0.6);
 
-  --muted: #4e635c;           /* Sage muted body text */
-  --muted-light: #728780;     /* Secondary meta labels */
+  --muted: #2d6b5b;           /* Elegant forest-sage body text */
+  --muted-light: #448070;     /* Secondary meta labels */
 
   /* Typography Hierarchy */
   --font-serif: 'Playfair Display', Georgia, serif;
   --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
   --font-accent: 'Outfit', sans-serif;
 
-  /* Ambient Multi-Layer Shadows */
-  --shadow-subtle: 0 2px 8px rgba(23, 50, 49, 0.04);
-  --shadow-card: 0 4px 20px -2px rgba(23, 50, 49, 0.05), 0 12px 32px -4px rgba(23, 50, 49, 0.06);
-  --shadow-hover: 0 8px 28px -2px rgba(23, 50, 49, 0.09), 0 22px 50px -8px rgba(23, 50, 49, 0.14);
+  /* Ambient Multi-Layer Shadows (Soft Forest Tinted) */
+  --shadow-subtle: 0 2px 8px rgba(31, 107, 88, 0.05);
+  --shadow-card: 0 4px 20px -2px rgba(31, 107, 88, 0.06), 0 12px 32px -4px rgba(31, 107, 88, 0.08);
+  --shadow-hover: 0 8px 28px -2px rgba(31, 107, 88, 0.12), 0 22px 50px -8px rgba(31, 107, 88, 0.18);
   --shadow-yellow: 0 6px 20px rgba(255, 252, 21, 0.45);
-  --shadow-glass: 0 16px 48px rgba(23, 50, 49, 0.08), 0 4px 16px rgba(23, 50, 49, 0.04);
+  --shadow-glass: 0 16px 48px rgba(31, 107, 88, 0.10), 0 4px 16px rgba(31, 107, 88, 0.05);
 
   /* Transitions & Motion Timing */
   --transition-smooth: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
@@ -809,7 +809,7 @@ img, video {
 .section-title em {
   font-style: italic;
   font-weight: 400;
-  background: linear-gradient(120deg, var(--forest) 0%, #173231 35%, var(--forest-light) 65%, var(--forest) 100%);
+  background: linear-gradient(120deg, var(--forest) 0%, var(--forest-dark) 35%, var(--forest-light) 65%, var(--forest) 100%);
   background-size: 200% auto;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -2312,7 +2312,7 @@ img, video {
 .cta-title em {
   font-style: italic;
   font-weight: 400;
-  background: linear-gradient(120deg, var(--forest) 0%, #173231 35%, var(--forest-light) 65%, var(--forest) 100%);
+  background: linear-gradient(120deg, var(--forest) 0%, var(--forest-dark) 35%, var(--forest-light) 65%, var(--forest) 100%);
   background-size: 200% auto;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
