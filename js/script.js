@@ -72,8 +72,8 @@ document.addEventListener('DOMContentLoaded', function () {
       nav_story: "Ceritaku",
       drawer_start: "Mulai Perjalanan WFA Kamu →",
 
-      hero_eyebrow: "Anggun Febby · Remote Career & WFA Lifestyle",
-      hero_title: "Work Freely.<br><span>Travel Mindfully.</span>",
+      hero_eyebrow: "Remote Worker & WFA Lifestyle",
+      hero_title: "Work Freely.<br>Travel Mindfully.",
       hero_sub: "Bangun karier & penghasilan yang bisa kamu bawa ke mana pun di dunia.",
       hero_cta_primary: "Mulai Perjalanan WFA Kamu",
       hero_cta_secondary: "Tentang Aku",
@@ -149,8 +149,8 @@ document.addEventListener('DOMContentLoaded', function () {
       nav_story: "About Me",
       drawer_start: "Start Your WFA Journey →",
 
-      hero_eyebrow: "Anggun Febby · Remote Career & WFA Lifestyle",
-      hero_title: "Work Freely.<br><span>Travel Mindfully.</span>",
+      hero_eyebrow: "Remote Worker & WFA Lifestyle",
+      hero_title: "Work Freely.<br>Travel Mindfully.",
       hero_sub: "Build a career & income you can take anywhere in the world.",
       hero_cta_primary: "Start Your WFA Journey",
       hero_cta_secondary: "About Me",
