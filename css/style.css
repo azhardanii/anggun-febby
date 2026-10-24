@@ -1701,18 +1701,21 @@ img, video {
 }
 
 .tools-float-tag {
-  position: absolute;
-  top: 14px;
-  left: 14px;
-  background: rgba(255, 255, 255, 0.95);
+  display: inline-flex;
+  align-items: center;
+  align-self: flex-start;
+  position: static;
+  background: rgba(255, 255, 255, 0.96);
   backdrop-filter: blur(10px);
   border: 1px solid var(--line);
-  padding: 6px 14px;
+  padding: 8px 18px;
   border-radius: 999px;
-  font-size: 0.76rem;
+  font-size: 0.82rem;
   font-weight: 700;
   color: var(--ink);
   box-shadow: var(--shadow-subtle);
+  width: fit-content;
+  margin-bottom: -4px;
 }
 
 .tools-sub-card {
