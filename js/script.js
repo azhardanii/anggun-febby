@@ -1,13 +1,282 @@
 /**
  * ANGGUN FEBBY — SIGNATURE INTERACTION & MOTION SCRIPTS
- * Reading progress, Auto-unmute reels, Audio Equalizer wave, 
- * Destination Live Filter & Quick Guide Modal, Smooth Navigation
+ * - High-Visibility Dynamic Language Switcher (Indonesian <-> English)
+ * - Dynamic Responsive Hero Video (video-hero-mobile.webm on mobile, video-hero.webm on tablet/desktop)
+ * - Hero Scroll Observer for Floating Join Button
+ * - Reading progress, Auto-unmute reels, Audio Equalizer wave
+ * - Destination Live Filter & Multilingual Quick Guide Modal
  */
 
 document.addEventListener('DOMContentLoaded', function () {
   'use strict';
 
-  // 1. Initialize AOS Smooth Motion Animations
+  // ==========================================================================
+  // 1. DYNAMIC RESPONSIVE HERO VIDEO (TABLET/DESKTOP VS MOBILE)
+  // ==========================================================================
+  const heroVideo = document.getElementById('hero-video');
+  function updateHeroVideo() {
+    if (!heroVideo) return;
+    const isMobile = window.innerWidth <= 768;
+    const targetSrc = isMobile
+      ? 'assets/videos/video-hero-mobile.webm'
+      : 'assets/videos/video-hero.webm';
+
+    if (heroVideo.dataset.activeSrc !== targetSrc) {
+      heroVideo.dataset.activeSrc = targetSrc;
+      heroVideo.src = targetSrc;
+      heroVideo.load();
+      const playPromise = heroVideo.play();
+      if (playPromise !== undefined) {
+        playPromise.catch(function () {});
+      }
+    }
+  }
+
+  updateHeroVideo();
+  let videoResizeTimer;
+  window.addEventListener('resize', function () {
+    clearTimeout(videoResizeTimer);
+    videoResizeTimer = setTimeout(updateHeroVideo, 200);
+  });
+
+  // ==========================================================================
+  // 2. SCROLL OBSERVER FOR FLOATING COMMUNITY BUTTON
+  //    (Hidden in hero section, smoothly appears after scrolling past hero)
+  // ==========================================================================
+  const floatingBtn = document.getElementById('floating-join-wfa');
+  const heroSection = document.getElementById('hero');
+
+  function checkFloatingVisibility() {
+    if (!floatingBtn || !heroSection) return;
+    const heroRect = heroSection.getBoundingClientRect();
+    if (heroRect.bottom <= 90 || window.scrollY > 350) {
+      floatingBtn.classList.add('is-visible');
+    } else {
+      floatingBtn.classList.remove('is-visible');
+    }
+  }
+
+  window.addEventListener('scroll', checkFloatingVisibility, { passive: true });
+  checkFloatingVisibility();
+
+  // ==========================================================================
+  // 3. MULTILINGUAL TRANSLATION SYSTEM (FRIENDLY INDONESIAN DEFAULT & ENGLISH)
+  // ==========================================================================
+  const translations = {
+    id: {
+      brand_tag: "Work Freely · Travel Mindfully",
+      nav_pathways: "Mulai WFA",
+      nav_destinations: "Destinasi",
+      nav_tools: "WFA Tools",
+      nav_community: "Komunitas",
+      nav_story: "Ceritaku",
+      drawer_start: "Mulai Perjalanan WFA Kamu →",
+
+      hero_eyebrow: "Anggun Febby · Remote Career & WFA Lifestyle",
+      hero_title: "Work Freely.<br><span>Travel Mindfully.</span>",
+      hero_sub: "Bangun karier & penghasilan yang bisa kamu bawa ke mana pun di dunia.",
+      hero_cta_primary: "Mulai Perjalanan WFA Kamu",
+      hero_cta_secondary: "Tentang Aku",
+      hero_badge_1: "Dari Indonesia untuk dunia",
+      hero_badge_2: "Di mana pun ada kopi enak & WiFi kencang",
+
+      pathways_eyebrow: "LANGKAH AWAL",
+      pathways_title: "Mulai Perjalanan WFA Kamu",
+      pathways_sub: "Aku siap bantu kamu ngebangun karier remote dan penghasilan yang bisa kamu bawa ke mana pun. Pilih langkah awalmu di bawah:",
+      path_1_badge: "⚡ Update Tiap Minggu",
+      path_1_desc: "Dapetin info lowongan kerja remote terkurasi dari perusahaan global setiap minggu.",
+      path_1_btn: "Cari Lowongan Remote",
+      path_2_badge: "🤝 Project & Media",
+      path_2_desc: "Yuk kolaborasi bareng buat project digital, campaign brand, ataupun partnership seru.",
+      path_2_btn: "Ngobrol di WhatsApp",
+      path_3_badge: "🚀 Skill & Mindset",
+      path_3_desc: "Upgrade skill kamu, bangun mindset yang tepat, dan mulai transisi ke remote work dengan percaya diri.",
+      path_3_btn: "Eksplor Sekolah WFA",
+
+      dest_eyebrow: "DIREKTORI DESTINASI",
+      dest_title: "Mau Kerja Dari<br><em>Mana Hari Ini?</em>",
+      dest_sub: "Eksplor kota & negara favoritku buat kerja remote—udah dicek langsung koneksi internet, biaya hidup, kemudahan visa, dan komunitasnya.",
+      dest_search_placeholder: "Cari negara, kota, atau rekomendasi...",
+      dest_popular_label: "Populer:",
+      dest_chip_all: "Semua Destinasi",
+      dest_bridge_title: "Butuh panduan destinasi lainnya?",
+      dest_bridge_desc: "Aku rutin sharing panduan kota baru, kafe ramah nomad, dan info visa di komunitas.",
+      dest_bridge_btn: "Tanya di Komunitas →",
+
+      tools_eyebrow: "✦ TOOLKIT PRIBADI AKU",
+      tools_badge: "⭐ Teruji & Dipakai Langsung oleh Anggun",
+      tools_sub: "Semua panduan dan template di sini adalah hal nyata yang aku pakai sendiri selama kerja keliling dunia.",
+      tools_cta: "Lihat Koleksi WFA Tools",
+
+      comm_title: "Mau kenalan & networking bareng sesama remote worker?",
+      comm_sub: "Tanya jawab seputar WFA, cari teman traveling bareng, dan saling semangatin di grup WhatsApp.",
+      comm_btn: "Gabung Komunitas di WhatsApp",
+
+      stories_eyebrow: "KESEHARIAN NYATA",
+      stories_title: "Keseharian & Cerita di Balik Layar",
+      stories_sub: "Momen seru dari bandara, kafe, kereta, sampai pemandangan indah di berbagai belahan dunia.",
+      stories_follow: "Ikuti Perjalananku @anggunfebby.s",
+
+      connect_eyebrow: "YUK TERHUBUNG ✦",
+      connect_title: "Yuk Terhubung Bareng Aku",
+      connect_sub: "Temukan aku di berbagai platform buat tips kerja remote, daily vlog, dan cerita seru keliling dunia:",
+      connect_ig_desc: "Sharing, Tips & Dokumentasi Momen",
+      connect_ig_btn: "Follow di Instagram",
+      connect_tt_desc: "Konten Santai & Behind the Scenes",
+      connect_tt_btn: "Nonton di TikTok",
+      connect_yt_desc: "Dokumentasi & Vlog Keliling Dunia",
+      connect_yt_btn: "Subscribe di YouTube",
+      touch_title: "Ada pertanyaan, tawaran kolaborasi, atau sekadar mau say hi?",
+      touch_desc: "Aku selalu baca DM! Langsung kirim pesan ke Instagram aku yaa.",
+      touch_btn: "Kirim DM Instagram",
+
+      turn_eyebrow: "GILIRAN KAMU",
+      turn_title: "Kamu Juga <em>Bisa.</em>",
+      turn_copy: "Karena impian kamu bukan cuma sekadar angan-angan.",
+      turn_btn: "Mulai Perjalanan WFA Kamu",
+      back_to_top: "Kembali ke atas",
+
+      floating_full: "Gabung Komunitas 💬",
+      floating_short: "Join",
+      modal_btn: "Lihat WFA Tools Buat Traveling"
+    },
+    en: {
+      brand_tag: "Work Freely · Travel Mindfully",
+      nav_pathways: "Pathways",
+      nav_destinations: "Destinations",
+      nav_tools: "WFA Tools",
+      nav_community: "Community",
+      nav_story: "About Me",
+      drawer_start: "Start Your WFA Journey →",
+
+      hero_eyebrow: "Anggun Febby · Remote Career & WFA Lifestyle",
+      hero_title: "Work Freely.<br><span>Travel Mindfully.</span>",
+      hero_sub: "Build a career & income you can take anywhere in the world.",
+      hero_cta_primary: "Start Your WFA Journey",
+      hero_cta_secondary: "About Me",
+      hero_badge_1: "From Indonesia to the world",
+      hero_badge_2: "Wherever there's good coffee & wifi",
+
+      pathways_eyebrow: "START HERE",
+      pathways_title: "Start Your WFA Journey",
+      pathways_sub: "I'm here to help you build a career, income, and lifestyle you can take anywhere. Choose your path below:",
+      path_1_badge: "⚡ Curated Weekly",
+      path_1_desc: "Get curated remote job openings from global companies every week.",
+      path_1_btn: "Find Remote Jobs",
+      path_2_badge: "🤝 Projects & Media",
+      path_2_desc: "Let's work together to create digital projects, brand campaigns, and partnerships.",
+      path_2_btn: "Chat with Me on WhatsApp",
+      path_3_badge: "🚀 Skills & Mindset",
+      path_3_desc: "Upgrade your skills, build the right mindset, and transition to remote work with confidence.",
+      path_3_btn: "Explore Sekolah WFA",
+
+      dest_eyebrow: "DESTINATION DIRECTORY",
+      dest_title: "Where Do You Want<br><em>to Work From?</em>",
+      dest_sub: "Explore my favorite nomad destinations across the world—tested for reliable internet, living costs, visa ease, and remote community.",
+      dest_search_placeholder: "Search country or city (e.g. Bali, Tokyo)...",
+      dest_popular_label: "Popular:",
+      dest_chip_all: "All Destinations",
+      dest_bridge_title: "Need detailed guides for another destination?",
+      dest_bridge_desc: "I regularly share fresh city guides, nomad cafes, and visa updates in the community.",
+      dest_bridge_btn: "Ask in Community →",
+
+      tools_eyebrow: "✦ MY PERSONAL TOOLKIT",
+      tools_badge: "⭐ Tested & Curated by Anggun",
+      tools_sub: "Every single guide here is what actually works for me while living and working on the road.",
+      tools_cta: "Explore My WFA Tools",
+
+      comm_title: "Ready to connect with fellow remote workers?",
+      comm_sub: "Share daily questions, find travel buddies, and get motivated together in our WhatsApp group.",
+      comm_btn: "Join the Community on WhatsApp",
+
+      stories_eyebrow: "REAL GLIMPSES",
+      stories_title: "Life in Motion & Travel Moments",
+      stories_sub: "Real snippets from airports, cafes, trains, and viewpoints across the world.",
+      stories_follow: "Follow My Daily Journey @anggunfebby.s",
+
+      connect_eyebrow: "LET'S CONNECT ✦",
+      connect_title: "Follow My Journey & Say Hello",
+      connect_sub: "From daily tips and behind-the-scenes moments to travel vlogs around the world, here is where you can find me:",
+      connect_ig_desc: "Sharing, Tips & Daily Moments",
+      connect_ig_btn: "Follow on Instagram",
+      connect_tt_desc: "Entertain Content & Behind the Scenes",
+      connect_tt_btn: "Watch on TikTok",
+      connect_yt_desc: "Documenting & World Vlogs",
+      connect_yt_btn: "Subscribe on YouTube",
+      touch_title: "Have a question, collaboration idea, or just want to say hi?",
+      touch_desc: "I read all my direct messages! Send me a DM on Instagram anytime.",
+      touch_btn: "Send a Direct Message",
+
+      turn_eyebrow: "YOUR TURN",
+      turn_title: "You Can Do It <em>Too.</em>",
+      turn_copy: "Because your dream isn't just wishful thinking.",
+      turn_btn: "Start Your WFA Journey",
+      back_to_top: "Back to top",
+
+      floating_full: "Join Community 💬",
+      floating_short: "Join",
+      modal_btn: "Explore WFA Tools For Traveling"
+    }
+  };
+
+  let currentLang = localStorage.getItem('anggun_lang') || 'id';
+
+  function applyLanguage(lang) {
+    currentLang = lang;
+    localStorage.setItem('anggun_lang', lang);
+    document.documentElement.setAttribute('lang', lang);
+
+    // Update switcher elements state
+    document.querySelectorAll('.lang-switch').forEach(function (sw) {
+      sw.setAttribute('data-active', lang);
+    });
+
+    document.querySelectorAll('.lang-btn').forEach(function (btn) {
+      const btnLang = btn.getAttribute('data-lang');
+      const isActive = btnLang === lang;
+      btn.classList.toggle('active', isActive);
+      btn.setAttribute('aria-checked', isActive ? 'true' : 'false');
+    });
+
+    // Update all text nodes with data-i18n
+    const dict = translations[lang] || translations.id;
+    document.querySelectorAll('[data-i18n]').forEach(function (el) {
+      const key = el.getAttribute('data-i18n');
+      if (dict[key]) {
+        if (dict[key].includes('<') && dict[key].includes('>')) {
+          el.innerHTML = dict[key];
+        } else {
+          el.textContent = dict[key];
+        }
+      }
+    });
+
+    // Update placeholders
+    document.querySelectorAll('[data-i18n-placeholder]').forEach(function (el) {
+      const key = el.getAttribute('data-i18n-placeholder');
+      if (dict[key]) {
+        el.setAttribute('placeholder', dict[key]);
+      }
+    });
+  }
+
+  // Attach click listeners to language toggle buttons
+  document.querySelectorAll('.lang-btn').forEach(function (btn) {
+    btn.addEventListener('click', function (e) {
+      e.preventDefault();
+      const targetLang = btn.getAttribute('data-lang');
+      if (targetLang && targetLang !== currentLang) {
+        applyLanguage(targetLang);
+      }
+    });
+  });
+
+  // Apply initial language (Default: Bahasa Indonesia)
+  applyLanguage(currentLang);
+
+  // ==========================================================================
+  // 4. INITIALIZE AOS SMOOTH MOTION ANIMATIONS
+  // ==========================================================================
   if (typeof AOS !== 'undefined') {
     AOS.init({
       duration: 800,
@@ -17,7 +286,9 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  // 2. Reading Progress Bar on Scroll
+  // ==========================================================================
+  // 5. READING PROGRESS BAR ON SCROLL
+  // ==========================================================================
   const progressBar = document.getElementById('reading-progress');
   window.addEventListener('scroll', function () {
     const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
@@ -27,7 +298,9 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }, { passive: true });
 
-  // 3. Floating Navbar Scroll State
+  // ==========================================================================
+  // 6. FLOATING NAVBAR SCROLL STATE
+  // ==========================================================================
   const navWrap = document.querySelector('.nav-wrap');
   window.addEventListener('scroll', function () {
     if (window.scrollY > 40) {
@@ -37,7 +310,9 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }, { passive: true });
 
-  // 4. Mobile Navigation Drawer Toggle
+  // ==========================================================================
+  // 7. MOBILE NAVIGATION DRAWER TOGGLE
+  // ==========================================================================
   const mobileToggle = document.querySelector('.mobile-toggle');
   const mobileDrawer = document.querySelector('.mobile-drawer');
   if (mobileToggle && mobileDrawer) {
@@ -52,7 +327,9 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  // 5. Back to Top Button Smooth Scroll
+  // ==========================================================================
+  // 8. BACK TO TOP BUTTON SMOOTH SCROLL
+  // ==========================================================================
   const backToTop = document.getElementById('back-to-top');
   if (backToTop) {
     backToTop.addEventListener('click', function (e) {
@@ -64,7 +341,9 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  // 6. 3D Card Tilt Effect on Mouse Move
+  // ==========================================================================
+  // 9. 3D CARD TILT EFFECT ON MOUSE MOVE
+  // ==========================================================================
   const tiltCards = document.querySelectorAll('.path-card, .dest-card, .tools-bento, .story-card');
   tiltCards.forEach(function (card) {
     card.addEventListener('mousemove', function (e) {
@@ -86,7 +365,9 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-  // 7. Destination Search & Filter Chips
+  // ==========================================================================
+  // 10. DESTINATION SEARCH & FILTER CHIPS
+  // ==========================================================================
   const destSearchInput = document.getElementById('dest-search-box');
   const destSearchClear = document.getElementById('dest-search-clear');
   const destChips = document.querySelectorAll('.dest-chip');
@@ -139,55 +420,105 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  // 8. Destination Quick Guide Modal Data & Interactions
+  // ==========================================================================
+  // 11. DESTINATION QUICK GUIDE MODAL DATA & LOCALIZED METRICS
+  // ==========================================================================
   const destinationData = {
     bali: {
       title: 'Bali',
-      country: 'Indonesia',
+      country: { id: 'Indonesia', en: 'Indonesia' },
       flag: 'https://flagcdn.com/w40/id.png',
       photo: 'assets/bali.webp',
-      score: '⭐ 8.5 / 10 Nomad Score',
+      score: { id: '⭐ 8.5 / 10 Skor Nomad', en: '⭐ 8.5 / 10 Nomad Score' },
       cost: '$600 – $1,200 / mo',
-      wifi: '85+ Mbps · Super fast in Canggu & Ubud coworking spaces',
-      visa: 'Easy (B211A Visit Visa / Remote Worker E33G)',
-      spots: 'Canggu, Ubud, Pererenan & Uluwatu specialty cafes',
-      tip: 'Stay near Batu Bolong for easy cafe hops, and choose a villa with verified generator backup for rainy days!'
+      wifi: {
+        id: '85+ Mbps · Cepat & stabil di kafe serta coworking Canggu & Ubud',
+        en: '85+ Mbps · Super fast in Canggu & Ubud coworking spaces'
+      },
+      visa: {
+        id: 'Mudah (B211A Visit Visa / Remote Worker E33G)',
+        en: 'Easy (B211A Visit Visa / Remote Worker E33G)'
+      },
+      spots: {
+        id: 'Kafe spesialis di Canggu, Ubud, Pererenan & Uluwatu',
+        en: 'Canggu, Ubud, Pererenan & Uluwatu specialty cafes'
+      },
+      tip: {
+        id: 'Pilih tempat tinggal dekat Batu Bolong biar gampang cafe hopping, dan pastikan vila punya genset cadangan!',
+        en: 'Stay near Batu Bolong for easy cafe hops, and choose a villa with verified generator backup for rainy days!'
+      }
     },
     tokyo: {
       title: 'Tokyo',
-      country: 'Japan',
+      country: { id: 'Jepang', en: 'Japan' },
       flag: 'https://flagcdn.com/w40/jp.png',
       photo: 'assets/tokyo.webp',
-      score: '⭐ 9.0 / 10 Nomad Score',
+      score: { id: '⭐ 9.0 / 10 Skor Nomad', en: '⭐ 9.0 / 10 Nomad Score' },
       cost: '$1,200 – $2,000 / mo',
-      wifi: '150+ Mbps · Ultra high-speed fiber everywhere',
-      visa: 'Digital Nomad Visa (6 Months) or 90-day Tourist',
-      spots: 'Shibuya coworking spaces, Daikanyama & Kichijoji',
-      tip: 'Tokyo’s safety and quiet transport are unmatched. Rent a Pocket Wi-Fi and explore work-friendly kissaten cafes!'
+      wifi: {
+        id: '150+ Mbps · Fiber optic super cepat di mana aja',
+        en: '150+ Mbps · Ultra high-speed fiber everywhere'
+      },
+      visa: {
+        id: 'Digital Nomad Visa (6 Bulan) atau Bebas Visa / Turis 90 Hari',
+        en: 'Digital Nomad Visa (6 Months) or 90-day Tourist'
+      },
+      spots: {
+        id: 'Coworking space di Shibuya, kafe Daikanyama & Kichijoji',
+        en: 'Shibuya coworking spaces, Daikanyama & Kichijoji'
+      },
+      tip: {
+        id: 'Kota paling aman dan transportasinya super tenang. Sewa Pocket Wi-Fi dan coba sensasi kerja di kissaten tradisional!',
+        en: 'Tokyo’s safety and quiet transport are unmatched. Rent a Pocket Wi-Fi and explore work-friendly kissaten cafes!'
+      }
     },
     'new york': {
       title: 'New York',
-      country: 'United States',
+      country: { id: 'Amerika Serikat', en: 'United States' },
       flag: 'https://flagcdn.com/w40/us.png',
       photo: 'assets/new_york.webp',
-      score: '⭐ 8.5 / 10 Nomad Score',
+      score: { id: '⭐ 8.5 / 10 Skor Nomad', en: '⭐ 8.5 / 10 Nomad Score' },
       cost: '$2,500+ / mo',
-      wifi: '120+ Mbps · Readily available in coffee shops & libraries',
-      visa: 'ESTA Visa Waiver or B1/B2 Visitor Visa',
-      spots: 'Brooklyn Public Library, DUMBO & Flatiron cafes',
-      tip: 'Endless creative energy! Work from coffee shops in Williamsburg or DUMBO for inspiring skyline views.'
+      wifi: {
+        id: '120+ Mbps · Tersedia gratis di coffee shop & perpustakaan kota',
+        en: '120+ Mbps · Readily available in coffee shops & libraries'
+      },
+      visa: {
+        id: 'ESTA Visa Waiver atau Visa Turis B1/B2',
+        en: 'ESTA Visa Waiver or B1/B2 Visitor Visa'
+      },
+      spots: {
+        id: 'Brooklyn Public Library, kafe di DUMBO & Flatiron',
+        en: 'Brooklyn Public Library, DUMBO & Flatiron cafes'
+      },
+      tip: {
+        id: 'Energi kreatifnya luar biasa! Kerja dari kafe di Williamsburg atau DUMBO sambil nikmatin pemandangan skyline Manhattan.',
+        en: 'Endless creative energy! Work from coffee shops in Williamsburg or DUMBO for inspiring skyline views.'
+      }
     },
     'new zealand': {
       title: 'New Zealand',
-      country: 'New Zealand',
+      country: { id: 'Selandia Baru', en: 'New Zealand' },
       flag: 'https://flagcdn.com/w40/nz.png',
       photo: 'assets/new_zealand.webp',
-      score: '⭐ 9.0 / 10 Nomad Score',
+      score: { id: '⭐ 9.0 / 10 Skor Nomad', en: '⭐ 9.0 / 10 Nomad Score' },
       cost: '$1,200 – $2,000 / mo',
-      wifi: '100+ Mbps · Fast nationwide fiber network',
-      visa: 'Working Holiday Visa or NZeTA Visitor Visa',
-      spots: 'Queenstown lakefront cafes & Auckland shared spaces',
-      tip: 'If you love nature, work early morning overlooking Lake Wakatipu, then spend afternoons hiking or skiing!'
+      wifi: {
+        id: '100+ Mbps · Jaringan fiber optic cepat nasional',
+        en: '100+ Mbps · Fast nationwide fiber network'
+      },
+      visa: {
+        id: 'Working Holiday Visa atau NZeTA Visitor Visa',
+        en: 'Working Holiday Visa or NZeTA Visitor Visa'
+      },
+      spots: {
+        id: 'Kafe pinggir Danau Wakatipu di Queenstown & ruang kerja bersama di Auckland',
+        en: 'Queenstown lakefront cafes & Auckland shared spaces'
+      },
+      tip: {
+        id: 'Buat pecinta alam: kerja pagi sambil mandang Danau Wakatipu, lalu sorenya hiking santai atau main ski!',
+        en: 'If you love nature, work early morning overlooking Lake Wakatipu, then spend afternoons hiking or skiing!'
+      }
     }
   };
 
@@ -208,16 +539,18 @@ document.addEventListener('DOMContentLoaded', function () {
     const data = destinationData[cityKey];
     if (!data || !destModalBackdrop) return;
 
+    const lang = currentLang || 'id';
+
     if (destModalImg) destModalImg.src = data.photo;
-    if (destModalScore) destModalScore.textContent = data.score;
+    if (destModalScore) destModalScore.textContent = typeof data.score === 'object' ? (data.score[lang] || data.score.id) : data.score;
     if (destModalTitle) destModalTitle.textContent = data.title;
     if (destModalFlag) destModalFlag.src = data.flag;
-    if (destModalCountryName) destModalCountryName.textContent = data.country;
+    if (destModalCountryName) destModalCountryName.textContent = typeof data.country === 'object' ? (data.country[lang] || data.country.id) : data.country;
     if (destModalCost) destModalCost.textContent = data.cost;
-    if (destModalWifi) destModalWifi.textContent = data.wifi;
-    if (destModalVisa) destModalVisa.textContent = data.visa;
-    if (destModalSpots) destModalSpots.textContent = data.spots;
-    if (destModalTip) destModalTip.textContent = data.tip;
+    if (destModalWifi) destModalWifi.textContent = typeof data.wifi === 'object' ? (data.wifi[lang] || data.wifi.id) : data.wifi;
+    if (destModalVisa) destModalVisa.textContent = typeof data.visa === 'object' ? (data.visa[lang] || data.visa.id) : data.visa;
+    if (destModalSpots) destModalSpots.textContent = typeof data.spots === 'object' ? (data.spots[lang] || data.spots.id) : data.spots;
+    if (destModalTip) destModalTip.textContent = typeof data.tip === 'object' ? (data.tip[lang] || data.tip.id) : data.tip;
 
     destModalBackdrop.classList.add('active');
     destModalBackdrop.setAttribute('aria-hidden', 'false');
@@ -232,7 +565,7 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   destCards.forEach(function (card) {
-    card.addEventListener('click', function (e) {
+    card.addEventListener('click', function () {
       const cityKey = card.getAttribute('data-city');
       if (cityKey) openDestModal(cityKey);
     });
@@ -262,7 +595,9 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 
-  // 9. Video Reels Player (AUTO SOUND ON CLICK PLAY, MUTE ON PAUSE)
+  // ==========================================================================
+  // 12. VIDEO REELS PLAYER (AUTO SOUND ON CLICK PLAY, MUTE ON PAUSE)
+  // ==========================================================================
   const storyCards = document.querySelectorAll('.story-card');
   storyCards.forEach(function (card) {
     const video = card.querySelector('.story-video');
@@ -273,7 +608,6 @@ document.addEventListener('DOMContentLoaded', function () {
       if (e.target.closest('.ig-badge')) return;
 
       if (video.paused) {
-        // Pause and mute other playing videos first
         document.querySelectorAll('.story-video').forEach(function (other) {
           if (other !== video) {
             other.pause();
@@ -287,7 +621,6 @@ document.addEventListener('DOMContentLoaded', function () {
           }
         });
 
-        // Auto-unmute and play with sound
         video.muted = false;
         video.play().then(function () {
           card.classList.add('is-playing');
@@ -299,7 +632,6 @@ document.addEventListener('DOMContentLoaded', function () {
           card.classList.add('is-playing');
         });
       } else {
-        // Pause video & mute
         video.pause();
         video.muted = true;
         card.classList.remove('is-playing');
