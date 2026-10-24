@@ -262,11 +262,10 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 
-  // 9. Video Reels Player (AUTO SOUND ON CLICK PLAY, MUTE ON PAUSE, EQUALIZER ANIMATION)
+  // 9. Video Reels Player (AUTO SOUND ON CLICK PLAY, MUTE ON PAUSE)
   const storyCards = document.querySelectorAll('.story-card');
   storyCards.forEach(function (card) {
     const video = card.querySelector('.story-video');
-    const soundStatus = card.querySelector('.sound-toggle-status');
     const soundHint = card.querySelector('.story-sound-hint');
     if (!video) return;
 
@@ -282,9 +281,7 @@ document.addEventListener('DOMContentLoaded', function () {
             const otherCard = other.closest('.story-card');
             if (otherCard) {
               otherCard.classList.remove('is-playing');
-              const oStatus = otherCard.querySelector('.sound-toggle-status');
               const oHint = otherCard.querySelector('.story-sound-hint');
-              if (oStatus) oStatus.textContent = 'Audio On Click';
               if (oHint) oHint.textContent = '▶ Click to play with sound';
             }
           }
@@ -294,7 +291,6 @@ document.addEventListener('DOMContentLoaded', function () {
         video.muted = false;
         video.play().then(function () {
           card.classList.add('is-playing');
-          if (soundStatus) soundStatus.textContent = '🔊 Audio Playing';
           if (soundHint) soundHint.textContent = '❚❚ Click to pause';
         }).catch(function (err) {
           console.warn('Audio play restricted, trying muted:', err);
@@ -307,7 +303,6 @@ document.addEventListener('DOMContentLoaded', function () {
         video.pause();
         video.muted = true;
         card.classList.remove('is-playing');
-        if (soundStatus) soundStatus.textContent = 'Audio On Click';
         if (soundHint) soundHint.textContent = '▶ Click to play with sound';
       }
     });
@@ -315,7 +310,6 @@ document.addEventListener('DOMContentLoaded', function () {
     video.addEventListener('ended', function () {
       video.muted = true;
       card.classList.remove('is-playing');
-      if (soundStatus) soundStatus.textContent = 'Audio On Click';
       if (soundHint) soundHint.textContent = '▶ Click to play with sound';
     });
   });
