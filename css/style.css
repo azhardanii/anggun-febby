@@ -334,11 +334,11 @@ img, video {
   transform: scale(1.02);
 }
 
-/* Sunlit Warm Gradients — ZERO DARK OVERLAYS */
+/* Sunlit Warm Gradients — Ultra-Sheer so Video Background is 100% Visible */
 .hero-overlay-warm {
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, rgba(254, 255, 205, 0.52) 0%, rgba(252, 255, 220, 0.35) 48%, rgba(254, 255, 205, 0.65) 100%);
+  background: linear-gradient(135deg, rgba(254, 255, 205, 0.22) 0%, rgba(252, 255, 220, 0.08) 48%, rgba(254, 255, 205, 0.26) 100%);
   z-index: 2;
   pointer-events: none;
 }
@@ -346,7 +346,7 @@ img, video {
 .hero-overlay-sunlight {
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at 75% 30%, rgba(252, 255, 84, 0.22) 0%, rgba(254, 255, 205, 0.35) 60%, rgba(254, 255, 205, 0.65) 100%);
+  background: radial-gradient(circle at 75% 30%, rgba(252, 255, 84, 0.16) 0%, transparent 65%);
   z-index: 3;
   pointer-events: none;
   animation: sunBreath 8s ease-in-out infinite alternate;
@@ -362,8 +362,8 @@ img, video {
   bottom: 0;
   left: 0;
   right: 0;
-  height: 170px;
-  background: linear-gradient(to bottom, transparent 0%, rgba(254, 255, 205, 0.65) 55%, var(--cream) 100%);
+  height: 130px;
+  background: linear-gradient(to bottom, transparent 0%, rgba(254, 255, 205, 0.45) 55%, var(--cream) 100%);
   z-index: 4;
   pointer-events: none;
 }
@@ -378,17 +378,17 @@ img, video {
   justify-content: center;
 }
 
-/* Frosted Glass Editorial Showcase Card */
+/* Ultra-Sheer Frosted Glass Showcase Card (Video Remains Fully Visible!) */
 .hero-content {
   max-width: 760px;
   position: relative;
-  padding: 44px 48px;
-  background: rgba(255, 255, 255, 0.86);
-  backdrop-filter: blur(24px) saturate(180%);
-  -webkit-backdrop-filter: blur(24px) saturate(180%);
-  border: 1.5px solid rgba(227, 230, 172, 0.9);
+  padding: 38px 44px;
+  background: rgba(255, 255, 255, 0.24);
+  backdrop-filter: blur(8px) saturate(135%);
+  -webkit-backdrop-filter: blur(8px) saturate(135%);
+  border: 1.5px solid rgba(255, 255, 255, 0.55);
   border-radius: 32px;
-  box-shadow: var(--shadow-glass);
+  box-shadow: 0 16px 45px rgba(23, 50, 49, 0.06);
 }
 
 .eyebrow {
@@ -396,15 +396,16 @@ img, video {
   align-items: center;
   gap: 8px;
   font-size: 0.78rem;
-  font-weight: 700;
+  font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 0.08em;
   color: var(--forest);
   margin-bottom: 20px;
-  background: var(--white);
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(8px);
   padding: 6px 16px;
   border-radius: 999px;
-  border: 1.5px solid var(--line);
+  border: 1.5px solid rgba(227, 230, 172, 0.85);
   box-shadow: var(--shadow-subtle);
 }
 
@@ -421,25 +422,27 @@ img, video {
   50% { transform: scale(1.35); opacity: 1; }
 }
 
-/* Kinetic Shimmer Typography */
+/* Kinetic Shimmer Typography with Contrast Halo for High Video Legibility */
 .hero-title {
   font-family: var(--font-serif);
   font-size: clamp(2.8rem, 5.5vw, 4.8rem);
-  font-weight: 600;
+  font-weight: 700;
   line-height: 1.08;
   letter-spacing: -0.025em;
   color: var(--ink);
   margin-bottom: 18px;
+  text-shadow: 0 2px 16px rgba(254, 255, 205, 0.9), 0 1px 3px rgba(255, 255, 255, 0.95);
 }
 
 .hero-title span {
   display: block;
-  font-weight: 700;
+  font-weight: 800;
   background: linear-gradient(120deg, var(--forest) 0%, #173231 35%, var(--forest-light) 65%, var(--forest) 100%);
   background-size: 200% auto;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: textShimmer 6s linear infinite;
+  filter: drop-shadow(0 1px 1px rgba(255, 255, 255, 0.9));
 }
 
 @keyframes textShimmer {
@@ -452,7 +455,8 @@ img, video {
   color: var(--ink);
   max-width: 620px;
   margin-bottom: 32px;
-  font-weight: 500;
+  font-weight: 600;
+  text-shadow: 0 1px 12px rgba(254, 255, 205, 0.95), 0 1px 2px rgba(255, 255, 255, 0.9);
 }
 
 .hero-actions {
