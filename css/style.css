@@ -334,11 +334,11 @@ img, video {
   transform: scale(1.02);
 }
 
-/* Sunlit Warm Gradients — Ultra-Sheer so Video Background is 100% Visible */
+/* Sunlit Warm Gradients — Directional left feathering so right side video is 100% clear */
 .hero-overlay-warm {
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, rgba(254, 255, 205, 0.22) 0%, rgba(252, 255, 220, 0.08) 48%, rgba(254, 255, 205, 0.26) 100%);
+  background: linear-gradient(90deg, rgba(254, 255, 205, 0.52) 0%, rgba(254, 255, 205, 0.28) 45%, rgba(254, 255, 205, 0.04) 75%, transparent 100%);
   z-index: 2;
   pointer-events: none;
 }
@@ -378,17 +378,17 @@ img, video {
   justify-content: center;
 }
 
-/* Ultra-Sheer Frosted Glass Showcase Card (Video Remains Fully Visible!) */
+/* Unboxed Hero Content — Frameless & Open so Background Video is 100% Visible & Unobstructed */
 .hero-content {
-  max-width: 760px;
+  max-width: 650px;
   position: relative;
-  padding: 38px 44px;
-  background: rgba(255, 255, 255, 0.24);
-  backdrop-filter: blur(8px) saturate(135%);
-  -webkit-backdrop-filter: blur(8px) saturate(135%);
-  border: 1.5px solid rgba(255, 255, 255, 0.55);
-  border-radius: 32px;
-  box-shadow: 0 16px 45px rgba(23, 50, 49, 0.06);
+  padding: 0;
+  background: transparent;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
 }
 
 .eyebrow {
@@ -517,22 +517,25 @@ img, video {
   align-items: center;
   gap: 12px;
   flex-wrap: wrap;
-  padding-top: 18px;
-  border-top: 1px solid var(--line);
+  margin-top: 26px;
+  padding-top: 0;
+  border-top: none;
 }
 
 .hero-badge-item {
   display: inline-flex;
   align-items: center;
   gap: 7px;
-  background: var(--cream-warm);
-  border: 1.5px solid var(--line);
-  padding: 7px 15px;
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1.2px solid rgba(23, 50, 49, 0.12);
+  padding: 8px 18px;
   border-radius: 999px;
-  font-size: 0.82rem;
+  font-size: 0.84rem;
   font-weight: 700;
   color: var(--ink);
-  box-shadow: var(--shadow-subtle);
+  box-shadow: 0 4px 14px rgba(23, 50, 49, 0.05);
   animation: floatBadge 4s ease-in-out infinite alternate;
 }
 
@@ -2119,8 +2122,14 @@ img, video {
   }
 
   .hero-content {
-    padding: 30px 24px;
-    border-radius: 24px;
+    padding: 0;
+    border-radius: 0;
+    background: transparent;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    border: none;
+    box-shadow: none;
+    max-width: 100%;
   }
 
   .dest-cards-grid {
