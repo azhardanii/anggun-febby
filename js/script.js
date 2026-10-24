@@ -1,6 +1,7 @@
 /**
  * ANGGUN FEBBY — SIGNATURE INTERACTION & MOTION SCRIPTS
- * Auto-unmute reels, 3D Tilt, Live Destination Filter, Smooth Navigation
+ * Reading progress, Auto-unmute reels, Audio Equalizer wave, 
+ * Destination Live Filter & Quick Guide Modal, Smooth Navigation
  */
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -16,7 +17,17 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  // 2. Floating Navbar Scroll State
+  // 2. Reading Progress Bar on Scroll
+  const progressBar = document.getElementById('reading-progress');
+  window.addEventListener('scroll', function () {
+    const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
+    if (totalHeight > 0 && progressBar) {
+      const progress = (window.scrollY / totalHeight) * 100;
+      progressBar.style.width = `${progress}%`;
+    }
+  }, { passive: true });
+
+  // 3. Floating Navbar Scroll State
   const navWrap = document.querySelector('.nav-wrap');
   window.addEventListener('scroll', function () {
     if (window.scrollY > 40) {
@@ -26,7 +37,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }, { passive: true });
 
-  // 3. Mobile Navigation Drawer Toggle
+  // 4. Mobile Navigation Drawer Toggle
   const mobileToggle = document.querySelector('.mobile-toggle');
   const mobileDrawer = document.querySelector('.mobile-drawer');
   if (mobileToggle && mobileDrawer) {
@@ -41,7 +52,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  // 4. Back to Top Button Smooth Scroll
+  // 5. Back to Top Button Smooth Scroll
   const backToTop = document.getElementById('back-to-top');
   if (backToTop) {
     backToTop.addEventListener('click', function (e) {
@@ -53,8 +64,8 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  // 5. 3D Card Tilt Effect on Mouse Move
-  const tiltCards = document.querySelectorAll('.path-card, .dest-card, .tools-bento, .lynkid-bento, .database-bento');
+  // 6. 3D Card Tilt Effect on Mouse Move
+  const tiltCards = document.querySelectorAll('.path-card, .dest-card, .tools-bento, .story-card');
   tiltCards.forEach(function (card) {
     card.addEventListener('mousemove', function (e) {
       if (window.innerWidth < 1024) return;
@@ -67,7 +78,7 @@ document.addEventListener('DOMContentLoaded', function () {
       const rotateX = ((y - centerY) / centerY) * -4;
       const rotateY = ((x - centerX) / centerX) * 4;
 
-      card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-5px)`;
+      card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-6px)`;
     });
 
     card.addEventListener('mouseleave', function () {
@@ -75,14 +86,19 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-  // 6. Destination Search & Popular Filter Chips
+  // 7. Destination Search & Filter Chips
   const destSearchInput = document.getElementById('dest-search-box');
+  const destSearchClear = document.getElementById('dest-search-clear');
   const destChips = document.querySelectorAll('.dest-chip');
   const destCards = document.querySelectorAll('.dest-card');
 
   function filterDestCards() {
     const activeChip = document.querySelector('.dest-chip.active')?.getAttribute('data-filter') || 'all';
     const query = (destSearchInput?.value || '').toLowerCase().trim();
+
+    if (destSearchClear) {
+      destSearchClear.style.display = query.length > 0 ? 'block' : 'none';
+    }
 
     destCards.forEach(function (card) {
       const city = (card.getAttribute('data-city') || '').toLowerCase();
@@ -92,7 +108,7 @@ document.addEventListener('DOMContentLoaded', function () {
       const matchesQuery = !query || text.includes(query);
 
       if (matchesChip && matchesQuery) {
-        card.style.display = 'block';
+        card.style.display = 'flex';
       } else {
         card.style.display = 'none';
       }
@@ -113,7 +129,140 @@ document.addEventListener('DOMContentLoaded', function () {
     destSearchInput.addEventListener('input', filterDestCards);
   }
 
-  // 7. Video Reels Player (AUTO SOUND ON CLICK PLAY, MUTE ON PAUSE)
+  if (destSearchClear) {
+    destSearchClear.addEventListener('click', function () {
+      if (destSearchInput) {
+        destSearchInput.value = '';
+        destSearchInput.focus();
+        filterDestCards();
+      }
+    });
+  }
+
+  // 8. Destination Quick Guide Modal Data & Interactions
+  const destinationData = {
+    bali: {
+      title: 'Bali',
+      country: 'Indonesia',
+      flag: 'https://flagcdn.com/w40/id.png',
+      photo: 'assets/bali.webp',
+      score: '⭐ 8.5 / 10 Nomad Score',
+      cost: '$600 – $1,200 / mo',
+      wifi: '85+ Mbps · Super fast in Canggu & Ubud coworking spaces',
+      visa: 'Easy (B211A Visit Visa / Remote Worker E33G)',
+      spots: 'Canggu, Ubud, Pererenan & Uluwatu specialty cafes',
+      tip: 'Stay near Batu Bolong for easy cafe hops, and choose a villa with verified generator backup for rainy days!'
+    },
+    tokyo: {
+      title: 'Tokyo',
+      country: 'Japan',
+      flag: 'https://flagcdn.com/w40/jp.png',
+      photo: 'assets/tokyo.webp',
+      score: '⭐ 9.0 / 10 Nomad Score',
+      cost: '$1,200 – $2,000 / mo',
+      wifi: '150+ Mbps · Ultra high-speed fiber everywhere',
+      visa: 'Digital Nomad Visa (6 Months) or 90-day Tourist',
+      spots: 'Shibuya coworking spaces, Daikanyama & Kichijoji',
+      tip: 'Tokyo’s safety and quiet transport are unmatched. Rent a Pocket Wi-Fi and explore work-friendly kissaten cafes!'
+    },
+    'new york': {
+      title: 'New York',
+      country: 'United States',
+      flag: 'https://flagcdn.com/w40/us.png',
+      photo: 'assets/new_york.webp',
+      score: '⭐ 8.5 / 10 Nomad Score',
+      cost: '$2,500+ / mo',
+      wifi: '120+ Mbps · Readily available in coffee shops & libraries',
+      visa: 'ESTA Visa Waiver or B1/B2 Visitor Visa',
+      spots: 'Brooklyn Public Library, DUMBO & Flatiron cafes',
+      tip: 'Endless creative energy! Work from coffee shops in Williamsburg or DUMBO for inspiring skyline views.'
+    },
+    'new zealand': {
+      title: 'New Zealand',
+      country: 'New Zealand',
+      flag: 'https://flagcdn.com/w40/nz.png',
+      photo: 'assets/new_zealand.webp',
+      score: '⭐ 9.0 / 10 Nomad Score',
+      cost: '$1,200 – $2,000 / mo',
+      wifi: '100+ Mbps · Fast nationwide fiber network',
+      visa: 'Working Holiday Visa or NZeTA Visitor Visa',
+      spots: 'Queenstown lakefront cafes & Auckland shared spaces',
+      tip: 'If you love nature, work early morning overlooking Lake Wakatipu, then spend afternoons hiking or skiing!'
+    }
+  };
+
+  const destModalBackdrop = document.getElementById('dest-modal-backdrop');
+  const destModalClose = document.getElementById('dest-modal-close');
+  const destModalImg = document.getElementById('dest-modal-img');
+  const destModalScore = document.getElementById('dest-modal-score');
+  const destModalTitle = document.getElementById('dest-modal-title');
+  const destModalFlag = document.getElementById('dest-modal-flag');
+  const destModalCountryName = document.getElementById('dest-modal-country-name');
+  const destModalCost = document.getElementById('dest-modal-cost');
+  const destModalWifi = document.getElementById('dest-modal-wifi');
+  const destModalVisa = document.getElementById('dest-modal-visa');
+  const destModalSpots = document.getElementById('dest-modal-spots');
+  const destModalTip = document.getElementById('dest-modal-tip');
+
+  function openDestModal(cityKey) {
+    const data = destinationData[cityKey];
+    if (!data || !destModalBackdrop) return;
+
+    if (destModalImg) destModalImg.src = data.photo;
+    if (destModalScore) destModalScore.textContent = data.score;
+    if (destModalTitle) destModalTitle.textContent = data.title;
+    if (destModalFlag) destModalFlag.src = data.flag;
+    if (destModalCountryName) destModalCountryName.textContent = data.country;
+    if (destModalCost) destModalCost.textContent = data.cost;
+    if (destModalWifi) destModalWifi.textContent = data.wifi;
+    if (destModalVisa) destModalVisa.textContent = data.visa;
+    if (destModalSpots) destModalSpots.textContent = data.spots;
+    if (destModalTip) destModalTip.textContent = data.tip;
+
+    destModalBackdrop.classList.add('active');
+    destModalBackdrop.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeDestModal() {
+    if (!destModalBackdrop) return;
+    destModalBackdrop.classList.remove('active');
+    destModalBackdrop.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  }
+
+  destCards.forEach(function (card) {
+    card.addEventListener('click', function (e) {
+      const cityKey = card.getAttribute('data-city');
+      if (cityKey) openDestModal(cityKey);
+    });
+
+    card.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        const cityKey = card.getAttribute('data-city');
+        if (cityKey) openDestModal(cityKey);
+      }
+    });
+  });
+
+  if (destModalClose) {
+    destModalClose.addEventListener('click', closeDestModal);
+  }
+
+  if (destModalBackdrop) {
+    destModalBackdrop.addEventListener('click', function (e) {
+      if (e.target === destModalBackdrop) closeDestModal();
+    });
+  }
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && destModalBackdrop?.classList.contains('active')) {
+      closeDestModal();
+    }
+  });
+
+  // 9. Video Reels Player (AUTO SOUND ON CLICK PLAY, MUTE ON PAUSE, EQUALIZER ANIMATION)
   const storyCards = document.querySelectorAll('.story-card');
   storyCards.forEach(function (card) {
     const video = card.querySelector('.story-video');
@@ -148,7 +297,6 @@ document.addEventListener('DOMContentLoaded', function () {
           if (soundStatus) soundStatus.textContent = '🔊 Audio Playing';
           if (soundHint) soundHint.textContent = '❚❚ Click to pause';
         }).catch(function (err) {
-          // If browser policy blocks unmuted autoplay, play muted first
           console.warn('Audio play restricted, trying muted:', err);
           video.muted = true;
           video.play();

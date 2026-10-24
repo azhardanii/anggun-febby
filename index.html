@@ -22,6 +22,9 @@
 </head>
 
 <body>
+  <!-- TOP READING PROGRESS BAR -->
+  <div class="reading-progress-bar" id="reading-progress"></div>
+
   <div class="page">
 
     <!-- FLOATING FROSTED GLASS NAVIGATION -->
@@ -40,12 +43,13 @@
           <li><a class="nav-link" href="#explore">Destinations</a></li>
           <li><a class="nav-link" href="#wfa-tools">WFA Tools</a></li>
           <li><a class="nav-link" href="#community">Community</a></li>
-          <li><a class="nav-link" href="#stories">Her Story</a></li>
+          <li><a class="nav-link" href="#stories">My Story</a></li>
         </ul>
 
         <div class="nav-cta-group">
-          <a class="btn-nav" href="https://chat.whatsapp.com/E3dPReLYer5AoXOJEF1KTr" target="_blank" rel="noopener">
-            <span>Join Community</span>
+          <!-- Distinct Action Button linking to Start Pathways (No duplicate Community button!) -->
+          <a class="btn-nav" href="#pathways">
+            <span>Start Journey</span>
             <span>→</span>
           </a>
           <button class="mobile-toggle" aria-label="Toggle Navigation Menu" type="button">
@@ -63,10 +67,10 @@
       <a href="#explore">Destination Guide</a>
       <a href="#wfa-tools">WFA Tools &amp; Digital Product</a>
       <a href="#community">WFA Community</a>
-      <a href="#stories">Anggun's Story &amp; Reels</a>
-      <a href="https://chat.whatsapp.com/E3dPReLYer5AoXOJEF1KTr" target="_blank" class="btn-nav"
+      <a href="#stories">My Story &amp; Reels</a>
+      <a href="#pathways" class="btn-nav"
         style="justify-content:center; margin-top:10px; padding:13px 20px;">
-        Join WhatsApp Community →
+        Start Your WFA Journey →
       </a>
     </div>
 
@@ -99,25 +103,27 @@
           </p>
 
           <div class="hero-actions">
+            <!-- Retained as requested: "untuk start your wfa journey udah bagus pertahankan kalimat itu" -->
             <a class="btn-hero-primary" href="#pathways">
               <span>Start Your WFA Journey</span>
               <span>→</span>
             </a>
+            <!-- Personalized narrative: "See My Story" instead of "Watch Her Story" -->
             <a class="btn-hero-secondary" href="#stories">
-              <span>Watch Her Story</span>
+              <span>See My Story</span>
               <span>▶</span>
             </a>
           </div>
 
-          <!-- Handwritten Style Floating Badges (From Indonesia to the World & Same Laptop New Views) -->
+          <!-- Handwritten Style Floating Badges (Updated to friendly coffee & wifi tagline) -->
           <div class="hero-badges-row">
             <div class="hero-badge-item">
               <span class="hero-badge-icon">♡</span>
               <span>From Indonesia to the world</span>
             </div>
             <div class="hero-badge-item">
-              <span class="hero-badge-icon">↘</span>
-              <span>Same laptop, new views</span>
+              <span class="hero-badge-icon">☕</span>
+              <span>Wherever there's good coffee &amp; wifi</span>
             </div>
           </div>
         </div>
@@ -139,7 +145,7 @@
             <div class="eyebrow-dark">START HERE</div>
             <h2 class="section-title">Start Your <em>WFA Journey</em></h2>
             <p class="section-subtitle">
-              Here to help you build a career, income, and lifestyle you can take anywhere. Choose your path below:
+              I'm here to help you build a career, income, and lifestyle you can take anywhere. Choose your path below:
             </p>
           </div>
           <div class="head-note" data-aos="fade-left">Choose your path ↘</div>
@@ -179,7 +185,7 @@
               </p>
               <a href="https://wa.me/6285163557107?text=Hi%20Anggun%2C%20I'm%20interested%20in%20collaborating%20with%20you.."
                 target="_blank" rel="noopener" class="path-btn">
-                <span>Chat on WhatsApp</span>
+                <span>Chat with Me on WhatsApp</span>
                 <span>→</span>
               </a>
             </div>
@@ -207,97 +213,159 @@
       </div>
     </section>
 
-    <!-- SECTION 2: DESTINATION GUIDE -->
+    <!-- SECTION 2: DESTINATION GUIDE (COHESIVE BALANCED REDESIGN WITH REAL FLAGS & CLICKABLE CARDS) -->
     <section class="section dest-section" id="explore">
       <div class="container">
-        <div class="dest-grid-layout">
-          <div class="dest-sidebar" data-aos="fade-right">
-            <div class="eyebrow-dark">DESTINATION GUIDE</div>
-            <h2 class="section-title">Where Do You Want<br><em>to Work From?</em></h2>
-            <p class="section-subtitle">
-              Discover great destinations for remote work, complete with living costs, internet speed, visa rules, and local vibes.
-            </p>
+        <!-- Unified Centered Header & Search Console -->
+        <div class="dest-header-block" data-aos="fade-up">
+          <div class="eyebrow-dark">DESTINATION DIRECTORY</div>
+          <h2 class="section-title">Where Do You Want<br><em>to Work From?</em></h2>
+          <p class="section-subtitle">
+            Explore my favorite nomad destinations across the world—tested for reliable internet, living costs, visa ease, and remote community.
+          </p>
 
-            <div class="dest-search-box">
+          <!-- Fully Proportioned Search & Filter Console -->
+          <div class="dest-search-bar-wrap">
+            <div class="dest-search-input-box">
+              <svg class="search-svg-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              </svg>
               <input type="text" class="dest-search-input" id="dest-search-box" placeholder="Search country or city (e.g. Bali, Tokyo)...">
-              <span style="font-size:18px; color:var(--muted);">⌕</span>
+              <button type="button" class="dest-search-clear" id="dest-search-clear" aria-label="Clear Search">✕</button>
             </div>
 
-            <div class="dest-chips">
-              <span style="font-size:0.82rem; font-weight:700; color:var(--muted); margin-right:4px;">Popular:</span>
+            <!-- Real Flag Chips (Clean & Touch-Friendly on Mobile and Desktop) -->
+            <div class="dest-chips-row">
+              <span class="chips-label">Popular:</span>
               <button type="button" class="dest-chip active" data-filter="all">All Destinations</button>
-              <button type="button" class="dest-chip" data-filter="bali">Bali</button>
-              <button type="button" class="dest-chip" data-filter="tokyo">Tokyo</button>
-              <button type="button" class="dest-chip" data-filter="new york">New York</button>
-              <button type="button" class="dest-chip" data-filter="new zealand">New Zealand</button>
+              <button type="button" class="dest-chip" data-filter="bali">
+                <img src="https://flagcdn.com/w40/id.png" srcset="https://flagcdn.com/w80/id.png 2x" width="16" height="11" alt="ID" class="chip-flag">
+                <span>Bali</span>
+              </button>
+              <button type="button" class="dest-chip" data-filter="tokyo">
+                <img src="https://flagcdn.com/w40/jp.png" srcset="https://flagcdn.com/w80/jp.png 2x" width="16" height="11" alt="JP" class="chip-flag">
+                <span>Tokyo</span>
+              </button>
+              <button type="button" class="dest-chip" data-filter="new york">
+                <img src="https://flagcdn.com/w40/us.png" srcset="https://flagcdn.com/w80/us.png 2x" width="16" height="11" alt="US" class="chip-flag">
+                <span>New York</span>
+              </button>
+              <button type="button" class="dest-chip" data-filter="new zealand">
+                <img src="https://flagcdn.com/w40/nz.png" srcset="https://flagcdn.com/w80/nz.png 2x" width="16" height="11" alt="NZ" class="chip-flag">
+                <span>New Zealand</span>
+              </button>
             </div>
           </div>
+        </div>
 
-          <div class="dest-cards" data-aos="fade-left">
-            <!-- Dest 1: Bali -->
-            <article class="dest-card" data-city="bali">
-              <div class="dest-photo">
-                <img src="assets/bali.webp" alt="Bali Indonesia Remote Work Hub" loading="lazy">
-              </div>
-              <div class="dest-body">
+        <!-- 4-Column Balanced Grid with Prominent Call to Action in Each Card -->
+        <div class="dest-cards-grid" data-aos="fade-up" data-aos-delay="150">
+          
+          <!-- Dest 1: Bali -->
+          <article class="dest-card" data-city="bali" tabindex="0" role="button" aria-label="Open Bali Nomad Guide">
+            <div class="dest-photo">
+              <img src="assets/bali.webp" alt="Bali Indonesia Remote Work Hub" loading="lazy">
+              <div class="dest-tag-badge">📍 Island Nomad Hub</div>
+            </div>
+            <div class="dest-body">
+              <div class="dest-title-row">
                 <h4>Bali</h4>
-                <div class="dest-country">🇮🇩 Indonesia</div>
-                <div class="dest-facts">
-                  <div class="dest-fact"><span>Nomad Score</span><span>8.5 / 10</span></div>
-                  <div class="dest-fact"><span>Living Cost</span><span>$600 – $1,200 / mo</span></div>
-                  <div class="dest-fact"><span>Visa</span><span>Easy (B211A / Remote Worker)</span></div>
+                <div class="dest-country-flag">
+                  <img src="https://flagcdn.com/w40/id.png" srcset="https://flagcdn.com/w80/id.png 2x" width="20" height="14" alt="Indonesia Flag" class="flag-img">
+                  <span>Indonesia</span>
                 </div>
               </div>
-            </article>
-
-            <!-- Dest 2: Tokyo -->
-            <article class="dest-card" data-city="tokyo">
-              <div class="dest-photo">
-                <img src="assets/tokyo.webp" alt="Tokyo Japan Remote Work Hub" loading="lazy">
+              <div class="dest-facts">
+                <div class="dest-fact"><span>Nomad Score</span><span>⭐ 8.5 / 10</span></div>
+                <div class="dest-fact"><span>Living Cost</span><span>$600 – $1,200 / mo</span></div>
+                <div class="dest-fact"><span>Wi-Fi &amp; Visa</span><span>85+ Mbps · Easy Visa</span></div>
               </div>
-              <div class="dest-body">
+              <button type="button" class="dest-card-action" data-city="bali">
+                <span>View Bali Guide &amp; Tips</span>
+                <span>→</span>
+              </button>
+            </div>
+          </article>
+
+          <!-- Dest 2: Tokyo -->
+          <article class="dest-card" data-city="tokyo" tabindex="0" role="button" aria-label="Open Tokyo Nomad Guide">
+            <div class="dest-photo">
+              <img src="assets/tokyo.webp" alt="Tokyo Japan Remote Work Hub" loading="lazy">
+              <div class="dest-tag-badge">⚡ Modern Metropolis</div>
+            </div>
+            <div class="dest-body">
+              <div class="dest-title-row">
                 <h4>Tokyo</h4>
-                <div class="dest-country">🇯🇵 Japan</div>
-                <div class="dest-facts">
-                  <div class="dest-fact"><span>Nomad Score</span><span>9.0 / 10</span></div>
-                  <div class="dest-fact"><span>Living Cost</span><span>$1,200 – $2,000 / mo</span></div>
-                  <div class="dest-fact"><span>Visa</span><span>Digital Nomad / Tourist</span></div>
+                <div class="dest-country-flag">
+                  <img src="https://flagcdn.com/w40/jp.png" srcset="https://flagcdn.com/w80/jp.png 2x" width="20" height="14" alt="Japan Flag" class="flag-img">
+                  <span>Japan</span>
                 </div>
               </div>
-            </article>
-
-            <!-- Dest 3: New York -->
-            <article class="dest-card" data-city="new york">
-              <div class="dest-photo">
-                <img src="assets/new_york.webp" alt="New York United States" loading="lazy">
+              <div class="dest-facts">
+                <div class="dest-fact"><span>Nomad Score</span><span>⭐ 9.0 / 10</span></div>
+                <div class="dest-fact"><span>Living Cost</span><span>$1,200 – $2,000 / mo</span></div>
+                <div class="dest-fact"><span>Wi-Fi &amp; Visa</span><span>150+ Mbps · 6-Mo Nomad</span></div>
               </div>
-              <div class="dest-body">
+              <button type="button" class="dest-card-action" data-city="tokyo">
+                <span>View Tokyo Guide &amp; Tips</span>
+                <span>→</span>
+              </button>
+            </div>
+          </article>
+
+          <!-- Dest 3: New York -->
+          <article class="dest-card" data-city="new york" tabindex="0" role="button" aria-label="Open New York Nomad Guide">
+            <div class="dest-photo">
+              <img src="assets/new_york.webp" alt="New York United States" loading="lazy">
+              <div class="dest-tag-badge">🗽 Global Capital</div>
+            </div>
+            <div class="dest-body">
+              <div class="dest-title-row">
                 <h4>New York</h4>
-                <div class="dest-country">🇺🇸 United States</div>
-                <div class="dest-facts">
-                  <div class="dest-fact"><span>Nomad Score</span><span>8.5 / 10</span></div>
-                  <div class="dest-fact"><span>Living Cost</span><span>$2,500+ / mo</span></div>
-                  <div class="dest-fact"><span>Visa</span><span>ESTA / Tourist Visa</span></div>
+                <div class="dest-country-flag">
+                  <img src="https://flagcdn.com/w40/us.png" srcset="https://flagcdn.com/w80/us.png 2x" width="20" height="14" alt="United States Flag" class="flag-img">
+                  <span>United States</span>
                 </div>
               </div>
-            </article>
+              <div class="dest-facts">
+                <div class="dest-fact"><span>Nomad Score</span><span>⭐ 8.5 / 10</span></div>
+                <div class="dest-fact"><span>Living Cost</span><span>$2,500+ / mo</span></div>
+                <div class="dest-fact"><span>Wi-Fi &amp; Visa</span><span>120+ Mbps · ESTA/B1/B2</span></div>
+              </div>
+              <button type="button" class="dest-card-action" data-city="new york">
+                <span>View NYC Guide &amp; Tips</span>
+                <span>→</span>
+              </button>
+            </div>
+          </article>
 
-            <!-- Dest 4: New Zealand -->
-            <article class="dest-card" data-city="new zealand">
-              <div class="dest-photo">
-                <img src="assets/new_zealand.webp" alt="New Zealand Nature Work Hub" loading="lazy">
-              </div>
-              <div class="dest-body">
+          <!-- Dest 4: New Zealand -->
+          <article class="dest-card" data-city="new zealand" tabindex="0" role="button" aria-label="Open New Zealand Nomad Guide">
+            <div class="dest-photo">
+              <img src="assets/new_zealand.webp" alt="New Zealand Nature Work Hub" loading="lazy">
+              <div class="dest-tag-badge">🏔️ Scenic Alpine</div>
+            </div>
+            <div class="dest-body">
+              <div class="dest-title-row">
                 <h4>New Zealand</h4>
-                <div class="dest-country">🇳🇿 New Zealand</div>
-                <div class="dest-facts">
-                  <div class="dest-fact"><span>Nomad Score</span><span>9.0 / 10</span></div>
-                  <div class="dest-fact"><span>Living Cost</span><span>$1,200 – $2,000 / mo</span></div>
-                  <div class="dest-fact"><span>Visa</span><span>Working Holiday / Visitor</span></div>
+                <div class="dest-country-flag">
+                  <img src="https://flagcdn.com/w40/nz.png" srcset="https://flagcdn.com/w80/nz.png 2x" width="20" height="14" alt="New Zealand Flag" class="flag-img">
+                  <span>New Zealand</span>
                 </div>
               </div>
-            </article>
-          </div>
+              <div class="dest-facts">
+                <div class="dest-fact"><span>Nomad Score</span><span>⭐ 9.0 / 10</span></div>
+                <div class="dest-fact"><span>Living Cost</span><span>$1,200 – $2,000 / mo</span></div>
+                <div class="dest-fact"><span>Wi-Fi &amp; Visa</span><span>100+ Mbps · Holiday Visa</span></div>
+              </div>
+              <button type="button" class="dest-card-action" data-city="new zealand">
+                <span>View NZ Guide &amp; Tips</span>
+                <span>→</span>
+              </button>
+            </div>
+          </article>
+
         </div>
 
         <!-- SEAMLESS BRIDGE TO WFA TOOLS -->
@@ -305,24 +373,24 @@
           <div class="dest-bridge-text">
             <h3>Ready to travel and work flexibly? You don't have to start from scratch.</h3>
             <p>
-              Get practical checklists, verified opportunity directories, and everyday tools Anggun uses to travel and work around the world.
+              Get practical checklists, verified opportunity directories, and everyday tools I use to travel and work around the world.
             </p>
           </div>
           <a href="#wfa-tools" class="btn-bridge-soft">
-            <span>Explore WFA Tools ↓</span>
+            <span>Explore My WFA Tools ↓</span>
           </a>
         </div>
       </div>
     </section>
 
-    <!-- SECTION 3: WFA TOOLS & DIGITAL PRODUCT (LYNK.ID SPOTLIGHT) -->
+    <!-- SECTION 3: WFA TOOLS & DIGITAL PRODUCT (PERSONALIZED NARASION) -->
     <section class="section wfa-tools-section" id="wfa-tools">
       <div class="container">
         <div class="tools-bento" data-aos="fade-up" data-aos-duration="850">
           
-          <!-- Editorial Content & Value Points -->
+          <!-- Editorial Content & Personal Value Points -->
           <div class="tools-content">
-            <span class="tools-tag">✦ Anggun's Curated Resources</span>
+            <span class="tools-tag">✦ MY PERSONAL TOOLKIT</span>
 
             <h2 class="tools-title">
               WFA Tools &amp;<br>
@@ -330,7 +398,7 @@
             </h2>
 
             <p class="tools-desc">
-              The exact guides, templates, and digital resources Anggun uses daily to work remotely and travel the world. Built to help you transition into remote work with practical, proven tools.
+              The exact guides, templates, and digital systems I use daily to work remotely and travel the world. Built from my own journey to help you transition into remote work with practical, proven tools.
             </p>
 
             <div class="tools-list">
@@ -362,7 +430,7 @@
             <!-- Soft, High-Conversion CTA to Lynk.id -->
             <div class="tools-cta-row">
               <a href="https://lynk.id/febbyanggun" target="_blank" rel="noopener noreferrer" class="btn-tools-primary">
-                <span>Check WFA Tools on Lynk.id</span>
+                <span>Explore My WFA Tools on Lynk.id</span>
                 <span>↗</span>
               </a>
               <div class="tools-guarantee">
@@ -377,7 +445,7 @@
             <div class="tools-visual-main">
               <img src="assets/travel-work-database.png" alt="Travel & Work Database iPad Showcase" loading="lazy">
               <div class="tools-float-tag">
-                <span>⭐ Anggun's Verified Resources</span>
+                <span>⭐ Tested &amp; Curated by Anggun</span>
               </div>
             </div>
             
@@ -386,8 +454,8 @@
                 <img src="assets/foto-anggun (1).webp" alt="Anggun Febby with Laptop" loading="lazy">
               </div>
               <div class="tools-sub-text">
-                <strong>Tested &amp; Proven on the Road</strong>
-                <span>Practical digital tools created for anyone dreaming of working from anywhere.</span>
+                <strong>Tested &amp; Proven on My Own Journey</strong>
+                <span>Every single guide here is what actually works for me while living and working on the road.</span>
               </div>
             </div>
           </div>
@@ -462,19 +530,19 @@
       </div>
     </section>
 
-    <!-- SECTION 5: REAL STORIES & REELS (INTERACTIVE AUDIO ON CLICK) -->
+    <!-- SECTION 5: REAL STORIES & REELS (PERSONALIZED NARRATIVE & EQUALIZER MOTION) -->
     <section class="section story-section" id="stories">
       <div class="container">
         <div class="story-grid">
           <div data-aos="fade-right">
-            <div class="eyebrow-dark">HER STORY ✦</div>
+            <div class="eyebrow-dark">MY STORY ✦</div>
             <h2 class="section-title">From a Small Village to <em>Working Around the World.</em></h2>
             <p class="section-subtitle" style="margin-bottom:30px;">
               “I grew up in a quiet village where staying in school was a daily challenge. Today, I work with international teams across continents, earn an independent income, and live the life I once only dreamed about.”
             </p>
 
             <a class="btn-hero-primary" href="http://instagram.com/anggunfebby.s" target="_blank" rel="noopener">
-              <span>Follow @anggunfebby.s on Instagram</span>
+              <span>Follow My Daily Journey @anggunfebby.s</span>
               <span>↗</span>
             </a>
           </div>
@@ -491,7 +559,16 @@
                     class="ig-badge" title="View on Instagram">
                     <span>Reel ↗</span>
                   </a>
-                  <span class="sound-toggle-status">Audio On Click</span>
+                  <div class="sound-status-pill">
+                    <!-- Dancing Audio Visualizer Bars -->
+                    <div class="audio-equalizer">
+                      <span class="bar"></span>
+                      <span class="bar"></span>
+                      <span class="bar"></span>
+                      <span class="bar"></span>
+                    </div>
+                    <span class="sound-toggle-status">Audio On Click</span>
+                  </div>
                 </div>
 
                 <div class="play-center-btn" aria-label="Play Reel Video">
@@ -501,7 +578,7 @@
                 </div>
 
                 <div class="story-caption-box">
-                  <div class="story-caption">From a village to global horizons.</div>
+                  <div class="story-caption">From my village roots to global horizons.</div>
                   <div class="story-sound-hint">▶ Click to play with sound</div>
                 </div>
               </div>
@@ -518,7 +595,15 @@
                     class="ig-badge" title="View on Instagram">
                     <span>Reel ↗</span>
                   </a>
-                  <span class="sound-toggle-status">Audio On Click</span>
+                  <div class="sound-status-pill">
+                    <div class="audio-equalizer">
+                      <span class="bar"></span>
+                      <span class="bar"></span>
+                      <span class="bar"></span>
+                      <span class="bar"></span>
+                    </div>
+                    <span class="sound-toggle-status">Audio On Click</span>
+                  </div>
                 </div>
 
                 <div class="play-center-btn" aria-label="Play Reel Video">
@@ -528,7 +613,7 @@
                 </div>
 
                 <div class="story-caption-box">
-                  <div class="story-caption">Remote work isn't a fantasy—it's a choice.</div>
+                  <div class="story-caption">Remote work isn't a fantasy—it's my daily reality.</div>
                   <div class="story-sound-hint">▶ Click to play with sound</div>
                 </div>
               </div>
@@ -545,7 +630,15 @@
                     class="ig-badge" title="View on Instagram">
                     <span>Reel ↗</span>
                   </a>
-                  <span class="sound-toggle-status">Audio On Click</span>
+                  <div class="sound-status-pill">
+                    <div class="audio-equalizer">
+                      <span class="bar"></span>
+                      <span class="bar"></span>
+                      <span class="bar"></span>
+                      <span class="bar"></span>
+                    </div>
+                    <span class="sound-toggle-status">Audio On Click</span>
+                  </div>
                 </div>
 
                 <div class="play-center-btn" aria-label="Play Reel Video">
@@ -555,7 +648,7 @@
                 </div>
 
                 <div class="story-caption-box">
-                  <div class="story-caption">Not just traveling, but creating meaningful work.</div>
+                  <div class="story-caption">Not just traveling, but building work I love.</div>
                   <div class="story-sound-hint">▶ Click to play with sound</div>
                 </div>
               </div>
@@ -615,6 +708,7 @@
         <h2 class="cta-title">You Can Do It <em>Too.</em></h2>
         <p class="cta-copy">Because your dream isn't just wishful thinking. Start your WFA journey today.</p>
 
+        <!-- Retained as requested: "untuk start your wfa journey udah bagus pertahankan kalimat itu" -->
         <a class="btn-hero-primary" href="#pathways" style="font-size:1.05rem; padding:18px 44px;">
           <span>Start Your WFA Journey</span>
           <span>→</span>
@@ -630,7 +724,7 @@
       </div>
     </footer>
 
-    <!-- COMPACT FLOATING JOIN WIDGET -->
+    <!-- COMPACT FLOATING JOIN WIDGET (ONLY FIXED COMMUNITY BUTTON) -->
     <a href="https://chat.whatsapp.com/E3dPReLYer5AoXOJEF1KTr" target="_blank" rel="noopener noreferrer"
       class="floating-join-wfa" aria-label="Join WFA WhatsApp Community">
       <div class="floating-avatar">
@@ -638,6 +732,69 @@
       </div>
       <span>Join Community 💬</span>
     </a>
+
+    <!-- INTERACTIVE DESTINATION QUICK GUIDE MODAL -->
+    <div class="dest-modal-backdrop" id="dest-modal-backdrop" aria-hidden="true">
+      <div class="dest-modal" id="dest-modal" role="dialog" aria-modal="true">
+        <button type="button" class="dest-modal-close" id="dest-modal-close" aria-label="Close Guide">✕</button>
+        
+        <div class="dest-modal-cover">
+          <img id="dest-modal-img" src="assets/bali.webp" alt="Destination Photo">
+          <div class="dest-modal-badge" id="dest-modal-score">⭐ 8.5 / 10 Nomad Score</div>
+        </div>
+
+        <div class="dest-modal-body">
+          <div class="dest-modal-header">
+            <div>
+              <h3 id="dest-modal-title">Bali</h3>
+              <div class="dest-modal-country" id="dest-modal-country">
+                <img id="dest-modal-flag" src="https://flagcdn.com/w40/id.png" width="20" height="14" alt="Flag">
+                <span id="dest-modal-country-name">Indonesia</span>
+              </div>
+            </div>
+            <div class="dest-modal-cost" id="dest-modal-cost">$600 – $1,200 / mo</div>
+          </div>
+
+          <div class="dest-modal-grid">
+            <div class="dest-modal-metric">
+              <span class="metric-icon">⚡</span>
+              <div>
+                <strong>Wi-Fi Reliability</strong>
+                <span id="dest-modal-wifi">85+ Mbps · High speed in coworking spaces</span>
+              </div>
+            </div>
+            <div class="dest-modal-metric">
+              <span class="metric-icon">🛂</span>
+              <div>
+                <strong>Visa Ease</strong>
+                <span id="dest-modal-visa">Easy (B211A Visit Visa / Remote Worker E33G)</span>
+              </div>
+            </div>
+            <div class="dest-modal-metric">
+              <span class="metric-icon">☕</span>
+              <div>
+                <strong>Top Work Spots</strong>
+                <span id="dest-modal-spots">Canggu, Ubud, Pererenan cafes</span>
+              </div>
+            </div>
+            <div class="dest-modal-metric">
+              <span class="metric-icon">💡</span>
+              <div>
+                <strong>Anggun's Personal Tip</strong>
+                <span id="dest-modal-tip">Always pick a villa with verified generator backup.</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="dest-modal-footer">
+            <a href="#wfa-tools" class="btn-modal-action" id="dest-modal-action-btn">
+              <span>Explore WFA Tools For Traveling</span>
+              <span>→</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
 
   </div>
 
