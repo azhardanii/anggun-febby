@@ -654,11 +654,11 @@ img, video {
   -webkit-backdrop-filter: blur(8px);
   color: #FFFFFF;
   font-weight: 800;
-  font-size: 1rem;
-  padding: 16px 36px;
+  font-size: 0.94rem;
+  padding: 13px 30px;
   border-radius: 999px;
   border: 1.5px solid var(--forest-dark);
-  box-shadow: 0 6px 20px rgba(31, 107, 88, 0.35);
+  box-shadow: 0 6px 20px rgba(31, 107, 88, 0.3);
   transition: var(--transition-bounce);
 }
 
@@ -676,22 +676,22 @@ img, video {
   background: rgba(255, 252, 21, 0.90);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
-  border: 1.5px solid var(--ink);
-  color: var(--ink);
+  border: 1.5px solid #1f6b58;
+  color: #1f6b58;
   font-weight: 800;
-  font-size: 0.96rem;
-  padding: 15px 30px;
+  font-size: 0.92rem;
+  padding: 12px 26px;
   border-radius: 999px;
-  box-shadow: 0 4px 14px rgba(255, 252, 21, 0.4);
+  box-shadow: 0 4px 14px rgba(255, 252, 21, 0.3);
   transition: var(--transition-bounce);
 }
 
 .btn-hero-secondary:hover {
   background: rgba(232, 229, 11, 0.96);
-  border-color: var(--ink);
-  color: var(--ink);
+  border-color: #175344;
+  color: #175344;
   transform: translateY(-2px) scale(1.02);
-  box-shadow: 0 8px 20px rgba(255, 252, 21, 0.55);
+  box-shadow: 0 8px 20px rgba(31, 107, 88, 0.18);
 }
 
 /* Floating Handwritten Badges with Ambient Bobbing Motion */
@@ -776,6 +776,7 @@ img, video {
 .section {
   padding: 100px 24px;
   position: relative;
+  scroll-margin-top: 80px;
 }
 
 .container {
@@ -2517,22 +2518,28 @@ img, video {
 }
 
 @media (max-width: 768px) {
-  /* Global Mobile Spacing & Typography */
+  /* Global Mobile Spacing & Typography — Generous Breathing Room */
   .section {
-    padding: 60px 18px;
+    padding: 85px 20px 65px;
+    scroll-margin-top: 80px;
+  }
+
+  .start-section {
+    padding-top: 92px;
+    padding-bottom: 70px;
   }
 
   .section-title {
-    font-size: clamp(1.75rem, 6.8vw, 2.2rem);
-    line-height: 1.22;
-    margin-bottom: 12px;
+    font-size: clamp(1.65rem, 6.2vw, 2.05rem);
+    line-height: 1.25;
+    margin-bottom: 14px;
     letter-spacing: -0.015em;
     word-break: break-word;
   }
 
   .section-subtitle {
     font-size: 0.92rem;
-    line-height: 1.55;
+    line-height: 1.62;
     margin-bottom: 24px;
   }
 
@@ -2541,6 +2548,7 @@ img, video {
     padding: 5px 12px;
     line-height: 1.35;
     white-space: normal;
+    margin-bottom: 12px;
   }
 
   /* Sleek, Non-Overcrowded Mobile Navbar */
@@ -2722,38 +2730,39 @@ img, video {
     max-width: 95%;
   }
 
-  /* Elongated Mobile Hero Buttons with Frosted Opacity and Generous Side Padding */
+  /* Compact & Sleek Mobile Hero Buttons — Elegant proportions & Signature Green Border */
   .hero-actions {
     display: flex;
     flex-direction: column;
-    align-items: stretch;
-    gap: 10px;
+    align-items: center;
+    gap: 8px;
     margin-top: auto;
-    margin-bottom: 0;
+    margin-bottom: 6px;
     width: 100%;
-    padding: 0 4px;
+    max-width: 275px;
+    align-self: center;
     box-sizing: border-box;
   }
 
   .btn-hero-primary {
     width: 100%;
-    display: flex;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
     gap: 8px;
-    padding: 13px 20px;
-    font-size: 0.92rem;
+    padding: 10px 18px;
+    font-size: 0.86rem;
     font-weight: 700;
     border-radius: 999px;
     box-sizing: border-box;
     text-align: center;
     white-space: nowrap;
-    background: rgba(31, 107, 88, 0.90);
+    background: rgba(31, 107, 88, 0.94);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    border: 1.5px solid rgba(254, 255, 205, 0.45);
+    border: 1.5px solid rgba(31, 107, 88, 0.85);
     color: #FFFFFF;
-    box-shadow: 0 6px 20px rgba(31, 107, 88, 0.28);
+    box-shadow: 0 4px 14px rgba(31, 107, 88, 0.22);
     transition: var(--transition-bounce);
   }
 
@@ -2764,29 +2773,31 @@ img, video {
 
   .btn-hero-secondary {
     width: 100%;
-    display: flex;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
     gap: 6px;
-    padding: 12px 20px;
-    font-size: 0.90rem;
+    padding: 9px 18px;
+    font-size: 0.84rem;
     font-weight: 700;
     border-radius: 999px;
     box-sizing: border-box;
     text-align: center;
     white-space: nowrap;
-    background: rgba(255, 252, 21, 0.88);
+    background: rgba(255, 252, 21, 0.92);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    border: 1.5px solid rgba(23, 50, 49, 0.75);
-    color: var(--ink);
-    box-shadow: 0 4px 14px rgba(255, 252, 21, 0.28);
+    border: 1.5px solid #1f6b58; /* Warna border hijau primary sesuai pallete, BUKAN hitam! */
+    color: #1f6b58;
+    box-shadow: 0 3px 10px rgba(31, 107, 88, 0.12);
     transition: var(--transition-bounce);
   }
 
   .btn-hero-secondary:active {
     transform: scale(0.98);
     background: rgba(232, 229, 11, 0.95);
+    border-color: #175344;
+    color: #175344;
   }
 
   .hero-badges-row {
@@ -2797,48 +2808,75 @@ img, video {
     display: none;
   }
 
-  /* Pathways Section Mobile */
+  /* Pathways Section Mobile — Airy, Proportional & Relaxed */
   .path-head-row {
     flex-direction: column;
     align-items: flex-start;
-    gap: 16px;
-    margin-bottom: 30px;
+    gap: 18px;
+    margin-bottom: 38px;
   }
 
   .head-note {
-    font-size: 0.92rem;
+    font-size: 0.88rem;
     padding: 6px 14px;
+    margin-top: 2px;
   }
 
   .path-grid {
-    gap: 20px;
+    gap: 26px;
   }
 
   .path-card {
-    border-radius: 22px;
+    border-radius: 24px;
+    border: 1.5px solid var(--line);
+    box-shadow: 0 4px 18px -2px rgba(31, 107, 88, 0.05), 0 10px 28px -4px rgba(31, 107, 88, 0.06);
+    overflow: hidden;
   }
 
   .path-photo {
-    height: 200px;
+    height: 155px;
+  }
+
+  .path-badge {
+    top: 10px;
+    right: 10px;
+    padding: 4px 10px;
+    font-size: 0.7rem;
   }
 
   .path-body {
-    padding: 20px 18px;
+    padding: 18px 18px 20px;
+  }
+
+  .path-icon {
+    width: 32px;
+    height: 32px;
+    font-size: 15px;
+    margin-bottom: 12px;
+    border-radius: 10px;
   }
 
   .path-title {
-    font-size: 1.15rem;
+    font-size: 1.12rem;
+    margin-bottom: 8px;
+    letter-spacing: 0.01em;
   }
 
   .path-desc {
-    font-size: 0.88rem;
-    line-height: 1.5;
+    font-size: 0.86rem;
+    line-height: 1.58;
     margin-bottom: 18px;
+  }
+
+  .path-btn {
+    padding: 11px 16px;
+    font-size: 0.86rem;
+    border-radius: 12px;
   }
 
   /* Destination Guide Mobile (Scrollbar hidden, natural swipe) */
   .dest-header-block {
-    margin-bottom: 24px;
+    margin-bottom: 28px;
   }
 
   .dest-search-bar-wrap {
@@ -2884,15 +2922,28 @@ img, video {
 
   .dest-cards-grid {
     grid-template-columns: 1fr;
-    gap: 18px;
+    gap: 22px;
+  }
+
+  .dest-card {
+    border-radius: 22px;
+  }
+
+  .dest-photo {
+    height: 160px;
+  }
+
+  .dest-body {
+    padding: 16px 16px 18px;
   }
 
   .dest-to-db-bridge {
-    padding: 20px 16px;
+    margin-top: 24px;
+    padding: 22px 18px;
     border-radius: 20px;
     flex-direction: column;
     align-items: stretch;
-    gap: 16px;
+    gap: 18px;
   }
 
   .dest-bridge-text h3 {
@@ -3119,19 +3170,26 @@ img, video {
     gap: 12px;
   }
 
-  /* Compact non-intrusive floating button for mobile */
+  /* Ultra-compact discrete floating button for mobile — Safe from obscuring content */
   .floating-join-wfa {
-    bottom: 16px;
+    bottom: calc(14px + env(safe-area-inset-bottom, 0px));
     right: 14px;
-    padding: 6px 12px 6px 6px;
+    padding: 4px 11px 4px 4px;
     gap: 6px;
-    font-size: 0.8rem;
-    box-shadow: 0 4px 16px rgba(23, 50, 49, 0.2);
+    font-size: 0.74rem;
+    border: 1.5px solid #1f6b58;
+    background: rgba(255, 252, 21, 0.94);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    box-shadow: 0 4px 14px rgba(31, 107, 88, 0.18);
+    z-index: 850;
+    opacity: 0.94;
   }
 
   .floating-avatar {
-    width: 26px;
-    height: 26px;
+    width: 24px;
+    height: 24px;
+    border: 1.2px solid #1f6b58;
   }
 
   .floating-text-desktop {
@@ -3141,6 +3199,8 @@ img, video {
   .floating-text-mobile {
     display: inline-block !important;
     font-weight: 800;
+    font-size: 0.74rem;
+    color: #1f6b58;
   }
 
   .lang-btn {
