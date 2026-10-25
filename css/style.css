@@ -544,11 +544,15 @@ img, video {
 .hero-text-block {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
 }
 
 .eyebrow {
   display: inline-flex;
   align-items: center;
+  width: fit-content;
+  max-width: fit-content;
+  align-self: flex-start;
   gap: 8px;
   font-size: 0.78rem;
   font-weight: 800;
@@ -808,8 +812,11 @@ img, video {
 }
 
 .section-title em {
+  display: inline-block;
   font-style: italic;
   font-weight: 400;
+  padding-right: 0.25em; /* Ruang ekstra untuk kemiringan font italic & tanda ? agar tidak terpotong text-clip */
+  letter-spacing: 0;
   background: linear-gradient(120deg, var(--forest) 0%, var(--forest-dark) 35%, var(--forest-light) 65%, var(--forest) 100%);
   background-size: 200% auto;
   -webkit-background-clip: text;
@@ -2314,8 +2321,11 @@ img, video {
 }
 
 .cta-title em {
+  display: inline-block;
   font-style: italic;
   font-weight: 400;
+  padding-right: 0.25em;
+  letter-spacing: 0;
   background: linear-gradient(120deg, var(--forest) 0%, var(--forest-dark) 35%, var(--forest-light) 65%, var(--forest) 100%);
   background-size: 200% auto;
   -webkit-background-clip: text;
@@ -2809,69 +2819,75 @@ img, video {
   }
 
   /* Pathways Section Mobile — Airy, Proportional & Relaxed */
+  .start-section {
+    padding-top: 96px;
+    padding-bottom: 75px;
+    scroll-margin-top: 85px;
+  }
+
   .path-head-row {
     flex-direction: column;
     align-items: flex-start;
-    gap: 18px;
-    margin-bottom: 38px;
+    gap: 12px;
+    margin-bottom: 28px;
   }
 
   .head-note {
-    font-size: 0.88rem;
-    padding: 6px 14px;
-    margin-top: 2px;
+    display: none !important; /* Hilangkan pill ekstra agar tidak bikin sesak */
   }
 
   .path-grid {
-    gap: 26px;
+    gap: 28px;
+    max-width: 460px;
+    margin: 0 auto;
   }
 
   .path-card {
-    border-radius: 24px;
-    border: 1.5px solid var(--line);
-    box-shadow: 0 4px 18px -2px rgba(31, 107, 88, 0.05), 0 10px 28px -4px rgba(31, 107, 88, 0.06);
+    border-radius: 20px;
+    border: 1px solid rgba(31, 107, 88, 0.15);
+    box-shadow: 0 4px 16px rgba(31, 107, 88, 0.05);
     overflow: hidden;
   }
 
   .path-photo {
-    height: 155px;
+    height: 135px; /* Ramping & proporsional, tidak memakan seluruh layar */
   }
 
   .path-badge {
-    top: 10px;
-    right: 10px;
-    padding: 4px 10px;
-    font-size: 0.7rem;
+    top: 8px;
+    right: 8px;
+    padding: 3px 9px;
+    font-size: 0.68rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
   }
 
   .path-body {
-    padding: 18px 18px 20px;
+    padding: 16px 16px 18px;
   }
 
   .path-icon {
-    width: 32px;
-    height: 32px;
-    font-size: 15px;
-    margin-bottom: 12px;
-    border-radius: 10px;
+    display: none !important; /* Hilangkan box icon dobel agar card body lega */
   }
 
   .path-title {
-    font-size: 1.12rem;
-    margin-bottom: 8px;
-    letter-spacing: 0.01em;
+    font-size: 1.08rem;
+    font-weight: 800;
+    margin-bottom: 6px;
+    letter-spacing: 0.02em;
   }
 
   .path-desc {
-    font-size: 0.86rem;
-    line-height: 1.58;
-    margin-bottom: 18px;
+    font-size: 0.85rem;
+    line-height: 1.55;
+    margin-bottom: 16px;
+    color: var(--muted);
   }
 
   .path-btn {
-    padding: 11px 16px;
-    font-size: 0.86rem;
-    border-radius: 12px;
+    padding: 10px 16px;
+    font-size: 0.84rem;
+    border-radius: 10px;
+    font-weight: 700;
   }
 
   /* Destination Guide Mobile (Scrollbar hidden, natural swipe) */

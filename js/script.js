@@ -89,7 +89,7 @@ document.addEventListener('DOMContentLoaded', function () {
       path_2_badge: "✨ Brand Collaboration & Rate Card",
       path_2_desc: "Tertarik kolaborasi campaign, review akomodasi/destinasi, konten kreatif, atau sponsorship? Yuk minta rate card-ku.",
       path_2_btn: "Tanya Rate Card di WhatsApp",
-      path_3_badge: "🌱 Bimbingan & Belajar WFA",
+      path_3_badge: "🌱 Belajar WFA",
       path_3_desc: "Buat kamu yang mau bimbingan intensif soal skill, mindset, dan langkah nyata transisi jadi pekerja WFA dari nol.",
       path_3_btn: "Pelajari Sekolah WFA",
 
