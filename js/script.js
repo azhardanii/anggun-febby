@@ -356,9 +356,12 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   // ==========================================================================
-  // 9. 3D CARD TILT EFFECT ON MOUSE MOVE
+  // 9. QUANTIZED STEPPED STOP-MOTION CARD TILT ON MOUSE MOVE
   // ==========================================================================
-  const tiltCards = document.querySelectorAll('.path-card, .dest-card, .tools-bento, .story-card');
+  const tiltCards = document.querySelectorAll('.path-card, .dest-card, .tools-bento, .story-card, .social-bento-card');
+  const quantizeStep = function (val, step) {
+    return Math.round(val / step) * step;
+  };
   tiltCards.forEach(function (card) {
     card.addEventListener('mousemove', function (e) {
       if (window.innerWidth < 1024) return;
@@ -368,10 +371,10 @@ document.addEventListener('DOMContentLoaded', function () {
       const centerX = rect.width / 2;
       const centerY = rect.height / 2;
 
-      const rotateX = ((y - centerY) / centerY) * -4;
-      const rotateY = ((x - centerX) / centerX) * 4;
+      const rotateX = quantizeStep(((y - centerY) / centerY) * -4.5, 1.5);
+      const rotateY = quantizeStep(((x - centerX) / centerX) * 4.5, 1.5);
 
-      card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-6px)`;
+      card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translate(-3px, -6px)`;
     });
 
     card.addEventListener('mouseleave', function () {
@@ -659,4 +662,93 @@ document.addEventListener('DOMContentLoaded', function () {
       if (soundHint) soundHint.textContent = '▶ Click to play with sound';
     });
   });
+
+  // ==========================================================================
+  // 13. SCROLL-QUANTIZED STOP-MOTION FLIPBOOK ENGINE
+  // ==========================================================================
+  const prefersReducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  let lastSmFrame = -1;
+
+  function updateScrollStopMotionFrame() {
+    if (prefersReducedMotion) {
+      document.body.setAttribute('data-sm-frame', '0');
+      return;
+    }
+    const frame = Math.floor(window.scrollY / 55) % 4;
+    if (frame !== lastSmFrame) {
+      lastSmFrame = frame;
+      document.body.setAttribute('data-sm-frame', String(frame));
+    }
+  }
+
+  window.addEventListener('scroll', updateScrollStopMotionFrame, { passive: true });
+  updateScrollStopMotionFrame();
+
+  // ==========================================================================
+  // 14. STOP-MOTION MULTI-FRAME PHOTO CYCLER (650ms STEPPED CUTS)
+  // ==========================================================================
+  const cycleFrames = [
+    'assets/foto-anggun (1).webp',
+    'assets/foto-anggun (2).webp',
+    'assets/foto-anggun (3).webp'
+  ];
+  const cycleImgs = document.querySelectorAll('img[data-sm-cycle]');
+
+  if (cycleImgs.length > 0 && !prefersReducedMotion) {
+    cycleFrames.forEach(function (src) {
+      const preload = new Image();
+      preload.src = src;
+    });
+
+    let cycleIndex = 0;
+    setInterval(function () {
+      cycleIndex = (cycleIndex + 1) % cycleFrames.length;
+      const nextSrc = cycleFrames[cycleIndex];
+      cycleImgs.forEach(function (img, idx) {
+        const staggeredSrc = cycleFrames[(cycleIndex + idx) % cycleFrames.length];
+        img.src = idx === 0 ? nextSrc : staggeredSrc;
+      });
+    }, 650);
+  }
+
+  // ==========================================================================
+  // 15. STOP-MOTION VIEWPORT ENTRANCE OBSERVER
+  // ==========================================================================
+  const smPopElements = document.querySelectorAll('.sm-pop');
+  if (smPopElements.length > 0) {
+    if (prefersReducedMotion || typeof IntersectionObserver === 'undefined') {
+      smPopElements.forEach(function (el) {
+        el.classList.add('sm-pop-active');
+      });
+    } else {
+      const revealVisibleSmPop = function () {
+        const vh = window.innerHeight || document.documentElement.clientHeight;
+        smPopElements.forEach(function (el) {
+          if (el.classList.contains('sm-pop-active')) return;
+          const rect = el.getBoundingClientRect();
+          if (rect.top <= vh + 40) {
+            el.classList.add('sm-pop-active');
+          }
+        });
+      };
+
+      const smObserver = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('sm-pop-active');
+            smObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.06, rootMargin: '0px 0px -20px 0px' });
+
+      smPopElements.forEach(function (el) {
+        if (!el.classList.contains('sm-pop-active')) {
+          smObserver.observe(el);
+        }
+      });
+
+      revealVisibleSmPop();
+      window.addEventListener('scroll', revealVisibleSmPop, { passive: true });
+    }
+  }
 });

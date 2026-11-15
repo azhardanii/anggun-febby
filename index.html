@@ -96,7 +96,7 @@
       </a>
     </div>
 
-    <!-- HERO SECTION — LIGHT & SUNNY WITH VIDEO BACKGROUND (ZERO DARK MODE) -->
+    <!-- HERO SECTION — LIGHT & SUNNY STOP-MOTION SCRAPBOOK WITH VIDEO BACKGROUND -->
     <section class="hero" id="hero">
       <div class="hero-video-wrap">
         <video class="hero-video" id="hero-video" autoplay muted loop playsinline poster="assets/thumb-hero.webp">
@@ -106,13 +106,24 @@
         </video>
       </div>
 
-      <!-- Sunlit Warm Gradients (Light Cream & Warm Butter Glaze, Zero Dark Vignette) -->
+      <!-- Sunlit Warm Gradients & Stop-Motion Viewfinder Brackets -->
       <div class="hero-overlay-warm"></div>
       <div class="hero-overlay-sunlight"></div>
       <div class="hero-overlay-bottom"></div>
+      <div class="hero-sm-corners" aria-hidden="true">
+        <span class="sm-corner sm-corner-tl"></span>
+        <span class="sm-corner sm-corner-tr"></span>
+        <span class="sm-corner sm-corner-bl"></span>
+        <span class="sm-corner sm-corner-br"></span>
+      </div>
 
       <div class="hero-inner">
-        <div class="hero-content" data-aos="fade-up" data-aos-duration="850">
+        <div class="hero-content sm-pop sm-pop-active">
+          <div class="hero-sm-frame-bar" aria-hidden="true">
+            <span class="sm-rec-pill"><span class="sm-rec-dot"></span> REC ● STOP-MOTION // 06 FPS</span>
+            <span class="sm-frame-pill">FRAME 01 — WFA JOURNAL</span>
+          </div>
+
           <div class="hero-text-block">
             <div class="eyebrow">
               <span class="eyebrow-dot"></span>
@@ -137,7 +148,35 @@
           </div>
         </div>
 
-        <div class="hero-scroll-indicator" data-aos="fade-up" data-aos-delay="300">
+        <!-- Stop-Motion Twin Polaroid Collage -->
+        <div class="hero-sm-polaroids sm-pop sm-pop-active" data-sm-item>
+          <div class="sm-polaroid sm-polaroid-back">
+            <span class="sm-tape" aria-hidden="true"></span>
+            <div class="sm-polaroid-img">
+              <img src="assets/bali.webp" alt="Work From Anywhere Destinations">
+            </div>
+            <div class="sm-polaroid-cap">Next Stop ✈</div>
+          </div>
+
+          <div class="sm-polaroid sm-polaroid-front">
+            <span class="sm-tape sm-tape-alt" aria-hidden="true"></span>
+            <div class="sm-polaroid-img">
+              <img src="assets/foto-anggun (1).webp" alt="Anggun Febby WFA Life" data-sm-cycle>
+              <span class="sm-fps-tag" aria-hidden="true">6 FPS</span>
+            </div>
+            <div class="sm-polaroid-cap">WFA Daily ✦</div>
+          </div>
+
+          <div class="sm-stamp hero-sm-stamp" aria-hidden="true">
+            <span>NOMAD PASS</span>
+            <strong>✦ WFA ✦</strong>
+            <span>WORLDWIDE</span>
+          </div>
+          <span class="sm-sticker hero-sticker-plane" aria-hidden="true">✈</span>
+          <span class="sm-sticker hero-sticker-spark" aria-hidden="true">✦</span>
+        </div>
+
+        <div class="hero-scroll-indicator">
           <div class="mouse-pill">
             <div class="mouse-wheel"></div>
           </div>
@@ -146,10 +185,10 @@
       </div>
     </section>
 
-    <!-- SECTION 1: START HERE — THREE PATHWAYS -->
+    <!-- SECTION 1: START HERE — THREE PATHWAYS (STOP-MOTION POLAROID STORYBOARD) -->
     <section class="section start-section" id="pathways">
       <div class="container">
-        <div class="path-head-row" data-aos="fade-up">
+        <div class="path-head-row sm-pop">
           <div>
             <div class="eyebrow-dark" data-i18n="pathways_eyebrow">KOLABORASI &amp; SHARING ✦</div>
             <h2 class="section-title" data-i18n="pathways_title">Tiga Hal yang Sering Aku Bagikan</h2>
@@ -157,12 +196,19 @@
               keliling dunia sembari berpenghasilan dari mana aja. Ini beberapa pintu buat kita saling kenal, kolaborasi
               bareng, atau belajar:</p>
           </div>
-          <div class="head-note" data-aos="fade-left">Pilih yang kamu butuhkan ↘</div>
+          <div class="path-head-aside">
+            <div class="sm-sticker-cluster" aria-hidden="true">
+              <span class="sm-sticker-pill">✦ COLLAB</span>
+              <span class="sm-sticker-pill sm-sticker-pill-yellow">✈ OPEN FOR WFA</span>
+            </div>
+            <div class="head-note">Pilih yang kamu butuhkan ↘</div>
+          </div>
         </div>
 
         <div class="path-grid">
           <!-- Pathway 1: WFA Job -->
-          <article class="path-card path-card-1" data-aos="fade-up" data-aos-delay="100">
+          <article class="path-card path-card-1 sm-pop" data-sm-item>
+            <span class="sm-tape" aria-hidden="true"></span>
             <div class="path-photo">
               <img src="assets/path_job.webp" alt="WFA Job Global Career Openings" loading="lazy">
             </div>
@@ -172,7 +218,7 @@
                   <span class="path-icon" aria-hidden="true">⌂</span>
                   <span class="path-badge" data-i18n="path_1_badge">💼 Info Lowongan Tiap Minggu</span>
                 </div>
-                <span class="path-step" aria-hidden="true">01</span>
+                <span class="path-step" aria-hidden="true">#01</span>
               </div>
               <h3 class="path-title">WFA JOBS</h3>
               <p class="path-desc" data-i18n="path_1_desc">Kurasi lowongan kerja WFA dari berbagai perusahaan global
@@ -185,7 +231,8 @@
           </article>
 
           <!-- Pathway 2: Collaboration (Content Creator & Rate Card) -->
-          <article class="path-card path-card-2 path-card-featured" data-aos="fade-up" data-aos-delay="200" id="jobs">
+          <article class="path-card path-card-2 path-card-featured sm-pop" data-sm-item id="jobs">
+            <span class="sm-tape sm-tape-alt" aria-hidden="true"></span>
             <div class="path-photo">
               <img src="assets/collab-done.webp" alt="Brand Collaboration with Anggun Febby" loading="lazy">
             </div>
@@ -195,7 +242,7 @@
                   <span class="path-icon" aria-hidden="true">▣</span>
                   <span class="path-badge" data-i18n="path_2_badge">✨ Brand Collaboration &amp; Rate Card</span>
                 </div>
-                <span class="path-step" aria-hidden="true">02</span>
+                <span class="path-step" aria-hidden="true">#02</span>
               </div>
               <h3 class="path-title">COLLABORATION</h3>
               <p class="path-desc" data-i18n="path_2_desc">Tertarik kolaborasi campaign, review akomodasi/destinasi,
@@ -209,7 +256,8 @@
           </article>
 
           <!-- Pathway 3: WFA Coaching (Hanya di sini ada narasi bimbingan/coaching) -->
-          <article class="path-card path-card-3" data-aos="fade-up" data-aos-delay="300">
+          <article class="path-card path-card-3 sm-pop" data-sm-item>
+            <span class="sm-tape" aria-hidden="true"></span>
             <div class="path-photo">
               <img src="assets/coaching-done.webp" alt="Sekolah WFA Coaching & Learning" loading="lazy">
             </div>
@@ -219,7 +267,7 @@
                   <span class="path-icon" aria-hidden="true">◎</span>
                   <span class="path-badge" data-i18n="path_3_badge">🌱 Belajar WFA</span>
                 </div>
-                <span class="path-step" aria-hidden="true">03</span>
+                <span class="path-step" aria-hidden="true">#03</span>
               </div>
               <h3 class="path-title">SEKOLAH WFA</h3>
               <p class="path-desc" data-i18n="path_3_desc">Buat kamu yang mau bimbingan intensif soal skill, mindset,
@@ -234,11 +282,15 @@
       </div>
     </section>
 
-    <!-- SECTION 2: DESTINATION GUIDE (COHESIVE BALANCED REDESIGN WITH REAL FLAGS & CLICKABLE CARDS) -->
+    <!-- SECTION 2: DESTINATION GUIDE (STOP-MOTION AIRMAIL POSTCARDS & BOARDING PASSES) -->
     <section class="section dest-section" id="explore">
       <div class="container">
         <!-- Unified Centered Header & Search Console -->
-        <div class="dest-header-block" data-aos="fade-up">
+        <div class="dest-header-block sm-pop">
+          <div class="sm-sticker-cluster sm-sticker-cluster-center" aria-hidden="true">
+            <span class="sm-sticker-pill">✈ PASSPORT LOG</span>
+            <span class="sm-sticker-pill sm-sticker-pill-yellow">📍 WI-FI CHECKED</span>
+          </div>
           <div class="eyebrow-dark" data-i18n="dest_eyebrow">CATATAN PERJALANAN ✦</div>
           <h2 class="section-title" data-i18n="dest_title">Mau Buka Laptop di<br><em>Mana Hari Ini?</em></h2>
           <p class="section-subtitle" data-i18n="dest_sub">Kumpulan kota dan negara yang pernah aku singgahi buat kerja
@@ -288,11 +340,11 @@
           </div>
         </div>
 
-        <!-- 4-Column Balanced Grid with Prominent Call to Action in Each Card -->
-        <div class="dest-cards-grid" data-aos="fade-up" data-aos-delay="150">
+        <!-- 4-Column Balanced Air-Mail Postcard Grid -->
+        <div class="dest-cards-grid">
 
           <!-- Dest 1: Bali -->
-          <article class="dest-card" data-city="bali" tabindex="0" role="button" aria-label="Open Bali Nomad Guide">
+          <article class="dest-card sm-pop" data-sm-item data-city="bali" tabindex="0" role="button" aria-label="Open Bali Nomad Guide">
             <div class="dest-photo">
               <img src="assets/bali.webp" alt="Bali Indonesia Remote Work Hub" loading="lazy">
               <div class="dest-tag-badge">📍 Island Nomad Hub</div>
@@ -318,7 +370,7 @@
           </article>
 
           <!-- Dest 2: Tokyo -->
-          <article class="dest-card" data-city="tokyo" tabindex="0" role="button" aria-label="Open Tokyo Nomad Guide">
+          <article class="dest-card sm-pop" data-sm-item data-city="tokyo" tabindex="0" role="button" aria-label="Open Tokyo Nomad Guide">
             <div class="dest-photo">
               <img src="assets/tokyo.webp" alt="Tokyo Japan Remote Work Hub" loading="lazy">
               <div class="dest-tag-badge">⚡ Modern Metropolis</div>
@@ -344,7 +396,7 @@
           </article>
 
           <!-- Dest 3: New York -->
-          <article class="dest-card" data-city="new york" tabindex="0" role="button"
+          <article class="dest-card sm-pop" data-sm-item data-city="new york" tabindex="0" role="button"
             aria-label="Open New York Nomad Guide">
             <div class="dest-photo">
               <img src="assets/new_york.webp" alt="New York United States" loading="lazy">
@@ -371,7 +423,7 @@
           </article>
 
           <!-- Dest 4: New Zealand -->
-          <article class="dest-card" data-city="new zealand" tabindex="0" role="button"
+          <article class="dest-card sm-pop" data-sm-item data-city="new zealand" tabindex="0" role="button"
             aria-label="Open New Zealand Nomad Guide">
             <div class="dest-photo">
               <img src="assets/new_zealand.webp" alt="New Zealand Nature Work Hub" loading="lazy">
@@ -400,7 +452,8 @@
         </div>
 
         <!-- SEAMLESS BRIDGE TO WFA TOOLS -->
-        <div class="dest-to-db-bridge" data-aos="fade-up">
+        <div class="dest-to-db-bridge sm-pop" data-sm-item>
+          <span class="sm-tape" aria-hidden="true"></span>
           <div class="dest-bridge-text">
             <h3 data-i18n="dest_bridge_title">Mau rekomendasi kafe atau kota lainnya?</h3>
             <p data-i18n="dest_bridge_desc">Aku sering sharing spot kerja tersembunyi, update visa nomad, dan suasana
@@ -414,10 +467,11 @@
       </div>
     </section>
 
-    <!-- SECTION 3: WFA TOOLS & DIGITAL PRODUCT (PERSONALIZED NARASION) -->
+    <!-- SECTION 3: WFA TOOLS & DIGITAL PRODUCT (CREATOR WORKBENCH STOP-MOTION) -->
     <section class="section wfa-tools-section" id="wfa-tools">
       <div class="container">
-        <div class="tools-bento" data-aos="fade-up" data-aos-duration="850">
+        <div class="tools-bento sm-pop">
+          <span class="sm-tape" aria-hidden="true"></span>
 
           <!-- Editorial Content & Personal Value Points -->
           <div class="tools-content">
@@ -435,7 +489,7 @@
             </p>
 
             <div class="tools-list">
-              <div class="tools-item">
+              <div class="tools-item" data-sm-item>
                 <div class="tools-item-icon">💼</div>
                 <div class="tools-item-text">
                   <strong data-i18n="tool_1_name">Travel &amp; Work Database™</strong>
@@ -444,7 +498,7 @@
                 </div>
               </div>
 
-              <div class="tools-item">
+              <div class="tools-item" data-sm-item>
                 <div class="tools-item-icon">✨</div>
                 <div class="tools-item-text">
                   <strong data-i18n="tool_2_name">Mengenal WFA dari Product Digital</strong>
@@ -453,7 +507,7 @@
                 </div>
               </div>
 
-              <div class="tools-item">
+              <div class="tools-item" data-sm-item>
                 <div class="tools-item-icon">⚡</div>
                 <div class="tools-item-text">
                   <strong data-i18n="tool_3_name">Assistant Content "Auto Pilot"</strong>
@@ -473,15 +527,21 @@
 
           </div>
 
-          <!-- High-End Visual Mockup with Database & Anggun's Photo -->
+          <!-- High-End Visual Mockup with Stop-Motion Cutout Stickers & Photo Cycler -->
           <div class="tools-visual-wrap">
-            <div class="tools-visual-main">
+            <div class="tools-sticker-bar" aria-hidden="true">
+              <span class="sm-sticker-pill sm-sticker-pill-yellow tools-sticker-left">⚡ AUTO-PILOT</span>
+              <span class="sm-sticker-pill tools-sticker-right">📓 NOTION + AI</span>
+            </div>
+
+            <div class="tools-visual-main" data-sm-item>
+              <span class="sm-tape sm-tape-alt" aria-hidden="true"></span>
               <img src="assets/travel-work-database.png" alt="Travel & Work Database iPad Showcase" loading="lazy">
             </div>
 
-            <div class="tools-sub-card">
+            <div class="tools-sub-card" data-sm-item>
               <div class="tools-avatar-wrap">
-                <img src="assets/foto-anggun (1).webp" alt="Anggun Febby with Laptop" loading="lazy">
+                <img src="assets/foto-anggun (1).webp" alt="Anggun Febby with Laptop" loading="lazy" data-sm-cycle>
               </div>
               <div class="tools-sub-text">
                 <strong>Proven on My Own Journey</strong>
@@ -495,9 +555,13 @@
       </div>
     </section>
 
-    <!-- SECTION 4: GLOBAL NOMAD COMMUNITY (SEAMLESS CONTINUOUS MARQUEE — ZERO COUNTERS) -->
+    <!-- SECTION 4: GLOBAL NOMAD COMMUNITY (STOP-MOTION POLAROID CLOTHESLINE MARQUEE) -->
     <section class="section community-section" id="community">
-      <div class="community-header-box" data-aos="fade-up">
+      <div class="community-header-box sm-pop">
+        <div class="sm-sticker-cluster" aria-hidden="true">
+          <span class="sm-sticker-pill">📸 POLAROID WALL</span>
+          <span class="sm-sticker-pill sm-sticker-pill-yellow">☕ COWORK TOGETHER</span>
+        </div>
         <div class="eyebrow-dark">KOMUNITAS PEKERJA WFA</div>
         <h2 class="section-title">Kerja Dari Mana Aja<br><em>Lebih Seru Kalau Barengan.</em></h2>
         <p class="section-subtitle">
@@ -515,7 +579,7 @@
         </div>
       </div>
 
-      <!-- SEAMLESS ZERO-GAP DUAL TRACK MARQUEE -->
+      <!-- SEAMLESS ZERO-GAP DUAL TRACK POLAROID MARQUEE -->
       <div class="marquee-container">
         <!-- Row 1: Leftward Infinite Marquee -->
         <div class="marquee-row">
@@ -567,7 +631,8 @@
       </div>
 
       <!-- INVITATION ACTION (ZERO NUMBER COUNTERS) -->
-      <div class="community-invite-card" data-aos="fade-up">
+      <div class="community-invite-card sm-pop" data-sm-item>
+        <span class="sm-tape sm-tape-alt" aria-hidden="true"></span>
         <div class="community-invite-text">
           <h3 data-i18n="comm_title">Kerja dari mana aja lebih seru kalau barengan.</h3>
           <p data-i18n="comm_sub">Nggak perlu ngerasa sendirian. Di sini kita saling kenal, sharing tips hidup WFA,
@@ -581,11 +646,12 @@
       </div>
     </section>
 
-    <!-- SECTION 5: REAL STORIES & REELS (PERSONALIZED NARRATIVE & EQUALIZER MOTION) -->
+    <!-- SECTION 5: REAL STORIES & REELS (STOP-MOTION CLAPPERBOARD & FILMSTRIP DECK) -->
     <section class="section story-section" id="stories">
       <div class="container">
         <div class="story-grid">
-          <div data-aos="fade-right">
+          <div class="sm-pop">
+            <div class="sm-clapperboard" aria-hidden="true">🎬 SCENE 05 // REELS</div>
             <div class="eyebrow-dark">CERITA DI BALIK LAYAR ✦</div>
             <h2 class="section-title">Dari Desa Kecil Sampai <em>Bisa Bawa Kerja Keliling Dunia.</em></h2>
             <p class="section-subtitle" style="margin-bottom:30px;">
@@ -599,78 +665,90 @@
             </a>
           </div>
 
-          <div class="story-cards-wrap" data-aos="fade-left">
-            <!-- Story Reel 1 -->
-            <div class="story-card" data-reel="1">
-              <video class="story-video" src="assets/videos/reel1.mp4" poster="assets/videos/reel1.webp" playsinline
-                loop preload="none"></video>
+          <div class="story-deck-col">
+            <div class="story-swipe-hint" aria-hidden="true">SWIPE REELS ⇄</div>
+            <div class="story-cards-wrap">
+              <!-- Story Reel 1 -->
+              <div class="story-card sm-pop" data-sm-item data-reel="1">
+                <span class="sm-tape" aria-hidden="true"></span>
+                <div class="story-card-frame">
+                  <video class="story-video" src="assets/videos/reel1.mp4" poster="assets/videos/reel1.webp" playsinline
+                    loop preload="none"></video>
 
-              <div class="story-overlay">
-                <div class="story-top-badge">
-                  <a href="https://www.instagram.com/reel/DM7ldABJTZD/" target="_blank" rel="noopener noreferrer"
-                    class="ig-badge" title="View on Instagram">
-                    <span>Reel ↗</span>
-                  </a>
-                </div>
+                  <div class="story-overlay">
+                    <div class="story-top-badge">
+                      <a href="https://www.instagram.com/reel/DM7ldABJTZD/" target="_blank" rel="noopener noreferrer"
+                        class="ig-badge" title="View on Instagram">
+                        <span>Reel ↗</span>
+                      </a>
+                    </div>
 
-                <div class="play-center-btn" aria-label="Play Reel Video">
-                  <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M8 5v14l11-7z" />
-                  </svg>
-                </div>
+                    <div class="play-center-btn" aria-label="Play Reel Video">
+                      <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M8 5v14l11-7z" />
+                      </svg>
+                    </div>
 
-                <div class="story-caption-box">
-                  <div class="story-caption">From my village roots to global horizons.</div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Story Reel 2 -->
-            <div class="story-card" data-reel="2">
-              <video class="story-video" src="assets/videos/reel2.mp4" poster="assets/videos/reel2.webp" playsinline
-                loop preload="none"></video>
-
-              <div class="story-overlay">
-                <div class="story-top-badge">
-                  <a href="https://www.instagram.com/reel/DPBhW11CSBb/" target="_blank" rel="noopener noreferrer"
-                    class="ig-badge" title="View on Instagram">
-                    <span>Reel ↗</span>
-                  </a>
-                </div>
-
-                <div class="play-center-btn" aria-label="Play Reel Video">
-                  <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M8 5v14l11-7z" />
-                  </svg>
-                </div>
-
-                <div class="story-caption-box">
-                  <div class="story-caption">Remote work isn't a fantasy, it's my daily reality.</div>
+                    <div class="story-caption-box">
+                      <div class="story-caption">From my village roots to global horizons.</div>
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
 
-            <!-- Story Reel 3 -->
-            <div class="story-card" data-reel="3">
-              <video class="story-video" src="assets/videos/reel3.mp4" poster="assets/videos/reel3.webp" playsinline
-                loop preload="none"></video>
+              <!-- Story Reel 2 -->
+              <div class="story-card sm-pop" data-sm-item data-reel="2">
+                <span class="sm-tape sm-tape-alt" aria-hidden="true"></span>
+                <div class="story-card-frame">
+                  <video class="story-video" src="assets/videos/reel2.mp4" poster="assets/videos/reel2.webp" playsinline
+                    loop preload="none"></video>
 
-              <div class="story-overlay">
-                <div class="story-top-badge">
-                  <a href="https://www.instagram.com/reel/DLmoeZPp7ow/" target="_blank" rel="noopener noreferrer"
-                    class="ig-badge" title="View on Instagram">
-                    <span>Reel ↗</span>
-                  </a>
+                  <div class="story-overlay">
+                    <div class="story-top-badge">
+                      <a href="https://www.instagram.com/reel/DPBhW11CSBb/" target="_blank" rel="noopener noreferrer"
+                        class="ig-badge" title="View on Instagram">
+                        <span>Reel ↗</span>
+                      </a>
+                    </div>
+
+                    <div class="play-center-btn" aria-label="Play Reel Video">
+                      <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M8 5v14l11-7z" />
+                      </svg>
+                    </div>
+
+                    <div class="story-caption-box">
+                      <div class="story-caption">Remote work isn't a fantasy, it's my daily reality.</div>
+                    </div>
+                  </div>
                 </div>
+              </div>
 
-                <div class="play-center-btn" aria-label="Play Reel Video">
-                  <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M8 5v14l11-7z" />
-                  </svg>
-                </div>
+              <!-- Story Reel 3 -->
+              <div class="story-card sm-pop" data-sm-item data-reel="3">
+                <span class="sm-tape" aria-hidden="true"></span>
+                <div class="story-card-frame">
+                  <video class="story-video" src="assets/videos/reel3.mp4" poster="assets/videos/reel3.webp" playsinline
+                    loop preload="none"></video>
 
-                <div class="story-caption-box">
-                  <div class="story-caption">Not just traveling, but building work I love.</div>
+                  <div class="story-overlay">
+                    <div class="story-top-badge">
+                      <a href="https://www.instagram.com/reel/DLmoeZPp7ow/" target="_blank" rel="noopener noreferrer"
+                        class="ig-badge" title="View on Instagram">
+                        <span>Reel ↗</span>
+                      </a>
+                    </div>
+
+                    <div class="play-center-btn" aria-label="Play Reel Video">
+                      <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M8 5v14l11-7z" />
+                      </svg>
+                    </div>
+
+                    <div class="story-caption-box">
+                      <div class="story-caption">Not just traveling, but building work I love.</div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -679,19 +757,20 @@
       </div>
     </section>
 
-    <!-- SECTION 6: SOCIALS (LET'S CONNECT — IMMERSIVE & IMPRESSIVE SHOWCASE) -->
+    <!-- SECTION 6: SOCIALS (STOP-MOTION CUTOUT CHANNELS & CREATOR CARD) -->
     <section class="section socials-section" id="socials">
       <div class="container">
-        <div class="socials-header-row" data-aos="fade-up">
+        <div class="socials-header-row sm-pop">
           <div class="eyebrow-dark" data-i18n="connect_eyebrow">MEDIA SOSIAL &amp; KONTEN ✦</div>
           <h2 class="section-title" data-i18n="connect_title">Intip Keseharian &amp; Konten Terbaruku</h2>
           <p class="section-subtitle" data-i18n="connect_sub">Di media sosial, aku rutin spill tips kerja WFA, review
             spot ngopi estetik di berbagai negara, behind the scenes, dan daily vlog perjalanan:</p>
         </div>
 
-        <div class="social-cards-grid" data-aos="fade-up" data-aos-delay="100">
+        <div class="social-cards-grid">
           <!-- Card 1: Instagram (Sharing, Tips, Dokumentasi Momen) -->
-          <article class="social-bento-card ig-card">
+          <article class="social-bento-card ig-card sm-pop" data-sm-item>
+            <span class="sm-tape" aria-hidden="true"></span>
             <div class="social-card-top">
               <div class="social-icon-badge ig-badge-icon">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
@@ -715,7 +794,8 @@
           </article>
 
           <!-- Card 2: TikTok (Entertain Content & Behind the Scenes) -->
-          <article class="social-bento-card tt-card">
+          <article class="social-bento-card tt-card sm-pop" data-sm-item>
+            <span class="sm-tape sm-tape-alt" aria-hidden="true"></span>
             <div class="social-card-top">
               <div class="social-icon-badge tt-badge-icon">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
@@ -739,7 +819,8 @@
           </article>
 
           <!-- Card 3: YouTube (Documenting & Vlog Around the World) -->
-          <article class="social-bento-card yt-card">
+          <article class="social-bento-card yt-card sm-pop" data-sm-item>
+            <span class="sm-tape" aria-hidden="true"></span>
             <div class="social-card-top">
               <div class="social-icon-badge yt-badge-icon">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
@@ -764,9 +845,9 @@
         </div>
 
         <!-- Personal Direct Touch Banner -->
-        <div class="social-touch-banner" data-aos="fade-up" data-aos-delay="150">
+        <div class="social-touch-banner sm-pop" data-sm-item>
           <div class="touch-avatar-wrap">
-            <img src="assets/foto-anggun (1).webp" alt="Anggun Febby" loading="lazy">
+            <img src="assets/foto-anggun (1).webp" alt="Anggun Febby" loading="lazy" data-sm-cycle>
             <span class="touch-status-dot"></span>
           </div>
           <div class="touch-info">
@@ -783,18 +864,28 @@
       </div>
     </section>
 
-    <!-- SECTION 7: CTA FOOTER (LIGHT, WARM & BRIGHT — ZERO DARK MODE) -->
+    <!-- SECTION 7: CTA FOOTER (LIGHT, WARM & BRIGHT — STOP-MOTION POSTCARD FINALE) -->
     <footer class="cta-footer" id="start">
       <div class="cta-bg" style="background-image:url('assets/cta_bg.webp');"></div>
       <div class="cta-overlay"></div>
 
-      <div class="cta-inner" data-aos="fade-up">
+      <div class="cta-inner sm-pop">
+        <span class="sm-tape" aria-hidden="true"></span>
+        <span class="sm-sticker cta-sticker-plane" aria-hidden="true">✈</span>
+        <span class="sm-sticker cta-sticker-globe" aria-hidden="true">🌏</span>
+        <span class="sm-sticker cta-sticker-coffee" aria-hidden="true">☕</span>
+        <div class="sm-stamp cta-sm-stamp" aria-hidden="true">
+          <span>WFA PASSPORT</span>
+          <strong>✦ 2026 ✦</strong>
+          <span>GO GLOBAL</span>
+        </div>
+
         <div class="eyebrow" data-i18n="turn_eyebrow">WFA BUKAN CUMA MIMPI</div>
         <h2 class="cta-title" data-i18n="turn_title">Hidup Fleksibel Itu <em>Mungkin.</em></h2>
         <p class="cta-copy" data-i18n="turn_copy">Punya waktu buat menjelajah dunia sembari tetap berpenghasilan mandiri
           bukan sekadar angan-angan.</p>
 
-        <a class="btn-hero-primary" href="#pathways" style="font-size:1.05rem; padding:18px 44px;">
+        <a class="btn-hero-primary" href="#pathways">
           <span data-i18n="turn_btn">Mulai Perjalanan WFA-mu</span>
           <span>→</span>
         </a>
@@ -813,7 +904,7 @@
     <a href="https://chat.whatsapp.com/E3dPReLYer5AoXOJEF1KTr" target="_blank" rel="noopener noreferrer"
       class="floating-join-wfa" id="floating-join-wfa" aria-label="Join WFA WhatsApp Community">
       <div class="floating-avatar">
-        <img src="assets/foto-anggun (1).webp" alt="Anggun Febby Avatar">
+        <img src="assets/foto-anggun (1).webp" alt="Anggun Febby Avatar" data-sm-cycle>
       </div>
       <span class="floating-text-desktop" data-i18n="floating_full">Komunitas WFA 💬</span>
       <span class="floating-text-mobile" data-i18n="floating_short">Join</span>
