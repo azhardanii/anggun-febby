@@ -869,11 +869,16 @@ img, video {
   background: #FFFFFF;
   border: 1.5px solid var(--line);
   border-radius: 28px;
+  padding: 12px;
   overflow: hidden;
   box-shadow: var(--shadow-card);
   transition: var(--transition-bounce);
   display: flex;
   flex-direction: column;
+}
+
+.path-card.path-card-featured {
+  border-color: rgba(31, 107, 88, 0.26);
 }
 
 .path-card:hover {
@@ -885,56 +890,98 @@ img, video {
 .path-photo {
   position: relative;
   width: 100%;
-  height: 250px;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  border-radius: 18px;
   overflow: hidden;
   background: var(--cream-warm);
+  border: 1px solid rgba(227, 230, 172, 0.75);
 }
 
 .path-photo img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
   transition: transform 0.6s ease;
+}
+
+.path-card-1 .path-photo img {
+  object-position: center 74%;
+}
+
+.path-card-2 .path-photo img {
+  object-position: center 42%;
+}
+
+.path-card-3 .path-photo img {
+  object-position: center 36%;
 }
 
 .path-card:hover .path-photo img {
   transform: scale(1.06);
 }
 
-.path-badge {
-  position: absolute;
-  top: 14px;
-  right: 14px;
-  background: rgba(254, 255, 205, 0.95);
-  backdrop-filter: blur(10px);
-  border: 1px solid var(--line);
-  padding: 5px 12px;
-  border-radius: 999px;
-  font-size: 0.74rem;
-  font-weight: 700;
-  color: var(--ink);
-  box-shadow: var(--shadow-subtle);
-}
-
 .path-body {
-  padding: 28px;
+  padding: 20px 14px 12px;
   display: flex;
   flex-direction: column;
   flex-grow: 1;
 }
 
-.path-icon {
-  width: 38px;
-  height: 38px;
-  border-radius: 12px;
-  background: var(--cream);
-  color: var(--forest);
+.path-meta-top {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.path-meta-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  min-width: 0;
+}
+
+.path-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 10px;
+  background: var(--cream);
+  color: var(--forest);
+  display: inline-flex;
+  align-items: center;
   justify-content: center;
-  font-size: 18px;
-  margin-bottom: 16px;
+  font-size: 16px;
+  margin-bottom: 0;
   border: 1px solid var(--line);
+  flex-shrink: 0;
+}
+
+.path-badge {
+  position: static;
+  display: inline-flex;
+  align-items: center;
+  background: var(--cream-warm);
+  border: 1px solid var(--line);
+  padding: 5px 12px;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--forest-dark);
+  line-height: 1.25;
+}
+
+.path-step {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: rgba(31, 107, 88, 0.42);
+  flex-shrink: 0;
+  line-height: 1;
 }
 
 .path-title {
@@ -958,21 +1005,47 @@ img, video {
   display: inline-flex;
   align-items: center;
   justify-content: space-between;
+  gap: 12px;
   width: 100%;
   background: var(--cream-warm);
   color: var(--ink);
   font-weight: 700;
   font-size: 0.9rem;
-  padding: 13px 20px;
+  padding: 12px 14px 12px 18px;
   border-radius: 14px;
   border: 1px solid var(--line);
   transition: var(--transition-smooth);
 }
 
+.path-btn-arrow {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #FFFFFF;
+  border: 1px solid var(--line);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: var(--transition-smooth);
+}
+
+.path-card:hover .path-btn,
 .path-btn:hover {
   background: var(--yellow);
   border-color: var(--ink);
   color: var(--ink);
+}
+
+.path-btn:hover {
+  transform: translateX(3px);
+}
+
+.path-card:hover .path-btn-arrow,
+.path-btn:hover .path-btn-arrow {
+  background: var(--forest);
+  color: #FFFFFF;
+  border-color: var(--forest);
   transform: translateX(3px);
 }
 
@@ -2445,8 +2518,9 @@ img, video {
 @media (max-width: 1024px) {
   .path-grid {
     grid-template-columns: 1fr;
-    max-width: 580px;
+    max-width: 520px;
     margin: 0 auto;
+    gap: 26px;
   }
 
   .tools-bento {
@@ -2820,16 +2894,20 @@ img, video {
 
   /* Pathways Section Mobile — Airy, Proportional & Relaxed */
   .start-section {
-    padding-top: 96px;
-    padding-bottom: 75px;
-    scroll-margin-top: 85px;
+    padding-top: 78px;
+    padding-bottom: 68px;
+    scroll-margin-top: 80px;
   }
 
   .path-head-row {
     flex-direction: column;
     align-items: flex-start;
-    gap: 12px;
+    gap: 10px;
     margin-bottom: 28px;
+  }
+
+  .path-head-row .section-subtitle {
+    margin-bottom: 0;
   }
 
   .head-note {
@@ -2837,57 +2915,78 @@ img, video {
   }
 
   .path-grid {
-    gap: 28px;
-    max-width: 460px;
+    gap: 22px;
+    max-width: 440px;
     margin: 0 auto;
   }
 
   .path-card {
-    border-radius: 20px;
-    border: 1px solid rgba(31, 107, 88, 0.15);
-    box-shadow: 0 4px 16px rgba(31, 107, 88, 0.05);
+    padding: 10px;
+    border-radius: 24px;
+    border: 1.5px solid var(--line);
+    box-shadow: 0 8px 24px -4px rgba(31, 107, 88, 0.08);
     overflow: hidden;
   }
 
   .path-photo {
-    height: 135px; /* Ramping & proporsional, tidak memakan seluruh layar */
-  }
-
-  .path-badge {
-    top: 8px;
-    right: 8px;
-    padding: 3px 9px;
-    font-size: 0.68rem;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    height: auto;
+    aspect-ratio: 4 / 3;
+    border-radius: 16px;
   }
 
   .path-body {
-    padding: 16px 16px 18px;
+    padding: 16px 8px 8px;
+  }
+
+  .path-meta-top {
+    margin-bottom: 10px;
+    gap: 8px;
   }
 
   .path-icon {
-    display: none !important; /* Hilangkan box icon dobel agar card body lega */
+    display: inline-flex !important;
+    width: 30px;
+    height: 30px;
+    font-size: 14px;
+    border-radius: 9px;
+  }
+
+  .path-badge {
+    position: static;
+    padding: 4px 10px;
+    font-size: 0.72rem;
+    box-shadow: none;
+  }
+
+  .path-step {
+    font-size: 0.95rem;
   }
 
   .path-title {
-    font-size: 1.08rem;
+    font-size: 1.18rem;
     font-weight: 800;
     margin-bottom: 6px;
     letter-spacing: 0.02em;
   }
 
   .path-desc {
-    font-size: 0.85rem;
-    line-height: 1.55;
+    font-size: 0.88rem;
+    line-height: 1.58;
     margin-bottom: 16px;
     color: var(--muted);
   }
 
   .path-btn {
-    padding: 10px 16px;
-    font-size: 0.84rem;
-    border-radius: 10px;
-    font-weight: 700;
+    padding: 11px 14px 11px 16px;
+    font-size: 0.86rem;
+    border-radius: 12px;
+    font-weight: 800;
+  }
+
+  .path-btn-arrow {
+    width: 26px;
+    height: 26px;
+    font-size: 0.85rem;
   }
 
   /* Destination Guide Mobile (Scrollbar hidden, natural swipe) */
