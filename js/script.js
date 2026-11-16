@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function () {
       heroVideo.load();
       const playPromise = heroVideo.play();
       if (playPromise !== undefined) {
-        playPromise.catch(function () {});
+        playPromise.catch(function () { });
       }
     }
   }
@@ -356,31 +356,50 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   // ==========================================================================
-  // 9. QUANTIZED STEPPED STOP-MOTION CARD TILT ON MOUSE MOVE
+  // 9. FLUID 3D CARD PERSPECTIVE TILT ON MOUSE MOVE (60FPS rAF)
   // ==========================================================================
+  const prefersReducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   const tiltCards = document.querySelectorAll('.path-card, .dest-card, .tools-bento, .story-card, .social-bento-card');
-  const quantizeStep = function (val, step) {
-    return Math.round(val / step) * step;
-  };
-  tiltCards.forEach(function (card) {
-    card.addEventListener('mousemove', function (e) {
-      if (window.innerWidth < 1024) return;
-      const rect = card.getBoundingClientRect();
-      const x = e.clientX - rect.left;
-      const y = e.clientY - rect.top;
-      const centerX = rect.width / 2;
-      const centerY = rect.height / 2;
+  if (!prefersReducedMotion) {
+    tiltCards.forEach(function (card) {
+      let tiltRafId = null;
 
-      const rotateX = quantizeStep(((y - centerY) / centerY) * -4.5, 1.5);
-      const rotateY = quantizeStep(((x - centerX) / centerX) * 4.5, 1.5);
+      card.addEventListener('mouseenter', function () {
+        if (window.innerWidth < 1024) return;
+        card.style.transition = 'transform 0.16s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.45s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.4s ease';
+      });
 
-      card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translate(-3px, -6px)`;
+      card.addEventListener('mousemove', function (e) {
+        if (window.innerWidth < 1024) return;
+        const clientX = e.clientX;
+        const clientY = e.clientY;
+        if (tiltRafId) window.cancelAnimationFrame(tiltRafId);
+
+        tiltRafId = window.requestAnimationFrame(function () {
+          const rect = card.getBoundingClientRect();
+          const x = clientX - rect.left;
+          const y = clientY - rect.top;
+          const centerX = rect.width / 2;
+          const centerY = rect.height / 2;
+
+          const rotateX = ((y - centerY) / centerY) * -3.5;
+          const rotateY = ((x - centerX) / centerX) * 3.5;
+
+          card.style.transform = `perspective(1100px) rotateX(${rotateX.toFixed(2)}deg) rotateY(${rotateY.toFixed(2)}deg) translateY(-8px) scale(1.02)`;
+          tiltRafId = null;
+        });
+      });
+
+      card.addEventListener('mouseleave', function () {
+        if (tiltRafId) {
+          window.cancelAnimationFrame(tiltRafId);
+          tiltRafId = null;
+        }
+        card.style.transition = '';
+        card.style.transform = '';
+      });
     });
-
-    card.addEventListener('mouseleave', function () {
-      card.style.transform = '';
-    });
-  });
+  }
 
   // ==========================================================================
   // 10. DESTINATION SEARCH & FILTER CHIPS
@@ -664,28 +683,37 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   // ==========================================================================
-  // 13. SCROLL-QUANTIZED STOP-MOTION FLIPBOOK ENGINE
+  // 13. FLUID REQUESTANIMATIONFRAME SCROLL PARALLAX ENGINE
   // ==========================================================================
-  const prefersReducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  let lastSmFrame = -1;
+  let currentScrollOffset = window.scrollY || 0;
+  let targetScrollOffset = currentScrollOffset;
+  let parallaxRafId = null;
 
-  function updateScrollStopMotionFrame() {
-    if (prefersReducedMotion) {
-      document.body.setAttribute('data-sm-frame', '0');
-      return;
-    }
-    const frame = Math.floor(window.scrollY / 55) % 4;
-    if (frame !== lastSmFrame) {
-      lastSmFrame = frame;
-      document.body.setAttribute('data-sm-frame', String(frame));
+  function tickSmoothParallax() {
+    currentScrollOffset += (targetScrollOffset - currentScrollOffset) * 0.12;
+    document.documentElement.style.setProperty('--scroll-offset', `${currentScrollOffset.toFixed(2)}px`);
+
+    if (Math.abs(targetScrollOffset - currentScrollOffset) > 0.25) {
+      parallaxRafId = window.requestAnimationFrame(tickSmoothParallax);
+    } else {
+      currentScrollOffset = targetScrollOffset;
+      document.documentElement.style.setProperty('--scroll-offset', `${currentScrollOffset.toFixed(2)}px`);
+      parallaxRafId = null;
     }
   }
 
-  window.addEventListener('scroll', updateScrollStopMotionFrame, { passive: true });
-  updateScrollStopMotionFrame();
+  if (!prefersReducedMotion) {
+    document.documentElement.style.setProperty('--scroll-offset', `${currentScrollOffset.toFixed(2)}px`);
+    window.addEventListener('scroll', function () {
+      targetScrollOffset = window.scrollY || 0;
+      if (!parallaxRafId) {
+        parallaxRafId = window.requestAnimationFrame(tickSmoothParallax);
+      }
+    }, { passive: true });
+  }
 
   // ==========================================================================
-  // 14. STOP-MOTION MULTI-FRAME PHOTO CYCLER (650ms STEPPED CUTS)
+  // 14. STOP-MOTION PHOTO FLIPBOOK CYCLER (CRISP CUTOUT FRAME CADENCE)
   // ==========================================================================
   const cycleFrames = [
     'assets/foto-anggun (1).webp',
@@ -693,6 +721,7 @@ document.addEventListener('DOMContentLoaded', function () {
     'assets/foto-anggun (3).webp'
   ];
   const cycleImgs = document.querySelectorAll('img[data-sm-cycle]');
+  const frameLabels = document.querySelectorAll('[data-sm-frame-label]');
 
   if (cycleImgs.length > 0 && !prefersReducedMotion) {
     cycleFrames.forEach(function (src) {
@@ -701,17 +730,36 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     let cycleIndex = 0;
+
+    const applyStopMotionTick = function (index) {
+      const tickStr = String(index % cycleFrames.length);
+      const frameNum = String((index % cycleFrames.length) + 1).padStart(2, '0');
+      const totalStr = String(cycleFrames.length).padStart(2, '0');
+
+      cycleImgs.forEach(function (img, idx) {
+        const frameIdx = (index + idx) % cycleFrames.length;
+        img.src = cycleFrames[frameIdx];
+        img.setAttribute('data-sm-tick', String(frameIdx));
+        const host = img.closest('.sm-polaroid-front, .tools-avatar-wrap, .touch-avatar-wrap, .floating-avatar');
+        if (host) {
+          host.setAttribute('data-sm-tick', tickStr);
+        }
+      });
+
+      frameLabels.forEach(function (label) {
+        label.textContent = `🎞️ STOP-MOTION · ${frameNum}/${totalStr}`;
+      });
+    };
+
+    applyStopMotionTick(0);
     setInterval(function () {
       cycleIndex = (cycleIndex + 1) % cycleFrames.length;
-      cycleImgs.forEach(function (img, idx) {
-        const staggeredSrc = cycleFrames[(cycleIndex + idx) % cycleFrames.length];
-        img.src = idx === 0 ? nextSrc : staggeredSrc;
-      });
-    }, 650);
+      applyStopMotionTick(cycleIndex);
+    }, 950);
   }
 
   // ==========================================================================
-  // 15. STOP-MOTION VIEWPORT ENTRANCE OBSERVER
+  // 15. STAGGERED 60FPS SPRING VIEWPORT ENTRANCE OBSERVER
   // ==========================================================================
   const smPopElements = document.querySelectorAll('.sm-pop');
   if (smPopElements.length > 0) {
@@ -720,13 +768,34 @@ document.addEventListener('DOMContentLoaded', function () {
         el.classList.add('sm-pop-active');
       });
     } else {
+      const staggerContainers = '.path-grid, .dest-cards-grid, .story-cards-wrap, .social-cards-grid';
+      document.querySelectorAll(staggerContainers).forEach(function (container) {
+        const items = container.querySelectorAll('.sm-pop');
+        items.forEach(function (item, idx) {
+          const delay = (idx % 4) * 95;
+          item.dataset.staggerDelay = String(delay);
+          if (!item.classList.contains('sm-pop-active')) {
+            item.style.transitionDelay = `${delay}ms`;
+          }
+        });
+      });
+
+      const activateSmPop = function (el) {
+        if (el.classList.contains('sm-pop-active')) return;
+        const delay = parseInt(el.dataset.staggerDelay || '0', 10);
+        el.classList.add('sm-pop-active');
+        setTimeout(function () {
+          el.style.transitionDelay = '';
+        }, delay + 850);
+      };
+
       const revealVisibleSmPop = function () {
         const vh = window.innerHeight || document.documentElement.clientHeight;
         smPopElements.forEach(function (el) {
           if (el.classList.contains('sm-pop-active')) return;
           const rect = el.getBoundingClientRect();
           if (rect.top <= vh + 40) {
-            el.classList.add('sm-pop-active');
+            activateSmPop(el);
           }
         });
       };
@@ -734,11 +803,11 @@ document.addEventListener('DOMContentLoaded', function () {
       const smObserver = new IntersectionObserver(function (entries) {
         entries.forEach(function (entry) {
           if (entry.isIntersecting) {
-            entry.target.classList.add('sm-pop-active');
+            activateSmPop(entry.target);
             smObserver.unobserve(entry.target);
           }
         });
-      }, { threshold: 0.06, rootMargin: '0px 0px -20px 0px' });
+      }, { threshold: 0.08, rootMargin: '0px 0px -30px 0px' });
 
       smPopElements.forEach(function (el) {
         if (!el.classList.contains('sm-pop-active')) {
