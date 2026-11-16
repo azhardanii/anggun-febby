@@ -703,7 +703,6 @@ document.addEventListener('DOMContentLoaded', function () {
     let cycleIndex = 0;
     setInterval(function () {
       cycleIndex = (cycleIndex + 1) % cycleFrames.length;
-      const nextSrc = cycleFrames[cycleIndex];
       cycleImgs.forEach(function (img, idx) {
         const staggeredSrc = cycleFrames[(cycleIndex + idx) % cycleFrames.length];
         img.src = idx === 0 ? nextSrc : staggeredSrc;
