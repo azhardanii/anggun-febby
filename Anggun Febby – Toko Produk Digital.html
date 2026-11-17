@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Febby Anggun – Toko Produk Digital untuk Kerja dari Mana Saja</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&family=Plus+Jakarta+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#FAFBEA;--surface:#fff;--ink:#14301F;--muted:#4F6555;--green:#2E7D3F;--deep:#14301F;--lime:#CFE56B;--sun:#F7D84A;--sun-soft:#FFF3B0;--line:#DDE5BC;--on-deep:#F4F8DC;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){color-scheme:dark;--bg:#0F1B13;--surface:#17271C;--ink:#F1F6D8;--muted:#A9BDA9;--green:#7CC36C;--deep:#0A130D;--lime:#CFE56B;--sun:#F7D84A;--sun-soft:#3A3512;--line:#2A3D2E;--on-deep:#F4F8DC}}
+:root[data-theme="dark"]{color-scheme:dark;--bg:#0F1B13;--surface:#17271C;--ink:#F1F6D8;--muted:#A9BDA9;--green:#7CC36C;--deep:#0A130D;--lime:#CFE56B;--sun:#F7D84A;--sun-soft:#3A3512;--line:#2A3D2E;--on-deep:#F4F8DC}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.6 "Plus Jakarta Sans",system-ui,sans-serif}
+h1,h2,h3{font-family:Fraunces,Georgia,serif;line-height:1.1;margin:0}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:3px solid var(--green);outline-offset:2px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+section{padding:72px 0}
+h2{font-size:clamp(28px,4vw,40px);font-weight:800}
+.lead{color:var(--muted);max-width:56ch;margin:10px 0 32px}
+.btn{display:inline-block;border:0;border-radius:999px;padding:13px 24px;font:700 15px inherit;font-family:inherit;cursor:pointer;background:var(--sun);color:#14301F;transition:transform .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn.dark{background:var(--deep);color:var(--on-deep)}
+.btn.ghost{background:transparent;border:2px solid currentColor}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--bg);border-bottom:1px solid var(--line)}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:30}
+nav{display:flex;align-items:center;gap:24px;height:64px}
+.logo{font:800 22px Fraunces,serif;display:flex;align-items:center;gap:8px}
+.logo i{width:28px;height:28px;border-radius:50% 50% 50% 8px;background:linear-gradient(135deg,var(--sun),var(--green))}
+nav .links{display:flex;gap:22px;margin-left:auto;font-weight:500;font-size:15px}
+.cartbtn{position:relative;background:var(--deep);color:var(--on-deep);border:0;border-radius:999px;padding:10px 18px;font:700 14px inherit;font-family:inherit;cursor:pointer}
+.cartbtn b{background:var(--sun);color:#14301F;border-radius:999px;padding:1px 8px;margin-left:6px}
+@media(max-width:720px){nav .links{display:none}nav .cartbtn{margin-left:auto}}
+/* hero */
+.hero{background:linear-gradient(160deg,var(--sun-soft) 0%,var(--bg) 55%);padding:64px 0 80px;overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
+.hero h1{font-size:clamp(38px,6vw,68px);font-weight:800;letter-spacing:-.02em}
+.hero h1 span{display:block;color:var(--green)}
+.hero p{font-size:18px;color:var(--muted);max-width:46ch;margin:20px 0 28px}
+.hero .cta{display:flex;gap:12px;flex-wrap:wrap}
+.proof{display:flex;gap:28px;margin-top:36px;flex-wrap:wrap}
+.proof div{font-size:13px;color:var(--muted)}
+.proof strong{display:block;font:800 26px Fraunces,serif;color:var(--ink)}
+.stack{position:relative;height:420px}
+.cover{position:absolute;width:190px;height:260px;border-radius:6px 14px 14px 6px;padding:18px 16px;display:flex;flex-direction:column;justify-content:space-between;color:#fff;box-shadow:-6px 0 0 rgba(0,0,0,.18) inset,0 18px 30px rgba(20,48,31,.28)}
+.cover small{opacity:.85;font-size:11px}
+.cover b{font:800 24px/1.05 Fraunces,serif}
+.cover svg{width:44px;height:44px}
+.c1{background:linear-gradient(160deg,#2E7D3F,#14301F)}
+.c2{background:linear-gradient(160deg,#F7D84A,#E0A800);color:#14301F}
+.c3{background:linear-gradient(160deg,#8DBE3F,#4C8A2B)}
+.c4{background:linear-gradient(160deg,#14301F,#2E7D3F 70%,#CFE56B)}
+.c5{background:linear-gradient(160deg,#CFE56B,#F7D84A);color:#14301F}
+.stack .c1{left:0;top:90px;transform:rotate(-8deg)}
+.stack .c2{left:105px;top:20px;transform:rotate(3deg);z-index:2}
+.stack .c3{left:215px;top:110px;transform:rotate(10deg)}
+.chip{position:absolute;z-index:3;background:var(--surface);border-radius:14px;padding:10px 14px;font-size:13px;font-weight:700;box-shadow:0 10px 24px rgba(20,48,31,.18)}
+.chip em{font-style:normal;color:var(--green)}
+@media(max-width:860px){.hero .wrap{grid-template-columns:1fr}.stack{height:380px;max-width:420px}}
+/* paths */
+.paths{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.path{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:24px;display:flex;flex-direction:column;gap:10px;cursor:pointer;text-align:left;font:inherit;color:inherit}
+.path:nth-child(2){background:var(--sun-soft)}
+.path:nth-child(3){background:var(--lime);color:#14301F}
+.path .ic{font-size:28px}
+.path h3{font-size:20px}
+.path p{margin:0;font-size:14px;color:var(--muted)}
+.path:nth-child(3) p{color:#2B4A2E}
+.path.on{outline:3px solid var(--green)}
+@media(max-width:900px){.paths{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.paths{grid-template-columns:1fr}}
+/* products */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:22px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:16px;display:flex;flex-direction:column;gap:10px}
+.card .cover{position:relative;width:100%;height:210px;box-shadow:-5px 0 0 rgba(0,0,0,.15) inset}
+.tag{align-self:flex-start;background:var(--sun);color:#14301F;border-radius:999px;font-size:11px;font-weight:700;padding:2px 10px}
+.card h3{font-size:19px}
+.card p{margin:0;color:var(--muted);font-size:14px;flex:1}
+.rate{font-size:13px;color:var(--muted)}.rate b{color:var(--ink)}
+.price{display:flex;align-items:baseline;gap:8px;font-weight:700;font-size:20px}
+.price s{font-size:13px;color:var(--muted);font-weight:400}
+.card .btn{width:100%;text-align:center}
+/* bundles */
+.bundles{background:var(--deep);color:var(--on-deep)}
+.bundles .lead{color:#B9CBB0}
+.bgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.bundle{border:1px solid #2F4A36;border-radius:22px;padding:26px;display:flex;flex-direction:column;gap:12px;background:#183323}
+.bundle.best{background:var(--sun);color:#14301F;border-color:var(--sun)}
+.bundle ul{margin:0;padding:0;list-style:none;font-size:14px;flex:1}
+.bundle li{padding:4px 0}.bundle li::before{content:"✓ ";font-weight:700;color:var(--lime)}
+.bundle.best li::before{color:var(--green)}
+.bundle .price s{color:inherit;opacity:.6}
+.bundle.best .btn{background:var(--deep);color:var(--on-deep)}
+@media(max-width:860px){.bgrid{grid-template-columns:1fr}}
+/* steps / testi */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;counter-reset:s}
+.step{border-left:4px solid var(--lime);padding:4px 0 4px 18px}
+.step h3{font-size:20px;margin-bottom:6px}.step p{margin:0;color:var(--muted);font-size:15px}
+@media(max-width:760px){.steps{grid-template-columns:1fr}}
+.tgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.quote{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:24px;margin:0}
+.quote p{margin:0 0 14px}.quote footer{font-size:13px;color:var(--muted)}
+.stars{color:#D9A400;letter-spacing:2px}
+@media(max-width:860px){.tgrid{grid-template-columns:1fr}}
+.faq details{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:16px 20px;margin-bottom:10px}
+.faq summary{font-weight:700;cursor:pointer}
+.faq p{color:var(--muted);margin:10px 0 0}
+.news{background:linear-gradient(120deg,var(--lime),var(--sun));color:#14301F;border-radius:28px;padding:44px;display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:center}
+.news p{margin:8px 0 0}
+.news form{display:flex;gap:8px;flex-wrap:wrap}
+.news input{flex:1;min-width:180px;border:2px solid #14301F;border-radius:999px;padding:12px 18px;font:inherit;background:#fff;color:#14301F}
+.msg{grid-column:1/-1;font-weight:700;min-height:1.4em;margin:0}
+@media(max-width:760px){.news{grid-template-columns:1fr;padding:28px}}
+footer.site{padding:36px 0 48px;border-top:1px solid var(--line);color:var(--muted);font-size:14px}
+footer.site .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+/* drawer */
+.drawer{position:fixed;top:0;right:0;bottom:0;width:min(380px,100%);background:var(--surface);z-index:50;transform:translateX(105%);transition:transform .25s;display:flex;flex-direction:column;padding:calc(20px + env(safe-area-inset-top,0px)) 20px calc(20px + env(safe-area-inset-bottom,0px));box-shadow:-10px 0 30px rgba(0,0,0,.2)}
+.drawer.open{transform:none}
+.drawer h3{font-size:24px;margin-bottom:12px}
+.items{flex:1;overflow:auto}
+.item{display:flex;justify-content:space-between;gap:10px;padding:12px 0;border-bottom:1px solid var(--line);font-size:14px}
+.item button{background:none;border:0;color:var(--green);cursor:pointer;font:inherit;font-weight:700}
+.total{display:flex;justify-content:space-between;font-weight:700;font-size:18px;margin:16px 0}
+.empty{color:var(--muted)}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<header><div class="wrap"><nav>
+<a class="logo" href="#"><i></i>Febby Anggun</a>
+<div class="links"><a href="#produk">Produk</a><a href="#bundle">Bundle</a><a href="#cara">Cara Kerja</a><a href="#faq">FAQ</a></div>
+<button class="cartbtn" id="openCart" aria-label="Buka keranjang">Keranjang<b id="count">0</b></button>
+</nav></div></header>
+
+<main>
+<div class="hero"><div class="wrap">
+<div>
+<h1>Bangun skill. Raih penghasilan.<span>Kerja dari mana saja.</span></h1>
+<p>Panduan, template, dan tools digital yang kupakai sendiri untuk kerja remote dan membangun bisnis kreator. Sekali beli, akses selamanya.</p>
+<div class="cta"><a class="btn dark" href="#produk">Lihat Produk</a><a class="btn ghost" href="#bundle">Cek Paket Hemat</a></div>
+<div class="proof"><div><strong>10K+</strong>pembeli puas</div><div><strong>4,9/5</strong>rating rata-rata</div><div><strong>Instan</strong>download langsung</div></div>
+</div>
+<div class="stack" aria-hidden="true">
+<div class="cover c1"><small>Panduan Lengkap</small><b>Rahasia WFA</b><span>✈</span></div>
+<div class="cover c2"><small>Paket Lengkap</small><b>Work From Anywhere Blueprint</b><span>🧭</span></div>
+<div class="cover c3"><small>Planner</small><b>Content Auto Pilot</b><span>🎬</span></div>
+<div class="chip" style="left:230px;top:0">Diskon s/d <em>50%</em></div>
+<div class="chip" style="left:10px;top:340px">⭐ 4,9 dari 2,1 rb ulasan</div>
+</div>
+</div></div>
+
+<section><div class="wrap">
+<h2>Mau mulai dari mana?</h2>
+<p class="lead">Pilih tujuanmu, kami tampilkan produk yang paling pas.</p>
+<div class="paths" id="paths">
+<button class="path" data-f="wfa"><span class="ic">✈️</span><h3>Mulai karier WFA</h3><p>Cari kerja remote dan siapkan lamaran.</p></button>
+<button class="path" data-f="income"><span class="ic">💰</span><h3>Bangun penghasilan</h3><p>Ubah skill jadi uang dari produk digital.</p></button>
+<button class="path" data-f="creator"><span class="ic">🎥</span><h3>Tumbuhkan bisnis kreator</h3><p>Konten rutin, portofolio rapi, brand kuat.</p></button>
+<button class="path" data-f="all"><span class="ic">🗂️</span><h3>Lihat semua</h3><p>Jelajahi seluruh koleksi produk.</p></button>
+</div></div></section>
+
+<section id="produk" style="padding-top:0"><div class="wrap">
+<h2>Produk terlaris</h2>
+<p class="lead">Dipercaya ribuan pembeli. Semua berupa file digital yang bisa langsung kamu unduh setelah bayar.</p>
+<div class="grid" id="grid"></div>
+</div></section>
+
+<section class="bundles" id="bundle"><div class="wrap">
+<h2>Paket hemat</h2>
+<p class="lead">Beli beberapa sekaligus, bayar lebih murah.</p>
+<div class="bgrid" id="bgrid"></div>
+</div></section>
+
+<section id="cara"><div class="wrap">
+<h2>Cara belanjanya gampang</h2>
+<p class="lead">Tidak perlu menunggu pengiriman.</p>
+<div class="steps">
+<div class="step"><h3>Pilih produk</h3><p>Tambahkan satu produk atau paket hemat ke keranjang.</p></div>
+<div class="step"><h3>Bayar aman</h3><p>Transfer, e-wallet, atau QRIS. Link download langsung dikirim.</p></div>
+<div class="step"><h3>Belajar kapan saja</h3><p>Akses seumur hidup, plus update gratis saat ada materi baru.</p></div>
+</div></div></section>
+
+<section style="padding-top:0"><div class="wrap">
+<h2>Kata mereka</h2>
+<p class="lead">Cerita nyata dari pembeli yang sudah mencoba.</p>
+<div class="tgrid">
+<figure class="quote"><div class="stars">★★★★★</div><p>Panduannya lengkap dan mudah dipahami. Sekarang aku sudah mulai kerja remote dari Bali!</p><footer>Sarah, Digital Nomad</footer></figure>
+<figure class="quote"><div class="stars">★★★★★</div><p>Template portofolionya rapi, dua hari jadi dan langsung dapat klien pertama.</p><footer>Dimas, Desainer Lepas</footer></figure>
+<figure class="quote"><div class="stars">★★★★★</div><p>Content Auto Pilot bikin jadwal konten sebulan selesai dalam satu sore.</p><footer>Nadia, Kreator Konten</footer></figure>
+</div></div></section>
+
+<section class="faq" id="faq" style="padding-top:0"><div class="wrap" style="max-width:760px">
+<h2 style="margin-bottom:24px">Pertanyaan umum</h2>
+<details><summary>Produknya dikirim dalam bentuk apa?</summary><p>File digital (PDF, template, spreadsheet). Link download muncul setelah pembayaran dan juga dikirim ke email.</p></details>
+<details><summary>Apakah akses-nya selamanya?</summary><p>Ya. Sekali beli, kamu bisa mengunduh ulang kapan pun dan mendapat update gratis.</p></details>
+<details><summary>Pembayarannya lewat apa saja?</summary><p>Transfer bank, e-wallet (GoPay, OVO, DANA), dan QRIS.</p></details>
+<details><summary>Bagaimana kalau aku bingung memakainya?</summary><p>Tim kami siap membantu lewat WhatsApp pada jam kerja.</p></details>
+</div></section>
+
+<section style="padding-top:0"><div class="wrap">
+<div class="news">
+<div><h2>Tips WFA langsung ke emailmu</h2><p>Gabung komunitas dan dapatkan checklist WFA gratis.</p></div>
+<form id="nf"><input type="email" required placeholder="Alamat email kamu" aria-label="Email"><button class="btn dark">Gabung Gratis</button></form>
+<p class="msg" id="msg" role="status"></p>
+</div></div></section>
+</main>
+
+<footer class="site"><div class="wrap"><span>© 2026 Febby Anggun. Semua hak dilindungi.</span><span><a href="#">WhatsApp</a> &nbsp; <a href="#">Instagram</a> &nbsp; <a href="#">TikTok</a> &nbsp; <a href="#">YouTube</a></span></div></footer>
+
+<aside class="drawer" id="drawer" aria-label="Keranjang">
+<h3>Keranjang</h3>
+<div class="items" id="items"></div>
+<div class="total"><span>Total</span><span id="total">Rp0</span></div>
+<button class="btn dark" id="checkout">Bayar Sekarang</button>
+<button class="btn ghost" id="closeCart" style="margin-top:8px">Lanjut belanja</button>
+</aside>
+
+<script>
+const rp=n=>"Rp"+n.toLocaleString("id-ID");
+const P=[
+{id:"rahasia",n:"Rahasia WFA",d:"Panduan memulai karier kerja remote dari nol.",p:49000,o:99000,f:"wfa",c:"c1",t:"Terlaris",r:"4,9 (2,1 rb)"},
+{id:"top100",n:"TOP 100+ Kerja WFA",d:"Daftar situs dan platform pencari kerja remote.",p:49000,o:79000,f:"wfa",c:"c4",t:"Baru",r:"4,9 (354)"},
+{id:"blueprint",n:"Work From Anywhere Blueprint",d:"Peluang, panduan, dan strategi dalam satu paket.",p:199000,o:299000,f:"income",c:"c2",t:"Terpopuler",r:"4,9 (1 rb)"},
+{id:"autopilot",n:"Content Auto Pilot",d:"Planner dan sistem konten untuk kreator produk.",p:99000,o:149000,f:"creator",c:"c3",t:"Favorit",r:"4,8 (850)"},
+{id:"portfolio",n:"Creator Portfolio Template",d:"Template portofolio profesional dan modern.",p:79000,o:129000,f:"creator",c:"c5",t:"Template",r:"4,8 (730)"}];
+const B=[
+{id:"starter",n:"WFA Starter Kit",l:["Rahasia WFA","TOP 100+ Kerja WFA","Checklist lamaran"],p:79000,o:98000},
+{id:"bp",n:"Work From Anywhere Blueprint",l:["Semua isi Starter Kit","Template CV dan lamaran","Rencana aksi 30 hari"],p:199000,o:299000,best:1,t:"Paling hemat per produk"},
+{id:"acc",n:"WFA Accelerator",l:["Semua produk toko","Update gratis selamanya","Bimbingan via WhatsApp"],p:499000,o:799000}];
+let cart=[];
+const $=s=>document.querySelector(s);
+function grid(f){ $("#grid").innerHTML=P.filter(x=>f==="all"||x.f===f).map(x=>`<article class="card"><div class="cover ${x.c}"><small>Febby Anggun</small><b>${x.n}</b></div><span class="tag">${x.t}</span><h3>${x.n}</h3><p>${x.d}</p><div class="rate">★ <b>${x.r}</b></div><div class="price">${rp(x.p)}<s>${rp(x.o)}</s></div><button class="btn dark" data-add="${x.id}">Tambah ke keranjang</button></article>`).join("")}
+$("#bgrid").innerHTML=B.map(b=>`<div class="bundle ${b.best?"best":""}">${b.t?`<span class="tag" style="background:var(--deep);color:var(--on-deep)">${b.t}</span>`:""}<h3>${b.n}</h3><ul>${b.l.map(i=>`<li>${i}</li>`).join("")}</ul><div class="price">${rp(b.p)}<s>${rp(b.o)}</s></div><button class="btn" data-add="${b.id}">Tambah paket</button></div>`).join("");
+grid("all");
+document.addEventListener("click",e=>{
+ const a=e.target.closest("[data-add]"); if(a){const it=[...P,...B].find(x=>x.id===a.dataset.add); if(!cart.some(c=>c.id===it.id))cart.push(it); render(); $("#drawer").classList.add("open");}
+ const rm=e.target.closest("[data-rm]"); if(rm){cart=cart.filter(c=>c.id!==rm.dataset.rm);render();}
+ const pa=e.target.closest(".path"); if(pa){document.querySelectorAll(".path").forEach(x=>x.classList.remove("on"));pa.classList.add("on");grid(pa.dataset.f);$("#produk").scrollIntoView({behavior:"smooth"});}
+});
+function render(){
+ $("#count").textContent=cart.length;
+ $("#items").innerHTML=cart.length?cart.map(c=>`<div class="item"><span>${c.n}<br><small>${rp(c.p)}</small></span><button data-rm="${c.id}">Hapus</button></div>`).join(""):'<p class="empty">Keranjangmu masih kosong. Pilih produk untuk mulai.</p>';
+ $("#total").textContent=rp(cart.reduce((s,c)=>s+c.p,0));
+}
+$("#openCart").onclick=()=>$("#drawer").classList.add("open");
+$("#closeCart").onclick=()=>$("#drawer").classList.remove("open");
+$("#checkout").onclick=()=>{ if(!cart.length){return} alert("Ini halaman contoh. Sambungkan tombol ini ke pembayaran (Midtrans, Xendit, atau Lynk.id)."); };
+$("#nf").onsubmit=e=>{e.preventDefault();$("#msg").textContent="Terima kasih! Cek emailmu untuk checklist WFA.";e.target.reset()};
+render();
+</script>
+</body>
+</html>
