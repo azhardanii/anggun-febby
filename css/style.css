@@ -376,8 +376,12 @@ img, video {
    ========================================================================== */
 .hero-stage {
   position: relative;
-  background: linear-gradient(160deg, var(--sun-soft) 0%, var(--bg) 55%);
-  padding: 64px 0 84px;
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  align-items: center;
+  background: var(--bg);
+  padding: 88px 0 96px;
   overflow: hidden;
 }
 
@@ -398,19 +402,25 @@ img, video {
   height: 100%;
   object-fit: cover;
   object-position: center 28%;
-  opacity: 0.78;
+  opacity: 0.82;
 }
 
+/* Smooth multi-stop fade so hero dissolves seamlessly into #FAFBEA without a hard seam */
 .hero-cream-veil {
   position: absolute;
   inset: 0;
   background:
+    linear-gradient(to bottom,
+      rgba(250, 251, 234, 0.22) 0%,
+      rgba(250, 251, 234, 0) 32%,
+      rgba(250, 251, 234, 0.36) 66%,
+      rgba(250, 251, 234, 0.82) 86%,
+      var(--bg) 100%),
     linear-gradient(96deg,
-      rgba(255, 243, 176, 0.92) 0%,
-      rgba(250, 251, 234, 0.88) 48%,
-      rgba(250, 251, 234, 0.48) 76%,
-      rgba(250, 251, 234, 0.25) 100%),
-    linear-gradient(to bottom, transparent 60%, var(--bg) 100%);
+      rgba(255, 243, 176, 0.86) 0%,
+      rgba(250, 251, 234, 0.82) 44%,
+      rgba(250, 251, 234, 0.38) 72%,
+      rgba(250, 251, 234, 0.14) 100%);
   z-index: 2;
 }
 
@@ -566,7 +576,7 @@ img, video {
    ========================================================================== */
 .pathways-band {
   background: var(--bg);
-  padding: 0 0 24px;
+  padding: 64px 0 36px;
 }
 
 .pathways-trio {
@@ -843,23 +853,32 @@ img, video {
 }
 
 .product-card h3 {
-  font-size: 18px;
+  font-size: 19px;
 }
 
-.product-desc {
+.product-includes {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
   color: var(--muted);
-  font-size: 14px;
-  flex: 1;
-}
-
-.product-rate {
   font-size: 13px;
-  color: var(--muted);
+  line-height: 1.45;
+  flex: 1;
+  margin: 2px 0 6px;
 }
 
-.stars {
-  color: #D9A400;
-  letter-spacing: 2px;
+.product-includes li {
+  display: flex;
+  align-items: flex-start;
+  gap: 7px;
+}
+
+.product-includes li::before {
+  content: '✓';
+  color: var(--green);
+  font-weight: 800;
+  flex-shrink: 0;
 }
 
 .product-price-row {
@@ -877,7 +896,7 @@ img, video {
 }
 
 /* ==========================================================================
-   SECTION 3: PAKET HEMAT (EXACT .html .bundles: #14301F & #F7D84A)
+   SECTION 3: BIMBINGAN WFA (EXACT .html .bundles: #14301F & #F7D84A)
    ========================================================================== */
 .bundles-section {
   background: var(--deep);
@@ -896,75 +915,64 @@ img, video {
   margin-bottom: 32px;
 }
 
+.bundles-section .wrap {
+  max-width: 1220px;
+}
+
 .bgrid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
 }
 
-.bundle {
+.coaching-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px;
+}
+
+.coaching-card {
   border: 1px solid #2F4A36;
   border-radius: 22px;
-  padding: 26px;
+  padding: 10px;
   display: flex;
   flex-direction: column;
   gap: 12px;
   background: #183323;
+  transition: transform 0.25s var(--ease-fluid);
 }
 
-.bundle.best {
-  background: var(--sun);
-  color: #14301F;
+.coaching-card:last-child {
+  grid-column: 1 / -1;
+  width: 100%;
+  max-width: calc(50% - 14px);
+  justify-self: center;
+}
+
+.coaching-card:hover {
+  transform: translateY(-4px);
+}
+
+.coaching-card.featured {
   border-color: var(--sun);
 }
 
-.bundle h3 {
-  color: inherit;
-  font-size: 22px;
+.coaching-poster {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 14px;
+  overflow: hidden;
+  background: #14301F;
 }
 
-.bundle-tag {
-  align-self: flex-start;
-  border-radius: 999px;
-  font-size: 11px;
-  font-weight: 700;
-  padding: 3px 10px;
-  background: var(--deep);
-  color: var(--on-deep);
+.coaching-poster img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-.bundle ul {
-  list-style: none;
-  font-size: 14px;
-  flex: 1;
-}
-
-.bundle li {
-  padding: 4px 0;
-}
-
-.bundle li::before {
-  content: '✓ ';
-  font-weight: 700;
-  color: var(--lime);
-}
-
-.bundle.best li::before {
-  color: var(--green);
-}
-
-.bundle-price {
-  display: flex;
-  align-items: baseline;
-  gap: 8px;
-  font-weight: 700;
-  font-size: 20px;
-}
-
-.bundle-price s {
-  font-size: 13px;
-  font-weight: 400;
-  opacity: 0.65;
+.stars {
+  color: #D9A400;
+  letter-spacing: 2px;
 }
 
 /* ==========================================================================
@@ -978,32 +986,87 @@ img, video {
   margin-bottom: 32px;
 }
 
-.tgrid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+/* Masonry testimonial wall (reference palette only) */
+.testi-masonry {
+  column-count: 3;
+  column-gap: 20px;
 }
 
-.quote-card {
+.testi-card {
+  break-inside: avoid;
+  -webkit-column-break-inside: avoid;
+  display: block;
+  width: 100%;
+  margin: 0 0 20px;
   background: var(--surface);
   border: 1px solid var(--line);
   border-radius: 20px;
-  padding: 24px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  padding: 22px;
 }
 
-.quote-card p {
-  margin: 10px 0 14px;
+.testi-card:nth-child(4n + 2) {
+  background: var(--sun-soft);
+}
+
+.testi-card.is-hidden {
+  display: none;
+}
+
+.testi-card p {
+  margin: 10px 0 18px;
   color: var(--ink);
   font-size: 15px;
+  line-height: 1.62;
 }
 
-.quote-card footer {
+.testi-person {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-top: 14px;
+  border-top: 1px solid var(--line);
+}
+
+.testi-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--line);
+  background: var(--bg);
+  flex-shrink: 0;
+}
+
+.testi-avatar-fallback {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--lime);
+  color: #14301F;
+  font: 800 16px var(--font-serif);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.testi-name {
+  display: block;
+  font-weight: 700;
+  font-size: 15px;
+  color: var(--ink);
+  line-height: 1.2;
+}
+
+.testi-handle {
   font-size: 13px;
   color: var(--muted);
-  font-weight: 600;
+}
+
+.testi-more-row {
+  display: flex;
+  justify-content: center;
+  margin-top: 8px;
 }
 
 /* ==========================================================================
@@ -1885,11 +1948,20 @@ img, video {
   .hero-content-wrap,
   .pathways-trio,
   .bgrid,
-  .tgrid,
+  .coaching-grid,
   .story-grid,
   .social-cards-grid,
   .news {
     grid-template-columns: 1fr;
+  }
+
+  .coaching-card:last-child {
+    grid-column: auto;
+    max-width: 100%;
+  }
+
+  .testi-masonry {
+    column-count: 2;
   }
 
   .hero-visual-aside {
@@ -1907,8 +1979,9 @@ img, video {
   }
 
   .hero-stage {
-    min-height: 82dvh;
-    padding: 90px 0 64px;
+    min-height: 100vh;
+    min-height: 100dvh;
+    padding: 96px 0 48px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -1916,10 +1989,15 @@ img, video {
 
   .hero-cream-veil {
     background: linear-gradient(to bottom,
-      rgba(255, 243, 176, 0.88) 0%,
-      rgba(250, 251, 234, 0.72) 45%,
-      rgba(250, 251, 234, 0.35) 75%,
+      rgba(255, 243, 176, 0.82) 0%,
+      rgba(250, 251, 234, 0.68) 38%,
+      rgba(250, 251, 234, 0.34) 64%,
+      rgba(250, 251, 234, 0.8) 86%,
       var(--bg) 100%);
+  }
+
+  .pathways-band {
+    padding: 40px 0 24px;
   }
 
   .hero-cta-row {
@@ -1968,6 +2046,10 @@ img, video {
   .products-grid,
   .dest-cards-grid {
     grid-template-columns: 1fr;
+  }
+
+  .testi-masonry {
+    column-count: 1;
   }
 
   .story-swipe-hint {
