@@ -52,7 +52,7 @@ body::-webkit-scrollbar {
 
 body {
   background: var(--bg);
-  color: var(--ink);
+  color: var(--green);
   font-family: var(--font-sans);
   font-size: 16px;
   line-height: 1.6;
@@ -68,7 +68,7 @@ h3,
 h4 {
   font-family: var(--font-serif);
   line-height: 1.12;
-  color: var(--ink);
+  color: var(--green);
 }
 
 a {
@@ -125,19 +125,23 @@ video {
   letter-spacing: 0.04em;
   text-transform: uppercase;
   padding: 4px 12px;
-  background: var(--sun);
-  color: #14301F;
+  background: var(--surface);
+  border: 1.5px solid var(--green);
+  color: var(--green);
   margin-bottom: 12px;
+  box-shadow: 0 2px 8px rgba(46, 125, 63, 0.1);
 }
 
 .pill-lime {
-  background: var(--lime);
-  color: #14301F;
+  background: var(--surface);
+  border: 1.5px solid var(--green);
+  color: var(--green);
 }
 
 .pill-sun-soft {
-  background: var(--sun-soft);
-  color: #14301F;
+  background: var(--surface);
+  border: 1.5px solid var(--green);
+  color: var(--green);
 }
 
 .section-heading {
@@ -146,6 +150,7 @@ video {
   font-weight: 800;
   letter-spacing: -0.02em;
   margin-bottom: 10px;
+  color: var(--green);
 }
 
 .section-heading em {
@@ -154,9 +159,10 @@ video {
 }
 
 .section-lead {
-  color: var(--muted);
+  color: var(--green);
   max-width: 58ch;
   font-size: 16px;
+  line-height: 1.6;
 }
 
 .centered-lead {
@@ -733,13 +739,13 @@ video {
 
 .pathway-card {
   background: var(--surface);
-  border: 1px solid var(--line);
+  border: 1.5px solid rgba(46, 125, 63, 0.2);
   border-radius: 20px;
   padding: 24px;
   display: flex;
   flex-direction: column;
   gap: 12px;
-  color: var(--ink);
+  color: var(--green);
   transition: transform 0.25s var(--ease-fluid);
 }
 
@@ -750,7 +756,7 @@ video {
 
 .pathway-card:nth-child(3) {
   background: var(--lime);
-  color: #14301F;
+  color: var(--green);
 }
 
 .pathway-card:hover {
@@ -773,25 +779,25 @@ video {
   font-size: 11px;
   font-weight: 700;
   background: var(--surface);
-  border: 1px solid var(--line);
+  border: 1px solid var(--green);
   padding: 3px 10px;
   border-radius: 999px;
-  color: #14301F;
+  color: var(--green);
 }
 
 .pathway-card h3 {
   font-size: 20px;
-  color: inherit;
+  color: var(--green);
 }
 
 .pathway-desc {
   font-size: 14px;
-  color: var(--muted);
+  color: var(--green);
   flex: 1;
 }
 
 .pathway-card:nth-child(3) .pathway-desc {
-  color: #2B4A2E;
+  color: var(--green);
 }
 
 .pathway-foot {
@@ -808,9 +814,9 @@ video {
   gap: 6px;
   font-weight: 700;
   font-size: 14px;
-  color: #14301F;
+  color: var(--green);
   background: var(--surface);
-  border: 1px solid var(--line);
+  border: 1.5px solid var(--green);
   border-radius: 999px;
   padding: 8px 14px;
 }
@@ -894,6 +900,7 @@ video {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  color: var(--green);
   transition: transform 0.25s var(--ease-fluid);
 }
 
@@ -918,8 +925,9 @@ video {
   position: absolute;
   top: 10px;
   right: 10px;
-  background: var(--sun);
-  color: #14301F;
+  background: var(--surface);
+  border: 1px solid var(--green);
+  color: var(--green);
   border-radius: 999px;
   font-size: 11px;
   font-weight: 700;
@@ -1000,6 +1008,7 @@ video {
 
 .product-card h3 {
   font-size: 19px;
+  color: var(--green);
 }
 
 .product-includes {
@@ -1007,7 +1016,7 @@ video {
   display: flex;
   flex-direction: column;
   gap: 5px;
-  color: var(--muted);
+  color: var(--green);
   font-size: 13px;
   line-height: 1.45;
   flex: 1;
@@ -1033,6 +1042,7 @@ video {
   gap: 8px;
   font-weight: 700;
   font-size: 20px;
+  color: var(--green);
 }
 
 .price-old {
@@ -1046,7 +1056,7 @@ video {
    ========================================================================== */
 .bundles-section {
   background: linear-gradient(120deg, var(--lime), var(--sun));
-  color: #14301F;
+  color: var(--green);
 }
 
 .bundles-section .section-pill {
@@ -1066,7 +1076,7 @@ video {
 }
 
 .light-muted {
-  color: #1F4D27;
+  color: var(--green);
   font-weight: 500;
 }
 
@@ -1197,7 +1207,7 @@ video {
 
 .testi-card p {
   margin: 10px 0 18px;
-  color: var(--ink);
+  color: var(--green);
   font-size: 15px;
   line-height: 1.62;
 }
@@ -1224,8 +1234,9 @@ video {
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  background: var(--lime);
-  color: #14301F;
+  background: var(--surface);
+  color: var(--green);
+  border: 1px solid var(--green);
   font: 800 16px var(--font-serif);
   display: inline-flex;
   align-items: center;
@@ -1237,13 +1248,14 @@ video {
   display: block;
   font-weight: 700;
   font-size: 15px;
-  color: var(--ink);
+  color: var(--green);
   line-height: 1.2;
 }
 
 .testi-handle {
   font-size: 13px;
-  color: var(--muted);
+  color: var(--green);
+  opacity: 0.8;
 }
 
 .testi-more-row {
@@ -1285,12 +1297,12 @@ video {
   white-space: nowrap;
   flex-shrink: 0;
   background: var(--surface);
-  border: 1px solid var(--line);
+  border: 1px solid var(--green);
   padding: 7px 15px;
   border-radius: 999px;
   font-size: 13px;
   font-weight: 700;
-  color: var(--ink);
+  color: var(--green);
 }
 
 .marquee-container {
@@ -1434,7 +1446,7 @@ video {
   padding: 6px 14px;
   font-size: 13px;
   font-weight: 700;
-  color: var(--ink);
+  color: var(--green);
 }
 
 .dest-chip.active {
@@ -1488,12 +1500,12 @@ video {
   top: 10px;
   left: 10px;
   background: var(--surface);
-  border: 1px solid var(--line);
+  border: 1px solid var(--green);
   padding: 3px 10px;
   border-radius: 999px;
   font-size: 11px;
   font-weight: 700;
-  color: var(--ink);
+  color: var(--green);
 }
 
 .dest-body {
@@ -1512,6 +1524,7 @@ video {
 
 .dest-title-row h3 {
   font-size: 19px;
+  color: var(--green);
 }
 
 .dest-flag-pill {
@@ -1545,12 +1558,13 @@ video {
   font-size: 10px;
   font-weight: 700;
   text-transform: uppercase;
-  color: var(--muted);
+  color: var(--green);
+  opacity: 0.8;
 }
 
 .dest-fact strong {
   font-size: 12px;
-  color: var(--ink);
+  color: var(--green);
 }
 
 .dest-card-btn {
@@ -1559,12 +1573,12 @@ video {
   align-items: center;
   justify-content: space-between;
   background: var(--bg);
-  border: 1px solid var(--line);
+  border: 1px solid rgba(46, 125, 63, 0.25);
   border-radius: 12px;
   padding: 9px 14px;
   font-size: 13px;
   font-weight: 700;
-  color: var(--ink);
+  color: var(--green);
 }
 
 .dest-card:hover .dest-card-btn {
@@ -1588,11 +1602,12 @@ video {
 .dest-bridge-card h3 {
   font-size: 20px;
   margin-bottom: 4px;
+  color: var(--green);
 }
 
 .dest-bridge-card p {
   font-size: 14px;
-  color: var(--muted);
+  color: var(--green);
 }
 
 /* ==========================================================================
@@ -1831,7 +1846,7 @@ video {
 .social-handle {
   font-size: 14px;
   font-weight: 800;
-  color: #14301F;
+  color: var(--green);
 }
 
 .social-badge {
@@ -1871,13 +1886,13 @@ video {
 .social-card-body h3 {
   font-size: 18px;
   line-height: 1.35;
-  color: #14301F;
+  color: var(--green);
   font-weight: 800;
 }
 
 .social-card-sub {
   font-size: 13.5px;
-  color: #4A6353;
+  color: var(--green);
   line-height: 1.5;
   margin: 0;
 }
@@ -2004,7 +2019,7 @@ video {
   flex: 1;
   font-size: 16.5px;
   font-weight: 700;
-  color: #14301F;
+  color: var(--green);
   line-height: 1.4;
 }
 
@@ -2039,7 +2054,7 @@ video {
 }
 
 .faq-body p {
-  color: #2D4C37;
+  color: var(--green);
   font-size: 15px;
   line-height: 1.7;
   margin: 0;
@@ -2079,13 +2094,13 @@ video {
 .faq-support-text strong {
   display: block;
   font-size: 16px;
-  color: #14301F;
+  color: var(--green);
   margin-bottom: 2px;
 }
 
 .faq-support-text p {
   font-size: 13.5px;
-  color: #2F4D38;
+  color: var(--green);
   margin: 0;
 }
 
@@ -2113,7 +2128,7 @@ video {
 /* EXACT REFERENCE .news CTA BANNER (Anggun Febby - Toko Produk Digital.html line 110) */
 .news {
   background: linear-gradient(120deg, var(--lime), var(--sun));
-  color: #14301F;
+  color: var(--green);
   border-radius: 28px;
   padding: 44px;
   display: grid;
@@ -2124,12 +2139,12 @@ video {
 
 .news h2 {
   font-size: clamp(26px, 3.6vw, 36px);
-  color: #14301F;
+  color: var(--green);
 }
 
 .news p {
   margin: 8px 0 0;
-  color: #14301F;
+  color: var(--green);
 }
 
 .news-form {
@@ -2162,7 +2177,7 @@ video {
 .site-footer {
   padding: 36px 0 48px;
   border-top: 1px solid var(--line);
-  color: var(--muted);
+  color: var(--green);
   font-size: 14px;
   background: var(--bg);
 }
@@ -2180,13 +2195,17 @@ video {
   gap: 18px;
 }
 
+.footer-links a {
+  color: var(--green);
+}
+
 .footer-links a:hover {
-  color: var(--ink);
+  opacity: 0.75;
 }
 
 .back-top-link {
   font-weight: 700;
-  color: var(--ink);
+  color: var(--green);
 }
 
 /* ==========================================================================
