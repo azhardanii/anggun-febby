@@ -90,7 +90,7 @@ document.addEventListener('DOMContentLoaded', function () {
       filter_creator: 'Creator',
       filter_wfa: 'Traveller',
       filter_income: 'AI & Manifesting',
-      add_to_cart: 'Tambah ke Keranjang →',
+      add_to_cart: 'Dapatkan Akses →',
 
       bundle_eyebrow: 'BIMBINGAN WFA',
       bundle_title: 'Program Bimbingan WFA',
