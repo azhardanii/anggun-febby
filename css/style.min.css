@@ -748,6 +748,12 @@ video {
   transition: transform 0.25s var(--ease-fluid);
 }
 
+.pathway-card:nth-child(1) {
+  background: linear-gradient(120deg, var(--lime), var(--sun));
+  border-color: rgba(46, 125, 63, 0.25);
+  box-shadow: 0 10px 24px rgba(20, 48, 31, 0.08);
+}
+
 /* Exact nth-child surface fills from reference .html lines 65-70 */
 .pathway-card:nth-child(2) {
   background: var(--sun-soft);
