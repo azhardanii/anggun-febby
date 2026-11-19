@@ -98,14 +98,12 @@
            ================================================================ -->
       <section class="hero-stage" id="hero">
         <div class="hero-backdrop-shell">
-          <div class="hero-video-layer">
-            <video class="hero-video" id="hero-video" autoplay muted loop playsinline poster="assets/thumb-hero.webp">
-              <source src="assets/videos/video-hero-mobile.webm" media="(max-width: 768px)" type="video/webm">
-              <source src="assets/videos/video-hero.webm" media="(min-width: 769px)" type="video/webm">
-              <source src="assets/videos/video-hero.webm" type="video/webm">
-            </video>
-          </div>
-          <div class="hero-cream-veil" aria-hidden="true"></div>
+          <picture class="hero-picture-layer">
+            <source media="(max-width: 768px)" srcset="assets/img-hero1-mob.webp">
+            <img src="assets/img-hero1.webp" alt="Anggun Febby - Work Anywhere, Travel Everywhere" class="hero-bg-img"
+              fetchpriority="high" loading="eager">
+          </picture>
+          <div class="hero-bottom-fade" aria-hidden="true"></div>
         </div>
 
         <div class="wrap hero-content-wrap">
@@ -115,7 +113,7 @@
               <span data-i18n="hero_eyebrow">Pekerja WFA · Traveller &amp; Content Creator</span>
             </div>
 
-            <h1 class="hero-title" data-i18n="hero_title">Work Anywhere.<br><em class="travel-brush">Travel</em>
+            <h1 class="hero-title" data-i18n="hero_title">Work Anywhere.<br><em class="travel-brush">Travel </em>
               Everywhere.</h1>
 
             <p class="hero-sub" data-i18n="hero_sub"><strong>Hai, aku Anggun</strong>, pekerja WFA &amp; content
@@ -133,7 +131,7 @@
                   <svg width="58" height="58" viewBox="0 0 48 48" fill="none">
                     <circle class="click-ripple" cx="13" cy="13" r="10" stroke="#2E7D3F" stroke-width="2.2" />
                     <path class="click-pointer" d="M13 13 L21.5 41 L27 31 L36 39.5 L40 35.5 L31 26.5 L41 21 Z"
-                    fill="#F7D84A" stroke="#2E7D3F" stroke-width="2.2" stroke-linejoin="round" />
+                      fill="#F7D84A" stroke="#2E7D3F" stroke-width="2.2" stroke-linejoin="round" />
                   </svg>
                 </span>
               </div>
@@ -149,19 +147,9 @@
                 <strong>4,9 / 5</strong>
                 <span data-i18n="proof_2">rating rata-rata panduan</span>
               </div>
-              <div class="proof-divider" aria-hidden="true"></div>
-              <div class="proof-item">
-                <strong data-i18n="proof_3_title">Instan</strong>
-                <span data-i18n="proof_3">akses digital selamanya</span>
-              </div>
             </div>
           </div>
         </div>
-
-        <a href="#pathways" class="mobile-scroll-cue" aria-label="Scroll ke bawah">
-          <span class="mouse-pill"><span class="mouse-wheel"></span></span>
-          <span data-i18n="hero_scroll">Scroll ke bawah</span>
-        </a>
       </section>
 
       <!-- ================================================================

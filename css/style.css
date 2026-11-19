@@ -39,6 +39,15 @@ html {
   scroll-padding-top: calc(74px + env(safe-area-inset-top, 0px));
   font-size: 16px;
   -webkit-text-size-adjust: 100%;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
 }
 
 body {
@@ -49,6 +58,8 @@ body {
   line-height: 1.6;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 
 h1,
@@ -397,32 +408,41 @@ video {
   z-index: 1;
 }
 
-.hero-video-layer {
+.hero-picture-layer {
   position: absolute;
   inset: 0;
   overflow: hidden;
 }
 
-.hero-video {
+.hero-bg-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 28%;
-  opacity: 1;
-  filter: brightness(1.03) contrast(1.05);
+  object-position: right center;
+  display: block;
 }
 
-/* Yellow overlay using button background color (#F7D84A / var(--sun)) with opacity so video background is clearly visible */
-.hero-cream-veil {
+/* Seamless gradient fade from hero image into next section background (#FAFBEA) */
+.hero-bottom-fade {
   position: absolute;
-  inset: 0;
-  background:
-    linear-gradient(to bottom,
-  rgba(247, 216, 74, 0.45) 0%,
-  rgba(247, 216, 74, 0.45) 68%,
-  rgba(250, 251, 234, 0.78) 88%,
-  var(--bg) 100%);
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: clamp(90px, 18vh, 180px);
+  background: linear-gradient(to bottom,
+    rgba(250, 251, 234, 0) 0%,
+    rgba(250, 251, 234, 0.12) 25%,
+    rgba(250, 251, 234, 0.38) 50%,
+    rgba(250, 251, 234, 0.72) 75%,
+    rgba(250, 251, 234, 0.94) 92%,
+    var(--bg) 100%
+  );
+  pointer-events: none;
   z-index: 2;
+}
+
+.hero-cream-veil {
+  display: none !important;
 }
 
 .hero-content-wrap {
@@ -643,10 +663,6 @@ video {
   width: 1px;
   height: 32px;
   background: rgba(46, 125, 63, 0.3);
-}
-
-.mobile-scroll-cue {
-  display: none;
 }
 
 /* ==========================================================================
@@ -2066,25 +2082,18 @@ video {
   .hero-stage {
     min-height: 100vh;
     min-height: 100dvh;
-    padding: 96px 0 48px;
+    padding: 40px 0 48px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
+  }
+
+  .hero-bg-img {
+    object-position: center top;
   }
 
   .hero-cream-veil {
-    background:
-      linear-gradient(to bottom,
-        transparent 56%,
-        rgba(250, 251, 234, 0.08) 68%,
-        rgba(250, 251, 234, 0.32) 79%,
-        rgba(250, 251, 234, 0.72) 90%,
-        var(--bg) 100%),
-      radial-gradient(circle at 92% 6%,
-        rgba(20, 48, 31, 0.72) 0%,
-        rgba(46, 125, 63, 0.45) 42%,
-        rgba(20, 48, 31, 0.3) 76%,
-        rgba(20, 48, 31, 0.18) 100%);
+    display: none !important;
   }
 
   .hero-title {
@@ -2118,52 +2127,6 @@ video {
 
   .pathways-band {
     padding: 40px 0 24px;
-  }
-
-  .mobile-scroll-cue {
-    display: inline-flex;
-    align-items: center;
-    align-self: center;
-    gap: 8px;
-    position: relative;
-    z-index: 6;
-    margin-top: 24px;
-    padding: 6px 14px;
-    border-radius: 999px;
-    background: var(--surface);
-    border: 1px solid var(--line);
-    font-size: 12px;
-    font-weight: 700;
-  }
-
-  .mouse-pill {
-    width: 16px;
-    height: 24px;
-    border: 1.5px solid var(--ink);
-    border-radius: 10px;
-    display: inline-flex;
-    justify-content: center;
-    padding-top: 4px;
-  }
-
-  .mouse-wheel {
-    width: 2.5px;
-    height: 5px;
-    border-radius: 2px;
-    background: var(--green);
-    animation: mouseSlide 1.5s ease-in-out infinite;
-  }
-
-  @keyframes mouseSlide {
-    0% {
-      transform: translateY(0);
-      opacity: 1;
-    }
-
-    100% {
-      transform: translateY(6px);
-      opacity: 0;
-    }
   }
 
   .products-grid,
