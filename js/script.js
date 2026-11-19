@@ -639,9 +639,13 @@ document.addEventListener('DOMContentLoaded', function () {
   const progressBar = document.getElementById('reading-progress');
   const floatingBtn = document.getElementById('floating-join-wfa');
   const heroSection = document.getElementById('hero');
+  const siteHeader = document.querySelector('.site-header');
 
   function onScrollUpdate() {
     const scrollY = window.scrollY || 0;
+    if (siteHeader) {
+      siteHeader.classList.toggle('scrolled', scrollY > 20);
+    }
     const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
     if (totalHeight > 0 && progressBar) {
       progressBar.style.width = `${(scrollY / totalHeight) * 100}%`;
