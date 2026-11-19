@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', function () {
       nav_join: 'Gabung Komunitas',
       drawer_start: 'Gabung Komunitas WFA →',
 
-      hero_eyebrow: 'Pekerja WFA · Traveller & Content Creator',
+      hero_eyebrow: 'Digital Nomad · WFA Educator · Travel Creator',
       hero_title: 'Work Anywhere.<br><em class="travel-brush">Travel</em> Everywhere.',
       hero_sub: '<strong>Hai, aku Anggun</strong>, pekerja WFA & content creator. Temukan tools digital & bimbingan WFA untuk bekerja dari mana saja.',
       hero_cta_primary: 'Join Community',
@@ -118,9 +118,9 @@ document.addEventListener('DOMContentLoaded', function () {
       dest_bridge_btn: 'Ngobrol di Komunitas →',
 
       stories_eyebrow: 'CERITA DI BALIK LAYAR',
-      stories_title: 'Dari Desa Kecil Sampai Bisa Bawa Kerja Keliling Dunia',
+      stories_title: 'Dari Desa Kecil Sampai Bisa Kerja Sambil Keliling Dunia',
       stories_sub: '“Dulu bisa terus sekolah aja udah sebuah perjuangan besar. Sekarang, aku bisa kerja dari mana aja, berkarya jadi content creator, dan menjalani hidup yang dulu cuma berani aku impikan.”',
-      stories_follow: 'Lihat Keseharianku @anggunfebby.s',
+      stories_follow: 'Mampir ke IG @anggunfebby.s',
 
       connect_eyebrow: 'MEDIA SOSIAL & KONTEN',
       connect_title: 'Intip Keseharian & Konten Terbaruku',
@@ -132,6 +132,7 @@ document.addEventListener('DOMContentLoaded', function () {
       connect_yt_desc: 'Travel Vlog & Dokumentasi Keliling Dunia',
       connect_yt_btn: 'Subscribe di YouTube ↗',
 
+      faq_eyebrow: 'FAQ & BANTUAN',
       faq_title: 'Pertanyaan Umum',
       faq_1_q: 'Produknya dikirim dalam bentuk apa?',
       faq_1_a: 'Semua panduan dan WFA tools tersedia dalam format digital (PDF, Notion template, spreadsheet) di Lynk.id. Link akses langsung aktif setelah pembayaran.',
@@ -162,7 +163,7 @@ document.addEventListener('DOMContentLoaded', function () {
       nav_join: 'Join Community',
       drawer_start: 'Join WFA Community →',
 
-      hero_eyebrow: 'WFA Worker · Traveller & Content Creator',
+      hero_eyebrow: 'Digital Nomad · WFA Educator · Travel Creator',
       hero_title: 'Work Anywhere.<br><em class="travel-brush">Travel</em> Everywhere.',
       hero_sub: '<strong>Hi, I’m Anggun</strong>, a WFA worker & content creator. Discover digital toolkits & coaching to work from anywhere.',
       hero_cta_primary: 'Join Community',
@@ -221,9 +222,9 @@ document.addEventListener('DOMContentLoaded', function () {
       dest_bridge_btn: 'Chat in the Community →',
 
       stories_eyebrow: 'BEHIND THE SCENES',
-      stories_title: 'From a Small Village to Working Around the World',
+      stories_title: 'From a Small Village to Working While Traveling the World',
       stories_sub: '“Staying in school was once a daily challenge. Today, I can work from anywhere, create digital content, and live the life I once only dreamed about.”',
-      stories_follow: 'Follow My Daily Life @anggunfebby.s',
+      stories_follow: 'Visit IG @anggunfebby.s',
 
       connect_eyebrow: 'SOCIALS & CONTENT',
       connect_title: 'See My Daily Life & Latest Content',
@@ -235,6 +236,7 @@ document.addEventListener('DOMContentLoaded', function () {
       connect_yt_desc: 'Travel Vlogs & World Travel Documentaries',
       connect_yt_btn: 'Subscribe on YouTube ↗',
 
+      faq_eyebrow: 'FAQ & HELP',
       faq_title: 'Frequently Asked Questions',
       faq_1_q: 'How are the digital products delivered?',
       faq_1_a: 'All guides and tools are digital files (PDFs, Notion templates, spreadsheets) via Lynk.id with instant download access right after checkout.',
