@@ -1,6 +1,6 @@
 /* ==========================================================================
-   ANGGUN FEBBY — EXACT REFERENCE PALETTE & EDITORIAL WIREFRAME
-   Reference: Anggun Febby – Toko Produk Digital.html
+   ANGGUN FEBBY - EXACT REFERENCE PALETTE & EDITORIAL WIREFRAME
+   Reference: Anggun Febby - Toko Produk Digital.html
    Colors ONLY from reference:
    --bg:#FAFBEA | --surface:#FFFFFF | --ink:#14301F | --muted:#4F6555
    --green:#2E7D3F | --deep:#14301F | --lime:#CFE56B | --sun:#F7D84A
@@ -87,9 +87,9 @@ img, video {
 
 .wrap {
   width: 100%;
-  max-width: 1120px;
+  max-width: 100%;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 clamp(24px, 4.5vw, 72px);
 }
 
 .section {
@@ -376,12 +376,12 @@ img, video {
    ========================================================================== */
 .hero-stage {
   position: relative;
-  min-height: 100vh;
-  min-height: 100dvh;
+  min-height: calc(100vh - 68px);
+  min-height: calc(100dvh - 68px);
   display: flex;
   align-items: center;
   background: var(--bg);
-  padding: 88px 0 96px;
+  padding: 32px 0 64px;
   overflow: hidden;
 }
 
@@ -402,47 +402,71 @@ img, video {
   height: 100%;
   object-fit: cover;
   object-position: center 28%;
-  opacity: 0.82;
+  opacity: 1;
+  filter: brightness(1.03) contrast(1.05);
 }
 
-/* Smooth multi-stop fade so hero dissolves seamlessly into #FAFBEA without a hard seam */
+/* Subtle yellow sunshine aura from top-right corner + ultra-light veil for vivid video + ultra-smooth bottom fade into #FAFBEA */
 .hero-cream-veil {
   position: absolute;
   inset: 0;
   background:
     linear-gradient(to bottom,
-      rgba(250, 251, 234, 0.22) 0%,
-      rgba(250, 251, 234, 0) 32%,
-      rgba(250, 251, 234, 0.36) 66%,
-      rgba(250, 251, 234, 0.82) 86%,
+      rgba(250, 251, 234, 0) 60%,
+      rgba(250, 251, 234, 0.14) 74%,
+      rgba(250, 251, 234, 0.42) 84%,
+      rgba(250, 251, 234, 0.80) 93%,
+      rgba(250, 251, 234, 0.96) 98%,
       var(--bg) 100%),
+    radial-gradient(ellipse 96% 90% at 94% 4%,
+      rgba(247, 216, 74, 0.22) 0%,
+      rgba(255, 243, 176, 0.14) 38%,
+      rgba(247, 216, 74, 0.06) 68%,
+      rgba(250, 251, 234, 0.02) 88%,
+      transparent 100%),
     linear-gradient(96deg,
-      rgba(255, 243, 176, 0.86) 0%,
-      rgba(250, 251, 234, 0.82) 44%,
-      rgba(250, 251, 234, 0.38) 72%,
-      rgba(250, 251, 234, 0.14) 100%);
+      rgba(255, 243, 176, 0.35) 0%,
+      rgba(255, 243, 176, 0.22) 38%,
+      rgba(247, 216, 74, 0.08) 68%,
+      transparent 88%);
   z-index: 2;
 }
 
 .hero-content-wrap {
   position: relative;
   z-index: 5;
-  display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
-  gap: 40px;
-  align-items: center;
+}
+
+@media (min-width: 901px) {
+  .hero-stage {
+    min-height: calc(100vh - 68px);
+    padding: 24px 0 56px;
+  }
+
+  .hero-content-wrap {
+    transform: translateY(-24px);
+  }
+}
+
+.hero-copy-col {
+  max-width: 780px;
 }
 
 .hero-eyebrow {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  font-size: 13px;
+  font-size: clamp(12px, 1vw, 14px);
   font-weight: 700;
-  color: var(--green);
+  color: var(--ink);
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid var(--line);
+  padding: 6px 16px;
+  border-radius: 999px;
   letter-spacing: 0.04em;
   text-transform: uppercase;
   margin-bottom: 14px;
+  box-shadow: 0 4px 14px rgba(20, 48, 31, 0.06);
 }
 
 .eyebrow-dot {
@@ -453,118 +477,151 @@ img, video {
 }
 
 .hero-title {
-  font-size: clamp(38px, 6vw, 66px);
+  font-family: var(--font-serif);
+  font-size: clamp(44px, 5.8vw, 84px);
   font-weight: 800;
-  letter-spacing: -0.02em;
-  line-height: 1.08;
+  letter-spacing: -0.025em;
+  line-height: 1.06;
+  color: var(--ink);
   margin-bottom: 20px;
+  text-shadow: 0 1px 3px rgba(255, 255, 255, 0.85), 0 0 24px rgba(255, 243, 176, 0.5);
 }
 
-.hero-title i {
+.hero-title .travel-brush {
+  font-family: inherit;
   font-style: italic;
-  color: var(--green);
+  font-weight: inherit;
+  color: inherit;
 }
 
 .hero-sub {
-  font-size: 17px;
-  color: var(--muted);
-  max-width: 50ch;
+  font-size: clamp(17px, 1.4vw, 22px);
+  color: #14301F;
+  max-width: 52ch;
   margin-bottom: 28px;
-  line-height: 1.62;
+  line-height: 1.58;
+  font-weight: 600;
+  text-shadow: 0 1px 3px rgba(255, 255, 255, 0.8), 0 0 16px rgba(255, 243, 176, 0.5);
+}
+
+.hero-sub strong {
+  color: var(--ink);
+  font-weight: 800;
 }
 
 .hero-cta-row {
   display: flex;
-  gap: 12px;
+  align-items: center;
+  gap: 16px;
   flex-wrap: wrap;
-  margin-bottom: 34px;
+  margin-bottom: 30px;
+}
+
+.hero-cta-row .btn {
+  padding: 15px 28px;
+  font-size: clamp(15px, 1.05vw, 17px);
+}
+
+.hero-cta-row .btn:not(.btn-hero-outline) {
+  background: var(--sun);
+  color: var(--ink);
+  border: 2px solid var(--ink);
+  box-shadow: 0 4px 14px rgba(20, 48, 31, 0.12);
+}
+
+.hero-cta-row .btn:not(.btn-hero-outline):hover {
+  background: #E8C936;
+  transform: translateY(-2px);
+}
+
+.hero-btn-cue-wrap {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.btn-hero-outline {
+  background: var(--surface);
+  color: var(--ink);
+  border: 2px solid var(--ink);
+  box-shadow: 0 4px 14px rgba(20, 48, 31, 0.08);
+}
+
+.btn-hero-outline:hover {
+  background: var(--ink);
+  color: var(--on-deep);
+}
+
+.hero-click-icon {
+  position: absolute;
+  right: -36px;
+  bottom: -34px;
+  width: 58px;
+  height: 58px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  z-index: 6;
+}
+
+.hero-click-icon svg {
+  width: 58px;
+  height: 58px;
+  overflow: visible;
+}
+
+.hero-click-icon .click-pointer {
+  transform-origin: 13px 13px;
+  filter: drop-shadow(0 6px 14px rgba(20, 48, 31, 0.28));
+  animation: heroCursorTap 1.15s cubic-bezier(0.22, 1, 0.36, 1) infinite;
+}
+
+.hero-click-icon .click-ripple {
+  transform-origin: 13px 13px;
+  opacity: 0;
+  animation: heroCursorRipple 1.15s cubic-bezier(0.22, 1, 0.36, 1) infinite;
+}
+
+@keyframes heroCursorTap {
+  0%, 100% { transform: translate3d(4px, 4px, 0) scale(1); }
+  28%      { transform: translate3d(-1px, -1px, 0) scale(0.88); }
+  45%      { transform: translate3d(4px, 4px, 0) scale(1); }
+}
+
+@keyframes heroCursorRipple {
+  0%, 24% { transform: scale(0.35); opacity: 0; }
+  34%     { transform: scale(0.75); opacity: 0.9; }
+  82%     { transform: scale(1.65); opacity: 0; }
+  100%    { transform: scale(1.65); opacity: 0; }
 }
 
 .hero-proof-row {
   display: flex;
-  gap: 28px;
+  gap: 32px;
   flex-wrap: wrap;
   align-items: center;
 }
 
 .proof-item strong {
   display: block;
-  font: 800 26px var(--font-serif);
+  font: 800 clamp(26px, 2.2vw, 34px) var(--font-serif);
   color: var(--ink);
   line-height: 1.1;
+  text-shadow: 0 1px 3px rgba(255, 255, 255, 0.85);
 }
 
 .proof-item span {
-  font-size: 13px;
-  color: var(--muted);
+  font-size: clamp(13px, 0.95vw, 15px);
+  color: var(--ink);
+  font-weight: 600;
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.75);
 }
 
 .proof-divider {
   width: 1px;
-  height: 30px;
-  background: var(--line);
-}
-
-.hero-visual-aside {
-  position: relative;
-  height: 360px;
-}
-
-.hero-mini-card {
-  position: absolute;
-  width: 214px;
-  background: var(--surface);
-  border: 1px solid var(--line);
-  border-radius: 18px;
-  padding: 8px;
-  box-shadow: 0 18px 34px rgba(20, 48, 31, 0.16);
-  transition: transform 0.45s var(--ease-fluid);
-}
-
-.hero-mini-card img {
-  width: 100%;
-  aspect-ratio: 4 / 5;
-  object-fit: cover;
-  object-position: center 22%;
-  border-radius: 12px;
-}
-
-.hero-mini-card-back {
-  right: 145px;
-  top: 50px;
-  transform: rotate(-7deg);
-  z-index: 2;
-}
-
-.hero-mini-card-front {
-  right: 12px;
-  top: 16px;
-  transform: rotate(4deg);
-  z-index: 4;
-}
-
-.hero-visual-aside:hover .hero-mini-card-back {
-  transform: rotate(-10deg) translate(-8px, -4px);
-}
-
-.hero-visual-aside:hover .hero-mini-card-front {
-  transform: rotate(1deg) translateY(-6px);
-}
-
-.hero-mini-caption {
-  padding: 10px 6px 4px;
-}
-
-.hero-mini-caption strong {
-  display: block;
-  font-family: var(--font-serif);
-  font-size: 15px;
-  color: var(--ink);
-}
-
-.hero-mini-caption span {
-  font-size: 12px;
-  color: var(--muted);
+  height: 32px;
+  background: rgba(20, 48, 31, 0.18);
 }
 
 .mobile-scroll-cue {
@@ -916,7 +973,7 @@ img, video {
 }
 
 .bundles-section .wrap {
-  max-width: 1220px;
+  max-width: 100%;
 }
 
 .bgrid {
@@ -1643,7 +1700,7 @@ img, video {
   padding-top: 0;
 }
 
-/* EXACT REFERENCE .news CTA BANNER (Anggun Febby – Toko Produk Digital.html line 110) */
+/* EXACT REFERENCE .news CTA BANNER (Anggun Febby - Toko Produk Digital.html line 110) */
 .news {
   background: linear-gradient(120deg, var(--lime), var(--sun));
   color: #14301F;
@@ -1945,7 +2002,6 @@ img, video {
     border-bottom: 1px solid var(--line);
   }
 
-  .hero-content-wrap,
   .pathways-trio,
   .bgrid,
   .coaching-grid,
@@ -1962,10 +2018,6 @@ img, video {
 
   .testi-masonry {
     column-count: 2;
-  }
-
-  .hero-visual-aside {
-    display: none;
   }
 }
 
@@ -1988,20 +2040,51 @@ img, video {
   }
 
   .hero-cream-veil {
-    background: linear-gradient(to bottom,
-      rgba(255, 243, 176, 0.82) 0%,
-      rgba(250, 251, 234, 0.68) 38%,
-      rgba(250, 251, 234, 0.34) 64%,
-      rgba(250, 251, 234, 0.8) 86%,
-      var(--bg) 100%);
+    background:
+      linear-gradient(to bottom,
+        transparent 56%,
+        rgba(250, 251, 234, 0.08) 68%,
+        rgba(250, 251, 234, 0.32) 79%,
+        rgba(250, 251, 234, 0.72) 90%,
+        var(--bg) 100%),
+      radial-gradient(circle at 92% 6%,
+        rgba(20, 48, 31, 0.72) 0%,
+        rgba(46, 125, 63, 0.45) 42%,
+        rgba(20, 48, 31, 0.3) 76%,
+        rgba(20, 48, 31, 0.18) 100%);
+  }
+
+  .hero-title {
+    font-size: clamp(34px, 9vw, 48px);
+  }
+
+  .hero-sub {
+    font-size: 16px;
+  }
+
+  .hero-cta-row {
+    margin-bottom: 24px;
+  }
+
+  .hero-cta-row .btn {
+    padding: 12px 20px;
+    font-size: 14px;
+  }
+
+  .hero-click-icon {
+    width: 46px;
+    height: 46px;
+    right: -26px;
+    bottom: -24px;
+  }
+
+  .hero-click-icon svg {
+    width: 46px;
+    height: 46px;
   }
 
   .pathways-band {
     padding: 40px 0 24px;
-  }
-
-  .hero-cta-row {
-    display: none;
   }
 
   .mobile-scroll-cue {
