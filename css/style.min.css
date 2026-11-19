@@ -521,6 +521,8 @@ video {
 }
 
 .hero-eyebrow {
+  position: relative;
+  overflow: hidden;
   display: inline-flex;
   align-items: center;
   gap: 6px;
@@ -537,11 +539,90 @@ video {
   box-shadow: 0 2px 10px rgba(46, 125, 63, 0.1);
 }
 
+.hero-eyebrow::after {
+  content: '';
+  position: absolute;
+  top: -60%;
+  left: -130%;
+  width: 50%;
+  height: 220%;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(247, 216, 74, 0.32) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: skewX(-25deg);
+  animation: eyebrowShimmerSweep 4.2s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes eyebrowShimmerSweep {
+  0%, 35% {
+    left: -130%;
+  }
+  58%, 100% {
+    left: 200%;
+  }
+}
+
 .eyebrow-dot {
+  position: relative;
   width: 6px;
   height: 6px;
   border-radius: 50%;
   background: var(--green);
+  flex-shrink: 0;
+}
+
+.eyebrow-dot::before,
+.eyebrow-dot::after {
+  content: '';
+  position: absolute;
+  inset: -1.5px;
+  border-radius: 50%;
+  border: 1.5px solid var(--green);
+  animation: eyebrowEcho 2.2s cubic-bezier(0.2, 0.8, 0.4, 1) infinite;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.eyebrow-dot::after {
+  animation-delay: 1.1s;
+}
+
+@keyframes eyebrowEcho {
+  0% {
+    transform: scale(0.6);
+    opacity: 0.95;
+  }
+  65%, 100% {
+    transform: scale(2.8);
+    opacity: 0;
+  }
+}
+
+.eyebrow-sparkle {
+  color: #D4A800;
+  font-size: 11px;
+  line-height: 1;
+  margin-left: 2px;
+  display: inline-block;
+  animation: eyebrowSparkleTwinkle 2.8s ease-in-out infinite;
+  transform-origin: center;
+}
+
+@keyframes eyebrowSparkleTwinkle {
+  0%, 100% {
+    transform: scale(0.92) rotate(0deg);
+    opacity: 0.75;
+    filter: drop-shadow(0 0 1px rgba(247, 216, 74, 0.3));
+  }
+  50% {
+    transform: scale(1.28) rotate(18deg);
+    opacity: 1;
+    filter: drop-shadow(0 0 5px rgba(247, 216, 74, 0.9));
+  }
 }
 
 .hero-title {
@@ -616,19 +697,23 @@ video {
   color: var(--green);
   border: 1px solid var(--green);
   box-shadow: 0 4px 14px rgba(46, 125, 63, 0.12);
+  animation: heroBtnTactilePress 1.5s cubic-bezier(0.22, 1, 0.36, 1) infinite;
+  transform-origin: center right;
+  transition: background 0.25s ease, color 0.25s ease, box-shadow 0.25s ease;
 }
 
 .btn-hero-outline:hover {
   background: var(--green);
   color: #FFFFFF;
+  animation-play-state: paused;
 }
 
 .hero-click-icon {
   position: absolute;
-  right: -36px;
-  bottom: -34px;
-  width: 58px;
-  height: 58px;
+  right: -32px;
+  bottom: -30px;
+  width: 60px;
+  height: 60px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -637,59 +722,137 @@ video {
 }
 
 .hero-click-icon svg {
-  width: 58px;
-  height: 58px;
+  width: 60px;
+  height: 60px;
   overflow: visible;
 }
 
 .hero-click-icon .click-pointer {
-  transform-origin: 13px 13px;
-  filter: drop-shadow(0 6px 14px rgba(20, 48, 31, 0.28));
-  animation: heroCursorTap 1.15s cubic-bezier(0.22, 1, 0.36, 1) infinite;
+  transform-origin: 14px 14px;
+  filter: drop-shadow(0 6px 14px rgba(20, 48, 31, 0.32));
+  animation: heroCursorTap 1.5s cubic-bezier(0.22, 1, 0.36, 1) infinite;
 }
 
-.hero-click-icon .click-ripple {
-  transform-origin: 13px 13px;
+.hero-click-icon .click-ripple-1 {
+  transform-origin: 14px 14px;
   opacity: 0;
-  animation: heroCursorRipple 1.15s cubic-bezier(0.22, 1, 0.36, 1) infinite;
+  animation: heroRippleOne 1.5s cubic-bezier(0.16, 1, 0.3, 1) infinite;
+}
+
+.hero-click-icon .click-ripple-2 {
+  transform-origin: 14px 14px;
+  opacity: 0;
+  animation: heroRippleTwo 1.5s cubic-bezier(0.16, 1, 0.3, 1) infinite;
+}
+
+.hero-click-icon .click-sparks {
+  transform-origin: 14px 14px;
+  pointer-events: none;
+}
+
+.hero-click-icon .spark-dot {
+  opacity: 0;
+  animation: heroSparksBurst 1.5s cubic-bezier(0.16, 1, 0.3, 1) infinite;
+}
+
+.hero-click-icon .spark-dot.s1 {
+  transform-origin: 14px 2px;
+}
+
+.hero-click-icon .spark-dot.s2 {
+  transform-origin: 24px 7px;
+}
+
+.hero-click-icon .spark-dot.s3 {
+  transform-origin: 3px 18px;
+}
+
+.hero-click-icon .spark-dot.s4 {
+  transform-origin: 9px 25px;
+}
+
+@keyframes heroBtnTactilePress {
+  0%, 20%, 46%, 100% {
+    transform: translateY(0) scale(1);
+    box-shadow: 0 4px 14px rgba(46, 125, 63, 0.12);
+  }
+  28% {
+    transform: translateY(1.5px) scale(0.975);
+    box-shadow: 0 1px 5px rgba(46, 125, 63, 0.24);
+  }
 }
 
 @keyframes heroCursorTap {
-
-  0%,
-  100% {
-    transform: translate3d(4px, 4px, 0) scale(1);
+  0%, 100% {
+    transform: translate3d(6px, 6px, 0) rotate(0deg) scale(1);
   }
-
+  20% {
+    transform: translate3d(2px, 2px, 0) rotate(-2deg) scale(1.02);
+  }
   28% {
-    transform: translate3d(-1px, -1px, 0) scale(0.88);
+    transform: translate3d(-2px, -2px, 0) rotate(-4deg) scale(0.86);
   }
-
-  45% {
-    transform: translate3d(4px, 4px, 0) scale(1);
+  38% {
+    transform: translate3d(5px, 5px, 0) rotate(1deg) scale(1.03);
+  }
+  48% {
+    transform: translate3d(6px, 6px, 0) rotate(0deg) scale(1);
   }
 }
 
-@keyframes heroCursorRipple {
-
-  0%,
-  24% {
-    transform: scale(0.35);
+@keyframes heroRippleOne {
+  0%, 25% {
+    transform: scale(0.3);
     opacity: 0;
   }
-
-  34% {
-    transform: scale(0.75);
-    opacity: 0.9;
+  28% {
+    transform: scale(0.4);
+    opacity: 0.95;
+    stroke-width: 2.2px;
   }
-
-  82% {
-    transform: scale(1.65);
+  68% {
+    transform: scale(1.85);
     opacity: 0;
+    stroke-width: 0.6px;
   }
-
   100% {
-    transform: scale(1.65);
+    transform: scale(1.85);
+    opacity: 0;
+  }
+}
+
+@keyframes heroRippleTwo {
+  0%, 30% {
+    transform: scale(0.25);
+    opacity: 0;
+  }
+  33% {
+    transform: scale(0.45);
+    opacity: 0.85;
+    stroke-width: 1.8px;
+  }
+  74% {
+    transform: scale(2.2);
+    opacity: 0;
+    stroke-width: 0.4px;
+  }
+  100% {
+    transform: scale(2.2);
+    opacity: 0;
+  }
+}
+
+@keyframes heroSparksBurst {
+  0%, 26% {
+    transform: scale(0) translate(0, 0);
+    opacity: 0;
+  }
+  32% {
+    transform: scale(1.3);
+    opacity: 1;
+  }
+  60%, 100% {
+    transform: scale(0.3);
     opacity: 0;
   }
 }
@@ -2498,6 +2661,10 @@ video {
   .hero-eyebrow .eyebrow-dot {
     width: 4px !important;
     height: 4px !important;
+  }
+
+  .hero-eyebrow .eyebrow-sparkle {
+    font-size: 8.5px !important;
   }
 
   .hero-proof-row {
