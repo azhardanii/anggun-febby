@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
       hero_eyebrow: 'Digital Nomad · WFA Educator · Travel Creator',
       hero_title: 'Work Anywhere.<br><em class="travel-brush">Travel</em> Everywhere.',
-      hero_sub: 'Digital nomad yang membangun bisnis, membuka peluang, dan menjelajahi dunia. Aku berbagi perjalanan untuk menginspirasi hidup fleksibel serta membantu sesama menemukan kebebasan bekerja dari mana saja.',
+      hero_sub: 'Digital nomad yang membangun bisnis, menjelajahi dunia, dan membimbing sesama meraih kebebasan bekerja dari mana saja.',
       hero_cta_primary: 'Join Community',
       hero_cta_secondary: 'Bimbingan Disini',
       hero_scroll: 'Scroll ke bawah',
@@ -165,7 +165,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
       hero_eyebrow: 'Digital Nomad · WFA Educator · Travel Creator',
       hero_title: 'Work Anywhere.<br><em class="travel-brush">Travel</em> Everywhere.',
-      hero_sub: 'A digital nomad building businesses, creating opportunities, and exploring the world. I share my journey, inspire a more flexible way of living, and help others discover the freedom of working from anywhere.',
+      hero_sub: 'A digital nomad building businesses, exploring the world, and guiding others to embrace the freedom of working from anywhere.',
       hero_cta_primary: 'Join Community',
       hero_cta_secondary: 'Join Coaching',
       hero_scroll: 'Scroll down',
