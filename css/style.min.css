@@ -566,7 +566,7 @@ video {
   font-family: var(--font-sans);
   font-size: clamp(14px, 0.96vw, 15.5px);
   color: var(--green);
-  max-width: min(33.333vw, 480px);
+  max-width: min(44.444vw, 580px);
   margin-bottom: 28px;
   line-height: 1.5;
   font-weight: 400;

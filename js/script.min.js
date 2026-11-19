@@ -61,8 +61,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
       hero_eyebrow: 'Digital Nomad · WFA Educator · Travel Creator',
       hero_title: 'Work Anywhere.<br><em class="travel-brush">Travel</em> Everywhere.',
-      hero_sub: 'Digital nomad yang membangun bisnis, menjelajahi dunia, dan membimbing sesama meraih kebebasan bekerja dari mana saja.',
-      hero_cta_primary: 'Join Community',
+      hero_sub: '<strong style="font-size:22px">Hai aku Anggun.</strong> Seorang digital nomad yang kerjanya sambil menjelajahi dunia, membimbing orang lain, dan menginspirasi mereka untuk merasakan kebebasan bekerja dari mana saja.',
+      hero_cta_primary: 'Jelajahi Peluang WFA',
       hero_cta_secondary: 'Bimbingan Disini',
       hero_scroll: 'Scroll ke bawah',
       proof_1: 'pembeli & komunitas aktif',
@@ -165,8 +165,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
       hero_eyebrow: 'Digital Nomad · WFA Educator · Travel Creator',
       hero_title: 'Work Anywhere.<br><em class="travel-brush">Travel</em> Everywhere.',
-      hero_sub: 'A digital nomad building businesses, exploring the world, and guiding others to embrace the freedom of working from anywhere.',
-      hero_cta_primary: 'Join Community',
+      hero_sub: `<strong style="font-size:22px">Hi i'm Anggun.</strong> A digital nomad building businesses, exploring the world, guiding others, and inspiring them to embrace the freedom of working from anywhere.`,
+      hero_cta_primary: 'Explore WFA Opportunities',
       hero_cta_secondary: 'Join Coaching',
       hero_scroll: 'Scroll down',
       proof_1: 'active readers & buyers',
