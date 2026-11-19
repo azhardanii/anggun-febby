@@ -485,13 +485,12 @@ video {
   bottom: 0;
   height: clamp(90px, 18vh, 180px);
   background: linear-gradient(to bottom,
-    rgba(250, 251, 234, 0) 0%,
-    rgba(250, 251, 234, 0.12) 25%,
-    rgba(250, 251, 234, 0.38) 50%,
-    rgba(250, 251, 234, 0.72) 75%,
-    rgba(250, 251, 234, 0.94) 92%,
-    var(--bg) 100%
-  );
+      rgba(250, 251, 234, 0) 0%,
+      rgba(250, 251, 234, 0.12) 25%,
+      rgba(250, 251, 234, 0.38) 50%,
+      rgba(250, 251, 234, 0.72) 75%,
+      rgba(250, 251, 234, 0.94) 92%,
+      var(--bg) 100%);
   pointer-events: none;
   z-index: 2;
 }
@@ -566,7 +565,7 @@ video {
 .hero-sub {
   font-family: var(--font-sans);
   font-size: clamp(16px, 1.2vw, 19px);
-  color: var(--green);
+  color: #1F4D27;
   max-width: 50ch;
   margin-bottom: 28px;
   line-height: 1.68;
@@ -2480,6 +2479,19 @@ video {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+  }
+
+  .hero-eyebrow {
+    font-size: 9.5px !important;
+    padding: 3px 9px !important;
+    gap: 4px !important;
+    letter-spacing: 0.03em !important;
+    margin-bottom: 8px !important;
+  }
+
+  .hero-eyebrow .eyebrow-dot {
+    width: 4px !important;
+    height: 4px !important;
   }
 
   .hero-proof-row {
