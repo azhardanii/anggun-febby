@@ -676,20 +676,20 @@ video {
 }
 
 .hero-cta-row .btn:not(.btn-hero-outline) {
-  background: linear-gradient(135deg, rgba(255, 235, 115, 0.96) 0%, rgba(247, 216, 74, 0.88) 48%, rgba(242, 202, 45, 0.96) 100%);
+  background: linear-gradient(135deg, #F9DE58 0%, #F7D84A 46%, #EFC022 100%);
   backdrop-filter: blur(28px) saturate(220%) brightness(108%);
   -webkit-backdrop-filter: blur(28px) saturate(220%) brightness(108%);
   color: var(--green);
   border: none !important;
   font-weight: 800;
-  box-shadow: 0 14px 34px -4px rgba(247, 195, 40, 0.55),
-              0 6px 16px rgba(20, 50, 25, 0.16),
+  box-shadow: 0 14px 34px -4px rgba(240, 185, 20, 0.55),
+              0 6px 16px rgba(20, 50, 25, 0.14),
               0 0 0 1.5px rgba(255, 255, 255, 0.9),
-              0 0 0 2.5px rgba(247, 216, 74, 0.45),
-              inset 0 2px 3px 0 rgba(255, 255, 255, 1),
-              inset 0 8px 16px -4px rgba(255, 255, 255, 0.55),
-              inset 0 -3px 6px 0 rgba(160, 110, 10, 0.28);
-  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+              0 0 0 2.5px rgba(247, 216, 74, 0.5),
+              inset 0 2px 3px 0 rgba(255, 255, 255, 0.95),
+              inset 0 8px 16px -4px rgba(255, 255, 255, 0.4),
+              inset 0 -3px 6px 0 rgba(175, 115, 0, 0.28);
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.7);
   transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.25s ease;
 }
 
@@ -700,7 +700,7 @@ video {
   left: 0;
   right: 0;
   height: 52%;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.55) 0%, rgba(255, 255, 255, 0.08) 100%);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.35) 0%, rgba(255, 255, 255, 0.02) 100%);
   border-radius: 999px 999px 0 0;
   pointer-events: none;
   z-index: 1;
