@@ -541,14 +541,14 @@ video {
   text-transform: uppercase;
   margin-bottom: 12px;
   box-shadow: 0 10px 28px -4px rgba(20, 50, 25, 0.18),
-              0 3px 10px rgba(0, 0, 0, 0.06),
-              inset 0 1.5px 2px 0 rgba(255, 255, 255, 1),
-              inset 0 -2px 3px 0 rgba(46, 125, 63, 0.14),
-              inset 1.5px 0 2px 0 rgba(255, 255, 255, 0.7);
+    0 3px 10px rgba(0, 0, 0, 0.06),
+    inset 0 1.5px 2px 0 rgba(255, 255, 255, 1),
+    inset 0 -2px 3px 0 rgba(46, 125, 63, 0.14),
+    inset 1.5px 0 2px 0 rgba(255, 255, 255, 0.7);
   text-shadow: 0 1px 2px rgba(255, 255, 255, 0.95);
 }
 
-.hero-eyebrow > * {
+.hero-eyebrow>* {
   position: relative;
   z-index: 2;
 }
@@ -561,13 +561,11 @@ video {
   overflow: hidden;
   pointer-events: none;
   z-index: 1 !important;
-  background: linear-gradient(
-    180deg,
-    rgba(255, 255, 255, 0.32) 0%,
-    rgba(255, 255, 255, 0.04) 50%,
-    rgba(255, 255, 255, 0) 51%,
-    rgba(255, 255, 255, 0.12) 100%
-  );
+  background: linear-gradient(180deg,
+      rgba(255, 255, 255, 0.32) 0%,
+      rgba(255, 255, 255, 0.04) 50%,
+      rgba(255, 255, 255, 0) 51%,
+      rgba(255, 255, 255, 0.12) 100%);
 }
 
 .eyebrow-shimmer::after {
@@ -577,21 +575,23 @@ video {
   left: -130%;
   width: 50%;
   height: 220%;
-  background: linear-gradient(
-    90deg,
-    rgba(255, 255, 255, 0) 0%,
-    rgba(255, 255, 255, 0.8) 50%,
-    rgba(255, 255, 255, 0) 100%
-  );
+  background: linear-gradient(90deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.8) 50%,
+      rgba(255, 255, 255, 0) 100%);
   transform: skewX(-25deg);
   animation: eyebrowShimmerSweep 3.8s ease-in-out infinite;
 }
 
 @keyframes eyebrowShimmerSweep {
-  0%, 35% {
+
+  0%,
+  35% {
     left: -130%;
   }
-  58%, 100% {
+
+  58%,
+  100% {
     left: 200%;
   }
 }
@@ -607,11 +607,14 @@ video {
 }
 
 @keyframes eyebrowSparkleTwinkle {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: scale(0.92) rotate(0deg);
     opacity: 0.75;
     filter: drop-shadow(0 0 1px rgba(247, 216, 74, 0.3));
   }
+
   50% {
     transform: scale(1.28) rotate(18deg);
     opacity: 1;
@@ -641,7 +644,7 @@ video {
   font-family: var(--font-sans);
   font-size: clamp(14px, 0.96vw, 15.5px);
   color: var(--green);
-  max-width: min(44.444vw, 580px);
+  max-width: min(35.355vw, 525px);
   margin-bottom: 28px;
   line-height: 1.5;
   font-weight: 400;
@@ -670,7 +673,7 @@ video {
   border: none !important;
 }
 
-.hero-cta-row .btn > * {
+.hero-cta-row .btn>* {
   position: relative;
   z-index: 2;
 }
@@ -685,14 +688,14 @@ video {
   border: none !important;
   font-weight: 800;
   box-shadow: 0 16px 36px -4px rgba(240, 185, 20, 0.52),
-              0 6px 16px rgba(20, 50, 25, 0.14),
-              0 0 0 1.5px rgba(255, 255, 255, 0.95),
-              0 0 0 2.5px rgba(247, 216, 74, 0.45),
-              inset 0 2px 3px 0 rgba(255, 255, 255, 1),
-              inset 0 8px 16px -4px rgba(255, 255, 255, 0.6),
-              inset 0 -3px 6px 0 rgba(175, 120, 0, 0.24),
-              inset 2px 0 3px 0 rgba(255, 255, 255, 0.8),
-              inset -2px 0 3px 0 rgba(175, 120, 0, 0.14);
+    0 6px 16px rgba(20, 50, 25, 0.14),
+    0 0 0 1.5px rgba(255, 255, 255, 0.95),
+    0 0 0 2.5px rgba(247, 216, 74, 0.45),
+    inset 0 2px 3px 0 rgba(255, 255, 255, 1),
+    inset 0 8px 16px -4px rgba(255, 255, 255, 0.6),
+    inset 0 -3px 6px 0 rgba(175, 120, 0, 0.24),
+    inset 2px 0 3px 0 rgba(255, 255, 255, 0.8),
+    inset -2px 0 3px 0 rgba(175, 120, 0, 0.14);
   text-shadow: 0 1px 2px rgba(255, 255, 255, 0.95);
   transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.25s ease, color 0.2s ease;
 }
@@ -714,9 +717,9 @@ video {
   background: var(--green);
   color: #FFFFFF;
   box-shadow: 0 20px 42px -4px rgba(46, 125, 63, 0.45),
-              0 8px 20px rgba(0, 0, 0, 0.12),
-              0 0 0 2px rgba(255, 255, 255, 1),
-              inset 0 2px 3px 0 rgba(255, 255, 255, 1);
+    0 8px 20px rgba(0, 0, 0, 0.12),
+    0 0 0 2px rgba(255, 255, 255, 1),
+    inset 0 2px 3px 0 rgba(255, 255, 255, 1);
   transform: translateY(-2px);
 }
 
@@ -736,14 +739,14 @@ video {
   border: none !important;
   font-weight: 800;
   box-shadow: 0 16px 36px -4px rgba(20, 50, 25, 0.24),
-              0 6px 16px rgba(0, 0, 0, 0.08),
-              0 0 0 1.5px rgba(255, 255, 255, 0.95),
-              0 0 0 2.5px rgba(255, 255, 255, 0.4),
-              inset 0 2px 3px 0 rgba(255, 255, 255, 1),
-              inset 0 8px 16px -4px rgba(255, 255, 255, 0.6),
-              inset 0 -3px 6px 0 rgba(46, 125, 63, 0.22),
-              inset 2px 0 3px 0 rgba(255, 255, 255, 0.8),
-              inset -2px 0 3px 0 rgba(46, 125, 63, 0.12);
+    0 6px 16px rgba(0, 0, 0, 0.08),
+    0 0 0 1.5px rgba(255, 255, 255, 0.95),
+    0 0 0 2.5px rgba(255, 255, 255, 0.4),
+    inset 0 2px 3px 0 rgba(255, 255, 255, 1),
+    inset 0 8px 16px -4px rgba(255, 255, 255, 0.6),
+    inset 0 -3px 6px 0 rgba(46, 125, 63, 0.22),
+    inset 2px 0 3px 0 rgba(255, 255, 255, 0.8),
+    inset -2px 0 3px 0 rgba(46, 125, 63, 0.12);
   text-shadow: 0 1px 2px rgba(255, 255, 255, 0.95);
   animation: heroBtnTactilePress 1.5s cubic-bezier(0.22, 1, 0.36, 1) infinite;
   transform-origin: center right;
@@ -767,9 +770,9 @@ video {
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.92) 0%, rgba(245, 252, 246, 0.72) 100%);
   color: var(--green);
   box-shadow: 0 20px 42px -4px rgba(20, 50, 25, 0.3),
-              0 8px 20px rgba(0, 0, 0, 0.1),
-              0 0 0 2px rgba(255, 255, 255, 1),
-              inset 0 2px 3px 0 rgba(255, 255, 255, 1);
+    0 8px 20px rgba(0, 0, 0, 0.1),
+    0 0 0 2px rgba(255, 255, 255, 1),
+    inset 0 2px 3px 0 rgba(255, 255, 255, 1);
   transform: translateY(-2px);
   animation-play-state: paused;
 }
@@ -838,59 +841,75 @@ video {
 }
 
 @keyframes heroBtnTactilePress {
-  0%, 20%, 46%, 100% {
+
+  0%,
+  20%,
+  46%,
+  100% {
     transform: translateY(0) scale(1);
     box-shadow: 0 16px 36px -4px rgba(20, 50, 25, 0.24),
-                0 6px 16px rgba(0, 0, 0, 0.08),
-                0 0 0 1.5px rgba(255, 255, 255, 0.95),
-                0 0 0 2.5px rgba(255, 255, 255, 0.4),
-                inset 0 2px 3px 0 rgba(255, 255, 255, 1),
-                inset 0 8px 16px -4px rgba(255, 255, 255, 0.6),
-                inset 0 -3px 6px 0 rgba(46, 125, 63, 0.22);
+      0 6px 16px rgba(0, 0, 0, 0.08),
+      0 0 0 1.5px rgba(255, 255, 255, 0.95),
+      0 0 0 2.5px rgba(255, 255, 255, 0.4),
+      inset 0 2px 3px 0 rgba(255, 255, 255, 1),
+      inset 0 8px 16px -4px rgba(255, 255, 255, 0.6),
+      inset 0 -3px 6px 0 rgba(46, 125, 63, 0.22);
   }
+
   28% {
     transform: translateY(1.5px) scale(0.975);
     box-shadow: 0 6px 16px -2px rgba(20, 50, 25, 0.28),
-                0 3px 8px rgba(0, 0, 0, 0.12),
-                0 0 0 1.5px rgba(255, 255, 255, 0.95),
-                inset 0 1.5px 2px 0 rgba(255, 255, 255, 1),
-                inset 0 -2px 3px 0 rgba(46, 125, 63, 0.28);
+      0 3px 8px rgba(0, 0, 0, 0.12),
+      0 0 0 1.5px rgba(255, 255, 255, 0.95),
+      inset 0 1.5px 2px 0 rgba(255, 255, 255, 1),
+      inset 0 -2px 3px 0 rgba(46, 125, 63, 0.28);
   }
 }
 
 @keyframes heroCursorTap {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translate3d(6px, 6px, 0) rotate(0deg) scale(1);
   }
+
   20% {
     transform: translate3d(2px, 2px, 0) rotate(-2deg) scale(1.02);
   }
+
   28% {
     transform: translate3d(-2px, -2px, 0) rotate(-4deg) scale(0.86);
   }
+
   38% {
     transform: translate3d(5px, 5px, 0) rotate(1deg) scale(1.03);
   }
+
   48% {
     transform: translate3d(6px, 6px, 0) rotate(0deg) scale(1);
   }
 }
 
 @keyframes heroRippleOne {
-  0%, 25% {
+
+  0%,
+  25% {
     transform: scale(0.3);
     opacity: 0;
   }
+
   28% {
     transform: scale(0.4);
     opacity: 0.95;
     stroke-width: 2.2px;
   }
+
   68% {
     transform: scale(1.85);
     opacity: 0;
     stroke-width: 0.6px;
   }
+
   100% {
     transform: scale(1.85);
     opacity: 0;
@@ -898,20 +917,25 @@ video {
 }
 
 @keyframes heroRippleTwo {
-  0%, 30% {
+
+  0%,
+  30% {
     transform: scale(0.25);
     opacity: 0;
   }
+
   33% {
     transform: scale(0.45);
     opacity: 0.85;
     stroke-width: 1.8px;
   }
+
   74% {
     transform: scale(2.2);
     opacity: 0;
     stroke-width: 0.4px;
   }
+
   100% {
     transform: scale(2.2);
     opacity: 0;
@@ -919,46 +943,144 @@ video {
 }
 
 @keyframes heroSparksBurst {
-  0%, 26% {
+
+  0%,
+  26% {
     transform: scale(0) translate(0, 0);
     opacity: 0;
   }
+
   32% {
     transform: scale(1.3);
     opacity: 1;
   }
-  60%, 100% {
+
+  60%,
+  100% {
     transform: scale(0.3);
     opacity: 0;
   }
 }
 
-.hero-proof-row {
-  display: flex;
-  gap: clamp(14px, 3.5vw, 32px);
-  flex-wrap: nowrap;
-  align-items: center;
+/* ==========================================================================
+   TRANSITION SOCIAL PROOF STRIP (HERO TO STORY)
+   Deep glassmorphism pill centered at transition seam
+   ========================================================================== */
+.hero-story-transition-proof {
+  position: relative;
+  z-index: 12;
+  margin-top: -48px;
+  margin-bottom: 20px;
+  pointer-events: auto;
 }
 
-.proof-item strong {
-  display: block;
-  font: 800 clamp(26px, 2.2vw, 34px) var(--font-serif);
+.proof-pill-banner {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: clamp(14px, 2.2vw, 26px);
+  padding: 16px clamp(20px, 3.5vw, 42px);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.76) 0%, rgba(246, 251, 245, 0.46) 48%, rgba(255, 255, 255, 0.68) 100%);
+  backdrop-filter: blur(28px) saturate(220%) brightness(105%);
+  -webkit-backdrop-filter: blur(28px) saturate(220%) brightness(105%);
+  border: 1.5px solid rgba(255, 255, 255, 0.95);
+  border-bottom: 1.5px solid rgba(255, 255, 255, 0.45);
+  border-right: 1.5px solid rgba(255, 255, 255, 0.55);
+  border-radius: 999px;
+  box-shadow: 0 16px 42px -6px rgba(20, 50, 25, 0.16),
+    0 6px 16px rgba(0, 0, 0, 0.05),
+    inset 0 1.5px 2px 0 rgba(255, 255, 255, 1),
+    inset 0 -2px 3px 0 rgba(46, 125, 63, 0.12),
+    inset 1.5px 0 2px 0 rgba(255, 255, 255, 0.7);
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+.ppb-item {
+  display: flex;
+  align-items: center;
+  gap: clamp(12px, 1.4vw, 18px);
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+.ppb-icon-wrap {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ppb-icon {
+  width: auto;
+  height: clamp(44px, 4vw, 54px);
+  max-width: 68px;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 4px rgba(46, 125, 63, 0.12));
+}
+
+.ppb-content {
+  min-width: 0;
+}
+
+.ppb-stat {
+  font: 800 clamp(24px, 2.2vw, 32px)/1 var(--font-serif);
   color: var(--green);
-  line-height: 1.1;
+  letter-spacing: -0.01em;
+  margin-bottom: 2px;
   text-shadow: 0 1px 2px rgba(255, 255, 255, 0.85);
 }
 
-.proof-item span {
-  font-size: clamp(13px, 0.95vw, 15px);
+.ppb-title {
+  font: 700 clamp(13px, 1vw, 15px)/1.2 var(--font-sans);
   color: var(--green);
-  font-weight: 600;
-  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.75);
+  letter-spacing: -0.01em;
+  margin-bottom: 2px;
 }
 
-.proof-divider {
-  width: 1px;
-  height: 32px;
-  background: rgba(46, 125, 63, 0.3);
+.ppb-desc {
+  font-size: clamp(11px, 0.82vw, 12.5px);
+  line-height: 1.35;
+  color: rgba(30, 60, 35, 0.78);
+  margin: 0;
+  font-weight: 500;
+}
+
+.ppb-divider {
+  width: 1.5px;
+  height: 52px;
+  background: linear-gradient(to bottom, rgba(46, 125, 63, 0.05), rgba(46, 125, 63, 0.28) 50%, rgba(46, 125, 63, 0.05));
+  flex-shrink: 0;
+}
+
+@media (max-width: 860px) {
+  .hero-story-transition-proof {
+    margin-top: -24px;
+    margin-bottom: 12px;
+  }
+
+  .proof-pill-banner {
+    border-radius: 28px;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 16px;
+    padding: 20px 22px;
+  }
+
+  .ppb-divider {
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(to right, rgba(46, 125, 63, 0.05), rgba(46, 125, 63, 0.25) 50%, rgba(46, 125, 63, 0.05));
+  }
+
+  .ppb-item {
+    gap: 14px;
+  }
+}
+
+.hero-proof-row {
+  display: none !important;
 }
 
 /* ==========================================================================
