@@ -1048,6 +1048,10 @@ video {
   white-space: nowrap;
 }
 
+.ppb-br {
+  display: none;
+}
+
 .ppb-divider {
   width: 1.5px;
   height: 38px;
@@ -1067,31 +1071,37 @@ video {
     flex-wrap: nowrap;
     align-items: center;
     justify-content: space-between;
-    gap: clamp(4px, 1.4vw, 10px);
-    padding: clamp(7px, 1.8vw, 10px) clamp(10px, 2.5vw, 16px);
+    gap: clamp(4px, 1.2vw, 8px);
+    padding: clamp(6px, 1.6vw, 9px) clamp(8px, 2.2vw, 14px);
   }
 
   .ppb-item {
     justify-content: center;
-    gap: clamp(4px, 1.2vw, 8px);
+    gap: clamp(4px, 1.2vw, 7px);
     flex: 1 1 0;
     min-width: 0;
   }
 
   .ppb-icon {
-    height: clamp(24px, 5.8vw, 32px);
-    max-width: 32px;
+    height: clamp(22px, 5.2vw, 30px);
+    max-width: 30px;
   }
 
   .ppb-stat {
-    font-size: clamp(13px, 3.4vw, 17px);
+    font-size: clamp(13px, 3.2vw, 16px);
     line-height: 1.05;
     margin-bottom: 1px;
   }
 
+  .ppb-br {
+    display: block;
+  }
+
   .ppb-title {
-    font-size: clamp(8px, 1.9vw, 10.5px);
-    line-height: 1.1;
+    font-size: clamp(8px, 1.9vw, 10px);
+    line-height: 1.15;
+    white-space: normal;
+    word-break: normal;
   }
 
   .ppb-divider {
