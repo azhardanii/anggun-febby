@@ -964,13 +964,13 @@ video {
 
 /* ==========================================================================
    TRANSITION SOCIAL PROOF STRIP (HERO TO STORY)
-   Deep glassmorphism pill centered at transition seam (Wide & Highlighted)
+   Deep glassmorphism compact pill centered at transition seam
    ========================================================================== */
 .hero-story-transition-proof {
   position: relative;
   z-index: 12;
-  margin-top: -52px;
-  margin-bottom: 24px;
+  margin-top: -36px;
+  margin-bottom: 16px;
   pointer-events: auto;
 }
 
@@ -979,21 +979,21 @@ video {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  gap: clamp(20px, 3.2vw, 48px);
-  padding: clamp(18px, 1.8vw, 24px) clamp(28px, 4.5vw, 64px);
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.82) 0%, rgba(246, 251, 245, 0.52) 48%, rgba(255, 255, 255, 0.74) 100%);
-  backdrop-filter: blur(32px) saturate(240%) brightness(108%);
-  -webkit-backdrop-filter: blur(32px) saturate(240%) brightness(108%);
-  border: 1.8px solid rgba(255, 255, 255, 0.98);
-  border-bottom: 1.8px solid rgba(255, 255, 255, 0.52);
-  border-right: 1.8px solid rgba(255, 255, 255, 0.62);
+  gap: clamp(14px, 2vw, 28px);
+  padding: 11px clamp(18px, 2.5vw, 36px);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.78) 0%, rgba(246, 251, 245, 0.46) 48%, rgba(255, 255, 255, 0.70) 100%);
+  backdrop-filter: blur(24px) saturate(220%) brightness(106%);
+  -webkit-backdrop-filter: blur(24px) saturate(220%) brightness(106%);
+  border: 1.5px solid rgba(255, 255, 255, 0.95);
+  border-bottom: 1.5px solid rgba(255, 255, 255, 0.48);
+  border-right: 1.5px solid rgba(255, 255, 255, 0.58);
   border-radius: 999px;
-  box-shadow: 0 20px 48px -8px rgba(20, 50, 25, 0.20),
-    0 8px 24px rgba(0, 0, 0, 0.06),
-    inset 0 2px 2.5px 0 rgba(255, 255, 255, 1),
-    inset 0 -2.5px 3.5px 0 rgba(46, 125, 63, 0.15),
-    inset 2px 0 2.5px 0 rgba(255, 255, 255, 0.85);
-  max-width: 1220px;
+  box-shadow: 0 12px 32px -4px rgba(20, 50, 25, 0.15),
+    0 4px 12px rgba(0, 0, 0, 0.04),
+    inset 0 1.5px 2px 0 rgba(255, 255, 255, 1),
+    inset 0 -1.5px 2.5px 0 rgba(46, 125, 63, 0.12),
+    inset 1.5px 0 2px 0 rgba(255, 255, 255, 0.75);
+  max-width: 840px;
   margin: 0 auto;
 }
 
@@ -1001,7 +1001,7 @@ video {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: clamp(16px, 1.8vw, 24px);
+  gap: clamp(10px, 1.2vw, 15px);
   flex: 1 1 0;
   min-width: 0;
 }
@@ -1015,15 +1015,15 @@ video {
 
 .ppb-icon {
   width: auto;
-  height: clamp(52px, 4.8vw, 68px);
-  max-width: 80px;
+  height: clamp(34px, 3.2vw, 42px);
+  max-width: 48px;
   object-fit: contain;
-  filter: drop-shadow(0 4px 10px rgba(46, 125, 63, 0.18));
-  transition: transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+  filter: drop-shadow(0 2px 6px rgba(46, 125, 63, 0.14));
+  transition: transform 0.25s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
 .ppb-item:hover .ppb-icon {
-  transform: scale(1.06) translateY(-2px);
+  transform: scale(1.08) translateY(-1px);
 }
 
 .ppb-content {
@@ -1033,48 +1033,53 @@ video {
 }
 
 .ppb-stat {
-  font: 800 clamp(32px, 3.2vw, 44px)/1.05 var(--font-serif);
+  font: 800 clamp(20px, 1.8vw, 25px)/1.05 var(--font-serif);
   color: var(--green);
-  letter-spacing: -0.02em;
+  letter-spacing: -0.01em;
   margin-bottom: 2px;
-  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.95), 0 2px 14px rgba(46, 125, 63, 0.14);
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.9);
 }
 
 .ppb-title {
-  font: 750 clamp(13.5px, 1.05vw, 15.5px)/1.2 var(--font-sans);
+  font: 700 clamp(11px, 0.82vw, 12.5px)/1.2 var(--font-sans);
   color: var(--green);
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
+  letter-spacing: 0.02em;
   opacity: 0.92;
   white-space: nowrap;
 }
 
 .ppb-divider {
   width: 1.5px;
-  height: 58px;
-  background: linear-gradient(to bottom, rgba(46, 125, 63, 0.04), rgba(46, 125, 63, 0.32) 50%, rgba(46, 125, 63, 0.04));
+  height: 38px;
+  background: linear-gradient(to bottom, rgba(46, 125, 63, 0.04), rgba(46, 125, 63, 0.26) 50%, rgba(46, 125, 63, 0.04));
   flex-shrink: 0;
 }
 
 @media (max-width: 860px) {
   .hero-story-transition-proof {
-    margin-top: -24px;
+    margin-top: -20px;
     margin-bottom: 12px;
   }
 
   .proof-pill-banner {
-    border-radius: 28px;
+    border-radius: 22px;
     flex-direction: column;
     align-items: stretch;
-    gap: 18px;
-    padding: 22px 24px;
+    gap: 12px;
+    padding: 16px 20px;
   }
 
   .ppb-divider {
     width: 100%;
     height: 1px;
-    background: linear-gradient(to right, rgba(46, 125, 63, 0.04), rgba(46, 125, 63, 0.28) 50%, rgba(46, 125, 63, 0.04));
+    background: linear-gradient(to right, rgba(46, 125, 63, 0.04), rgba(46, 125, 63, 0.24) 50%, rgba(46, 125, 63, 0.04));
   }
+
+  .ppb-item {
+    justify-content: flex-start;
+    gap: 14px;
+  }
+}
 
   .ppb-item {
     justify-content: flex-start;
