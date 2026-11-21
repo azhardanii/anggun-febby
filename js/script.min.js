@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
       hero_eyebrow: 'Digital Nomad · WFA Educator · Travel Creator',
       hero_title: 'Work Anywhere.<br><em class="travel-brush">Travel</em> Everywhere.',
-      hero_sub: '<strong style="font-size:22px">Hai aku Anggun.</strong> Digital nomad yang <strong>kerjanya sambil keliling dunia</strong>. Aku bantu kamu membangun <strong>penghasilan</strong> dari dunia digital dan menemukan opportunity dari luar negeri, supaya kamu bebas traveling dan <strong>kerja dari mana aja</strong>.',
+      hero_sub: '<strong style="font-size:22px">Hai aku Anggun.</strong> Digital nomad yang <strong>kerjanya sambil keliling dunia</strong>. Aku bantu kamu membangun <strong>penghasilan</strong> dari dunia digital dan menemukan opportunity dari luar negeri, supaya kamu bebas traveling dan <strong>kerja dari mana saja</strong>.',
       hero_cta_primary: 'Jelajahi Peluang WFA',
       hero_cta_secondary: 'Mulai Coaching',
       hero_scroll: 'Scroll ke bawah',

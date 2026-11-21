@@ -663,6 +663,7 @@ video {
   align-items: center;
   gap: 16px;
   flex-wrap: wrap;
+  max-width: min(39vw, 570px);
   margin-bottom: 30px;
 }
 
@@ -790,10 +791,10 @@ video {
 
 .hero-click-icon {
   position: absolute;
-  right: -42px;
-  bottom: -38px;
-  width: 80px;
-  height: 80px;
+  right: -66px;
+  bottom: -4px;
+  width: 86px;
+  height: 56px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -801,115 +802,46 @@ video {
   z-index: 6;
 }
 
-.hero-click-icon svg {
-  width: 80px;
-  height: 80px;
+.hero-click-icon .hero-curved-arrow-svg {
+  width: 86px;
+  height: 56px;
   overflow: visible;
-}
-
-.hero-click-icon .curved-arrow-body {
-  transform-origin: 10px 10px;
+  filter: drop-shadow(0 4px 12px rgba(27, 94, 43, 0.28));
+  transform-origin: 20% 40%;
   animation: heroCurvedArrowNudge 1.8s cubic-bezier(0.22, 1, 0.36, 1) infinite;
-}
-
-.hero-click-icon .arrow-touch-ripple {
-  transform-origin: 10px 10px;
-  opacity: 0;
-}
-
-.hero-click-icon .arrow-touch-ripple.ripple-1 {
-  animation: heroArrowRippleOne 1.8s cubic-bezier(0.16, 1, 0.3, 1) infinite;
-}
-
-.hero-click-icon .arrow-touch-ripple.ripple-2 {
-  animation: heroArrowRippleTwo 1.8s cubic-bezier(0.16, 1, 0.3, 1) infinite;
 }
 
 @keyframes heroCurvedArrowNudge {
   0% {
-    transform: translate3d(2px, 2px, 0) rotate(0deg) scale(1);
+    transform: scaleX(-1) rotate(10deg) translate3d(0, 0, 0);
   }
 
   16% {
-    transform: translate3d(6px, 6px, 0) rotate(2deg) scale(0.97);
+    transform: scaleX(-1) rotate(13deg) translate3d(-5px, 4px, 0) scale(0.96);
   }
 
   26% {
-    transform: translate3d(-6px, -6px, 0) rotate(-4deg) scale(1.06);
+    transform: scaleX(-1) rotate(6deg) translate3d(8px, -8px, 0) scale(1.06);
   }
 
   34% {
-    transform: translate3d(1px, 1px, 0) rotate(1deg) scale(0.99);
+    transform: scaleX(-1) rotate(11deg) translate3d(-2px, 1px, 0) scale(0.99);
   }
 
-  44% {
-    transform: translate3d(-1px, -1px, 0) rotate(-1deg) scale(1.01);
+  46% {
+    transform: scaleX(-1) rotate(9deg) translate3d(1px, -1px, 0) scale(1.01);
   }
 
-  56% {
-    transform: translate3d(3px, 2px, 0) rotate(0deg) scale(0.99);
-  }
-
-  74% {
-    transform: translate3d(1px, 3px, 0) rotate(-1deg) scale(1);
+  65% {
+    transform: scaleX(-1) rotate(10deg) translate3d(0, 0, 0);
   }
 
   100% {
-    transform: translate3d(2px, 2px, 0) rotate(0deg) scale(1);
+    transform: scaleX(-1) rotate(10deg) translate3d(0, 0, 0);
   }
 }
 
-@keyframes heroArrowRippleOne {
 
-  0%,
-  24% {
-    transform: scale(0.4);
-    opacity: 0;
-  }
-
-  26% {
-    transform: scale(0.6);
-    opacity: 0.9;
-    stroke-width: 2.2px;
-  }
-
-  48% {
-    transform: scale(2.4);
-    opacity: 0;
-    stroke-width: 0.3px;
-  }
-
-  100% {
-    transform: scale(2.4);
-    opacity: 0;
-  }
-}
-
-@keyframes heroArrowRippleTwo {
-
-  0%,
-  27% {
-    transform: scale(0.3);
-    opacity: 0;
-  }
-
-  29% {
-    transform: scale(0.65);
-    opacity: 0.85;
-    stroke-width: 1.8px;
-  }
-
-  54% {
-    transform: scale(2.8);
-    opacity: 0;
-    stroke-width: 0.2px;
-  }
-
-  100% {
-    transform: scale(2.8);
-    opacity: 0;
-  }
-}
 
 @keyframes heroBtnTactilePress {
 
@@ -3347,12 +3279,14 @@ video {
     font-size: clamp(12.5px, 3.4vw, 14px) !important;
     line-height: 1.48 !important;
     margin-bottom: 22px !important;
-    max-width: 100% !important;
-    width: 100% !important;
+    max-width: min(86vw, 440px) !important;
+    width: auto !important;
   }
 
   .hero-cta-row {
+    max-width: min(86vw, 440px) !important;
     margin-bottom: 24px;
+    gap: 12px;
   }
 
   .hero-cta-row .btn {
@@ -3361,15 +3295,16 @@ video {
   }
 
   .hero-click-icon {
-    width: 46px;
-    height: 46px;
-    right: -26px;
-    bottom: -24px;
+    width: 60px;
+    height: 38px;
+    right: -36px;
+    bottom: -4px;
   }
 
+  .hero-click-icon .hero-curved-arrow-svg,
   .hero-click-icon svg {
-    width: 46px;
-    height: 46px;
+    width: 60px;
+    height: 38px;
   }
 
   .pathways-band {
