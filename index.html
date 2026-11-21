@@ -414,24 +414,28 @@
       </section>
 
       <!-- ================================================================
-           SECTION 4: TESTIMONI (MOVED UP TO SWAP WITH CATATAN PERJALANAN)
+           SECTION 4: TESTIMONI (14 CERITA NYATA ALUMNI SEKOLAH WFA)
            ================================================================ -->
       <section class="section reviews-section" id="reviews">
         <div class="wrap">
           <div class="reviews-head reveal-up">
-            <span class="section-pill" data-i18n="testi_eyebrow">KATA MEREKA</span>
+            <div class="reviews-eyebrow-row">
+              <span class="section-pill" data-i18n="testi_eyebrow">KATA MEREKA</span>
+              <span class="testi-stat-pill">★ 4.9/5 dari 1.000+ Alumni</span>
+            </div>
             <h2 class="section-heading" data-i18n="testi_title">Kata Mereka yang Sudah Mencoba</h2>
-            <p class="section-lead" data-i18n="testi_sub">Cerita nyata dari teman-teman alumni Sekolah WFA yang sekarang
-              bisa kerja dan berpenghasilan dari mana aja.</p>
+            <p class="section-lead" data-i18n="testi_sub">Cerita nyata dari 14 teman alumni Sekolah WFA yang sekarang bisa kerja dan berpenghasilan dari mana aja.</p>
+
+            <div class="testi-filter-bar" id="testi-filter-bar">
+              <button type="button" class="testi-filter-pill active" data-testi-filter="all">Semua Cerita (14)</button>
+              <button type="button" class="testi-filter-pill" data-testi-filter="nomad">✈️ Nomad &amp; Traveling (5)</button>
+              <button type="button" class="testi-filter-pill" data-testi-filter="creator">💼 Creator &amp; Bisnis (4)</button>
+              <button type="button" class="testi-filter-pill" data-testi-filter="beginner">🌱 Pemula &amp; Transisi (5)</button>
+            </div>
           </div>
 
-          <!-- Testimonial cards rendered from TESTIMONIALS array in js/script.js -->
+          <!-- All 14 Testimonial cards rendered from TESTIMONIALS array in js/script.js -->
           <div class="testi-masonry" id="testi-grid"></div>
-
-          <div class="testi-more-row">
-            <button type="button" class="btn btn-ghost" id="testi-toggle" data-i18n="testi_more">Lihat Semua
-              Testimoni</button>
-          </div>
         </div>
       </section>
 

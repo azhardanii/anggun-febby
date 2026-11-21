@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
       hero_eyebrow: 'Digital Nomad · WFA Educator · Travel Creator',
       hero_title: 'Work Anywhere.<br><em class="travel-brush">Travel</em> Everywhere.',
-      hero_sub: '<strong style="font-size:22px">Hai aku Anggun.</strong> Digital nomad yang kerjanya sambil keliling dunia. Aku bantu kamu membangun <strong>penghasilan</strong> dari dunia digital dan menemukan peluang dari luar negeri, supaya kamu bebas traveling dan <strong>kerja dari mana aja</strong>.',
+      hero_sub: '<strong style="font-size:22px">Hai aku Anggun.</strong> Digital nomad yang <strong>kerjanya sambil keliling dunia</strong>. Aku bantu kamu membangun <strong>penghasilan</strong> dari dunia digital dan menemukan opportunity dari luar negeri, supaya kamu bebas traveling dan <strong>kerja dari mana saja</strong>.',
       hero_cta_primary: 'Jelajahi Peluang WFA',
       hero_cta_secondary: 'Start Coaching',
       hero_scroll: 'Scroll ke bawah',
@@ -173,7 +173,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
       hero_eyebrow: 'Digital Nomad · WFA Educator · Travel Creator',
       hero_title: 'Work Anywhere.<br><em class="travel-brush">Travel</em> Everywhere.',
-      hero_sub: `<strong style="font-size:22px">Hi i'm Anggun.</strong> A digital nomad working while traveling the globe. I help you build <strong>income</strong> in the digital space and discover overseas opportunities, so you are free to travel & <strong>work from anywhere</strong>.`,
+      hero_sub: `<strong style="font-size:22px">Hi i'm Anggun.</strong> A digital nomad <strong>working from anywhere</strong>. I help you build <strong>income</strong> in the digital space and discover overseas opportunities, so you are free to travel & <strong>work from anywhere</strong>.`,
       hero_cta_primary: 'Explore WFA Opportunities',
       hero_cta_secondary: 'Start Coaching',
       hero_scroll: 'Scroll down',
@@ -446,13 +446,16 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   // ==========================================================================
-  // 4. TESTIMONIALS (ALUMNI SEKOLAH WFA)
+  // 4. TESTIMONIALS (ALUMNI SEKOLAH WFA - 14 CERITA LENGKAP & FILTERABLE)
   // ==========================================================================
   const TESTIMONIALS = [
     {
       id: 1,
       name: 'Ibun Aif',
       handle: '@aifarifah',
+      category: 'creator',
+      role: 'Content Creator',
+      badge: 'Monetisasi Konten',
       avatar: 'https://sekolahwfa.com/img/testi/avatar-aif.webp',
       text: 'Duh gimana ya, seneng banget rasanya. Dulu tuh aku cuma bisa bikin konten, tapi gak ngerti gimana cara monetize dengan bener. Nah Sekolah WFA ini ngajarin semua hal itu, dari strategi, eksekusi, sampe cara dapetin penghasilan dari mana aja. Dan yang paling aku suka, mereka ngajarin dengan cara yang fun, gak boring. Mentor-mentornya juga asik, bisa diajak diskusi kapan aja. Pokoknya materinya daging semua deh!'
     },
@@ -460,6 +463,9 @@ document.addEventListener('DOMContentLoaded', function () {
       id: 2,
       name: 'Kadafi Devayana',
       handle: '@kadafidevayana',
+      category: 'creator',
+      role: 'Personal Branding Strategist',
+      badge: 'Strategic & Proven',
       avatar: 'https://sekolahwfa.com/img/testi/avatar-kadafi.webp',
       text: 'Sebagai seseorang yang udah berkecimpung di dunia personal branding cukup lama, aku bisa bilang Sekolah WFA punya kurikulum yang terstruktur. Mereka ngerti betul ekosistem digital yang sebenarnya. Bukan janji-janji muluk yang ngga masuk akal. Approach-nya strategic, actionable, dan yang paling penting, proven! Aku personally recommend untuk profesional yang ingin serius di bidang digital.'
     },
@@ -467,6 +473,9 @@ document.addEventListener('DOMContentLoaded', function () {
       id: 3,
       name: 'Asran Shady',
       handle: '@gashady',
+      category: 'nomad',
+      role: 'Jurnalis & Mobile Worker',
+      badge: 'Fleksibilitas Kerja',
       avatar: 'https://sekolahwfa.com/img/testi/avatar-asran.webp',
       text: 'Sebagai orang yang pekerjaannya mobile, saya butuh skill yang bisa mendukung fleksibilitas itu. Sekolah WFA memberikan perspektif baru tentang bagaimana saya bisa diversifikasi pekerjaan tanpa meninggalkan passion saya di dunia jurnalistik. Kurikulumnya applicable, dan saya bisa langsung praktek. Kalau ditanya worth it atau tidak, jawabannya absolutely worth it.'
     },
@@ -474,6 +483,9 @@ document.addEventListener('DOMContentLoaded', function () {
       id: 4,
       name: 'Clara',
       handle: '@ceritadigitalclara',
+      category: 'beginner',
+      role: 'Digital Newbie to Action',
+      badge: 'Lepas Mental Block',
       avatar: 'https://sekolahwfa.com/img/testi/avatar-clara.webp',
       text: 'Guys, jujur sebenernya aku tuh udah mulai nyemplung, tapi sempet stuck dan ragu banget buat lanjut karena ngerasa super newbie di dunia digital. Tapi untungnya setelah belajar di Sekolah WFA, akar permasalahanku bener-bener dibedah tuntas! Akhirnya aku bisa lepas dari mental block, dan sekarang malah jadi makin pede buat action. Ternyata kuncinya bukan cuma di skill, tapi di pola pikir yang bener. Thanks banget ilmunya!'
     },
@@ -481,6 +493,9 @@ document.addEventListener('DOMContentLoaded', function () {
       id: 5,
       name: 'Amanda Mindiw',
       handle: '@amanddanf',
+      category: 'nomad',
+      role: 'Ex-Agency Nomad',
+      badge: 'Bebas dari Kantor',
       avatar: 'https://sekolahwfa.com/img/testi/avatar-mindiw.webp',
       text: 'Okay so. Aku kan udah kerja di beberapa agency, handle brand-brand gede juga. Kirain udah expert lah ya. Tapi pas ikut Sekolah WFA, Aku nyadar masih banyak yang bisa di-improve. Mereka tuh ngasih framework yang bikin kerjaan aku jauh lebih efisien. Plus, sekarang aku udah gak perlu stuck di kantor. Bisa kerja dari coffee shop, dari rumah, bahkan dari luar kota. Best decision ever sih ini.'
     },
@@ -488,6 +503,9 @@ document.addEventListener('DOMContentLoaded', function () {
       id: 6,
       name: 'Dimas Ramadhan',
       handle: '@dimasramadhan',
+      category: 'nomad',
+      role: 'Travel Creator',
+      badge: 'Travel Creator Sistem',
       avatar: 'https://sekolahwfa.com/img/testi/avatar-dimas.webp',
       text: 'Jadi ceritanya gue kan udah lama banget jadi travel creator ya. Kira-kira udah ngerti semua lah. Eh pas ikut Sekolah WFA, ternyata banyak banget yang masih missing. Especially soal sistemnya. Mereka ngajarin hal-hal yang gak pernah kepikiran sama gue sebelumnya. Dan yang gue suka, kak Anggun itu humble, gak sok tau. Pokoknya recommended deh kalau lo serius.'
     },
@@ -495,6 +513,9 @@ document.addEventListener('DOMContentLoaded', function () {
       id: 7,
       name: 'Mia Aulia',
       handle: '@miaauliaa.p',
+      category: 'nomad',
+      role: 'WFA Enthusiast',
+      badge: 'Networking Komunitas',
       avatar: 'https://sekolahwfa.com/img/testi/avatar-mia.webp',
       text: 'Komunitasnya aktif banget. Gak cuma belajar materinya doang, tapi juga bisa networking sama temen-temen se-visi dari berbagai macam background berbeda-beda yang kerjanya WFA, jadi ngebuka peluang kolaborasi yang aku butuhin banget selama ini.'
     },
@@ -502,6 +523,9 @@ document.addEventListener('DOMContentLoaded', function () {
       id: 8,
       name: 'Fuad Rizal',
       handle: '@fuadekspor',
+      category: 'creator',
+      role: 'Praktisi Bisnis Ekspor',
+      badge: 'Digitalisasi Bisnis',
       avatar: 'https://sekolahwfa.com/img/testi/avatar-fuad.webp',
       text: 'Kak, saya jujur ya. Awalnya mikir, lah ini kok kayak kursus-kursus online pada umumnya. Tapi ternyata beda jauh. Mereka tuh detail banget ngajarinnya, dan bisa disesuaikan sama industri kita. Saya kan di bidang ekspor, tradisional banget. Eh mereka bisa breakdown gimana cara digitalisasinya. Mantap pokoknya. Sekarang kerjaan saya jauh lebih ringan, bisnis makin lancar.'
     },
@@ -509,6 +533,9 @@ document.addEventListener('DOMContentLoaded', function () {
       id: 9,
       name: 'Hana Puji',
       handle: '@hana.ph',
+      category: 'nomad',
+      role: 'Nomad in Istanbul',
+      badge: 'Living in Istanbul',
       avatar: 'https://sekolahwfa.com/img/testi/avatar-hana.webp',
       text: "Gue tuh dari dulu pengen banget bisa kerja sambil traveling gitu kan. Nah, Sekolah WFA ini jawaban banget sih buat mimpi gue. Mereka ngajarin everything you need to know dari nol sampai bisa profit. Dan gak cuma ngajarin doang, tapi juga kasih insight tentang lifestyle-nya gimana. Now I'm living in Istanbul, working with clients from Indonesia, dan hidup gue so much better. Literally living the dream!"
     },
@@ -516,6 +543,9 @@ document.addEventListener('DOMContentLoaded', function () {
       id: 10,
       name: 'Raden Anggie',
       handle: '@radengie',
+      category: 'beginner',
+      role: 'WFA Freelancer',
+      badge: '10 Juta Pertama/Bulan',
       avatar: 'https://sekolahwfa.com/img/testi/avatar-anggie.webp',
       text: 'Awalnya sih agak ragu ya, namanya juga modal nekat, apalagi sebelumnya aku pernah ikut kelas gini zonkk banget! Tapi pas udah masuk, wahhh ternyata beneran berkualitas. Sistemnya rapi, step by step jelas. Dan yang bikin kaget, dalam waktu sebulan aja aku udah dapet 10 juta pertama ku! Gak nyangka secepatnya itu. Sekarang income aku lebih stabil, dan yang paling penting, aku happy karena bisa atur waktu sendiri. Thank God mempertemukan ku dengan Sekolah WFA!'
     },
@@ -523,6 +553,9 @@ document.addEventListener('DOMContentLoaded', function () {
       id: 11,
       name: 'Sherly Fanny',
       handle: '@fannykondoh',
+      category: 'beginner',
+      role: 'Flexible Digital Worker',
+      badge: 'Support System Juara',
       avatar: 'https://sekolahwfa.com/img/testi/avatar-fanny.webp',
       text: 'Pas gue lagi masa-masa berat dulu, gue sadar banget pentingnya punya kerjaan yang fleksibel. Dan WFA ini literally ngasih semua yang gue butuhin. Dari mulai skill sampai support system-nya. Gue nangis beberapa kali lho waktu belajar, bukan karena susah, tapi karena grateful aja akhirnya nemu tempat yang bener-bener understand our needs as digital workers.'
     },
@@ -530,6 +563,9 @@ document.addEventListener('DOMContentLoaded', function () {
       id: 12,
       name: 'David Lo',
       handle: '@davidlo.fit',
+      category: 'nomad',
+      role: 'Fitness Coach & Remote Worker',
+      badge: 'Praktis & To The Point',
       avatar: 'https://sekolahwfa.com/img/testi/avatar-david.webp',
       text: "Gue udah coba berbagai course online, tapi Sekolah WFA beda level sih. Mereka tuh praktis banget, langsung to the point. Gak pake basa-basi teori yang bikin ngantuk. Sekarang gue bisa dapetin income dari mana aja, meanwhile gue lagi workout di gym manapun yang gue mau. Life's good, man."
     },
@@ -537,6 +573,9 @@ document.addEventListener('DOMContentLoaded', function () {
       id: 13,
       name: 'Uci Afterhours',
       handle: '@digital.afterhours',
+      category: 'creator',
+      role: 'Educator & Community Builder',
+      badge: 'Ramah Pemula',
       avatar: 'https://sekolahwfa.com/img/testi/avatar-suci.webp',
       text: 'Hai semuanya! Jadi aku tuh passionate banget soal empower perempuan di bidang digital. Dan Sekolah WFA ini align banget sama misi aku. Yang bikin seneng, mereka tuh gak elitist. Bahasa yang dipakai juga gampang dipahami, cocok banget buat pemula. Aku udah ajak temen-temen di komunitas aku, dan mereka pada excited semua. Thankful banget nemu tempat belajar yang supportive kayak gini!'
     },
@@ -544,31 +583,38 @@ document.addEventListener('DOMContentLoaded', function () {
       id: 14,
       name: 'Yetti Oktarina',
       handle: '@rinaprana',
+      category: 'beginner',
+      role: 'Lubuklinggau to Global',
+      badge: 'Klien Luar Daerah',
       avatar: 'https://sekolahwfa.com/img/testi/avatar-yetti.webp',
       text: 'Permisi ya, mau sharing dikit. Aku dari Lubuklinggau, kadang suka insecure juga sih karena jauh dari kota besar. Tapi sejak ikut Sekolah WFA, mindset aku berubah total. Ternyata lokasi tuh bukan penghalang. Materinya lengkap, bisa diakses kapan aja, dan mentor-mentornya baik-baik banget mau jawab pertanyaan. Sekarang aku udah berani ambil project dari klien luar daerah. Alhamdulillah banget deh pokoknya!'
     }
   ];
 
-  const TESTI_INITIAL_COUNT = 6;
-  let testiExpanded = false;
+  let activeTestiFilter = 'all';
   const testiGrid = document.getElementById('testi-grid');
-  const testiToggle = document.getElementById('testi-toggle');
 
   const escapeHtml = (str) =>
     String(str).replace(/[&<>"']/g, (ch) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[ch]));
 
-  const TOP_TESTI_IDS = [3, 2, 1]; // 3 most convincing: Asran Shady (Journalist/Mobile), Kadafi Devayana (Strategist), Ibun Aif (Creator)
-  
-  function renderTestimonials() {
+  function renderTestimonials(filterKey) {
     if (!testiGrid) return;
-    const topThree = TOP_TESTI_IDS.map((id) => TESTIMONIALS.find((t) => t.id === id)).filter(Boolean);
-    testiGrid.innerHTML = topThree.map((t) => {
+    activeTestiFilter = filterKey || activeTestiFilter;
+
+    const visible = TESTIMONIALS.filter((t) => {
+      if (activeTestiFilter === 'all') return true;
+      return t.category === activeTestiFilter;
+    });
+
+    testiGrid.innerHTML = visible.map((t) => {
       const initial = escapeHtml(t.name.charAt(0).toUpperCase());
+      const cleanHandle = escapeHtml(t.handle);
+      const igUser = cleanHandle.replace('@', '');
       return `
-        <figure class="testi-card">
+        <figure class="testi-card" data-category="${t.category}">
           <div class="testi-card-head">
             <div class="stars" aria-label="5 bintang">★★★★★</div>
-            <span class="testi-verified-pill">Alumni Terverifikasi</span>
+            <span class="testi-verified-pill">${escapeHtml(t.badge || 'Alumni Terverifikasi')}</span>
           </div>
           <p class="testi-quote">“${escapeHtml(t.text)}”</p>
           <figcaption class="testi-person">
@@ -576,7 +622,8 @@ document.addEventListener('DOMContentLoaded', function () {
               data-initial="${initial}">
             <div class="testi-meta">
               <strong class="testi-name">${escapeHtml(t.name)}</strong>
-              <span class="testi-handle">${escapeHtml(t.handle)}</span>
+              <span class="testi-role">${escapeHtml(t.role || 'Alumni Sekolah WFA')}</span>
+              <a href="https://instagram.com/${igUser}" target="_blank" rel="noopener noreferrer" class="testi-handle">${cleanHandle} ↗</a>
             </div>
           </figcaption>
         </figure>
@@ -588,22 +635,18 @@ document.addEventListener('DOMContentLoaded', function () {
       img.addEventListener('error', function () {
         const badge = document.createElement('span');
         badge.className = 'testi-avatar-fallback';
-        badge.textContent = img.dataset.initial || '';
+        badge.textContent = img.dataset.initial || '✦';
         img.replaceWith(badge);
       }, { once: true });
     });
-
-    if (testiToggle && testiToggle.parentElement) {
-      testiToggle.parentElement.style.display = 'none'; // Unclutter homepage as requested
-    }
   }
 
-  testiToggle?.addEventListener('click', function () {
-    testiExpanded = !testiExpanded;
-    renderTestimonials();
-    if (!testiExpanded) {
-      document.getElementById('reviews')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
+  document.querySelectorAll('#testi-filter-bar .testi-filter-pill').forEach(function (pill) {
+    pill.addEventListener('click', function () {
+      document.querySelectorAll('#testi-filter-bar .testi-filter-pill').forEach((p) => p.classList.remove('active'));
+      pill.classList.add('active');
+      renderTestimonials(pill.getAttribute('data-testi-filter') || 'all');
+    });
   });
 
   // ==========================================================================
