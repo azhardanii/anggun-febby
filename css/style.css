@@ -2,18 +2,18 @@
    ANGGUN FEBBY - EXACT REFERENCE PALETTE & EDITORIAL WIREFRAME
    Reference: Anggun Febby - Toko Produk Digital.html
    Colors ONLY from reference:
-   --bg:#FAFBEA | --surface:#FFFFFF | --ink:#14301F | --muted:#4F6555
-   --green:#2E7D3F | --deep:#14301F | --lime:#CFE56B | --sun:#F7D84A
+   --bg:#FAFBEA | --surface:#FFFFFF | --ink:#1B5E2B | --muted:#4F6555
+   --green:#2E7D3F | --deep:#1B5E2B | --lime:#CFE56B | --sun:#F7D84A
    --sun-soft:#FFF3B0 | --line:#DDE5BC | --on-deep:#F4F8DC
    ========================================================================== */
 
 :root {
   --bg: #FAFBEA;
   --surface: #FFFFFF;
-  --ink: #14301F;
+  --ink: #1B5E2B;
   --muted: #4F6555;
   --green: #2E7D3F;
-  --deep: #14301F;
+  --deep: #1B5E2B;
   --lime: #CFE56B;
   --sun: #F7D84A;
   --sun-soft: #FFF3B0;
@@ -181,7 +181,7 @@ video {
   font: 700 15px var(--font-sans);
   cursor: pointer;
   background: var(--sun);
-  color: #14301F;
+  color: var(--green);
   transition: transform 0.18s var(--ease-fluid), opacity 0.2s ease;
   white-space: nowrap;
 }
@@ -541,7 +541,7 @@ video {
   text-transform: uppercase;
   margin-bottom: 12px;
   box-shadow: 0 10px 28px -4px rgba(20, 50, 25, 0.18),
-    0 3px 10px rgba(0, 0, 0, 0.06),
+    0 3px 10px rgba(27, 94, 43, 0.08),
     inset 0 1.5px 2px 0 rgba(255, 255, 255, 1),
     inset 0 -2px 3px 0 rgba(46, 125, 63, 0.14),
     inset 1.5px 0 2px 0 rgba(255, 255, 255, 0.7);
@@ -717,7 +717,7 @@ video {
   background: var(--green);
   color: #FFFFFF;
   box-shadow: 0 20px 42px -4px rgba(46, 125, 63, 0.45),
-    0 8px 20px rgba(0, 0, 0, 0.12),
+    0 8px 20px rgba(27, 94, 43, 0.14),
     0 0 0 2px rgba(255, 255, 255, 1),
     inset 0 2px 3px 0 rgba(255, 255, 255, 1);
   transform: translateY(-2px);
@@ -1183,7 +1183,7 @@ video {
   border-right: 1.5px solid rgba(255, 255, 255, 0.65);
   border-radius: 9999px;
   box-shadow: 0 16px 38px -6px rgba(20, 50, 25, 0.14),
-    0 4px 14px rgba(0, 0, 0, 0.03),
+    0 4px 14px rgba(27, 94, 43, 0.06),
     inset 0 1.5px 2px 0 rgba(255, 255, 255, 1),
     inset 0 -1.5px 2px 0 rgba(46, 125, 63, 0.10);
   max-width: 960px;
@@ -1380,7 +1380,7 @@ video {
   backdrop-filter: blur(24px) saturate(180%);
   -webkit-backdrop-filter: blur(24px) saturate(180%);
   box-shadow: 0 14px 34px -6px rgba(20, 50, 25, 0.10),
-    0 4px 12px rgba(0, 0, 0, 0.03),
+    0 4px 12px rgba(27, 94, 43, 0.06),
     inset 0 1.5px 2px 0 rgba(255, 255, 255, 1);
   transition: transform 0.28s cubic-bezier(0.2, 0.8, 0.2, 1),
     box-shadow 0.28s cubic-bezier(0.2, 0.8, 0.2, 1);
@@ -1389,7 +1389,7 @@ video {
 .pathway-card:hover {
   transform: translateY(-6px);
   box-shadow: 0 24px 48px -6px rgba(20, 50, 25, 0.18),
-    0 6px 16px rgba(0, 0, 0, 0.05),
+    0 6px 16px rgba(27, 94, 43, 0.08),
     inset 0 2px 2.5px 0 rgba(255, 255, 255, 1);
 }
 
@@ -1617,7 +1617,7 @@ video {
   justify-content: space-between;
   color: #FFFFFF;
   overflow: hidden;
-  box-shadow: -6px 0 0 rgba(0, 0, 0, 0.2) inset, 0 16px 28px rgba(20, 48, 31, 0.28);
+  box-shadow: -6px 0 0 rgba(27, 94, 43, 0.25) inset, 0 16px 28px rgba(27, 94, 43, 0.28);
   transform: perspective(700px) rotateY(-10deg);
   transition: transform 0.35s var(--ease-fluid);
 }
@@ -1636,12 +1636,12 @@ video {
 }
 
 .book-3d.c1 {
-  background: linear-gradient(160deg, #2E7D3F, #14301F);
+  background: linear-gradient(160deg, #2E7D3F, #1B5E2B);
 }
 
 .book-3d.c2 {
   background: linear-gradient(160deg, #F7D84A, #E0A800);
-  color: #14301F;
+  color: #1B5E2B;
 }
 
 .book-3d.c3 {
@@ -1650,7 +1650,7 @@ video {
 
 .book-3d.c5 {
   background: linear-gradient(160deg, #CFE56B, #F7D84A);
-  color: #14301F;
+  color: #1B5E2B;
 }
 
 .book-spine-tag {
@@ -1787,13 +1787,22 @@ video {
   color: var(--green);
 }
 
+.bundles-head {
+  margin-bottom: 44px;
+}
+
 .bundles-head .section-heading {
   color: var(--green);
   text-shadow: 0 1px 2px rgba(255, 255, 255, 0.7);
+  margin-bottom: 14px;
+}
+
+.bundles-head .section-lead {
+  margin: 0;
 }
 
 .light-muted {
-  color: rgba(20, 60, 30, 0.88);
+  color: rgba(27, 94, 43, 0.88);
 }
 
 .bundles-section .wrap {
@@ -1825,7 +1834,7 @@ video {
   flex-direction: column;
   gap: 14px;
   box-shadow: 0 16px 38px -6px rgba(20, 50, 25, 0.16),
-    0 4px 12px rgba(0, 0, 0, 0.04),
+    0 4px 12px rgba(27, 94, 43, 0.06),
     inset 0 1.5px 2px 0 rgba(255, 255, 255, 0.95),
     inset 0 -2px 3px 0 rgba(46, 125, 63, 0.08),
     inset 1.5px 0 2px 0 rgba(255, 255, 255, 0.7);
@@ -1843,7 +1852,7 @@ video {
 .coaching-card:hover {
   transform: translateY(-6px);
   box-shadow: 0 24px 48px -6px rgba(20, 50, 25, 0.22),
-    0 6px 16px rgba(0, 0, 0, 0.06),
+    0 6px 16px rgba(27, 94, 43, 0.08),
     inset 0 2px 2.5px 0 rgba(255, 255, 255, 1),
     inset 0 -2px 3px 0 rgba(46, 125, 63, 0.12),
     inset 1.5px 0 2px 0 rgba(255, 255, 255, 0.8);
@@ -1892,7 +1901,7 @@ video {
   padding: 12px 20px;
   box-shadow: 0 6px 18px -2px rgba(20, 50, 25, 0.25),
     inset 0 1px 1.5px rgba(255, 255, 255, 0.5),
-    inset 0 -1.5px 2px rgba(0, 0, 0, 0.15);
+    inset 0 -1.5px 2px rgba(27, 94, 43, 0.25);
   transition: all 0.24s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
@@ -2696,7 +2705,7 @@ video {
   height: 48px;
   border-radius: 50%;
   background: var(--sun);
-  color: #14301F;
+  color: var(--green);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2815,7 +2824,7 @@ video {
   justify-content: center;
   color: #FFFFFF;
   flex-shrink: 0;
-  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 6px 14px rgba(27, 94, 43, 0.16);
 }
 
 .social-icon-ig {
@@ -2823,9 +2832,9 @@ video {
 }
 
 .social-icon-tt {
-  background: #111111;
+  background: #1B5E2B;
   color: #25F4EE;
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  border: 1.5px solid rgba(255, 255, 255, 0.25);
 }
 
 .social-icon-yt {
@@ -2871,7 +2880,7 @@ video {
 }
 
 .platform-tt {
-  color: #111111;
+  color: #1B5E2B;
 }
 
 .platform-yt {
@@ -2903,7 +2912,7 @@ video {
 }
 
 .btn-social-ig {
-  background: #14301F;
+  background: #2E7D3F;
   color: #FFFFFF;
 }
 
@@ -2914,18 +2923,18 @@ video {
 }
 
 .btn-social-tt {
-  background: #14301F;
+  background: #2E7D3F;
   color: #FFFFFF;
 }
 
 .btn-social-tt:hover {
-  background: #000000;
+  background: #1B5E2B;
   color: #25F4EE;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 6px 18px rgba(27, 94, 43, 0.35);
 }
 
 .btn-social-yt {
-  background: #14301F;
+  background: #2E7D3F;
   color: #FFFFFF;
 }
 
@@ -3208,7 +3217,7 @@ video {
   align-items: center;
   gap: 8px;
   background: var(--sun);
-  color: #14301F;
+  color: var(--green);
   padding: 7px 15px 7px 7px;
   border-radius: 999px;
   border: 1px solid var(--line);
@@ -3232,7 +3241,7 @@ video {
   height: 28px;
   border-radius: 50%;
   overflow: hidden;
-  border: 1.5px solid #14301F;
+  border: 1.5px solid var(--green);
 }
 
 .floating-avatar img {
@@ -3304,7 +3313,7 @@ video {
   bottom: 12px;
   left: 16px;
   background: var(--sun);
-  color: #14301F;
+  color: var(--green);
   padding: 4px 12px;
   border-radius: 999px;
   font-size: 12px;
@@ -3606,6 +3615,10 @@ video {
 
   .floating-text-mobile {
     display: inline;
+  }
+
+  .bundles-head {
+    margin-bottom: 28px;
   }
 }
 
