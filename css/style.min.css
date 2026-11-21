@@ -737,12 +737,12 @@ video {
   border: 1.5px solid #2E7D3F !important;
   font-weight: 800;
   box-shadow: 0 16px 36px -4px rgba(20, 50, 25, 0.32),
-    0 6px 16px rgba(0, 0, 0, 0.1),
+    0 6px 16px rgba(20, 50, 25, 0.16),
     0 0 0 1.5px rgba(247, 216, 74, 0.55),
     inset 0 2px 3px 0 rgba(255, 255, 255, 0.25),
-    inset 0 -3px 6px 0 rgba(0, 0, 0, 0.22);
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
-  animation: heroBtnTactilePress 2.4s cubic-bezier(0.22, 1, 0.36, 1) infinite;
+    inset 0 -3px 6px 0 rgba(20, 50, 25, 0.25);
+  text-shadow: 0 1px 2px rgba(20, 50, 25, 0.35);
+  animation: heroBtnTactilePress 1.6s cubic-bezier(0.22, 1, 0.36, 1) infinite;
   transform-origin: center right;
   transition: background 0.25s ease, color 0.25s ease, box-shadow 0.25s ease, transform 0.2s ease;
 }
@@ -768,11 +768,11 @@ video {
   right: 0;
   bottom: 0;
   border-radius: inherit;
-  background: radial-gradient(circle at 85% 80%, rgba(247, 216, 74, 0.45) 0%, rgba(255, 255, 255, 0.2) 40%, transparent 70%);
+  background: radial-gradient(circle at 85% 80%, rgba(247, 216, 74, 0.55) 0%, rgba(255, 255, 255, 0.25) 40%, transparent 70%);
   opacity: 0;
   pointer-events: none;
   z-index: 2;
-  animation: heroBtnInnerFlash 2.4s cubic-bezier(0.16, 1, 0.3, 1) infinite;
+  animation: heroBtnInnerFlash 1.6s cubic-bezier(0.16, 1, 0.3, 1) infinite;
 }
 
 .btn-hero-outline:hover {
@@ -780,7 +780,7 @@ video {
   color: #FFFFFF !important;
   border-color: #1B5E2B !important;
   box-shadow: 0 20px 42px -4px rgba(20, 50, 25, 0.42),
-    0 8px 20px rgba(0, 0, 0, 0.15),
+    0 8px 20px rgba(20, 50, 25, 0.2),
     0 0 0 2px rgba(247, 216, 74, 0.95),
     inset 0 2px 3px 0 rgba(255, 255, 255, 0.3);
   transform: translateY(-2px);
@@ -789,10 +789,10 @@ video {
 
 .hero-click-icon {
   position: absolute;
-  right: -36px;
-  bottom: -32px;
-  width: 68px;
-  height: 68px;
+  right: -38px;
+  bottom: -34px;
+  width: 72px;
+  height: 72px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -801,20 +801,20 @@ video {
 }
 
 .hero-click-icon svg {
-  width: 68px;
-  height: 68px;
+  width: 72px;
+  height: 72px;
   overflow: visible;
 }
 
 .hero-click-icon .click-pointer {
   transform-origin: 16px 16px;
-  animation: heroCursorTap 2.4s cubic-bezier(0.22, 1, 0.36, 1) infinite;
+  animation: heroCursorTap 1.6s cubic-bezier(0.22, 1, 0.36, 1) infinite;
 }
 
 .hero-click-icon .click-flash {
   transform-origin: 16px 16px;
   opacity: 0;
-  animation: heroClickFlashBurst 2.4s cubic-bezier(0.16, 1, 0.3, 1) infinite;
+  animation: heroClickFlashBurst 1.6s cubic-bezier(0.16, 1, 0.3, 1) infinite;
 }
 
 .hero-click-icon .click-ripple {
@@ -823,15 +823,15 @@ video {
 }
 
 .hero-click-icon .click-ripple-1 {
-  animation: heroRippleOne 2.4s cubic-bezier(0.16, 1, 0.3, 1) infinite;
+  animation: heroRippleOne 1.6s cubic-bezier(0.16, 1, 0.3, 1) infinite;
 }
 
 .hero-click-icon .click-ripple-2 {
-  animation: heroRippleTwo 2.4s cubic-bezier(0.16, 1, 0.3, 1) infinite;
+  animation: heroRippleTwo 1.6s cubic-bezier(0.16, 1, 0.3, 1) infinite;
 }
 
 .hero-click-icon .click-ripple-3 {
-  animation: heroRippleThree 2.4s cubic-bezier(0.16, 1, 0.3, 1) infinite;
+  animation: heroRippleThree 1.6s cubic-bezier(0.16, 1, 0.3, 1) infinite;
 }
 
 .hero-click-icon .click-sparks {
@@ -841,66 +841,106 @@ video {
 
 .hero-click-icon .spark-dot {
   opacity: 0;
-  animation: heroSparksBurst 2.4s cubic-bezier(0.16, 1, 0.3, 1) infinite;
+  animation: heroSparksBurst 1.6s cubic-bezier(0.16, 1, 0.3, 1) infinite;
 }
 
 .hero-click-icon .spark-dot.s1 {
   transform-origin: 16px 2px;
+  --spark-tx: 0px;
+  --spark-ty: -18px;
 }
 
 .hero-click-icon .spark-dot.s2 {
-  transform-origin: 28px 6px;
+  transform-origin: 27px 5px;
+  --spark-tx: 14px;
+  --spark-ty: -14px;
 }
 
 .hero-click-icon .spark-dot.s3 {
-  transform-origin: 32px 18px;
+  transform-origin: 33px 16px;
+  --spark-tx: 18px;
+  --spark-ty: 0px;
 }
 
 .hero-click-icon .spark-dot.s4 {
-  transform-origin: 27px 29px;
+  transform-origin: 29px 28px;
+  --spark-tx: 14px;
+  --spark-ty: 14px;
 }
 
 .hero-click-icon .spark-dot.s5 {
-  transform-origin: 4px 27px;
+  transform-origin: 16px 33px;
+  --spark-tx: 0px;
+  --spark-ty: 18px;
 }
 
 .hero-click-icon .spark-dot.s6 {
-  transform-origin: 3px 8px;
+  transform-origin: 4px 27px;
+  --spark-tx: -14px;
+  --spark-ty: 14px;
+}
+
+.hero-click-icon .spark-dot.s7 {
+  transform-origin: 1px 16px;
+  --spark-tx: -18px;
+  --spark-ty: 0px;
+}
+
+.hero-click-icon .spark-dot.s8 {
+  transform-origin: 5px 5px;
+  --spark-tx: -14px;
+  --spark-ty: -14px;
+}
+
+.hero-click-icon .spark-star {
+  opacity: 0;
+  transform-origin: 16px 16px;
+  animation: heroStarsBurst 1.6s cubic-bezier(0.16, 1, 0.3, 1) infinite;
+}
+
+.hero-click-icon .spark-star.star1 {
+  --star-tx: 16px;
+  --star-ty: -14px;
+}
+
+.hero-click-icon .spark-star.star2 {
+  --star-tx: -15px;
+  --star-ty: 13px;
 }
 
 @keyframes heroBtnTactilePress {
   0%,
-  24% {
+  20% {
     transform: translateY(0) scale(1);
     box-shadow: 0 16px 36px -4px rgba(20, 50, 25, 0.32),
-      0 6px 16px rgba(0, 0, 0, 0.1),
+      0 6px 16px rgba(20, 50, 25, 0.16),
       0 0 0 1.5px rgba(247, 216, 74, 0.55),
       inset 0 2px 3px 0 rgba(255, 255, 255, 0.25),
-      inset 0 -3px 6px 0 rgba(0, 0, 0, 0.22);
+      inset 0 -3px 6px 0 rgba(20, 50, 25, 0.25);
   }
 
-  32% {
-    transform: translateY(0.5px) scale(0.99);
+  23% {
+    transform: translateY(1px) scale(0.985);
   }
 
-  34.5% {
-    transform: translateY(3px) scale(0.965);
-    box-shadow: 0 6px 16px -2px rgba(20, 50, 25, 0.35),
-      0 3px 8px rgba(0, 0, 0, 0.16),
-      0 0 0 2px rgba(247, 216, 74, 0.95),
-      inset 0 3px 5px 0 rgba(0, 0, 0, 0.3),
+  25% {
+    transform: translateY(3.5px) scale(0.958);
+    box-shadow: 0 4px 12px -2px rgba(20, 50, 25, 0.4),
+      0 0 0 2.5px rgba(247, 216, 74, 1),
+      0 0 28px rgba(247, 216, 74, 0.85),
+      inset 0 3px 5px 0 rgba(20, 50, 25, 0.4),
       inset 0 -1.5px 3px 0 rgba(255, 255, 255, 0.3);
   }
 
-  39% {
-    transform: translateY(-1.5px) scale(1.02);
-    box-shadow: 0 20px 42px -4px rgba(20, 50, 25, 0.38),
-      0 8px 20px rgba(0, 0, 0, 0.12),
-      0 0 0 2px rgba(247, 216, 74, 0.75),
+  32% {
+    transform: translateY(-2px) scale(1.025);
+    box-shadow: 0 22px 44px -4px rgba(20, 50, 25, 0.38),
+      0 8px 20px rgba(20, 50, 25, 0.18),
+      0 0 0 2px rgba(247, 216, 74, 0.8),
       inset 0 2px 3px 0 rgba(255, 255, 255, 0.35);
   }
 
-  44% {
+  40% {
     transform: translateY(0) scale(1);
   }
 
@@ -911,15 +951,15 @@ video {
 
 @keyframes heroBtnInnerFlash {
   0%,
-  32% {
+  23% {
     opacity: 0;
   }
 
-  34.5% {
+  25% {
     opacity: 1;
   }
 
-  42% {
+  34% {
     opacity: 0;
   }
 
@@ -930,170 +970,191 @@ video {
 
 @keyframes heroCursorTap {
   0% {
-    transform: translate3d(8px, 10px, 0) rotate(0deg) scale(1);
+    transform: translate3d(8px, 10px, 0) rotate(-4deg) scale(1);
   }
 
   12% {
-    transform: translate3d(10px, 13px, 0) rotate(1deg) scale(1.02);
+    transform: translate3d(2px, 3px, 0) rotate(-7deg) scale(0.96);
   }
 
-  22% {
-    transform: translate3d(6px, 8px, 0) rotate(-1deg) scale(1.01);
+  20% {
+    transform: translate3d(0px, 0px, 0) rotate(-9deg) scale(0.9);
   }
 
-  28% {
-    transform: translate3d(2px, 3px, 0) rotate(-4deg) scale(0.98);
+  25% {
+    transform: translate3d(-3.5px, -4.5px, 0) rotate(-13deg) scale(0.76);
   }
 
-  34.5% {
-    transform: translate3d(-4px, -5px, 0) rotate(-10deg) scale(0.82);
+  32% {
+    transform: translate3d(5px, 4px, 0) rotate(3deg) scale(1.1);
   }
 
-  39% {
-    transform: translate3d(6px, 6px, 0) rotate(3deg) scale(1.09);
+  42% {
+    transform: translate3d(9px, 9px, 0) rotate(-1deg) scale(1.02);
   }
 
-  45% {
-    transform: translate3d(9px, 11px, 0) rotate(-1deg) scale(0.99);
+  58% {
+    transform: translate3d(6px, 12px, 0) rotate(2deg) scale(0.98);
   }
 
-  54% {
-    transform: translate3d(8px, 10px, 0) rotate(0deg) scale(1);
+  76% {
+    transform: translate3d(10px, 8px, 0) rotate(-2deg) scale(1.01);
+  }
+
+  90% {
+    transform: translate3d(9px, 10px, 0) rotate(-3deg) scale(1);
   }
 
   100% {
-    transform: translate3d(8px, 10px, 0) rotate(0deg) scale(1);
+    transform: translate3d(8px, 10px, 0) rotate(-4deg) scale(1);
   }
 }
 
 @keyframes heroClickFlashBurst {
   0%,
-  33% {
+  24% {
     transform: scale(0.2);
     opacity: 0;
   }
 
-  34.5% {
-    transform: scale(0.8);
-    opacity: 0.95;
+  25% {
+    transform: scale(0.9);
+    opacity: 1;
   }
 
-  40% {
-    transform: scale(1.6);
+  34% {
+    transform: scale(1.85);
     opacity: 0;
   }
 
   100% {
-    transform: scale(1.6);
+    transform: scale(1.85);
     opacity: 0;
   }
 }
 
 @keyframes heroRippleOne {
   0%,
-  33% {
+  24% {
     transform: scale(0.3);
     opacity: 0;
   }
 
-  34.5% {
+  25% {
     transform: scale(0.45);
     opacity: 0.95;
-    stroke-width: 2.5px;
+    stroke-width: 2.8px;
   }
 
-  56% {
-    transform: scale(1.95);
+  48% {
+    transform: scale(2.2);
     opacity: 0;
-    stroke-width: 0.4px;
+    stroke-width: 0.3px;
   }
 
   100% {
-    transform: scale(1.95);
+    transform: scale(2.2);
     opacity: 0;
   }
 }
 
 @keyframes heroRippleTwo {
   0%,
-  36% {
+  26% {
     transform: scale(0.25);
     opacity: 0;
   }
 
-  38% {
+  27.5% {
     transform: scale(0.5);
-    opacity: 0.85;
-    stroke-width: 2px;
+    opacity: 0.9;
+    stroke-width: 2.4px;
   }
 
-  62% {
-    transform: scale(2.35);
+  54% {
+    transform: scale(2.6);
     opacity: 0;
-    stroke-width: 0.3px;
+    stroke-width: 0.2px;
   }
 
   100% {
-    transform: scale(2.35);
+    transform: scale(2.6);
     opacity: 0;
   }
 }
 
 @keyframes heroRippleThree {
   0%,
-  39% {
+  28% {
     transform: scale(0.25);
     opacity: 0;
   }
 
-  41% {
+  30% {
     transform: scale(0.55);
-    opacity: 0.75;
-    stroke-width: 1.6px;
+    opacity: 0.85;
+    stroke-width: 2px;
   }
 
-  68% {
-    transform: scale(2.7);
+  60% {
+    transform: scale(3);
     opacity: 0;
     stroke-width: 0.2px;
   }
 
   100% {
-    transform: scale(2.7);
+    transform: scale(3);
     opacity: 0;
   }
 }
 
 @keyframes heroSparksBurst {
   0%,
-  33% {
+  24% {
     transform: scale(0) translate(0, 0);
     opacity: 0;
   }
 
-  35% {
+  26% {
     transform: scale(1.4) translate(0, 0);
     opacity: 1;
   }
 
-  48% {
-    transform: scale(0.8) translate(var(--spark-tx, 6px), var(--spark-ty, -6px));
-    opacity: 0.6;
+  44% {
+    transform: scale(0.85) translate(var(--spark-tx, 6px), var(--spark-ty, -6px));
+    opacity: 0.75;
   }
 
   58%,
   100% {
-    transform: scale(0.2) translate(var(--spark-tx, 10px), var(--spark-ty, -10px));
+    transform: scale(0.15) translate(calc(var(--spark-tx, 10px) * 1.35), calc(var(--spark-ty, -10px) * 1.35));
     opacity: 0;
   }
 }
 
-.hero-click-icon .spark-dot.s1 { --spark-tx: 0px; --spark-ty: -12px; }
-.hero-click-icon .spark-dot.s2 { --spark-tx: 10px; --spark-ty: -8px; }
-.hero-click-icon .spark-dot.s3 { --spark-tx: 12px; --spark-ty: 2px; }
-.hero-click-icon .spark-dot.s4 { --spark-tx: 8px; --spark-ty: 10px; }
-.hero-click-icon .spark-dot.s5 { --spark-tx: -10px; --spark-ty: 8px; }
-.hero-click-icon .spark-dot.s6 { --spark-tx: -10px; --spark-ty: -8px; }
+@keyframes heroStarsBurst {
+  0%,
+  24% {
+    transform: scale(0) translate(0, 0) rotate(0deg);
+    opacity: 0;
+  }
+
+  26% {
+    transform: scale(1.3) translate(0, 0) rotate(45deg);
+    opacity: 1;
+  }
+
+  44% {
+    transform: scale(0.9) translate(var(--star-tx, 14px), var(--star-ty, -10px)) rotate(180deg);
+    opacity: 0.85;
+  }
+
+  58%,
+  100% {
+    transform: scale(0.1) translate(calc(var(--star-tx, 14px) * 1.4), calc(var(--star-ty, -10px) * 1.4)) rotate(270deg);
+    opacity: 0;
+  }
+}
 
 /* ==========================================================================
    TRANSITION SOCIAL PROOF STRIP (HERO TO STORY)
