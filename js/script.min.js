@@ -51,9 +51,10 @@ document.addEventListener('DOMContentLoaded', function () {
   const translations = {
     id: {
       nav_tools: 'Produk Bundle',
-      nav_bundle: 'Bimbingan WFA',
+      nav_bundle: 'Paket Hemat',
       nav_reviews: 'Testimoni',
       nav_destinations: 'Destinasi',
+      nav_journal: 'Travel Journal',
       nav_story: 'Ceritaku',
       nav_socials: 'Media Sosial',
       nav_join: 'Join Komunitas WFA',
@@ -161,9 +162,10 @@ document.addEventListener('DOMContentLoaded', function () {
     },
     en: {
       nav_tools: 'Bundles',
-      nav_bundle: 'WFA Coaching',
+      nav_bundle: 'Featured Offer',
       nav_reviews: 'Testimonials',
       nav_destinations: 'Destinations',
+      nav_journal: 'Travel Journal',
       nav_story: 'My Story',
       nav_socials: 'Socials',
       nav_join: 'Join Community',
@@ -402,7 +404,7 @@ document.addEventListener('DOMContentLoaded', function () {
       .map((item) => {
         const tag = item.tag[lang];
         const title = item.name[lang];
-        const listHtml = item.items[lang].map((line) => `<li>${line}</li>`).join('');
+        const highlights = item.items[lang].slice(0, 3).map((line) => `<span class="prod-pill">✦ ${escapeHtml(line)}</span>`).join('');
         return `
           <article class="product-card">
             <div class="book-stage">
@@ -417,13 +419,18 @@ document.addEventListener('DOMContentLoaded', function () {
                 </div>
               </div>
             </div>
-            <h3>${title}</h3>
-            <ul class="product-includes">${listHtml}</ul>
-            <div class="product-price-row">
-              <span>${rp(item.price)}</span>
-              <s class="price-old">${rp(item.oldPrice)}</s>
+            <div class="product-card-body">
+              <h3 class="product-card-title">${title}</h3>
+              <div class="product-highlights">${highlights}</div>
+              <div class="product-price-row">
+                <span class="price-current">${rp(item.price)}</span>
+                <s class="price-old">${rp(item.oldPrice)}</s>
+              </div>
+              <a href="${item.url}" target="_blank" rel="noopener noreferrer" class="btn btn-full btn-product-buy">
+                <span>${ctaLabel}</span>
+                <span aria-hidden="true">→</span>
+              </a>
             </div>
-            <a href="${item.url}" target="_blank" rel="noopener noreferrer" class="btn btn-dark btn-full">${ctaLabel}</a>
           </article>
         `;
       })
@@ -550,22 +557,27 @@ document.addEventListener('DOMContentLoaded', function () {
   const escapeHtml = (str) =>
     String(str).replace(/[&<>"']/g, (ch) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[ch]));
 
+  const TOP_TESTI_IDS = [3, 2, 1]; // 3 most convincing: Asran Shady (Journalist/Mobile), Kadafi Devayana (Strategist), Ibun Aif (Creator)
+  
   function renderTestimonials() {
     if (!testiGrid) return;
-    testiGrid.innerHTML = TESTIMONIALS.map((t, i) => {
-      const hidden = !testiExpanded && i >= TESTI_INITIAL_COUNT ? ' is-hidden' : '';
+    const topThree = TOP_TESTI_IDS.map((id) => TESTIMONIALS.find((t) => t.id === id)).filter(Boolean);
+    testiGrid.innerHTML = topThree.map((t) => {
       const initial = escapeHtml(t.name.charAt(0).toUpperCase());
       return `
-        <figure class="testi-card${hidden}">
-          <div class="stars" aria-label="5 bintang">★★★★★</div>
-          <p>“${escapeHtml(t.text)}”</p>
+        <figure class="testi-card">
+          <div class="testi-card-head">
+            <div class="stars" aria-label="5 bintang">★★★★★</div>
+            <span class="testi-verified-pill">Alumni Terverifikasi</span>
+          </div>
+          <p class="testi-quote">“${escapeHtml(t.text)}”</p>
           <figcaption class="testi-person">
-            <img class="testi-avatar" src="${t.avatar}" alt="${escapeHtml(t.name)}" loading="lazy" width="44" height="44"
+            <img class="testi-avatar" src="${t.avatar}" alt="${escapeHtml(t.name)}" loading="lazy" width="48" height="48"
               data-initial="${initial}">
-            <span>
-              <span class="testi-name">${escapeHtml(t.name)}</span>
+            <div class="testi-meta">
+              <strong class="testi-name">${escapeHtml(t.name)}</strong>
               <span class="testi-handle">${escapeHtml(t.handle)}</span>
-            </span>
+            </div>
           </figcaption>
         </figure>
       `;
@@ -581,10 +593,8 @@ document.addEventListener('DOMContentLoaded', function () {
       }, { once: true });
     });
 
-    if (testiToggle) {
-      const lang = currentLang === 'en' ? 'en' : 'id';
-      testiToggle.textContent = testiExpanded ? translations[lang].testi_less : translations[lang].testi_more;
-      testiToggle.setAttribute('aria-expanded', testiExpanded ? 'true' : 'false');
+    if (testiToggle && testiToggle.parentElement) {
+      testiToggle.parentElement.style.display = 'none'; // Unclutter homepage as requested
     }
   }
 
