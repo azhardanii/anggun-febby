@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', function () {
       hero_title: 'Work Anywhere.<br><em class="travel-brush">Travel</em> Everywhere.',
       hero_sub: '<strong style="font-size:22px">Hai aku Anggun.</strong> Digital nomad yang <strong>kerjanya sambil keliling dunia</strong>. Aku bantu kamu membangun <strong>penghasilan</strong> dari dunia digital dan menemukan opportunity dari luar negeri, supaya kamu bebas traveling dan <strong>kerja dari mana saja</strong>.',
       hero_cta_primary: 'Jelajahi Peluang WFA',
-      hero_cta_secondary: 'Start Coaching',
+      hero_cta_secondary: 'Mulai Coaching',
       hero_scroll: 'Scroll ke bawah',
       proof_1: 'pembeli & komunitas aktif',
       proof_2: 'rating rata-rata panduan',
