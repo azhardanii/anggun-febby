@@ -1138,39 +1138,54 @@ video {
 .pathways-trio {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
+  gap: 20px;
 }
 
 .pathway-card {
+  position: relative;
   background: var(--surface);
-  border: 1.5px solid rgba(46, 125, 63, 0.2);
-  border-radius: 20px;
-  padding: 24px;
+  border: 1.5px solid rgba(255, 255, 255, 0.92);
+  border-bottom: 1.5px solid rgba(255, 255, 255, 0.45);
+  border-right: 1.5px solid rgba(255, 255, 255, 0.55);
+  border-radius: 24px;
+  padding: 26px 24px;
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 14px;
   color: var(--green);
-  transition: transform 0.25s var(--ease-fluid);
+  backdrop-filter: blur(24px) saturate(200%) brightness(103%);
+  -webkit-backdrop-filter: blur(24px) saturate(200%) brightness(103%);
+  box-shadow: 0 16px 36px -6px rgba(20, 50, 25, 0.12),
+    0 4px 12px rgba(0, 0, 0, 0.04),
+    inset 0 1.5px 2px 0 rgba(255, 255, 255, 0.95),
+    inset 0 -2px 3px 0 rgba(46, 125, 63, 0.08),
+    inset 1.5px 0 2px 0 rgba(255, 255, 255, 0.7);
+  transition: transform 0.28s cubic-bezier(0.2, 0.8, 0.2, 1),
+    box-shadow 0.28s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
+/* Card 1: Frosted Lime to Sun gradient */
 .pathway-card:nth-child(1) {
-  background: linear-gradient(120deg, var(--lime), var(--sun));
-  border-color: rgba(46, 125, 63, 0.25);
-  box-shadow: 0 10px 24px rgba(20, 48, 31, 0.08);
+  background: linear-gradient(135deg, rgba(207, 229, 107, 0.84) 0%, rgba(247, 216, 74, 0.72) 50%, rgba(207, 229, 107, 0.80) 100%);
 }
 
-/* Exact nth-child surface fills from reference .html lines 65-70 */
+/* Card 2: Frosted Sun-soft */
 .pathway-card:nth-child(2) {
-  background: var(--sun-soft);
+  background: linear-gradient(135deg, rgba(255, 243, 176, 0.88) 0%, rgba(255, 248, 204, 0.68) 50%, rgba(255, 243, 176, 0.82) 100%);
 }
 
+/* Card 3: Frosted Lime */
 .pathway-card:nth-child(3) {
-  background: var(--lime);
-  color: var(--green);
+  background: linear-gradient(135deg, rgba(207, 229, 107, 0.88) 0%, rgba(226, 244, 142, 0.68) 50%, rgba(207, 229, 107, 0.82) 100%);
 }
 
 .pathway-card:hover {
-  transform: translateY(-4px);
+  transform: translateY(-6px);
+  box-shadow: 0 24px 48px -6px rgba(20, 50, 25, 0.18),
+    0 6px 16px rgba(0, 0, 0, 0.05),
+    inset 0 2px 2.5px 0 rgba(255, 255, 255, 1),
+    inset 0 -2px 3px 0 rgba(46, 125, 63, 0.12),
+    inset 1.5px 0 2px 0 rgba(255, 255, 255, 0.8);
 }
 
 .pathway-top-bar {
@@ -1181,33 +1196,57 @@ video {
 }
 
 .pathway-icon {
-  font-size: 24px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.78) 0%, rgba(255, 255, 255, 0.42) 100%);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1.2px solid rgba(255, 255, 255, 0.95);
+  border-bottom: 1.2px solid rgba(255, 255, 255, 0.45);
+  box-shadow: 0 4px 12px -2px rgba(20, 50, 25, 0.08),
+    inset 0 1px 1.5px rgba(255, 255, 255, 0.95);
+  font-size: 20px;
   line-height: 1;
+  flex-shrink: 0;
 }
 
 .pathway-chip {
   font-size: 11px;
-  font-weight: 700;
-  background: var(--surface);
-  border: 1px solid var(--green);
-  padding: 3px 10px;
+  font-weight: 750;
+  letter-spacing: 0.02em;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.82) 0%, rgba(246, 251, 245, 0.48) 100%);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1.2px solid rgba(255, 255, 255, 0.95);
+  border-bottom: 1.2px solid rgba(255, 255, 255, 0.42);
+  padding: 5px 13px;
   border-radius: 999px;
   color: var(--green);
+  box-shadow: 0 4px 12px -2px rgba(20, 50, 25, 0.08),
+    inset 0 1px 1.5px rgba(255, 255, 255, 0.95);
 }
 
 .pathway-card h3 {
-  font-size: 20px;
+  font: 800 21px/1.2 var(--font-sans);
   color: var(--green);
+  letter-spacing: -0.015em;
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.7);
 }
 
 .pathway-desc {
   font-size: 14px;
-  color: var(--green);
+  line-height: 1.55;
+  color: rgba(20, 60, 30, 0.88);
+  font-weight: 500;
   flex: 1;
 }
 
 .pathway-card:nth-child(3) .pathway-desc {
-  color: var(--green);
+  color: rgba(20, 60, 30, 0.88);
 }
 
 .pathway-foot {
@@ -1215,34 +1254,44 @@ video {
   align-items: flex-end;
   justify-content: space-between;
   gap: 12px;
-  margin-top: 4px;
+  margin-top: 6px;
 }
 
 .pathway-link {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
-  font-weight: 700;
-  font-size: 14px;
+  gap: 7px;
+  font-weight: 750;
+  font-size: 13.5px;
   color: var(--green);
-  background: var(--surface);
-  border: 1.5px solid var(--green);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.88) 0%, rgba(246, 251, 245, 0.58) 100%);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1.5px solid rgba(255, 255, 255, 0.98);
+  border-bottom: 1.5px solid rgba(46, 125, 63, 0.25);
   border-radius: 999px;
-  padding: 8px 14px;
+  padding: 9px 16px;
+  box-shadow: 0 6px 18px -3px rgba(20, 50, 25, 0.12),
+    inset 0 1.5px 1.5px rgba(255, 255, 255, 1),
+    inset 0 -1.5px 2px rgba(46, 125, 63, 0.08);
+  transition: all 0.22s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
 .pathway-link:hover {
-  background: var(--deep);
+  background: var(--green);
   color: var(--on-deep);
-  border-color: var(--deep);
+  border-color: var(--green);
+  box-shadow: 0 10px 24px -2px rgba(46, 125, 63, 0.32);
+  transform: translateY(-2px);
 }
 
 .pathway-thumb {
   width: 78px;
   height: 58px;
-  border-radius: 12px;
+  border-radius: 14px;
   overflow: hidden;
-  border: 1px solid var(--line);
+  border: 1.5px solid rgba(255, 255, 255, 0.92);
+  box-shadow: 0 6px 16px -2px rgba(20, 50, 25, 0.12);
   flex-shrink: 0;
 }
 
@@ -1250,6 +1299,11 @@ video {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.pathway-card:hover .pathway-thumb img {
+  transform: scale(1.08);
 }
 
 /* ==========================================================================
