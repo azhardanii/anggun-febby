@@ -791,8 +791,9 @@ video {
 
 .hero-click-icon {
   position: absolute;
-  right: -66px;
-  bottom: -4px;
+  rotate: 25deg;
+  right: -115px;
+  bottom: -50px;
   width: 86px;
   height: 56px;
   display: inline-flex;
@@ -3295,10 +3296,11 @@ video {
   }
 
   .hero-click-icon {
-    width: 60px;
+    width: 50px;
+    rotate: 45deg;
     height: 38px;
-    right: -36px;
-    bottom: -4px;
+    right: -60px;
+    bottom: -50px;
   }
 
   .hero-click-icon .hero-curved-arrow-svg,
