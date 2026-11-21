@@ -118,7 +118,7 @@
               Everywhere.</h1>
 
             <p class="hero-sub" data-i18n="hero_sub"><strong style="font-size:22px">Hai aku Anggun.</strong> Digital nomad yang kerjanya sambil keliling dunia.
-              Aku bantu kamu membangun penghasilan dari dunia digital dan menemukan peluang dari luar negeri, supaya kamu bebas traveling &amp; bekerja dari mana saja.</p>
+              Aku bantu kamu membangun penghasilan dari dunia digital dan menemukan peluang dari luar negeri, supaya kamu bebas traveling &amp; bekerja dari mana aja.</p>
 
             <div class="hero-cta-row">
               <a class="btn" href="#wfa-tools">
@@ -128,43 +128,43 @@
               <div class="hero-btn-cue-wrap">
                 <a class="btn btn-hero-outline" href="#bundle" data-i18n="hero_cta_secondary">Start Coaching</a>
                 <span class="hero-click-icon" aria-hidden="true">
-                  <svg width="72" height="72" viewBox="0 0 64 64" fill="none">
+                  <svg width="80" height="80" viewBox="0 0 76 76" fill="none">
                     <defs>
-                      <radialGradient id="clickFlashGrad" cx="50%" cy="50%" r="50%">
-                        <stop offset="0%" stop-color="#FFFFFF" stop-opacity="1" />
-                        <stop offset="45%" stop-color="#F7D84A" stop-opacity="0.9" />
-                        <stop offset="75%" stop-color="#8DBE3F" stop-opacity="0.4" />
-                        <stop offset="100%" stop-color="#2E7D3F" stop-opacity="0" />
-                      </radialGradient>
-                      <linearGradient id="pointerGrad" x1="16" y1="16" x2="44" y2="44" gradientUnits="userSpaceOnUse">
-                        <stop offset="0%" stop-color="#FFFFFF" />
-                        <stop offset="25%" stop-color="#FFF9C4" />
-                        <stop offset="65%" stop-color="#F7D84A" />
-                        <stop offset="100%" stop-color="#E5A600" />
+                      <linearGradient id="curvedArrowYellow" x1="66" y1="64" x2="10" y2="10" gradientUnits="userSpaceOnUse">
+                        <stop offset="0%" stop-color="#F4CF38" />
+                        <stop offset="45%" stop-color="#F7D84A" />
+                        <stop offset="80%" stop-color="#FFF176" />
+                        <stop offset="100%" stop-color="#FFFFFF" />
                       </linearGradient>
-                      <filter id="pointerGlow" x="-30%" y="-30%" width="170%" height="170%">
-                        <feDropShadow dx="0" dy="3" stdDeviation="3" flood-color="#2E7D3F" flood-opacity="0.55" />
-                        <feDropShadow dx="0" dy="1" stdDeviation="1.5" flood-color="#F7D84A" flood-opacity="0.45" />
+                      <linearGradient id="curvedArrowGreen3D" x1="70" y1="68" x2="14" y2="14" gradientUnits="userSpaceOnUse">
+                        <stop offset="0%" stop-color="#1B5E2B" />
+                        <stop offset="60%" stop-color="#2E7D3F" />
+                        <stop offset="100%" stop-color="#58A835" />
+                      </linearGradient>
+                      <filter id="curvedArrowAura" x="-20%" y="-20%" width="150%" height="150%">
+                        <feDropShadow dx="1" dy="3.5" stdDeviation="3.5" flood-color="#1B5E2B" flood-opacity="0.32" />
+                        <feDropShadow dx="0" dy="1" stdDeviation="1.5" flood-color="#F7D84A" flood-opacity="0.35" />
                       </filter>
                     </defs>
-                    <circle class="click-flash" cx="16" cy="16" r="16" fill="url(#clickFlashGrad)" />
-                    <circle class="click-ripple click-ripple-1" cx="16" cy="16" r="12" stroke="#2E7D3F" stroke-width="2.5" />
-                    <circle class="click-ripple click-ripple-2" cx="16" cy="16" r="12" stroke="#F7D84A" stroke-width="2.2" />
-                    <circle class="click-ripple click-ripple-3" cx="16" cy="16" r="12" stroke="#8DBE3F" stroke-width="1.8" />
-                    <g class="click-sparks">
-                      <circle class="spark-dot s1" cx="16" cy="2" r="2.4" fill="#F7D84A" />
-                      <circle class="spark-dot s2" cx="27" cy="5" r="1.9" fill="#2E7D3F" />
-                      <circle class="spark-dot s3" cx="33" cy="16" r="2.3" fill="#F7D84A" />
-                      <circle class="spark-dot s4" cx="29" cy="28" r="1.8" fill="#8DBE3F" />
-                      <circle class="spark-dot s5" cx="16" cy="33" r="2.2" fill="#FFFFFF" />
-                      <circle class="spark-dot s6" cx="4" cy="27" r="1.9" fill="#F7D84A" />
-                      <circle class="spark-dot s7" cx="1" cy="16" r="2.2" fill="#2E7D3F" />
-                      <circle class="spark-dot s8" cx="5" cy="5" r="1.8" fill="#8DBE3F" />
-                      <path class="spark-star star1" d="M26 8 L27.5 12 L31.5 13.5 L27.5 15 L26 19 L24.5 15 L20.5 13.5 L24.5 12 Z" fill="#F7D84A" />
-                      <path class="spark-star star2" d="M7 21 L8 24 L11 25 L8 26 L7 29 L6 26 L3 25 L6 24 Z" fill="#FFFFFF" />
+
+                    <!-- Subtle touch wave at arrowhead tip -->
+                    <circle class="arrow-touch-ripple ripple-1" cx="10" cy="10" r="7" stroke="#2E7D3F" stroke-width="2" fill="none" />
+                    <circle class="arrow-touch-ripple ripple-2" cx="10" cy="10" r="7" stroke="#F7D84A" stroke-width="1.6" fill="none" />
+
+                    <!-- Curved 3D Swoop Arrow (from user reference) -->
+                    <g class="curved-arrow-body" filter="url(#curvedArrowAura)">
+                      <!-- 3D Under-layer (Green extrusion) -->
+                      <path class="arrow-3d-under" d="M 13.5 13.5 L 30.5 10.5 L 26.5 20.5 Q 51.5 25.5 70.5 60.5 L 62.5 67.5 Q 41.5 46.5 20.5 26.5 L 10.5 30.5 Z" fill="url(#curvedArrowGreen3D)" />
+
+                      <!-- Main Arrow Body (Glossy Yellow) -->
+                      <path class="arrow-front-body" d="M 10 10 L 27 7 L 23 17 Q 48 22 67 57 L 59 64 Q 38 43 17 23 L 7 27 Z" fill="url(#curvedArrowYellow)" stroke="#FFFFFF" stroke-width="1.2" stroke-linejoin="round" />
+
+                      <!-- Glossy White Highlight Spine on top curve -->
+                      <path class="arrow-highlight-spine" d="M 26 19 Q 47 24 61 52" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" opacity="0.95" />
+
+                      <!-- Glossy highlight glints near head -->
+                      <ellipse cx="16" cy="15" rx="2" ry="1.2" transform="rotate(-40 16 15)" fill="#FFFFFF" opacity="0.95" />
                     </g>
-                    <path class="click-pointer" d="M16 16 L25.5 45 L31.5 34.5 L41.5 43.5 L46 39 L36 30 L46.5 24 Z"
-                      fill="url(#pointerGrad)" stroke="#2E7D3F" stroke-width="2.2" stroke-linejoin="round" filter="url(#pointerGlow)" />
                   </svg>
                 </span>
               </div>
