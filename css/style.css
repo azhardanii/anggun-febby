@@ -1829,10 +1829,6 @@ video {
 .testi-more-row {
   display: none !important;
 }
-  display: flex;
-  justify-content: center;
-  margin-top: 8px;
-}
 
 /* ==========================================================================
    SECTION 5: KOMUNITAS PEKERJA WFA

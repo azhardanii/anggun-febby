@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
       hero_eyebrow: 'Digital Nomad · WFA Educator · Travel Creator',
       hero_title: 'Work Anywhere.<br><em class="travel-brush">Travel</em> Everywhere.',
-      hero_sub: '<strong style="font-size:22px">Hai aku Anggun.</strong> Digital nomad yang kerjanya sambil keliling dunia. Aku bantu kamu membangun penghasilan dari dunia digital dan menemukan peluang dari luar negeri, supaya kamu bebas traveling & bekerja dari mana saja.',
+      hero_sub: '<strong style="font-size:22px">Hai aku Anggun.</strong> Digital nomad yang kerjanya sambil keliling dunia. Aku bantu kamu membangun <strong>penghasilan</strong> dari dunia digital dan menemukan peluang dari luar negeri, supaya kamu bebas traveling dan <strong>kerja dari mana aja</strong>.',
       hero_cta_primary: 'Jelajahi Peluang WFA',
       hero_cta_secondary: 'Start Coaching',
       hero_scroll: 'Scroll ke bawah',
@@ -173,7 +173,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
       hero_eyebrow: 'Digital Nomad · WFA Educator · Travel Creator',
       hero_title: 'Work Anywhere.<br><em class="travel-brush">Travel</em> Everywhere.',
-      hero_sub: `<strong style="font-size:22px">Hi i'm Anggun.</strong> A digital nomad working while traveling the globe. I help you build income in the digital space and discover overseas opportunities, so you are free to travel & work from anywhere.`,
+      hero_sub: `<strong style="font-size:22px">Hi i'm Anggun.</strong> A digital nomad working while traveling the globe. I help you build <strong>income</strong> in the digital space and discover overseas opportunities, so you are free to travel & <strong>work from anywhere</strong>.`,
       hero_cta_primary: 'Explore WFA Opportunities',
       hero_cta_secondary: 'Start Coaching',
       hero_scroll: 'Scroll down',
@@ -428,13 +428,6 @@ document.addEventListener('DOMContentLoaded', function () {
               </div>
               <a href="${item.url}" target="_blank" rel="noopener noreferrer" class="btn btn-full btn-product-buy">
                 <span>${ctaLabel}</span>
-                <span aria-hidden="true">→</span>
-              </a>
-            </div>
-          </article>
-        `;
-      })
-      .join('');
                 <span aria-hidden="true">→</span>
               </a>
             </div>
