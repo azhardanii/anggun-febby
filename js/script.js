@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
       hero_eyebrow: 'Digital Nomad · WFA Educator · Travel Creator',
       hero_title: 'Work Anywhere.<br><em class="travel-brush">Travel</em> Everywhere.',
-      hero_sub: '<strong style="font-size:22px">Hai aku Anggun.</strong> Seorang digital nomad yang kerjanya sambil menjelajahi dunia, berbagi pengalaman dan membimbing orang lain untuk menemukan kebebasan bekerja dari mana saja.',
+      hero_sub: '<strong style="font-size:22px">Hai aku Anggun.</strong> Digital nomad yang kerjanya sambil keliling dunia. Aku bantu kamu membangun penghasilan dari dunia digital dan menemukan peluang dari luar negeri, supaya kamu bebas traveling & bekerja dari mana saja.',
       hero_cta_primary: 'Jelajahi Peluang WFA',
       hero_cta_secondary: 'Start Coaching',
       hero_scroll: 'Scroll ke bawah',
@@ -173,7 +173,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
       hero_eyebrow: 'Digital Nomad · WFA Educator · Travel Creator',
       hero_title: 'Work Anywhere.<br><em class="travel-brush">Travel</em> Everywhere.',
-      hero_sub: `<strong style="font-size:22px">Hi i'm Anggun.</strong> A digital nomad building businesses, exploring the world, guiding others, and inspiring them to embrace the freedom of working from anywhere.`,
+      hero_sub: `<strong style="font-size:22px">Hi i'm Anggun.</strong> A digital nomad working while traveling the globe. I help you build income in the digital space and discover overseas opportunities, so you are free to travel & work from anywhere.`,
       hero_cta_primary: 'Explore WFA Opportunities',
       hero_cta_secondary: 'Start Coaching',
       hero_scroll: 'Scroll down',
@@ -404,7 +404,7 @@ document.addEventListener('DOMContentLoaded', function () {
       .map((item) => {
         const tag = item.tag[lang];
         const title = item.name[lang];
-        const highlights = item.items[lang].slice(0, 3).map((line) => `<span class="prod-pill">✦ ${escapeHtml(line)}</span>`).join('');
+        const highlights = item.items[lang].map((line) => `<span class="prod-pill"><span class="prod-icon">✦</span><span>${escapeHtml(line)}</span></span>`).join('');
         return `
           <article class="product-card">
             <div class="book-stage">
@@ -428,6 +428,13 @@ document.addEventListener('DOMContentLoaded', function () {
               </div>
               <a href="${item.url}" target="_blank" rel="noopener noreferrer" class="btn btn-full btn-product-buy">
                 <span>${ctaLabel}</span>
+                <span aria-hidden="true">→</span>
+              </a>
+            </div>
+          </article>
+        `;
+      })
+      .join('');
                 <span aria-hidden="true">→</span>
               </a>
             </div>
