@@ -2573,7 +2573,7 @@ video {
   height: 100%;
   border-radius: 14px;
   overflow: hidden;
-  background: var(--deep);
+  background: transparent;
 }
 
 .story-video {
@@ -2585,13 +2585,13 @@ video {
 }
 
 .story-video-card:not(.is-playing) .story-video {
-  filter: brightness(1.16) contrast(1.03);
+  filter: brightness(1.22) contrast(1.04) saturate(1.05);
 }
 
 .story-video-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, rgba(20, 48, 31, 0.36) 0%, transparent 45%, transparent 100%);
+  background: none;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
