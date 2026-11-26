@@ -591,46 +591,45 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   ];
 
+  const FEATURED_TESTI_IDS = [2, 6, 5]; // Kadafi, Dimas, Mindiw
   let activeTestiFilter = 'all';
+  let testiExpanded = false;
   const testiGrid = document.getElementById('testi-grid');
+  const testiMoreWrap = document.getElementById('testi-more-wrap');
+  const testiMoreBtn = document.getElementById('testi-more-btn');
 
   const escapeHtml = (str) =>
     String(str).replace(/[&<>"']/g, (ch) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[ch]));
 
-  function renderTestimonials(filterKey) {
-    if (!testiGrid) return;
-    activeTestiFilter = filterKey || activeTestiFilter;
-
-    const visible = TESTIMONIALS.filter((t) => {
-      if (activeTestiFilter === 'all') return true;
-      return t.category === activeTestiFilter;
-    });
-
-    testiGrid.innerHTML = visible.map((t) => {
-      const initial = escapeHtml(t.name.charAt(0).toUpperCase());
-      const cleanHandle = escapeHtml(t.handle);
-      const igUser = cleanHandle.replace('@', '');
-      return `
-        <figure class="testi-card" data-category="${t.category}">
-          <div class="testi-card-head">
-            <div class="stars" aria-label="5 bintang">★★★★★</div>
-            <span class="testi-verified-pill">${escapeHtml(t.badge || 'Alumni Terverifikasi')}</span>
+  function buildTestiCardHtml(t, animIndex) {
+    const initial = escapeHtml(t.name.charAt(0).toUpperCase());
+    const cleanHandle = escapeHtml(t.handle);
+    const igUser = cleanHandle.replace('@', '');
+    const isAnimated = typeof animIndex === 'number' && animIndex >= 0;
+    const animClass = isAnimated ? ' is-immersive-enter' : '';
+    const animStyle = isAnimated ? ` style="--reveal-delay:${animIndex * 75}ms"` : '';
+    return `
+      <figure class="testi-card${animClass}" data-category="${t.category}" data-testi-id="${t.id}"${animStyle}>
+        <div class="testi-card-head">
+          <div class="stars" aria-label="5 bintang">★★★★★</div>
+          <span class="testi-verified-pill">${escapeHtml(t.badge || 'Alumni Terverifikasi')}</span>
+        </div>
+        <p class="testi-quote">“${escapeHtml(t.text)}”</p>
+        <figcaption class="testi-person">
+          <img class="testi-avatar" src="${t.avatar}" alt="${escapeHtml(t.name)}" loading="lazy" width="48" height="48"
+            data-initial="${initial}">
+          <div class="testi-meta">
+            <strong class="testi-name">${escapeHtml(t.name)}</strong>
+            <span class="testi-role">${escapeHtml(t.role || 'Alumni Sekolah WFA')}</span>
+            <a href="https://instagram.com/${igUser}" target="_blank" rel="noopener noreferrer" class="testi-handle">${cleanHandle} ↗</a>
           </div>
-          <p class="testi-quote">“${escapeHtml(t.text)}”</p>
-          <figcaption class="testi-person">
-            <img class="testi-avatar" src="${t.avatar}" alt="${escapeHtml(t.name)}" loading="lazy" width="48" height="48"
-              data-initial="${initial}">
-            <div class="testi-meta">
-              <strong class="testi-name">${escapeHtml(t.name)}</strong>
-              <span class="testi-role">${escapeHtml(t.role || 'Alumni Sekolah WFA')}</span>
-              <a href="https://instagram.com/${igUser}" target="_blank" rel="noopener noreferrer" class="testi-handle">${cleanHandle} ↗</a>
-            </div>
-          </figcaption>
-        </figure>
-      `;
-    }).join('');
+        </figcaption>
+      </figure>
+    `;
+  }
 
-    // Fallback to an initial badge if an avatar fails to load
+  function bindAvatarFallbacks() {
+    if (!testiGrid) return;
     testiGrid.querySelectorAll('.testi-avatar').forEach((img) => {
       img.addEventListener('error', function () {
         const badge = document.createElement('span');
@@ -641,11 +640,73 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
+  function renderTestimonials(filterKey, animateNew) {
+    if (!testiGrid) return;
+    activeTestiFilter = filterKey || activeTestiFilter;
+
+    let visible;
+    const isCollapsedAll = activeTestiFilter === 'all' && !testiExpanded;
+
+    if (isCollapsedAll) {
+      visible = FEATURED_TESTI_IDS
+        .map((id) => TESTIMONIALS.find((t) => t.id === id))
+        .filter(Boolean);
+    } else if (activeTestiFilter === 'all') {
+      const featured = FEATURED_TESTI_IDS
+        .map((id) => TESTIMONIALS.find((t) => t.id === id))
+        .filter(Boolean);
+      const others = TESTIMONIALS.filter((t) => !FEATURED_TESTI_IDS.includes(t.id));
+      visible = featured.concat(others);
+    } else {
+      visible = TESTIMONIALS.filter((t) => t.category === activeTestiFilter);
+    }
+
+    testiGrid.classList.toggle('is-collapsed', isCollapsedAll);
+
+    testiGrid.innerHTML = visible.map((t, idx) => {
+      if (animateNew) {
+        const isFeatured = activeTestiFilter === 'all' && FEATURED_TESTI_IDS.includes(t.id);
+        const animIdx = isFeatured ? -1 : (activeTestiFilter === 'all' ? idx - FEATURED_TESTI_IDS.length : idx);
+        return buildTestiCardHtml(t, animIdx >= 0 ? animIdx : -1);
+      }
+      return buildTestiCardHtml(t, -1);
+    }).join('');
+
+    bindAvatarFallbacks();
+
+    if (testiMoreWrap && testiMoreBtn) {
+      const showBtn = activeTestiFilter === 'all';
+      testiMoreWrap.style.display = showBtn ? 'flex' : 'none';
+      const label = testiMoreBtn.querySelector('.testi-more-label');
+      const icon = testiMoreBtn.querySelector('.testi-more-icon');
+      testiMoreBtn.setAttribute('aria-expanded', testiExpanded ? 'true' : 'false');
+      if (label) {
+        label.textContent = testiExpanded
+          ? 'Tampilkan 3 Cerita Utama'
+          : 'Lihat Lebih Banyak Testimoni (+11 Cerita)';
+      }
+      if (icon) {
+        icon.textContent = testiExpanded ? '↑' : '✦';
+      }
+    }
+  }
+
+  if (testiMoreBtn) {
+    testiMoreBtn.addEventListener('click', function () {
+      testiExpanded = !testiExpanded;
+      renderTestimonials('all', testiExpanded);
+      if (!testiExpanded) {
+        document.getElementById('reviews')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  }
+
   document.querySelectorAll('#testi-filter-bar .testi-filter-pill').forEach(function (pill) {
     pill.addEventListener('click', function () {
       document.querySelectorAll('#testi-filter-bar .testi-filter-pill').forEach((p) => p.classList.remove('active'));
       pill.classList.add('active');
-      renderTestimonials(pill.getAttribute('data-testi-filter') || 'all');
+      const key = pill.getAttribute('data-testi-filter') || 'all';
+      renderTestimonials(key, key !== 'all' || testiExpanded);
     });
   });
 

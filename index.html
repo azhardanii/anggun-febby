@@ -400,8 +400,15 @@
             </div>
           </div>
 
-          <!-- All 14 Testimonial cards rendered from TESTIMONIALS array in js/script.js -->
-          <div class="testi-masonry" id="testi-grid"></div>
+          <!-- Featured 3 Testimonial cards by default; expands to all 14 on click -->
+          <div class="testi-masonry is-collapsed" id="testi-grid"></div>
+
+          <div class="testi-more-wrap" id="testi-more-wrap">
+            <button type="button" class="btn testi-more-btn" id="testi-more-btn" aria-expanded="false">
+              <span class="testi-more-label">Lihat Lebih Banyak Testimoni (+11 Cerita)</span>
+              <span class="testi-more-icon" aria-hidden="true">✦</span>
+            </button>
+          </div>
         </div>
       </section>
 
