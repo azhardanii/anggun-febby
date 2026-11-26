@@ -607,7 +607,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const igUser = cleanHandle.replace('@', '');
     const isAnimated = typeof animIndex === 'number' && animIndex >= 0;
     const animClass = isAnimated ? ' is-immersive-enter' : '';
-    const animStyle = isAnimated ? ` style="--reveal-delay:${animIndex * 75}ms"` : '';
+    const animStyle = isAnimated ? ` style="--reveal-delay:${animIndex * 45}ms"` : '';
     return `
       <figure class="testi-card${animClass}" data-category="${t.category}" data-testi-id="${t.id}"${animStyle}>
         <div class="testi-card-head">
@@ -628,9 +628,12 @@ document.addEventListener('DOMContentLoaded', function () {
     `;
   }
 
-  function bindAvatarFallbacks() {
-    if (!testiGrid) return;
-    testiGrid.querySelectorAll('.testi-avatar').forEach((img) => {
+  function bindAvatarFallbacks(scope) {
+    const root = scope || testiGrid;
+    if (!root) return;
+    root.querySelectorAll('.testi-avatar').forEach((img) => {
+      if (img.dataset.boundFallback) return;
+      img.dataset.boundFallback = '1';
       img.addEventListener('error', function () {
         const badge = document.createElement('span');
         badge.className = 'testi-avatar-fallback';
@@ -638,6 +641,23 @@ document.addEventListener('DOMContentLoaded', function () {
         img.replaceWith(badge);
       }, { once: true });
     });
+  }
+
+  function updateMoreButton() {
+    if (!testiMoreWrap || !testiMoreBtn) return;
+    const showBtn = activeTestiFilter === 'all';
+    testiMoreWrap.style.display = showBtn ? 'flex' : 'none';
+    const label = testiMoreBtn.querySelector('.testi-more-label');
+    const icon = testiMoreBtn.querySelector('.testi-more-icon');
+    testiMoreBtn.setAttribute('aria-expanded', testiExpanded ? 'true' : 'false');
+    if (label) {
+      label.textContent = testiExpanded
+        ? 'Tampilkan 3 Cerita Utama'
+        : 'Lihat Lebih Banyak Testimoni (+11 Cerita)';
+    }
+    if (icon) {
+      icon.textContent = testiExpanded ? '↑' : '✦';
+    }
   }
 
   function renderTestimonials(filterKey, animateNew) {
@@ -663,6 +683,26 @@ document.addEventListener('DOMContentLoaded', function () {
 
     testiGrid.classList.toggle('is-collapsed', isCollapsedAll);
 
+    // When expanding from the initial 3 featured cards, keep them intact at the top and append the rest smoothly
+    if (animateNew && activeTestiFilter === 'all' && testiExpanded && testiGrid.children.length === FEATURED_TESTI_IDS.length) {
+      const others = TESTIMONIALS.filter((t) => !FEATURED_TESTI_IDS.includes(t.id));
+      const frag = document.createElement('div');
+      frag.innerHTML = others.map((t, idx) => buildTestiCardHtml(t, idx)).join('');
+      const newCards = Array.from(frag.children);
+      requestAnimationFrame(() => {
+        newCards.forEach((card) => {
+          card.addEventListener('animationend', () => {
+            card.classList.remove('is-immersive-enter');
+            card.style.willChange = 'auto';
+          }, { once: true });
+          testiGrid.appendChild(card);
+        });
+        bindAvatarFallbacks(testiGrid);
+      });
+      updateMoreButton();
+      return;
+    }
+
     testiGrid.innerHTML = visible.map((t, idx) => {
       if (animateNew) {
         const isFeatured = activeTestiFilter === 'all' && FEATURED_TESTI_IDS.includes(t.id);
@@ -672,23 +712,8 @@ document.addEventListener('DOMContentLoaded', function () {
       return buildTestiCardHtml(t, -1);
     }).join('');
 
-    bindAvatarFallbacks();
-
-    if (testiMoreWrap && testiMoreBtn) {
-      const showBtn = activeTestiFilter === 'all';
-      testiMoreWrap.style.display = showBtn ? 'flex' : 'none';
-      const label = testiMoreBtn.querySelector('.testi-more-label');
-      const icon = testiMoreBtn.querySelector('.testi-more-icon');
-      testiMoreBtn.setAttribute('aria-expanded', testiExpanded ? 'true' : 'false');
-      if (label) {
-        label.textContent = testiExpanded
-          ? 'Tampilkan 3 Cerita Utama'
-          : 'Lihat Lebih Banyak Testimoni (+11 Cerita)';
-      }
-      if (icon) {
-        icon.textContent = testiExpanded ? '↑' : '✦';
-      }
-    }
+    bindAvatarFallbacks(testiGrid);
+    updateMoreButton();
   }
 
   if (testiMoreBtn) {
