@@ -2378,19 +2378,10 @@ video {
   border: none;
 }
 
-.story-showcase-shell {
-  background: var(--surface);
-  border: 1.5px solid var(--line);
-  border-radius: 28px;
-  padding: clamp(24px, 3.6vw, 44px);
-  box-shadow: 0 18px 46px rgba(27, 94, 43, 0.06);
-  overflow: hidden;
-}
-
 .story-grid {
   display: grid;
-  grid-template-columns: 1fr 1.65fr;
-  gap: clamp(24px, 3.4vw, 42px);
+  grid-template-columns: 0.92fr 1.6fr;
+  gap: clamp(24px, 3.6vw, 44px);
   align-items: center;
 }
 
@@ -3319,11 +3310,6 @@ video {
 
   .featured-offer-shell {
     padding: 24px 18px;
-  }
-
-  .story-showcase-shell {
-    padding: 22px 18px;
-    border-radius: 22px;
   }
 
   .story-grid {
