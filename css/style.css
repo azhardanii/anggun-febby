@@ -2359,119 +2359,91 @@ video {
 }
 
 /* ==========================================================================
-   SECTION 7: CERITAKU & REAL REELS
+   SECTION 7: CERITAKU & TRAVEL MOMENTS (PHOTO COLLAGE SHOWCASE)
    ========================================================================== */
 .stories-section {
   background: var(--bg);
   border: none;
 }
 
+.story-showcase-shell {
+  background: var(--surface);
+  border: 1.5px solid var(--line);
+  border-radius: 28px;
+  padding: clamp(24px, 3.6vw, 44px);
+  box-shadow: 0 18px 46px rgba(27, 94, 43, 0.06);
+  overflow: hidden;
+}
+
 .story-grid {
   display: grid;
-  grid-template-columns: 0.92fr 1.6fr;
-  gap: 40px;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: clamp(28px, 4vw, 48px);
   align-items: center;
+}
+
+.story-text-col {
+  min-width: 0;
 }
 
 .story-grid .section-lead {
   margin-bottom: 24px;
 }
 
-.story-deck-col {
-  min-width: 0;
-}
-
-.story-swipe-hint {
-  display: none;
-  margin: 0 auto 10px;
-  padding: 5px 14px;
-  border-radius: 999px;
+.story-photo-card {
+  margin: 0;
   background: var(--surface);
-  border: 1px solid var(--line);
-  font-size: 12px;
-  font-weight: 700;
-  width: fit-content;
-}
-
-.story-cards-wrap {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 18px;
-}
-
-.story-card {
-  background: var(--surface);
-  border: 1px solid var(--line);
+  border: 1.5px solid var(--line);
   border-radius: 20px;
   padding: 8px;
-  aspect-ratio: 9 / 15;
-  cursor: pointer;
+  box-shadow: 0 14px 32px rgba(27, 94, 43, 0.1);
+  transition: transform 0.35s var(--ease-fluid), box-shadow 0.35s var(--ease-fluid);
 }
 
-.story-card-frame {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  border-radius: 14px;
-  overflow: hidden;
-  background: var(--deep);
-}
-
-.story-video {
+.story-photo-card img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-}
-
-.story-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to top, rgba(20, 48, 31, 0.85) 0%, rgba(20, 48, 31, 0.05) 55%, rgba(20, 48, 31, 0.3) 100%);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 12px;
-}
-
-.ig-badge {
-  display: inline-flex;
-  background: var(--surface);
-  color: var(--ink);
-  padding: 4px 10px;
-  border-radius: 999px;
-  font-size: 11px;
-  font-weight: 700;
-}
-
-.play-center-btn {
-  align-self: center;
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  background: var(--sun);
-  color: var(--green);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.story-card.is-playing .play-center-btn {
-  opacity: 0;
-  pointer-events: none;
-}
-
-.story-caption {
-  font-size: 13px;
-  font-weight: 700;
-  color: #FFFFFF;
-}
-
-.story-sound-hint {
+  border-radius: 13px;
   display: block;
-  margin-top: 3px;
-  font-size: 11px;
-  color: var(--sun);
-  font-weight: 700;
+}
+
+.story-photo-landscape {
+  margin-top: 28px;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+}
+
+.story-square-col {
+  min-width: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  padding: 10px 6px;
+}
+
+.story-photo-square {
+  position: relative;
+  width: 100%;
+  max-width: 300px;
+  aspect-ratio: 1 / 1;
+}
+
+.story-photo-square--left {
+  transform: rotate(-4deg) translateX(-10px);
+  z-index: 2;
+}
+
+.story-photo-square--right {
+  transform: rotate(4.5deg) translateX(12px);
+  margin-top: -28px;
+  z-index: 1;
+}
+
+.story-photo-square:hover {
+  z-index: 4;
+  transform: rotate(0deg) translateY(-4px) scale(1.02);
+  box-shadow: 0 20px 42px rgba(27, 94, 43, 0.16);
 }
 
 /* ==========================================================================
@@ -3330,29 +3302,40 @@ video {
     padding: 24px 18px;
   }
 
-  .story-swipe-hint {
-    display: inline-flex;
+  .story-showcase-shell {
+    padding: 22px 18px;
+    border-radius: 22px;
   }
 
-  .story-cards-wrap {
-    display: flex;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    gap: 14px;
-    padding-bottom: 10px;
-    scrollbar-width: none;
+  .story-grid {
+    gap: 24px;
   }
 
-  .story-cards-wrap::-webkit-scrollbar {
-    display: none;
+  .story-photo-landscape {
+    margin-top: 20px;
   }
 
-  .story-card {
-    flex: 0 0 76%;
-    max-width: 268px;
-    height: 410px;
-    aspect-ratio: auto;
-    scroll-snap-align: center;
+  .story-square-col {
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    padding: 6px 4px 18px;
+  }
+
+  .story-photo-square {
+    max-width: 100%;
+  }
+
+  .story-photo-square--left {
+    transform: rotate(-3.5deg);
+    margin-right: -10px;
+    z-index: 2;
+  }
+
+  .story-photo-square--right {
+    transform: rotate(3.5deg) translateY(14px);
+    margin-top: 0;
+    margin-left: -10px;
+    z-index: 1;
   }
 
   .news {

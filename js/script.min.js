@@ -941,50 +941,8 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   // ==========================================================================
-  // 7. VIDEO REELS PLAYER
+  // 7. STORY SECTION (STATIC PHOTO COLLAGE)
   // ==========================================================================
-  document.querySelectorAll('.story-card').forEach(function (card) {
-    const video = card.querySelector('.story-video');
-    const soundHint = card.querySelector('.story-sound-hint');
-    if (!video) return;
-
-    card.addEventListener('click', function (e) {
-      if (e.target.closest('.ig-badge')) return;
-      if (video.paused) {
-        document.querySelectorAll('.story-video').forEach(function (other) {
-          if (other !== video) {
-            other.pause();
-            other.muted = true;
-            other.closest('.story-card')?.classList.remove('is-playing');
-          }
-        });
-
-        video.muted = false;
-        video
-          .play()
-          .then(function () {
-            card.classList.add('is-playing');
-            if (soundHint) soundHint.textContent = '❚❚ Klik untuk jeda';
-          })
-          .catch(function () {
-            video.muted = true;
-            video.play();
-            card.classList.add('is-playing');
-          });
-      } else {
-        video.pause();
-        video.muted = true;
-        card.classList.remove('is-playing');
-        if (soundHint) soundHint.textContent = '▶ Klik untuk putar dengan suara';
-      }
-    });
-
-    video.addEventListener('ended', function () {
-      video.muted = true;
-      card.classList.remove('is-playing');
-      if (soundHint) soundHint.textContent = '▶ Klik untuk putar dengan suara';
-    });
-  });
 
   // ==========================================================================
   // 8. NEWSLETTER FORM & SCROLL REVEAL
