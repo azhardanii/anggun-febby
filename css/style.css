@@ -2529,7 +2529,7 @@ video {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 14px;
-  align-items: stretch;
+  align-items: center;
 }
 
 .story-photo-card {
@@ -2553,6 +2553,18 @@ video {
 .story-portrait-card {
   width: 100%;
   aspect-ratio: 9 / 15;
+}
+
+.story-portrait-photo {
+  width: 100%;
+  height: auto;
+  aspect-ratio: auto;
+}
+
+.story-portrait-photo img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
 }
 
 .story-video-card {
