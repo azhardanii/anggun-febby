@@ -1137,6 +1137,18 @@ video {
     inset 0 2px 2.5px 0 rgba(255, 255, 255, 1);
 }
 
+.pathway-card:nth-child(1) {
+  background: linear-gradient(135deg, rgba(207, 229, 107, 0.36) 0%, rgba(235, 246, 198, 0.82) 55%, rgba(207, 229, 107, 0.45) 100%);
+}
+
+.pathway-card:nth-child(2) {
+  background: linear-gradient(135deg, rgba(255, 243, 176, 0.90) 0%, rgba(255, 249, 214, 0.94) 55%, rgba(255, 243, 176, 0.84) 100%);
+}
+
+.pathway-card:nth-child(3) {
+  background: linear-gradient(120deg, var(--lime), var(--sun));
+}
+
 .pathway-top-bar {
   display: flex;
   align-items: center;
