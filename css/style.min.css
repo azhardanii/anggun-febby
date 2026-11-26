@@ -2626,13 +2626,23 @@ video {
   font-weight: 700;
 }
 
-/* Living Snowfall Overlay on story-snow.jpeg */
+/* Living Snowfall Overlay on video thumbnail (story-snow.jpeg) */
 .snow-overlay {
   position: absolute;
   inset: 0;
   pointer-events: none;
   overflow: hidden;
   border-radius: inherit;
+  z-index: 1;
+  transition: opacity 0.3s ease;
+}
+
+.story-video-card.is-playing .snow-overlay {
+  opacity: 0;
+}
+
+.story-video-overlay {
+  z-index: 2;
 }
 
 .snow-layer {
