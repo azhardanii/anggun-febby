@@ -1027,8 +1027,42 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   // ==========================================================================
-  // 7. STORY SECTION (STATIC PHOTO COLLAGE)
+  // 7. STORY REEL VIDEO PLAYER
   // ==========================================================================
+  document.querySelectorAll('.story-video-card').forEach(function (card) {
+    const video = card.querySelector('.story-video');
+    const soundHint = card.querySelector('.story-sound-hint');
+    if (!video) return;
+
+    card.addEventListener('click', function (e) {
+      if (e.target.closest('.ig-badge')) return;
+      if (video.paused) {
+        video.muted = false;
+        video
+          .play()
+          .then(function () {
+            card.classList.add('is-playing');
+            if (soundHint) soundHint.textContent = '❚❚ Jeda';
+          })
+          .catch(function () {
+            video.muted = true;
+            video.play();
+            card.classList.add('is-playing');
+          });
+      } else {
+        video.pause();
+        video.muted = true;
+        card.classList.remove('is-playing');
+        if (soundHint) soundHint.textContent = '▶ Putar';
+      }
+    });
+
+    video.addEventListener('ended', function () {
+      video.muted = true;
+      card.classList.remove('is-playing');
+      if (soundHint) soundHint.textContent = '▶ Putar';
+    });
+  });
 
   // ==========================================================================
   // 8. NEWSLETTER FORM & SCROLL REVEAL
