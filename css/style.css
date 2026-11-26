@@ -2248,8 +2248,9 @@ video {
 
 .journal-grid {
   display: grid;
-  grid-template-columns: 1.35fr 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
   gap: 24px;
+  align-items: stretch;
 }
 
 .journal-card {
@@ -2307,7 +2308,7 @@ video {
 }
 
 .journal-card-lead .journal-card-title {
-  font-size: 24px;
+  font-size: 20px;
 }
 
 .journal-card-excerpt {
@@ -2322,6 +2323,8 @@ video {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: nowrap;
+  gap: 12px;
   padding-top: 14px;
   border-top: 1px solid var(--line);
   font-size: 12.5px;
@@ -2330,6 +2333,10 @@ video {
 .journal-author {
   color: var(--muted);
   font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-width: 0;
 }
 
 .journal-read-link {
@@ -2339,6 +2346,8 @@ video {
   font-weight: 750;
   color: var(--green);
   text-decoration: none;
+  white-space: nowrap;
+  flex-shrink: 0;
   transition: gap 0.2s ease, color 0.2s ease;
 }
 

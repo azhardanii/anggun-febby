@@ -50,10 +50,10 @@ document.addEventListener('DOMContentLoaded', function () {
   // ==========================================================================
   const translations = {
     id: {
-      nav_tools: 'Produk Bundle',
-      nav_bundle: 'Paket Hemat',
+      nav_tools: 'WFA Tools',
+      nav_bundle: 'Coaching',
       nav_reviews: 'Testimoni',
-      nav_destinations: 'Destinasi',
+      nav_destinations: 'Trip',
       nav_journal: 'Travel Journal',
       nav_story: 'Ceritaku',
       nav_socials: 'Media Sosial',
@@ -161,10 +161,10 @@ document.addEventListener('DOMContentLoaded', function () {
       modal_btn: 'Lihat WFA Tools Buat Traveling'
     },
     en: {
-      nav_tools: 'Bundles',
-      nav_bundle: 'Featured Offer',
+      nav_tools: 'WFA Tools',
+      nav_bundle: 'Coaching',
       nav_reviews: 'Testimonials',
-      nav_destinations: 'Destinations',
+      nav_destinations: 'Trip',
       nav_journal: 'Travel Journal',
       nav_story: 'My Story',
       nav_socials: 'Socials',
