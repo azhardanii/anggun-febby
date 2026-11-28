@@ -21,7 +21,7 @@
   --on-deep: #F4F8DC;
 
   --font-serif: 'Fraunces', Georgia, serif;
-  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --font-sans: 'Google Sans', system-ui, -apple-system, sans-serif;
   --ease-fluid: cubic-bezier(0.22, 1, 0.36, 1);
   --transition: all 0.25s cubic-bezier(0.22, 1, 0.36, 1);
 }
