@@ -420,7 +420,6 @@ document.addEventListener('DOMContentLoaded', function () {
               </div>
               <a href="${item.url}" target="_blank" rel="noopener noreferrer" class="btn btn-full btn-product-buy">
                 <span>${ctaLabel}</span>
-                <span aria-hidden="true">→</span>
               </a>
             </div>
           </article>
