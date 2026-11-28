@@ -1105,7 +1105,7 @@ video {
 
 .pathways-layout {
   display: grid;
-  grid-template-columns: 0.85fr 2.35fr;
+  grid-template-columns: 0.95fr 1.65fr;
   gap: clamp(24px, 3vw, 40px);
   align-items: center;
 }
@@ -1133,7 +1133,7 @@ video {
 .pathways-trio {
   min-width: 0;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 18px;
   align-items: stretch;
 }
@@ -1452,7 +1452,152 @@ video {
 }
 
 /* ==========================================================================
-   SECTION 1.8: DIGITAL TOOLKIT & TEMPLATES (9 CURATED TOOLS)
+   SECTION 1.6: REMOTE WORK & OPPORTUNITIES HUB (3-COL HORIZONTAL)
+   ========================================================================== */
+.remote-hub-section {
+  background: var(--bg);
+  padding: 40px 0 44px;
+}
+
+.remote-hub-grid {
+  display: grid;
+  grid-template-columns: 0.95fr 1.1fr 1.15fr;
+  gap: clamp(20px, 3vw, 34px);
+  align-items: center;
+}
+
+.remote-hub-visual {
+  min-width: 0;
+}
+
+.remote-hub-laptop {
+  position: relative;
+  border-radius: 18px;
+  padding: 6px;
+  background: var(--surface);
+  border: 1.5px solid var(--line);
+  box-shadow: 0 18px 40px rgba(27, 94, 43, 0.12);
+  transform: rotate(-1.5deg);
+  transition: transform 0.35s var(--ease-fluid);
+}
+
+.remote-hub-laptop:hover {
+  transform: rotate(0deg) translateY(-4px);
+}
+
+.remote-hub-laptop img {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  border-radius: 13px;
+  display: block;
+}
+
+.remote-hub-badge {
+  position: absolute;
+  top: -14px;
+  left: -12px;
+  width: 74px;
+  height: 74px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #2E7D3F 0%, #1B5E2B 100%);
+  color: #FFFFFF;
+  border: 2.5px solid var(--sun);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  line-height: 1.05;
+  box-shadow: 0 10px 24px rgba(27, 94, 43, 0.28);
+}
+
+.remote-hub-badge strong {
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--sun);
+}
+
+.remote-hub-badge span {
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.remote-hub-copy {
+  min-width: 0;
+}
+
+.remote-hub-copy .section-heading {
+  font-size: clamp(22px, 2.5vw, 30px);
+  margin-bottom: 10px;
+}
+
+.remote-hub-copy .section-lead {
+  font-size: 13.5px;
+  margin-bottom: 18px;
+}
+
+.remote-hub-btn {
+  background: var(--green);
+  color: #FFFFFF !important;
+  border: 1px solid var(--green) !important;
+  padding: 11px 22px;
+  font-size: 13.5px;
+  font-weight: 750;
+  box-shadow: 0 10px 24px -4px rgba(27, 94, 43, 0.3);
+}
+
+.remote-hub-btn:hover {
+  background: #1B5E2B;
+  transform: translateY(-2px);
+}
+
+.remote-hub-mini-grid {
+  min-width: 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.remote-mini-card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 16px 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 10px;
+  box-shadow: 0 8px 22px rgba(20, 50, 25, 0.05);
+  transition: transform 0.25s var(--ease-fluid), border-color 0.25s ease;
+}
+
+.remote-mini-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(46, 125, 63, 0.35);
+}
+
+.remote-mini-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(207, 229, 107, 0.38);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+}
+
+.remote-mini-card strong {
+  font-size: 11.5px;
+  font-weight: 700;
+  line-height: 1.3;
+  color: var(--green);
+}
+
+/* ==========================================================================
+   SECTION 1.8: DIGITAL TOOLKIT & TEMPLATES (4 CURATED TOOLS)
    ========================================================================== */
 .toolkit-section {
   background: var(--bg);
@@ -1462,8 +1607,8 @@ video {
 
 .toolkit-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
 }
 
 .toolkit-card {
@@ -1488,15 +1633,15 @@ video {
   position: relative;
   border-radius: 14px;
   overflow: hidden;
-  background: var(--bg);
+  background: #FAFBEA;
   border: 1px solid var(--line);
-  aspect-ratio: 16 / 10;
+  aspect-ratio: 1 / 1;
 }
 
 .toolkit-thumb img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   display: block;
   transition: transform 0.35s var(--ease-fluid);
 }
@@ -3751,8 +3896,13 @@ video {
    RESPONSIVE BREAKPOINTS
    ========================================================================== */
 @media (max-width: 1040px) {
-  .pathways-layout {
+  .pathways-layout,
+  .remote-hub-grid {
     grid-template-columns: 1fr;
+  }
+
+  .remote-hub-mini-grid {
+    grid-template-columns: repeat(4, 1fr);
   }
 
   .pathways-intro {
@@ -3824,6 +3974,10 @@ video {
   .free-starter-card,
   .bgrid,
   .coaching-grid,
+  .remote-hub-mini-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   .story-grid {
     grid-template-columns: 1fr;
   }
@@ -3991,6 +4145,10 @@ video {
 
   .featured-offer-shell {
     padding: 24px 18px;
+  }
+
+  .remote-hub-mini-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .story-grid {

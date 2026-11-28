@@ -419,51 +419,6 @@ document.addEventListener('DOMContentLoaded', function () {
       price: 55000,
       thumb: 'https://cdn.lynkid.my.id/products/21-12-2025/1766313946270_2543009.webp',
       url: 'https://lynk.id/febbyanggun/Gxz5rZb'
-    },
-    {
-      title: 'TOP 100+ Kerja WFA',
-      subtitle: 'Daftar kurasi 100+ pekerjaan remote & peluang kerja fleksibel.',
-      badge: 'Personal Use',
-      oldPrice: 100000,
-      price: 25500,
-      thumb: 'https://cdn.lynkid.my.id/products/05-09-2026/1788601397898_8081199.png',
-      url: 'https://lynk.id/febbyanggun/9e21rzokyogj'
-    },
-    {
-      title: 'PROPOSAL RAHASIA JALUR LANGIT',
-      subtitle: 'Panduan refleksi, doa, dan penyusunan niat ikhtiar jalur langit.',
-      badge: 'Personal Use',
-      oldPrice: 80000,
-      price: 25000,
-      thumb: 'https://cdn.lynkid.my.id/products/06-01-2026/1767707660114_2931464.webp',
-      url: 'https://lynk.id/febbyanggun/5w1ezww'
-    },
-    {
-      title: 'PROJECT CHALLENGE 40 HARI WFA',
-      subtitle: 'Daily To Do Checklist 40 hari membangun ritme kerja dari mana saja.',
-      badge: 'Personal Use',
-      oldPrice: 90000,
-      price: 50000,
-      thumb: 'https://cdn.lynkid.my.id/products/22-01-2025/1737534649074_8888509',
-      url: 'https://lynk.id/febbyanggun/aola1PX'
-    },
-    {
-      title: 'HABIT TRACKER FULL VERSION',
-      subtitle: "Bonus!! Daily Todo List, Mood, Sleep, n' Water Tracker lengkap.",
-      badge: 'Personal Use',
-      oldPrice: 98000,
-      price: 25500,
-      thumb: 'https://cdn.lynkid.my.id/products/21-01-2025/1737451996636_5377379',
-      url: 'https://lynk.id/febbyanggun/PGPyE25'
-    },
-    {
-      title: 'HABIT TRACKER JALUR LANGIT FULL VERSION',
-      subtitle: 'Template Daily Checklist Amalan untuk menjaga konsistensi harian.',
-      badge: 'Personal Use',
-      oldPrice: 89000,
-      price: 57700,
-      thumb: 'https://cdn.lynkid.my.id/products/21-01-2025/1737454467010_4366684',
-      url: 'https://lynk.id/febbyanggun/W1bonzb'
     }
   ];
 
