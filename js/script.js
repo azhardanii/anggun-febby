@@ -383,6 +383,115 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   ];
 
+  const TOOLKIT_ITEMS = [
+    {
+      title: '✈️ Creator Portfolio Template',
+      subtitle: 'Template portofolio profesional siap pakai untuk kreator & freelancer.',
+      badge: 'Personal Use',
+      oldPrice: 150000,
+      price: 39000,
+      thumb: 'https://cdn.lynkid.my.id/products/06-10-2026/1791290014128_4374374.webp',
+      url: 'https://lynk.id/febbyanggun/9qmm13mwxk8d'
+    },
+    {
+      title: '3000+ Footage Reels Exclusive Travel',
+      subtitle: 'Koleksi ribuan footage travel estetik siap edit & boleh dijual kembali.',
+      badge: 'PLR License',
+      oldPrice: 250000,
+      price: 29000,
+      thumb: 'https://cdn.lynkid.my.id/products/25-04-2026/1777108635382_4428003.webp',
+      url: 'https://lynk.id/febbyanggun/o6ndleq3rorv/checkout'
+    },
+    {
+      title: 'F.I.N.A - Finansial Assistant Sekolah WFA',
+      subtitle: 'FINA Personal Version, asisten pintar pencatat keuangan harian via WA.',
+      badge: 'Personal Version',
+      oldPrice: 800000,
+      price: 79000,
+      thumb: 'https://cdn.lynkid.my.id/products/31-01-2026/1769843490766_7935448.webp',
+      url: 'https://lynk.id/febbyanggun/6qn2d0pmpp38'
+    },
+    {
+      title: 'CONTENT AUTO PILOT by Sekolah WFA',
+      subtitle: 'Bantu merencanakan & menyusun ide konten sosial media lebih efisien.',
+      badge: 'Personal Use',
+      oldPrice: 500000,
+      price: 55000,
+      thumb: 'https://cdn.lynkid.my.id/products/21-12-2025/1766313946270_2543009.webp',
+      url: 'https://lynk.id/febbyanggun/Gxz5rZb'
+    },
+    {
+      title: 'TOP 100+ Kerja WFA',
+      subtitle: 'Daftar kurasi 100+ pekerjaan remote & peluang kerja fleksibel.',
+      badge: 'Personal Use',
+      oldPrice: 100000,
+      price: 25500,
+      thumb: 'https://cdn.lynkid.my.id/products/05-09-2026/1788601397898_8081199.png',
+      url: 'https://lynk.id/febbyanggun/9e21rzokyogj'
+    },
+    {
+      title: 'PROPOSAL RAHASIA JALUR LANGIT',
+      subtitle: 'Panduan refleksi, doa, dan penyusunan niat ikhtiar jalur langit.',
+      badge: 'Personal Use',
+      oldPrice: 80000,
+      price: 25000,
+      thumb: 'https://cdn.lynkid.my.id/products/06-01-2026/1767707660114_2931464.webp',
+      url: 'https://lynk.id/febbyanggun/5w1ezww'
+    },
+    {
+      title: 'PROJECT CHALLENGE 40 HARI WFA',
+      subtitle: 'Daily To Do Checklist 40 hari membangun ritme kerja dari mana saja.',
+      badge: 'Personal Use',
+      oldPrice: 90000,
+      price: 50000,
+      thumb: 'https://cdn.lynkid.my.id/products/22-01-2025/1737534649074_8888509',
+      url: 'https://lynk.id/febbyanggun/aola1PX'
+    },
+    {
+      title: 'HABIT TRACKER FULL VERSION',
+      subtitle: "Bonus!! Daily Todo List, Mood, Sleep, n' Water Tracker lengkap.",
+      badge: 'Personal Use',
+      oldPrice: 98000,
+      price: 25500,
+      thumb: 'https://cdn.lynkid.my.id/products/21-01-2025/1737451996636_5377379',
+      url: 'https://lynk.id/febbyanggun/PGPyE25'
+    },
+    {
+      title: 'HABIT TRACKER JALUR LANGIT FULL VERSION',
+      subtitle: 'Template Daily Checklist Amalan untuk menjaga konsistensi harian.',
+      badge: 'Personal Use',
+      oldPrice: 89000,
+      price: 57700,
+      thumb: 'https://cdn.lynkid.my.id/products/21-01-2025/1737454467010_4366684',
+      url: 'https://lynk.id/febbyanggun/W1bonzb'
+    }
+  ];
+
+  const toolkitGrid = document.getElementById('toolkit-grid');
+  if (toolkitGrid) {
+    toolkitGrid.innerHTML = TOOLKIT_ITEMS.map((t) => `
+      <article class="toolkit-card reveal-up">
+        <div class="toolkit-thumb">
+          <img src="${t.thumb}" alt="${t.title}" loading="lazy">
+          <span class="toolkit-license-badge">${t.badge}</span>
+        </div>
+        <div class="toolkit-body">
+          <h3 class="toolkit-title">${t.title}</h3>
+          <p class="toolkit-subtitle">${t.subtitle}</p>
+          <div class="toolkit-foot">
+            <div class="toolkit-prices">
+              <s class="price-old">${rp(t.oldPrice)}</s>
+              <span class="price-current">${rp(t.price)}</span>
+            </div>
+            <a href="${t.url}" target="_blank" rel="noopener noreferrer" class="btn btn-toolkit-buy">
+              <span>Dapatkan Akses →</span>
+            </a>
+          </div>
+        </div>
+      </article>
+    `).join('');
+  }
+
   let activeProductFilter = 'all';
   const productsGrid = document.getElementById('products-grid');
 
