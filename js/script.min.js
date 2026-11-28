@@ -57,8 +57,31 @@ document.addEventListener('DOMContentLoaded', function () {
       nav_journal: 'Travel Journal',
       nav_story: 'Ceritaku',
       nav_socials: 'Media Sosial',
+      nav_faq: 'FAQ dan Bantuan',
       nav_join: 'Join Komunitas WFA',
       drawer_start: 'Join Komunitas WFA →',
+      story_play: '▶ Putar',
+
+      pathways_title: 'Mulai dari Sini',
+      pathways_sub: 'Pilih langkah pertama yang paling sesuai dengan tujuanmu untuk mulai kerja fleksibel dan keliling dunia.',
+      free_badge: '🎁 Gratis · Bayar Suka-Suka',
+      free_title: 'Mengenal WFA dari <span>Product Digital</span> with Lynk',
+      free_desc: 'Baru mau mulai membangun penghasilan dari produk digital agar bisa kerja fleksibel dari mana saja? Mulai langkah pertamamu lewat panduan pengantar ini dengan sistem <strong>bayar suka-suka (mulai dari Rp 0)</strong>.',
+      free_pt_1: 'Pengenalan ekosistem WFA dan peluang product digital',
+      free_pt_2: 'Cara kerja praktis membangun aset digital di Lynk',
+      free_pt_3: 'Akses langsung tanpa minimum harga, bayar seikhlasnya',
+      free_btn: 'Dapatkan Aksesnya',
+      free_price: 'Rp 0 / Suka-Suka',
+      free_note: 'Akses instan via Lynk.id',
+
+      remote_pill: 'Remote Work dan Opportunities',
+      remote_title: 'Temukan Peluang Kerja di Seluruh Dunia',
+      remote_desc: 'Akses database lowongan, program, dan tools untuk bekerja dari mana saja.',
+      remote_card_4: 'Work dan Travel Dashboard',
+
+      toolkit_eyebrow: 'DIGITAL TOOLKIT dan TEMPLATES',
+      toolkit_title: 'WFA Tools dan Template Siap Pakai',
+      toolkit_desc: 'Pilih template, database, asisten AI, hingga habit tracker pilihan yang paling kamu butuhkan untuk mempercepat langkah kerja remote-mu.',
 
       hero_eyebrow: 'Digital Nomad · WFA Educator · Travel Creator',
       hero_title: 'Work Anywhere.<br><em class="travel-brush">Travel</em> Everywhere.',
@@ -105,14 +128,29 @@ document.addEventListener('DOMContentLoaded', function () {
       coaching_btn: 'Daftar Coaching →',
 
       testi_eyebrow: 'KATA MEREKA',
+      testi_stat: '★ 4.9/5 dari 1.000+ Alumni',
       testi_title: 'Cerita Nyata Dari Mereka',
       testi_sub: 'Cerita nyata dari teman-teman alumni Sekolah WFA yang sekarang bisa kerja dan berpenghasilan dari mana aja.',
+      testi_filter_all: 'Semua Cerita (14)',
+      testi_filter_nomad: '✈️ Nomad dan Traveling (5)',
+      testi_filter_creator: '💼 Creator dan Bisnis (4)',
+      testi_filter_beginner: '🌱 Pemula dan Transisi (5)',
       testi_more: 'Lihat Semua Testimoni',
       testi_less: 'Tampilkan Lebih Sedikit',
+
+      travel_lead: 'Jelajahi dunia, temukan pengalaman baru, dan ciptakan cerita seru <strong>bersama komunitas travelers</strong> yang punya visi yang sama.',
+      trips_title: 'Trip Selanjutnya',
+      trips_sub: 'Siap untuk petualangan berikutnya? Yuk, jalan bareng!',
+      travel_banner_desc: 'Bergabung dengan komunitas kami untuk mendapatkan update trip, tips traveling, dan inspirasi perjalanan lainnya.',
 
       comm_eyebrow: 'KOMUNITAS PEKERJA WFA',
       comm_title: 'Kerja Dari Mana Aja Lebih Seru Kalau Barengan.',
       comm_sub: 'Nggak perlu ngerasa sendirian. Di sini kita saling kenal, sharing tips hidup WFA, saling semangatin, sampai janjian coworking bareng.',
+
+      collab_badge: '💼 BRAND COLLABORATION dan RATE CARD',
+      collab_title: 'Open Collaboration dan Rate Card',
+      collab_desc: 'Tertarik kolaborasi campaign, review akomodasi/destinasi, konten kreatif, atau sponsorship? Yuk minta rate card-ku.',
+      collab_btn: 'Mulai Diskusi',
 
       dest_eyebrow: 'CATATAN PERJALANAN',
       dest_title: 'Mau Buka Laptop di<br><em>Mana Hari Ini?</em>',
@@ -120,6 +158,20 @@ document.addEventListener('DOMContentLoaded', function () {
       dest_search_placeholder: 'Cari negara, kota, atau kafe ramah nomad...',
       dest_popular_label: 'Populer:',
       dest_chip_all: 'Semua Destinasi',
+      dest_wifi_label: 'Wi-Fi dan Karakter',
+      dest_bali_blurb: 'Surga tropis kreator. Kafe di antara persawahan Ubud hingga beach club Canggu, perpaduan seimbang antara ritme kerja dan alam.',
+      dest_bali_cost: '$600 - $1.200 / bln',
+      dest_bali_btn: 'Buka Field Guide Bali',
+      dest_tokyo_blurb: 'Megacity paling efisien di dunia. Internet fiber 150+ Mbps di setiap sudut, kafe ramah laptop hingga larut malam di Shibuya dan Daikanyama.',
+      dest_tokyo_cost: '$1.200 - $2.000 / bln',
+      dest_tokyo_wifi: '150+ Mbps · Safe dan Focused',
+      dest_tokyo_btn: 'Buka Field Guide Tokyo',
+      dest_ny_blurb: 'Ritme cepat dan denyut energi global. Ruang kerja kreatif industrial di Brooklyn dan akses networking brand internasional tanpa batas.',
+      dest_ny_cost: '$2.500+ / bln',
+      dest_ny_btn: 'Buka Field Guide NYC',
+      dest_nz_blurb: 'Bekerja dikelilingi pegunungan salju dan danau alpine Queenstown. Destinasi impian untuk deep work dan mindful remote living sejati.',
+      dest_nz_cost: '$1.200 - $2.000 / bln',
+      dest_nz_btn: 'Buka Field Guide NZ',
       dest_bridge_title: 'Mau rekomendasi kafe atau kota lainnya?',
       dest_bridge_desc: 'Aku sering sharing spot kerja tersembunyi, update visa nomad, dan suasana kafe baru di grup WhatsApp.',
       dest_bridge_btn: 'Ngobrol di Komunitas →',
@@ -141,6 +193,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
       faq_eyebrow: 'FAQ dan BANTUAN',
       faq_title: 'Pertanyaan Umum',
+      faq_sub: 'Semua hal penting seputar akses produk, bimbingan, dan cara kolaborasi bersama Anggun.',
       faq_1_q: 'Produknya dikirim dalam bentuk apa?',
       faq_1_a: 'Semua panduan dan WFA tools tersedia dalam format digital (PDF, Notion template, spreadsheet) di Lynk.id. Link akses langsung aktif setelah pembayaran.',
       faq_2_q: 'Apakah akses materinya berlaku selamanya?',
@@ -150,6 +203,7 @@ document.addEventListener('DOMContentLoaded', function () {
       faq_4_q: 'Bagaimana kalau aku masih bingung mulai dari mana?',
       faq_4_a: 'Kamu bisa gabung komunitas WFA gratis terlebih dulu atau langsung chat tim lewat WhatsApp untuk arahan produk yang paling sesuai.',
 
+      news_badge: '✦ KOMUNITAS dan TIPS EKSKLUSIF',
       news_title: 'Tips WFA dan Kolaborasi Langsung ke Emailmu',
       news_sub: 'Gabung komunitas dan dapatkan info lowongan kerja remote serta checklist WFA gratis.',
       newsletter_placeholder: 'Alamat email kamu',
@@ -168,16 +222,17 @@ document.addEventListener('DOMContentLoaded', function () {
       nav_journal: 'Travel Journal',
       nav_story: 'My Story',
       nav_socials: 'Socials',
+      nav_faq: 'FAQ and Help',
       nav_join: 'Join Community',
       drawer_start: 'Join WFA Community →',
 
       hero_eyebrow: 'Digital Nomad · WFA Educator · Travel Creator',
       hero_title: 'Work Anywhere.<br><em class="travel-brush">Travel</em> Everywhere.',
-      hero_sub: `<strong style="font-size:22px">Hi i'm Anggun.</strong> A digital nomad <strong>working from anywhere</strong>. I help you build <strong>income</strong> in the digital space and discover overseas opportunities, so you are free to travel dan <strong>work from anywhere</strong>.`,
+      hero_sub: `<strong style="font-size:22px">Hi I'm Anggun.</strong> A digital nomad <strong>working from anywhere</strong>. I help you build <strong>income</strong> in the digital space and discover overseas opportunities, so you are free to travel and <strong>work from anywhere</strong>.`,
       hero_cta_primary: 'Explore WFA Opportunities',
       hero_cta_secondary: 'Start Coaching',
       hero_scroll: 'Scroll down',
-      proof_1: 'active readers dan buyers',
+      proof_1: 'active readers and buyers',
       proof_2: 'average guide rating',
       proof_3_title: 'Instant',
       proof_3: 'lifetime digital access',
@@ -187,19 +242,41 @@ document.addEventListener('DOMContentLoaded', function () {
       ppb_comm_desc: 'A growing community of WFA enthusiasts.',
       ppb_mentees_title: 'Mentees Guided',
       ppb_mentees_desc: 'Let\'s grow your WFA journey together.',
+      story_play: '▶ Play',
 
+      pathways_title: 'Start Here',
+      pathways_sub: 'Choose the first step that best fits your goal to start working flexibly and traveling the world.',
       path_1_badge: 'Weekly Local Openings',
       path_1_heading: 'Find Local Remote Jobs',
       path_1_desc: 'Curated local remote and WFA job openings updated weekly for anyone starting a flexible career.',
       path_1_btn: 'Browse Job Openings',
       path_2_badge: 'TOP 100+ Global WFA',
       path_2_heading: 'Find International Remote Jobs',
-      path_2_desc: 'Curated list of TOP 100+ global remote work dan business opportunities across countries.',
+      path_2_desc: 'Curated list of TOP 100+ global remote work and business opportunities across countries.',
       path_2_btn: 'Get Job List',
-      path_3_badge: 'Travel dan Work Database',
+      path_3_badge: 'Travel and Work Database',
       path_3_heading: 'Remote Work While Traveling',
       path_3_desc: 'Database of 111+ programs across 35 countries: paid trips, free hotel stays, UGC, and remote work.',
       path_3_btn: 'Explore Database',
+
+      free_badge: '🎁 Free · Pay What You Want',
+      free_title: 'Getting Started with WFA via <span>Digital Products</span> on Lynk',
+      free_desc: 'Ready to start building digital product income so you can work flexibly from anywhere? Take your first step with this starter guide on a <strong>pay-what-you-want basis (starting from Rp 0)</strong>.',
+      free_pt_1: 'Introduction to the WFA ecosystem and digital product opportunities',
+      free_pt_2: 'Practical workflow to build your digital assets on Lynk',
+      free_pt_3: 'Instant access with no minimum price, pay what feels right',
+      free_btn: 'Get Instant Access',
+      free_price: 'Rp 0 / Pay What You Want',
+      free_note: 'Instant access via Lynk.id',
+
+      remote_pill: 'Remote Work and Opportunities',
+      remote_title: 'Discover Work Opportunities Worldwide',
+      remote_desc: 'Access a curated database of remote jobs, global programs, and tools to work from anywhere.',
+      remote_card_4: 'Work and Travel Dashboard',
+
+      toolkit_eyebrow: 'DIGITAL TOOLKIT and TEMPLATES',
+      toolkit_title: 'Ready-to-Use WFA Tools and Templates',
+      toolkit_desc: 'Pick the templates, databases, AI assistants, or habit trackers you need most to accelerate your remote work journey.',
 
       tools_eyebrow: 'WFA DIGITAL BUNDLES',
       tools_heading: 'Featured WFA Bundles',
@@ -207,8 +284,8 @@ document.addEventListener('DOMContentLoaded', function () {
       filter_all: 'All Bundles',
       filter_creator: 'Creator',
       filter_wfa: 'Traveller',
-      filter_income: 'AI dan Manifesting',
-      add_to_cart: 'Add to Cart →',
+      filter_income: 'AI and Manifesting',
+      add_to_cart: 'Get Access →',
 
       bundle_eyebrow: 'WFA COACHING',
       bundle_title: 'WFA Coaching Programs',
@@ -216,14 +293,29 @@ document.addEventListener('DOMContentLoaded', function () {
       coaching_btn: 'Join Coaching →',
 
       testi_eyebrow: 'TESTIMONIALS',
-      testi_title: 'What Readers dan Nomads Say',
+      testi_stat: '★ 4.9/5 from 1,000+ Alumni',
+      testi_title: 'Real Stories From Them',
       testi_sub: 'Real stories from Sekolah WFA alumni who now work and earn from anywhere.',
-      testi_more: 'See All Testimonials',
-      testi_less: 'Show Less',
+      testi_filter_all: 'All Stories (14)',
+      testi_filter_nomad: '✈️ Nomad and Traveling (5)',
+      testi_filter_creator: '💼 Creator and Business (4)',
+      testi_filter_beginner: '🌱 Beginners and Transitions (5)',
+      testi_more: 'See More Testimonials (+11 Stories)',
+      testi_less: 'Show Top 3 Featured Stories',
+
+      travel_lead: 'Explore the world, discover new experiences, and create unforgettable stories <strong>with a community of like-minded travelers</strong>.',
+      trips_title: 'Upcoming Trips',
+      trips_sub: 'Ready for your next adventure? Let\'s travel together!',
+      travel_banner_desc: 'Join our community to get trip updates, travel tips, and inspiration for your next journey.',
 
       comm_eyebrow: 'GLOBAL WFA COMMUNITY',
-      comm_title: 'Working from anywhere is better together.',
+      comm_title: 'Working From Anywhere Is Better Together.',
       comm_sub: 'You don’t have to build your WFA journey alone. Connect with fellow travelers, share WFA lifestyle tips, and co-work together.',
+
+      collab_badge: '💼 BRAND COLLABORATION and RATE CARD',
+      collab_title: 'Open Collaboration and Rate Card',
+      collab_desc: 'Interested in brand campaigns, accommodation or destination reviews, creative content, or sponsorships? Request my rate card.',
+      collab_btn: 'Start a Conversation',
 
       dest_eyebrow: 'TRAVEL LOGS',
       dest_title: 'Where Do You Want<br><em>to Work Today?</em>',
@@ -231,27 +323,42 @@ document.addEventListener('DOMContentLoaded', function () {
       dest_search_placeholder: 'Search country, city, or nomad cafe...',
       dest_popular_label: 'Popular:',
       dest_chip_all: 'All Destinations',
+      dest_wifi_label: 'Wi-Fi and Vibe',
+      dest_bali_blurb: 'A creator’s tropical paradise. From rice-field cafes in Ubud to beach clubs in Canggu, balancing focused work with island nature.',
+      dest_bali_cost: '$600 - $1,200 / mo',
+      dest_bali_btn: 'Open Bali Field Guide',
+      dest_tokyo_blurb: 'The world’s most efficient megacity. 150+ Mbps fiber internet everywhere and laptop-friendly cafes in Shibuya and Daikanyama.',
+      dest_tokyo_cost: '$1,200 - $2,000 / mo',
+      dest_tokyo_wifi: '150+ Mbps · Safe and Focused',
+      dest_tokyo_btn: 'Open Tokyo Field Guide',
+      dest_ny_blurb: 'Fast-paced global energy. Industrial creative workspaces in Brooklyn and limitless international brand networking.',
+      dest_ny_cost: '$2,500+ / mo',
+      dest_ny_btn: 'Open NYC Field Guide',
+      dest_nz_blurb: 'Work surrounded by snow-capped peaks and Queenstown’s alpine lakes. A dream destination for deep work and mindful remote living.',
+      dest_nz_cost: '$1,200 - $2,000 / mo',
+      dest_nz_btn: 'Open NZ Field Guide',
       dest_bridge_title: 'Looking for recommendations in other cities?',
       dest_bridge_desc: 'I regularly share hidden work spots, cafe reviews, and visa tips in our WhatsApp group.',
       dest_bridge_btn: 'Chat in the Community →',
 
       stories_eyebrow: 'BEHIND THE SCENES',
-      stories_title: 'From a Village to Working While Traveling the World',
+      stories_title: 'From a Village<br>Working While<br>Traveling the World',
       stories_sub: 'I used to be a village kid fighting through scholarships just to stay in school. Today, I create content, earn passive income from digital products, work with local and international clients, and enjoy the freedom to work from anywhere while traveling the world.',
       stories_follow: 'Read Full Story',
 
-      connect_eyebrow: 'SOCIALS dan CONTENT',
-      connect_title: 'See My Daily Life dan Latest Content',
+      connect_eyebrow: 'SOCIALS and CONTENT',
+      connect_title: 'See My Daily Life and Latest Content',
       connect_sub: 'On social media, I share practical WFA tips, aesthetic cafe finds worldwide, behind-the-scenes moments, and travel vlogs:',
-      connect_ig_desc: 'WFA Tips, Recommendations dan Story Moments',
+      connect_ig_desc: 'WFA Tips, Recommendations and Story Moments',
       connect_ig_btn: 'Follow on Instagram ↗',
-      connect_tt_desc: 'Casual Clips, Behind The Scenes dan WFA Reality',
+      connect_tt_desc: 'Casual Clips, Behind The Scenes and WFA Reality',
       connect_tt_btn: 'Watch on TikTok ↗',
-      connect_yt_desc: 'Travel Vlogs dan World Travel Documentaries',
+      connect_yt_desc: 'Travel Vlogs and World Travel Documentaries',
       connect_yt_btn: 'Subscribe on YouTube ↗',
 
-      faq_eyebrow: 'FAQ dan HELP',
+      faq_eyebrow: 'FAQ and HELP',
       faq_title: 'Frequently Asked Questions',
+      faq_sub: 'Everything you need to know about product access, coaching, and collaborating with Anggun.',
       faq_1_q: 'How are the digital products delivered?',
       faq_1_a: 'All guides and tools are digital files (PDFs, Notion templates, spreadsheets) via Lynk.id with instant download access right after checkout.',
       faq_2_q: 'Do I get lifetime access?',
@@ -261,7 +368,8 @@ document.addEventListener('DOMContentLoaded', function () {
       faq_4_q: 'What if I’m unsure where to begin?',
       faq_4_a: 'Join the free WFA community first or chat via WhatsApp for recommendations on the best starting kit.',
 
-      news_title: 'WFA Tips dan Updates Straight to Your Inbox',
+      news_badge: '✦ EXCLUSIVE COMMUNITY and TIPS',
+      news_title: 'WFA Tips and Updates Straight to Your Inbox',
       news_sub: 'Join the community and get weekly remote opportunities plus a free WFA starter checklist.',
       newsletter_placeholder: 'Your email address',
       newsletter_btn: 'Join Free',
@@ -328,7 +436,7 @@ document.addEventListener('DOMContentLoaded', function () {
           'Secrets to Working While Traveling',
           '40+ List of Travel Opportunities',
           'TOP 100+ WFA Opportunities',
-          'Travel dan Work Database (111+ Programs)'
+          'Travel and Work Database (111+ Programs)'
         ]
       },
       price: 59000,
@@ -386,7 +494,10 @@ document.addEventListener('DOMContentLoaded', function () {
   const TOOLKIT_ITEMS = [
     {
       title: '✈️ Creator Portfolio Template',
-      subtitle: 'Template portofolio profesional siap pakai untuk kreator dan freelancer.',
+      subtitle: {
+        id: 'Template portofolio profesional siap pakai untuk kreator dan freelancer.',
+        en: 'Ready-to-use professional portfolio template for creators and freelancers.'
+      },
       badge: 'Personal Use',
       oldPrice: 150000,
       price: 39000,
@@ -395,7 +506,10 @@ document.addEventListener('DOMContentLoaded', function () {
     },
     {
       title: '3000+ Footage Reels Exclusive Travel',
-      subtitle: 'Koleksi ribuan footage travel estetik siap edit dan boleh dijual kembali.',
+      subtitle: {
+        id: 'Koleksi ribuan footage travel estetik siap edit dan boleh dijual kembali.',
+        en: 'Curated collection of aesthetic travel footage ready to edit and resell.'
+      },
       badge: 'PLR License',
       oldPrice: 250000,
       price: 29000,
@@ -404,7 +518,10 @@ document.addEventListener('DOMContentLoaded', function () {
     },
     {
       title: 'F.I.N.A - Finansial Assistant Sekolah WFA',
-      subtitle: 'FINA Personal Version, asisten pintar pencatat keuangan harian via WA.',
+      subtitle: {
+        id: 'FINA Personal Version, asisten pintar pencatat keuangan harian via WA.',
+        en: 'FINA Personal Version, your smart daily expense tracker assistant via WhatsApp.'
+      },
       badge: 'Personal Version',
       oldPrice: 800000,
       price: 79000,
@@ -413,7 +530,10 @@ document.addEventListener('DOMContentLoaded', function () {
     },
     {
       title: 'CONTENT AUTO PILOT by Sekolah WFA',
-      subtitle: 'Bantu merencanakan dan menyusun ide konten sosial media lebih efisien.',
+      subtitle: {
+        id: 'Bantu merencanakan dan menyusun ide konten sosial media lebih efisien.',
+        en: 'Plan and organize your social media content ideas way more efficiently.'
+      },
       badge: 'Personal Use',
       oldPrice: 500000,
       price: 55000,
@@ -423,7 +543,10 @@ document.addEventListener('DOMContentLoaded', function () {
   ];
 
   const toolkitGrid = document.getElementById('toolkit-grid');
-  if (toolkitGrid) {
+  function renderToolkit() {
+    if (!toolkitGrid) return;
+    const lang = currentLang === 'en' ? 'en' : 'id';
+    const ctaLabel = (translations[lang] && translations[lang].add_to_cart) || 'Dapatkan Akses →';
     toolkitGrid.innerHTML = TOOLKIT_ITEMS.map((t) => `
       <article class="toolkit-card reveal-up">
         <div class="toolkit-thumb">
@@ -432,14 +555,14 @@ document.addEventListener('DOMContentLoaded', function () {
         </div>
         <div class="toolkit-body">
           <h3 class="toolkit-title">${t.title}</h3>
-          <p class="toolkit-subtitle">${t.subtitle}</p>
+          <p class="toolkit-subtitle">${t.subtitle[lang]}</p>
           <div class="toolkit-foot">
             <div class="toolkit-prices">
               <s class="price-old">${rp(t.oldPrice)}</s>
               <span class="price-current">${rp(t.price)}</span>
             </div>
             <a href="${t.url}" target="_blank" rel="noopener noreferrer" class="btn btn-toolkit-buy">
-              <span>Dapatkan Akses →</span>
+              <span>${ctaLabel}</span>
             </a>
           </div>
         </div>
@@ -511,8 +634,10 @@ document.addEventListener('DOMContentLoaded', function () {
       category: 'creator',
       role: 'Content Creator',
       badge: 'Monetisasi Konten',
+      badgeEn: 'Content Monetization',
       avatar: 'https://sekolahwfa.com/img/testi/avatar-aif.webp',
-      text: 'Duh gimana ya, seneng banget rasanya. Dulu tuh aku cuma bisa bikin konten, tapi gak ngerti gimana cara monetize dengan bener. Nah Sekolah WFA ini ngajarin semua hal itu, dari strategi, eksekusi, sampe cara dapetin penghasilan dari mana aja. Dan yang paling aku suka, mereka ngajarin dengan cara yang fun, gak boring. Mentor-mentornya juga asik, bisa diajak diskusi kapan aja. Pokoknya materinya daging semua deh!'
+      text: 'Duh gimana ya, seneng banget rasanya. Dulu tuh aku cuma bisa bikin konten, tapi gak ngerti gimana cara monetize dengan bener. Nah Sekolah WFA ini ngajarin semua hal itu, dari strategi, eksekusi, sampe cara dapetin penghasilan dari mana aja. Dan yang paling aku suka, mereka ngajarin dengan cara yang fun, gak boring. Mentor-mentornya juga asik, bisa diajak diskusi kapan aja. Pokoknya materinya daging semua deh!',
+      textEn: 'I feel so grateful! I used to only know how to make content without knowing how to properly monetize it. Sekolah WFA taught me everything from strategy and execution to earning income from anywhere. Best of all, the lessons are super fun, never boring, and the mentors are always approachable!'
     },
     {
       id: 2,
@@ -521,8 +646,10 @@ document.addEventListener('DOMContentLoaded', function () {
       category: 'creator',
       role: 'Personal Branding Strategist',
       badge: 'Strategic dan Proven',
+      badgeEn: 'Strategic and Proven',
       avatar: 'https://sekolahwfa.com/img/testi/avatar-kadafi.webp',
-      text: 'Sebagai seseorang yang udah berkecimpung di dunia personal branding cukup lama, aku bisa bilang Sekolah WFA punya kurikulum yang terstruktur. Mereka ngerti betul ekosistem digital yang sebenarnya. Bukan janji-janji muluk yang ngga masuk akal. Approach-nya strategic, actionable, dan yang paling penting, proven! Aku personally recommend untuk profesional yang ingin serius di bidang digital.'
+      text: 'Sebagai seseorang yang udah berkecimpung di dunia personal branding cukup lama, aku bisa bilang Sekolah WFA punya kurikulum yang terstruktur. Mereka ngerti betul ekosistem digital yang sebenarnya. Bukan janji-janji muluk yang ngga masuk akal. Approach-nya strategic, actionable, dan yang paling penting, proven! Aku personally recommend untuk profesional yang ingin serius di bidang digital.',
+      textEn: 'Having worked in personal branding for quite a while, I can say Sekolah WFA has a genuinely structured curriculum. They truly understand the digital ecosystem without empty hype. The approach is strategic, actionable, and proven. I personally recommend it for professionals serious about building in the digital space.'
     },
     {
       id: 3,
@@ -530,9 +657,12 @@ document.addEventListener('DOMContentLoaded', function () {
       handle: '@gashady',
       category: 'nomad',
       role: 'Jurnalis dan Mobile Worker',
+      roleEn: 'Journalist and Mobile Worker',
       badge: 'Fleksibilitas Kerja',
+      badgeEn: 'Work Flexibility',
       avatar: 'https://sekolahwfa.com/img/testi/avatar-asran.webp',
-      text: 'Sebagai orang yang pekerjaannya mobile, saya butuh skill yang bisa mendukung fleksibilitas itu. Sekolah WFA memberikan perspektif baru tentang bagaimana saya bisa diversifikasi pekerjaan tanpa meninggalkan passion saya di dunia jurnalistik. Kurikulumnya applicable, dan saya bisa langsung praktek. Kalau ditanya worth it atau tidak, jawabannya absolutely worth it.'
+      text: 'Sebagai orang yang pekerjaannya mobile, saya butuh skill yang bisa mendukung fleksibilitas itu. Sekolah WFA memberikan perspektif baru tentang bagaimana saya bisa diversifikasi pekerjaan tanpa meninggalkan passion saya di dunia jurnalistik. Kurikulumnya applicable, dan saya bisa langsung praktek. Kalau ditanya worth it atau tidak, jawabannya absolutely worth it.',
+      textEn: 'Working on the move means I need skills that support true flexibility. Sekolah WFA gave me a fresh perspective on diversifying my income without leaving my passion for journalism. Everything is practical and immediately actionable, absolutely worth it.'
     },
     {
       id: 4,
@@ -541,8 +671,10 @@ document.addEventListener('DOMContentLoaded', function () {
       category: 'beginner',
       role: 'Digital Newbie to Action',
       badge: 'Lepas Mental Block',
+      badgeEn: 'Broke Mental Block',
       avatar: 'https://sekolahwfa.com/img/testi/avatar-clara.webp',
-      text: 'Guys, jujur sebenernya aku tuh udah mulai nyemplung, tapi sempet stuck dan ragu banget buat lanjut karena ngerasa super newbie di dunia digital. Tapi untungnya setelah belajar di Sekolah WFA, akar permasalahanku bener-bener dibedah tuntas! Akhirnya aku bisa lepas dari mental block, dan sekarang malah jadi makin pede buat action. Ternyata kuncinya bukan cuma di skill, tapi di pola pikir yang bener. Thanks banget ilmunya!'
+      text: 'Guys, jujur sebenernya aku tuh udah mulai nyemplung, tapi sempet stuck dan ragu banget buat lanjut karena ngerasa super newbie di dunia digital. Tapi untungnya setelah belajar di Sekolah WFA, akar permasalahanku bener-bener dibedah tuntas! Akhirnya aku bisa lepas dari mental block, dan sekarang malah jadi makin pede buat action. Ternyata kuncinya bukan cuma di skill, tapi di pola pikir yang bener. Thanks banget ilmunya!',
+      textEn: 'Honestly, I had tried jumping in before but felt stuck and full of doubt as a total beginner. After learning at Sekolah WFA, every root issue was unpacked clearly. I finally broke through my mental block and feel confident taking action now!'
     },
     {
       id: 5,
@@ -551,8 +683,10 @@ document.addEventListener('DOMContentLoaded', function () {
       category: 'nomad',
       role: 'Ex-Agency Nomad',
       badge: 'Bebas dari Kantor',
+      badgeEn: 'Location Free',
       avatar: 'https://sekolahwfa.com/img/testi/avatar-mindiw.webp',
-      text: 'Okay so. Aku kan udah kerja di beberapa agency, handle brand-brand gede juga. Kirain udah expert lah ya. Tapi pas ikut Sekolah WFA, Aku nyadar masih banyak yang bisa di-improve. Mereka tuh ngasih framework yang bikin kerjaan aku jauh lebih efisien. Plus, sekarang aku udah gak perlu stuck di kantor. Bisa kerja dari coffee shop, dari rumah, bahkan dari luar kota. Best decision ever sih ini.'
+      text: 'Okay so. Aku kan udah kerja di beberapa agency, handle brand-brand gede juga. Kirain udah expert lah ya. Tapi pas ikut Sekolah WFA, Aku nyadar masih banyak yang bisa di-improve. Mereka tuh ngasih framework yang bikin kerjaan aku jauh lebih efisien. Plus, sekarang aku udah gak perlu stuck di kantor. Bisa kerja dari coffee shop, dari rumah, bahkan dari luar kota. Best decision ever sih ini.',
+      textEn: 'After working at several agencies handling big brands, I thought I already knew it all. Joining Sekolah WFA showed me how much more efficient my workflow could be. Now I am no longer stuck in an office, and I can work from cafes, home, or out of town. Best decision ever!'
     },
     {
       id: 6,
@@ -561,8 +695,10 @@ document.addEventListener('DOMContentLoaded', function () {
       category: 'nomad',
       role: 'Travel Creator',
       badge: 'Travel Creator Sistem',
+      badgeEn: 'Creator Systems',
       avatar: 'https://sekolahwfa.com/img/testi/avatar-dimas.webp',
-      text: 'Jadi ceritanya gue kan udah lama banget jadi travel creator ya. Kira-kira udah ngerti semua lah. Eh pas ikut Sekolah WFA, ternyata banyak banget yang masih missing. Especially soal sistemnya. Mereka ngajarin hal-hal yang gak pernah kepikiran sama gue sebelumnya. Dan yang gue suka, kak Anggun itu humble, gak sok tau. Pokoknya recommended deh kalau lo serius.'
+      text: 'Jadi ceritanya gue kan udah lama banget jadi travel creator ya. Kira-kira udah ngerti semua lah. Eh pas ikut Sekolah WFA, ternyata banyak banget yang masih missing. Especially soal sistemnya. Mereka ngajarin hal-hal yang gak pernah kepikiran sama gue sebelumnya. Dan yang gue suka, kak Anggun itu humble, gak sok tau. Pokoknya recommended deh kalau lo serius.',
+      textEn: 'Even after years as a travel creator, joining Sekolah WFA revealed how many systems I was still missing. They teach frameworks I had never thought of before, and Anggun is genuinely humble and down to earth. Highly recommended if you are serious.'
     },
     {
       id: 7,
@@ -571,8 +707,10 @@ document.addEventListener('DOMContentLoaded', function () {
       category: 'nomad',
       role: 'WFA Enthusiast',
       badge: 'Networking Komunitas',
+      badgeEn: 'Community Network',
       avatar: 'https://sekolahwfa.com/img/testi/avatar-mia.webp',
-      text: 'Komunitasnya aktif banget. Gak cuma belajar materinya doang, tapi juga bisa networking sama temen-temen se-visi dari berbagai macam background berbeda-beda yang kerjanya WFA, jadi ngebuka peluang kolaborasi yang aku butuhin banget selama ini.'
+      text: 'Komunitasnya aktif banget. Gak cuma belajar materinya doang, tapi juga bisa networking sama temen-temen se-visi dari berbagai macam background berbeda-beda yang kerjanya WFA, jadi ngebuka peluang kolaborasi yang aku butuhin banget selama ini.',
+      textEn: 'The community is super active! Beyond the learning materials, you get to network with like-minded remote workers from all kinds of backgrounds, opening up real collaboration opportunities.'
     },
     {
       id: 8,
@@ -580,9 +718,12 @@ document.addEventListener('DOMContentLoaded', function () {
       handle: '@fuadekspor',
       category: 'creator',
       role: 'Praktisi Bisnis Ekspor',
+      roleEn: 'Export Business Practitioner',
       badge: 'Digitalisasi Bisnis',
+      badgeEn: 'Business Digitalization',
       avatar: 'https://sekolahwfa.com/img/testi/avatar-fuad.webp',
-      text: 'Kak, saya jujur ya. Awalnya mikir, lah ini kok kayak kursus-kursus online pada umumnya. Tapi ternyata beda jauh. Mereka tuh detail banget ngajarinnya, dan bisa disesuaikan sama industri kita. Saya kan di bidang ekspor, tradisional banget. Eh mereka bisa breakdown gimana cara digitalisasinya. Mantap pokoknya. Sekarang kerjaan saya jauh lebih ringan, bisnis makin lancar.'
+      text: 'Kak, saya jujur ya. Awalnya mikir, lah ini kok kayak kursus-kursus online pada umumnya. Tapi ternyata beda jauh. Mereka tuh detail banget ngajarinnya, dan bisa disesuaikan sama industri kita. Saya kan di bidang ekspor, tradisional banget. Eh mereka bisa breakdown gimana cara digitalisasinya. Mantap pokoknya. Sekarang kerjaan saya jauh lebih ringan, bisnis makin lancar.',
+      textEn: 'To be honest, I first thought it would be like any typical online course, but it was completely different. Coming from the traditional export industry, they broke down exactly how to digitalize my business. Now my workflow is lighter and smoother.'
     },
     {
       id: 9,
@@ -592,7 +733,8 @@ document.addEventListener('DOMContentLoaded', function () {
       role: 'Nomad in Istanbul',
       badge: 'Living in Istanbul',
       avatar: 'https://sekolahwfa.com/img/testi/avatar-hana.webp',
-      text: "Gue tuh dari dulu pengen banget bisa kerja sambil traveling gitu kan. Nah, Sekolah WFA ini jawaban banget sih buat mimpi gue. Mereka ngajarin everything you need to know dari nol sampai bisa profit. Dan gak cuma ngajarin doang, tapi juga kasih insight tentang lifestyle-nya gimana. Now I'm living in Istanbul, working with clients from Indonesia, dan hidup gue so much better. Literally living the dream!"
+      text: "Gue tuh dari dulu pengen banget bisa kerja sambil traveling gitu kan. Nah, Sekolah WFA ini jawaban banget sih buat mimpi gue. Mereka ngajarin everything you need to know dari nol sampai bisa profit. Dan gak cuma ngajarin doang, tapi juga kasih insight tentang lifestyle-nya gimana. Now I'm living in Istanbul, working with clients from Indonesia, dan hidup gue so much better. Literally living the dream!",
+      textEn: 'I always dreamed of working while traveling, and Sekolah WFA made that possible, teaching everything from zero to profitable plus the real nomad lifestyle. Now I live in Istanbul working with clients remotely. Literally living the dream!'
     },
     {
       id: 10,
@@ -601,8 +743,10 @@ document.addEventListener('DOMContentLoaded', function () {
       category: 'beginner',
       role: 'WFA Freelancer',
       badge: '10 Juta Pertama/Bulan',
+      badgeEn: 'First 10M IDR/Month',
       avatar: 'https://sekolahwfa.com/img/testi/avatar-anggie.webp',
-      text: 'Awalnya sih agak ragu ya, namanya juga modal nekat, apalagi sebelumnya aku pernah ikut kelas gini zonkk banget! Tapi pas udah masuk, wahhh ternyata beneran berkualitas. Sistemnya rapi, step by step jelas. Dan yang bikin kaget, dalam waktu sebulan aja aku udah dapet 10 juta pertama ku! Gak nyangka secepatnya itu. Sekarang income aku lebih stabil, dan yang paling penting, aku happy karena bisa atur waktu sendiri. Thank God mempertemukan ku dengan Sekolah WFA!'
+      text: 'Awalnya sih agak ragu ya, namanya juga modal nekat, apalagi sebelumnya aku pernah ikut kelas gini zonkk banget! Tapi pas udah masuk, wahhh ternyata beneran berkualitas. Sistemnya rapi, step by step jelas. Dan yang bikin kaget, dalam waktu sebulan aja aku udah dapet 10 juta pertama ku! Gak nyangka secepatnya itu. Sekarang income aku lebih stabil, dan yang paling penting, aku happy karena bisa atur waktu sendiri. Thank God mempertemukan ku dengan Sekolah WFA!',
+      textEn: 'I was skeptical at first after disappointing classes elsewhere, but the step-by-step system here was genuinely high quality. To my surprise, within just one month I hit my first 10 million IDR milestone and now have flexible control over my own schedule!'
     },
     {
       id: 11,
@@ -611,8 +755,10 @@ document.addEventListener('DOMContentLoaded', function () {
       category: 'beginner',
       role: 'Flexible Digital Worker',
       badge: 'Support System Juara',
+      badgeEn: 'Amazing Support System',
       avatar: 'https://sekolahwfa.com/img/testi/avatar-fanny.webp',
-      text: 'Pas gue lagi masa-masa berat dulu, gue sadar banget pentingnya punya kerjaan yang fleksibel. Dan WFA ini literally ngasih semua yang gue butuhin. Dari mulai skill sampai support system-nya. Gue nangis beberapa kali lho waktu belajar, bukan karena susah, tapi karena grateful aja akhirnya nemu tempat yang bener-bener understand our needs as digital workers.'
+      text: 'Pas gue lagi masa-masa berat dulu, gue sadar banget pentingnya punya kerjaan yang fleksibel. Dan WFA ini literally ngasih semua yang gue butuhin. Dari mulai skill sampai support system-nya. Gue nangis beberapa kali lho waktu belajar, bukan karena susah, tapi karena grateful aja akhirnya nemu tempat yang bener-bener understand our needs as digital workers.',
+      textEn: 'During a tough season in my life, having flexible remote work meant everything. Sekolah WFA gave me both the practical skills and an incredible support system that truly understands digital workers.'
     },
     {
       id: 12,
@@ -620,9 +766,12 @@ document.addEventListener('DOMContentLoaded', function () {
       handle: '@davidlo.fit',
       category: 'nomad',
       role: 'Fitness Coach dan Remote Worker',
+      roleEn: 'Fitness Coach and Remote Worker',
       badge: 'Praktis dan To The Point',
+      badgeEn: 'Practical and Direct',
       avatar: 'https://sekolahwfa.com/img/testi/avatar-david.webp',
-      text: "Gue udah coba berbagai course online, tapi Sekolah WFA beda level sih. Mereka tuh praktis banget, langsung to the point. Gak pake basa-basi teori yang bikin ngantuk. Sekarang gue bisa dapetin income dari mana aja, meanwhile gue lagi workout di gym manapun yang gue mau. Life's good, man."
+      text: "Gue udah coba berbagai course online, tapi Sekolah WFA beda level sih. Mereka tuh praktis banget, langsung to the point. Gak pake basa-basi teori yang bikin ngantuk. Sekarang gue bisa dapetin income dari mana aja, meanwhile gue lagi workout di gym manapun yang gue mau. Life's good, man.",
+      textEn: 'I have tried many online courses, and Sekolah WFA is on another level, straight to the point without dry theory. Now I earn income from anywhere while keeping my training routine wherever I go.'
     },
     {
       id: 13,
@@ -630,9 +779,12 @@ document.addEventListener('DOMContentLoaded', function () {
       handle: '@digital.afterhours',
       category: 'creator',
       role: 'Educator dan Community Builder',
+      roleEn: 'Educator and Community Builder',
       badge: 'Ramah Pemula',
+      badgeEn: 'Beginner Friendly',
       avatar: 'https://sekolahwfa.com/img/testi/avatar-suci.webp',
-      text: 'Hai semuanya! Jadi aku tuh passionate banget soal empower perempuan di bidang digital. Dan Sekolah WFA ini align banget sama misi aku. Yang bikin seneng, mereka tuh gak elitist. Bahasa yang dipakai juga gampang dipahami, cocok banget buat pemula. Aku udah ajak temen-temen di komunitas aku, dan mereka pada excited semua. Thankful banget nemu tempat belajar yang supportive kayak gini!'
+      text: 'Hai semuanya! Jadi aku tuh passionate banget soal empower perempuan di bidang digital. Dan Sekolah WFA ini align banget sama misi aku. Yang bikin seneng, mereka tuh gak elitist. Bahasa yang dipakai juga gampang dipahami, cocok banget buat pemula. Aku udah ajak temen-temen di komunitas aku, dan mereka pada excited semua. Thankful banget nemu tempat belajar yang supportive kayak gini!',
+      textEn: 'I am passionate about empowering women in the digital space, and Sekolah WFA aligns so closely with that mission. Zero elitism, easy-to-follow language for beginners, and such a supportive community!'
     },
     {
       id: 14,
@@ -641,8 +793,10 @@ document.addEventListener('DOMContentLoaded', function () {
       category: 'beginner',
       role: 'Lubuklinggau to Global',
       badge: 'Klien Luar Daerah',
+      badgeEn: 'Out-of-Town Clients',
       avatar: 'https://sekolahwfa.com/img/testi/avatar-yetti.webp',
-      text: 'Permisi ya, mau sharing dikit. Aku dari Lubuklinggau, kadang suka insecure juga sih karena jauh dari kota besar. Tapi sejak ikut Sekolah WFA, mindset aku berubah total. Ternyata lokasi tuh bukan penghalang. Materinya lengkap, bisa diakses kapan aja, dan mentor-mentornya baik-baik banget mau jawab pertanyaan. Sekarang aku udah berani ambil project dari klien luar daerah. Alhamdulillah banget deh pokoknya!'
+      text: 'Permisi ya, mau sharing dikit. Aku dari Lubuklinggau, kadang suka insecure juga sih karena jauh dari kota besar. Tapi sejak ikut Sekolah WFA, mindset aku berubah total. Ternyata lokasi tuh bukan penghalang. Materinya lengkap, bisa diakses kapan aja, dan mentor-mentornya baik-baik banget mau jawab pertanyaan. Sekarang aku udah berani ambil project dari klien luar daerah. Alhamdulillah banget deh pokoknya!',
+      textEn: 'Living far from major cities used to make me feel insecure, but Sekolah WFA completely shifted my mindset. Location is never a barrier, and I now confidently take on projects from clients across different regions!'
     }
   ];
 
@@ -657,25 +811,29 @@ document.addEventListener('DOMContentLoaded', function () {
     String(str).replace(/[&<>"']/g, (ch) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[ch]));
 
   function buildTestiCardHtml(t, animIndex) {
+    const lang = currentLang === 'en' ? 'en' : 'id';
     const initial = escapeHtml(t.name.charAt(0).toUpperCase());
     const cleanHandle = escapeHtml(t.handle);
     const igUser = cleanHandle.replace('@', '');
     const isAnimated = typeof animIndex === 'number' && animIndex >= 0;
     const animClass = isAnimated ? ' is-immersive-enter' : '';
     const animStyle = isAnimated ? ` style="--reveal-delay:${animIndex * 45}ms"` : '';
+    const badgeText = lang === 'en' && t.badgeEn ? t.badgeEn : (t.badge || (lang === 'en' ? 'Verified Alumni' : 'Alumni Terverifikasi'));
+    const roleText = lang === 'en' && t.roleEn ? t.roleEn : (t.role || 'Alumni Sekolah WFA');
+    const quoteText = lang === 'en' && t.textEn ? t.textEn : t.text;
     return `
       <figure class="testi-card${animClass}" data-category="${t.category}" data-testi-id="${t.id}"${animStyle}>
         <div class="testi-card-head">
           <div class="stars" aria-label="5 bintang">★★★★★</div>
-          <span class="testi-verified-pill">${escapeHtml(t.badge || 'Alumni Terverifikasi')}</span>
+          <span class="testi-verified-pill">${escapeHtml(badgeText)}</span>
         </div>
-        <p class="testi-quote">“${escapeHtml(t.text)}”</p>
+        <p class="testi-quote">“${escapeHtml(quoteText)}”</p>
         <figcaption class="testi-person">
           <img class="testi-avatar" src="${t.avatar}" alt="${escapeHtml(t.name)}" loading="lazy" width="48" height="48"
             data-initial="${initial}">
           <div class="testi-meta">
             <strong class="testi-name">${escapeHtml(t.name)}</strong>
-            <span class="testi-role">${escapeHtml(t.role || 'Alumni Sekolah WFA')}</span>
+            <span class="testi-role">${escapeHtml(roleText)}</span>
             <a href="https://instagram.com/${igUser}" target="_blank" rel="noopener noreferrer" class="testi-handle">${cleanHandle} ↗</a>
           </div>
         </figcaption>
@@ -700,6 +858,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   function updateMoreButton() {
     if (!testiMoreWrap || !testiMoreBtn) return;
+    const lang = currentLang === 'en' ? 'en' : 'id';
     const showBtn = activeTestiFilter === 'all';
     testiMoreWrap.style.display = showBtn ? 'flex' : 'none';
     const label = testiMoreBtn.querySelector('.testi-more-label');
@@ -707,8 +866,8 @@ document.addEventListener('DOMContentLoaded', function () {
     testiMoreBtn.setAttribute('aria-expanded', testiExpanded ? 'true' : 'false');
     if (label) {
       label.textContent = testiExpanded
-        ? 'Tampilkan 3 Cerita Utama'
-        : 'Lihat Lebih Banyak Testimoni (+11 Cerita)';
+        ? (lang === 'en' ? 'Show Top 3 Featured Stories' : 'Tampilkan 3 Cerita Utama')
+        : (lang === 'en' ? 'See More Testimonials (+11 Stories)' : 'Lihat Lebih Banyak Testimoni (+11 Cerita)');
     }
     if (icon) {
       icon.textContent = testiExpanded ? '↑' : '✦';
@@ -825,6 +984,7 @@ document.addEventListener('DOMContentLoaded', function () {
       if (dict[key]) el.setAttribute('placeholder', dict[key]);
     });
 
+    renderToolkit();
     renderProducts(activeProductFilter);
     renderTestimonials();
   }
@@ -937,7 +1097,7 @@ document.addEventListener('DOMContentLoaded', function () {
       cost: '$600 - $1,200 / mo',
       wifi: {
         id: '85+ Mbps · Cepat dan stabil di kafe serta coworking Canggu dan Ubud',
-        en: '85+ Mbps · Super fast in Canggu dan Ubud coworking spaces'
+        en: '85+ Mbps · Super fast in Canggu and Ubud coworking spaces'
       },
       visa: {
         id: 'Mudah (B211A Visit Visa / Remote Worker E33G)',
@@ -945,7 +1105,7 @@ document.addEventListener('DOMContentLoaded', function () {
       },
       spots: {
         id: 'Kafe spesialis di Canggu, Ubud, Pererenan dan Uluwatu',
-        en: 'Canggu, Ubud, Pererenan dan Uluwatu specialty cafes'
+        en: 'Canggu, Ubud, Pererenan and Uluwatu specialty cafes'
       },
       tip: {
         id: 'Pilih tempat tinggal dekat Batu Bolong biar gampang cafe hopping, dan pastikan vila punya genset cadangan!',
@@ -969,7 +1129,7 @@ document.addEventListener('DOMContentLoaded', function () {
       },
       spots: {
         id: 'Coworking space di Shibuya, kafe Daikanyama dan Kichijoji',
-        en: 'Shibuya coworking spaces, Daikanyama dan Kichijoji'
+        en: 'Shibuya coworking spaces, Daikanyama and Kichijoji'
       },
       tip: {
         id: 'Kota paling aman dan transportasinya super tenang. Sewa Pocket Wi-Fi dan coba sensasi kerja di kissaten tradisional!',
@@ -985,7 +1145,7 @@ document.addEventListener('DOMContentLoaded', function () {
       cost: '$2,500+ / mo',
       wifi: {
         id: '120+ Mbps · Tersedia gratis di coffee shop dan perpustakaan kota',
-        en: '120+ Mbps · Readily available in coffee shops dan libraries'
+        en: '120+ Mbps · Readily available in coffee shops and libraries'
       },
       visa: {
         id: 'ESTA Visa Waiver atau Visa Turis B1/B2',
@@ -993,7 +1153,7 @@ document.addEventListener('DOMContentLoaded', function () {
       },
       spots: {
         id: 'Brooklyn Public Library, kafe di DUMBO dan Flatiron',
-        en: 'Brooklyn Public Library, DUMBO dan Flatiron cafes'
+        en: 'Brooklyn Public Library, DUMBO and Flatiron cafes'
       },
       tip: {
         id: 'Energi kreatifnya luar biasa! Kerja dari kafe di Williamsburg atau DUMBO sambil nikmatin pemandangan skyline Manhattan.',
@@ -1017,7 +1177,7 @@ document.addEventListener('DOMContentLoaded', function () {
       },
       spots: {
         id: 'Kafe pinggir Danau Wakatipu di Queenstown dan ruang kerja bersama di Auckland',
-        en: 'Queenstown lakefront cafes dan Auckland shared spaces'
+        en: 'Queenstown lakefront cafes and Auckland shared spaces'
       },
       tip: {
         id: 'Buat pecinta alam: kerja pagi sambil mandang Danau Wakatipu, lalu sorenya hiking santai atau main ski!',
