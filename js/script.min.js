@@ -99,10 +99,10 @@ document.addEventListener('DOMContentLoaded', function () {
       filter_income: 'AI & Manifesting',
       add_to_cart: 'Dapatkan Akses →',
 
-      bundle_eyebrow: 'BIMBINGAN WFA',
-      bundle_title: 'Program Bimbingan WFA',
+      bundle_eyebrow: 'COACHING WFA',
+      bundle_title: 'Program Coaching WFA',
       bundle_lead: 'Pilih kelas online paket terlengkap, mentoring private 1-on-1 via Zoom, atau kelas tatap muka eksklusif bersama tim Sekolah WFA.',
-      coaching_btn: 'Daftar Bimbingan →',
+      coaching_btn: 'Daftar Coaching →',
 
       testi_eyebrow: 'KATA MEREKA',
       testi_title: 'Kata Mereka yang Sudah Mencoba',
