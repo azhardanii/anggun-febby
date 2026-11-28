@@ -125,8 +125,8 @@ document.addEventListener('DOMContentLoaded', function () {
       dest_bridge_btn: 'Ngobrol di Komunitas →',
 
       stories_eyebrow: 'CERITA DI BALIK LAYAR',
-      stories_title: 'Dari Desa Kecil Sampai Bisa Kerja Sambil Keliling Dunia',
-      stories_sub: '“Dulu bisa terus sekolah aja udah sebuah perjuangan besar. Sekarang, aku bisa kerja dari mana aja, berkarya jadi content creator, dan menjalani hidup yang dulu cuma berani aku impikan.”',
+      stories_title: 'Dari Desa Bisa Kerja Sambil Keliling Dunia',
+      stories_sub: 'Dulu, aku hanyalah anak desa yang harus berjuang lewat beasiswa demi bisa sekolah. Kini, aku bisa berkarya sebagai content creator, mendapat passive income dari produk digital, bekerja dengan klien lokal hingga internasional, dan bebas kerja dari mana saja sambil keliling dunia.',
       stories_follow: 'Mampir ke IG @anggunfebby.s',
 
       connect_eyebrow: 'MEDIA SOSIAL & KONTEN',
@@ -236,8 +236,8 @@ document.addEventListener('DOMContentLoaded', function () {
       dest_bridge_btn: 'Chat in the Community →',
 
       stories_eyebrow: 'BEHIND THE SCENES',
-      stories_title: 'From a Small Village to Working While Traveling the World',
-      stories_sub: '“Staying in school was once a daily challenge. Today, I can work from anywhere, create digital content, and live the life I once only dreamed about.”',
+      stories_title: 'From a Village to Working While Traveling the World',
+      stories_sub: 'I used to be a village kid fighting through scholarships just to stay in school. Today, I create content, earn passive income from digital products, work with local and international clients, and enjoy the freedom to work from anywhere while traveling the world.',
       stories_follow: 'Visit IG @anggunfebby.s',
 
       connect_eyebrow: 'SOCIALS & CONTENT',
