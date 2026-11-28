@@ -1521,15 +1521,30 @@ video {
 
 .book-stage {
   position: relative;
-  background: var(--bg);
+  background: linear-gradient(160deg, #FAFBEA 0%, #F2F6DF 100%);
   border: 1px solid var(--line);
   border-radius: 14px;
-  height: 245px;
+  height: 235px;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 16px;
+  padding: 18px 14px;
   overflow: hidden;
+}
+
+.bundle-mockup-img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 12px 22px rgba(27, 94, 43, 0.16));
+  transition: transform 0.35s var(--ease-fluid), filter 0.35s var(--ease-fluid);
+}
+
+.product-card:hover .bundle-mockup-img {
+  transform: translateY(-4px) scale(1.04);
+  filter: drop-shadow(0 18px 30px rgba(27, 94, 43, 0.22));
 }
 
 .book-badge {

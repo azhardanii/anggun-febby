@@ -283,7 +283,7 @@ document.addEventListener('DOMContentLoaded', function () {
       id: 'creator',
       category: 'creator',
       theme: 'c3',
-      coverImg: 'assets/collab-done.webp',
+      coverImg: 'assets/bundle-creator.png',
       tag: { id: 'Terpopuler', en: 'Most Popular' },
       name: { id: 'Bundle Creator', en: 'Bundle Creator' },
       items: {
@@ -314,7 +314,7 @@ document.addEventListener('DOMContentLoaded', function () {
       id: 'traveller',
       category: 'wfa',
       theme: 'c1',
-      coverImg: 'assets/bali.webp',
+      coverImg: 'assets/bundle-traveller.png',
       tag: { id: 'Terlaris', en: 'Best Seller' },
       name: { id: 'Bundle Traveller', en: 'Bundle Traveller' },
       items: {
@@ -339,7 +339,7 @@ document.addEventListener('DOMContentLoaded', function () {
       id: 'ai-assistant',
       category: 'ai',
       theme: 'c2',
-      coverImg: 'assets/travel-work-database.png',
+      coverImg: 'assets/bundle-ai.png',
       tag: { id: 'AI Tools', en: 'AI Tools' },
       name: { id: 'Bundle AI Assistant', en: 'Bundle AI Assistant' },
       items: {
@@ -360,7 +360,7 @@ document.addEventListener('DOMContentLoaded', function () {
       id: 'manifesting',
       category: 'manifesting',
       theme: 'c5',
-      coverImg: 'assets/coaching-done.webp',
+      coverImg: 'assets/bundle-jalur-langit.png',
       tag: { id: 'Favorit', en: 'Favorite' },
       name: { id: 'Manifesting Jalur Langit', en: 'Manifesting Jalur Langit' },
       items: {
@@ -409,15 +409,7 @@ document.addEventListener('DOMContentLoaded', function () {
           <article class="product-card">
             <div class="book-stage">
               <span class="book-badge">${tag}</span>
-              <div class="book-3d ${item.theme}">
-                <img src="${item.coverImg}" alt="" class="book-3d-img" loading="lazy">
-                <span class="book-spine-tag">Anggun Febby</span>
-                <strong class="book-cover-title">${title}</strong>
-                <div class="book-cover-foot">
-                  <span>WFA Edition</span>
-                  <span>✦</span>
-                </div>
-              </div>
+              <img src="${item.coverImg}" alt="${title}" class="bundle-mockup-img" loading="lazy">
             </div>
             <div class="product-card-body">
               <h3 class="product-card-title">${title}</h3>
