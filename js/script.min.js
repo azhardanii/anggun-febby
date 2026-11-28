@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', function () {
     id: {
       nav_tools: 'WFA Tools',
       nav_bundle: 'Coaching',
-      nav_reviews: 'Testimoni',
+      nav_reviews: 'Cerita nyata dari mereka',
       nav_destinations: 'Trip',
       nav_journal: 'Travel Journal',
       nav_story: 'Ceritaku',
@@ -105,7 +105,7 @@ document.addEventListener('DOMContentLoaded', function () {
       coaching_btn: 'Daftar Coaching →',
 
       testi_eyebrow: 'KATA MEREKA',
-      testi_title: 'Kata Mereka yang Sudah Mencoba',
+      testi_title: 'Cerita nyata dari mereka',
       testi_sub: 'Cerita nyata dari teman-teman alumni Sekolah WFA yang sekarang bisa kerja dan berpenghasilan dari mana aja.',
       testi_more: 'Lihat Semua Testimoni',
       testi_less: 'Tampilkan Lebih Sedikit',
