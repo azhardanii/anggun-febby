@@ -1,10 +1,10 @@
 /**
- * ANGGUN FEBBY - EDITORIAL STORE & WFA INTERACTION SCRIPT
+ * ANGGUN FEBBY - EDITORIAL STORE dan WFA INTERACTION SCRIPT
  * - Bilingual Switcher (ID <-> EN)
  * - Responsive Hero Video
- * - Product Grid & Bundle Grid (Direct Redirect to Lynk.id)
- * - Destination Filter, Search & Quick Guide Modal
- * - Video Reels Player, Mobile Drawer & Scroll Reveal
+ * - Product Grid dan Bundle Grid (Direct Redirect to Lynk.id)
+ * - Destination Filter, Search dan Quick Guide Modal
+ * - Video Reels Player, Mobile Drawer dan Scroll Reveal
  */
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -66,7 +66,7 @@ document.addEventListener('DOMContentLoaded', function () {
       hero_cta_primary: 'Jelajahi Peluang WFA',
       hero_cta_secondary: 'Mulai Coaching',
       hero_scroll: 'Scroll ke bawah',
-      proof_1: 'pembeli & komunitas aktif',
+      proof_1: 'pembeli dan komunitas aktif',
       proof_2: 'rating rata-rata panduan',
       proof_3_title: 'Instan',
       proof_3: 'akses digital selamanya',
@@ -83,9 +83,9 @@ document.addEventListener('DOMContentLoaded', function () {
       path_1_btn: 'Cari Info Lowongan',
       path_2_badge: 'TOP 100+ Kerja WFA',
       path_2_heading: 'Cari Kerja Remote Internasional',
-      path_2_desc: 'Daftar kurasi TOP 100+ peluang kerja remote & bisnis global di berbagai negara buat kamu yang siap go-international.',
+      path_2_desc: 'Daftar kurasi TOP 100+ peluang kerja remote dan bisnis global di berbagai negara buat kamu yang siap go-international.',
       path_2_btn: 'Dapatkan Daftar Kerja',
-      path_3_badge: 'Travel & Work Database',
+      path_3_badge: 'Travel dan Work Database',
       path_3_heading: 'Peluang Kerja Remote Sambil Travelling',
       path_3_desc: 'Database 111+ program di 35 negara: paid trip, free hotel stay, UGC, hingga remote work untuk kerja sambil keliling dunia.',
       path_3_btn: 'Lihat Database Peluang',
@@ -96,7 +96,7 @@ document.addEventListener('DOMContentLoaded', function () {
       filter_all: 'Semua Bundle',
       filter_creator: 'Creator',
       filter_wfa: 'Traveller',
-      filter_income: 'AI & Manifesting',
+      filter_income: 'AI dan Manifesting',
       add_to_cart: 'Dapatkan Akses →',
 
       bundle_eyebrow: 'COACHING WFA',
@@ -129,17 +129,17 @@ document.addEventListener('DOMContentLoaded', function () {
       stories_sub: 'Dulu, aku hanyalah anak desa yang harus berjuang lewat beasiswa demi bisa sekolah. Kini, aku bisa berkarya sebagai content creator, mendapat passive income dari produk digital, bekerja dengan klien lokal hingga internasional, dan bebas kerja dari mana saja sambil keliling dunia.',
       stories_follow: 'Cerita Selengkapnya',
 
-      connect_eyebrow: 'MEDIA SOSIAL & KONTEN',
-      connect_title: 'Intip Keseharian & Konten Terbaruku',
+      connect_eyebrow: 'MEDIA SOSIAL dan KONTEN',
+      connect_title: 'Intip Keseharian dan Konten Terbaruku',
       connect_sub: 'Di media sosial, aku rutin spill tips kerja WFA, review spot ngopi estetik di berbagai negara, behind the scenes, dan daily vlog perjalanan:',
-      connect_ig_desc: 'Tips WFA, Rekomendasi & Dokumentasi Momen',
+      connect_ig_desc: 'Tips WFA, Rekomendasi dan Dokumentasi Momen',
       connect_ig_btn: 'Follow di Instagram ↗',
-      connect_tt_desc: 'Konten Santai, Behind The Scenes & Reality WFA',
+      connect_tt_desc: 'Konten Santai, Behind The Scenes dan Reality WFA',
       connect_tt_btn: 'Nonton di TikTok ↗',
-      connect_yt_desc: 'Travel Vlog & Dokumentasi Keliling Dunia',
+      connect_yt_desc: 'Travel Vlog dan Dokumentasi Keliling Dunia',
       connect_yt_btn: 'Subscribe di YouTube ↗',
 
-      faq_eyebrow: 'FAQ & BANTUAN',
+      faq_eyebrow: 'FAQ dan BANTUAN',
       faq_title: 'Pertanyaan Umum',
       faq_1_q: 'Produknya dikirim dalam bentuk apa?',
       faq_1_a: 'Semua panduan dan WFA tools tersedia dalam format digital (PDF, Notion template, spreadsheet) di Lynk.id. Link akses langsung aktif setelah pembayaran.',
@@ -150,7 +150,7 @@ document.addEventListener('DOMContentLoaded', function () {
       faq_4_q: 'Bagaimana kalau aku masih bingung mulai dari mana?',
       faq_4_a: 'Kamu bisa gabung komunitas WFA gratis terlebih dulu atau langsung chat tim lewat WhatsApp untuk arahan produk yang paling sesuai.',
 
-      news_title: 'Tips WFA & Kolaborasi Langsung ke Emailmu',
+      news_title: 'Tips WFA dan Kolaborasi Langsung ke Emailmu',
       news_sub: 'Gabung komunitas dan dapatkan info lowongan kerja remote serta checklist WFA gratis.',
       newsletter_placeholder: 'Alamat email kamu',
       newsletter_btn: 'Gabung Gratis',
@@ -173,11 +173,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
       hero_eyebrow: 'Digital Nomad · WFA Educator · Travel Creator',
       hero_title: 'Work Anywhere.<br><em class="travel-brush">Travel</em> Everywhere.',
-      hero_sub: `<strong style="font-size:22px">Hi i'm Anggun.</strong> A digital nomad <strong>working from anywhere</strong>. I help you build <strong>income</strong> in the digital space and discover overseas opportunities, so you are free to travel & <strong>work from anywhere</strong>.`,
+      hero_sub: `<strong style="font-size:22px">Hi i'm Anggun.</strong> A digital nomad <strong>working from anywhere</strong>. I help you build <strong>income</strong> in the digital space and discover overseas opportunities, so you are free to travel dan <strong>work from anywhere</strong>.`,
       hero_cta_primary: 'Explore WFA Opportunities',
       hero_cta_secondary: 'Start Coaching',
       hero_scroll: 'Scroll down',
-      proof_1: 'active readers & buyers',
+      proof_1: 'active readers dan buyers',
       proof_2: 'average guide rating',
       proof_3_title: 'Instant',
       proof_3: 'lifetime digital access',
@@ -194,9 +194,9 @@ document.addEventListener('DOMContentLoaded', function () {
       path_1_btn: 'Browse Job Openings',
       path_2_badge: 'TOP 100+ Global WFA',
       path_2_heading: 'Find International Remote Jobs',
-      path_2_desc: 'Curated list of TOP 100+ global remote work & business opportunities across countries.',
+      path_2_desc: 'Curated list of TOP 100+ global remote work dan business opportunities across countries.',
       path_2_btn: 'Get Job List',
-      path_3_badge: 'Travel & Work Database',
+      path_3_badge: 'Travel dan Work Database',
       path_3_heading: 'Remote Work While Traveling',
       path_3_desc: 'Database of 111+ programs across 35 countries: paid trips, free hotel stays, UGC, and remote work.',
       path_3_btn: 'Explore Database',
@@ -207,7 +207,7 @@ document.addEventListener('DOMContentLoaded', function () {
       filter_all: 'All Bundles',
       filter_creator: 'Creator',
       filter_wfa: 'Traveller',
-      filter_income: 'AI & Manifesting',
+      filter_income: 'AI dan Manifesting',
       add_to_cart: 'Add to Cart →',
 
       bundle_eyebrow: 'WFA COACHING',
@@ -216,7 +216,7 @@ document.addEventListener('DOMContentLoaded', function () {
       coaching_btn: 'Join Coaching →',
 
       testi_eyebrow: 'TESTIMONIALS',
-      testi_title: 'What Readers & Nomads Say',
+      testi_title: 'What Readers dan Nomads Say',
       testi_sub: 'Real stories from Sekolah WFA alumni who now work and earn from anywhere.',
       testi_more: 'See All Testimonials',
       testi_less: 'Show Less',
@@ -240,17 +240,17 @@ document.addEventListener('DOMContentLoaded', function () {
       stories_sub: 'I used to be a village kid fighting through scholarships just to stay in school. Today, I create content, earn passive income from digital products, work with local and international clients, and enjoy the freedom to work from anywhere while traveling the world.',
       stories_follow: 'Read Full Story',
 
-      connect_eyebrow: 'SOCIALS & CONTENT',
-      connect_title: 'See My Daily Life & Latest Content',
+      connect_eyebrow: 'SOCIALS dan CONTENT',
+      connect_title: 'See My Daily Life dan Latest Content',
       connect_sub: 'On social media, I share practical WFA tips, aesthetic cafe finds worldwide, behind-the-scenes moments, and travel vlogs:',
-      connect_ig_desc: 'WFA Tips, Recommendations & Story Moments',
+      connect_ig_desc: 'WFA Tips, Recommendations dan Story Moments',
       connect_ig_btn: 'Follow on Instagram ↗',
-      connect_tt_desc: 'Casual Clips, Behind The Scenes & WFA Reality',
+      connect_tt_desc: 'Casual Clips, Behind The Scenes dan WFA Reality',
       connect_tt_btn: 'Watch on TikTok ↗',
-      connect_yt_desc: 'Travel Vlogs & World Travel Documentaries',
+      connect_yt_desc: 'Travel Vlogs dan World Travel Documentaries',
       connect_yt_btn: 'Subscribe on YouTube ↗',
 
-      faq_eyebrow: 'FAQ & HELP',
+      faq_eyebrow: 'FAQ dan HELP',
       faq_title: 'Frequently Asked Questions',
       faq_1_q: 'How are the digital products delivered?',
       faq_1_a: 'All guides and tools are digital files (PDFs, Notion templates, spreadsheets) via Lynk.id with instant download access right after checkout.',
@@ -261,7 +261,7 @@ document.addEventListener('DOMContentLoaded', function () {
       faq_4_q: 'What if I’m unsure where to begin?',
       faq_4_a: 'Join the free WFA community first or chat via WhatsApp for recommendations on the best starting kit.',
 
-      news_title: 'WFA Tips & Updates Straight to Your Inbox',
+      news_title: 'WFA Tips dan Updates Straight to Your Inbox',
       news_sub: 'Join the community and get weekly remote opportunities plus a free WFA starter checklist.',
       newsletter_placeholder: 'Your email address',
       newsletter_btn: 'Join Free',
@@ -322,13 +322,13 @@ document.addEventListener('DOMContentLoaded', function () {
           'Rahasia WFA Keliling Dunia',
           '40+ List Travel Opportunities',
           'TOP 100+ Kerja WFA',
-          'Travel & Work Database (111+ Program)'
+          'Travel dan Work Database (111+ Program)'
         ],
         en: [
           'Secrets to Working While Traveling',
           '40+ List of Travel Opportunities',
           'TOP 100+ WFA Opportunities',
-          'Travel & Work Database (111+ Programs)'
+          'Travel dan Work Database (111+ Programs)'
         ]
       },
       price: 59000,
@@ -386,7 +386,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const TOOLKIT_ITEMS = [
     {
       title: '✈️ Creator Portfolio Template',
-      subtitle: 'Template portofolio profesional siap pakai untuk kreator & freelancer.',
+      subtitle: 'Template portofolio profesional siap pakai untuk kreator dan freelancer.',
       badge: 'Personal Use',
       oldPrice: 150000,
       price: 39000,
@@ -395,7 +395,7 @@ document.addEventListener('DOMContentLoaded', function () {
     },
     {
       title: '3000+ Footage Reels Exclusive Travel',
-      subtitle: 'Koleksi ribuan footage travel estetik siap edit & boleh dijual kembali.',
+      subtitle: 'Koleksi ribuan footage travel estetik siap edit dan boleh dijual kembali.',
       badge: 'PLR License',
       oldPrice: 250000,
       price: 29000,
@@ -413,7 +413,7 @@ document.addEventListener('DOMContentLoaded', function () {
     },
     {
       title: 'CONTENT AUTO PILOT by Sekolah WFA',
-      subtitle: 'Bantu merencanakan & menyusun ide konten sosial media lebih efisien.',
+      subtitle: 'Bantu merencanakan dan menyusun ide konten sosial media lebih efisien.',
       badge: 'Personal Use',
       oldPrice: 500000,
       price: 55000,
@@ -501,7 +501,7 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   // ==========================================================================
-  // 4. TESTIMONIALS (ALUMNI SEKOLAH WFA - 14 CERITA LENGKAP & FILTERABLE)
+  // 4. TESTIMONIALS (ALUMNI SEKOLAH WFA - 14 CERITA LENGKAP dan FILTERABLE)
   // ==========================================================================
   const TESTIMONIALS = [
     {
@@ -520,7 +520,7 @@ document.addEventListener('DOMContentLoaded', function () {
       handle: '@kadafidevayana',
       category: 'creator',
       role: 'Personal Branding Strategist',
-      badge: 'Strategic & Proven',
+      badge: 'Strategic dan Proven',
       avatar: 'https://sekolahwfa.com/img/testi/avatar-kadafi.webp',
       text: 'Sebagai seseorang yang udah berkecimpung di dunia personal branding cukup lama, aku bisa bilang Sekolah WFA punya kurikulum yang terstruktur. Mereka ngerti betul ekosistem digital yang sebenarnya. Bukan janji-janji muluk yang ngga masuk akal. Approach-nya strategic, actionable, dan yang paling penting, proven! Aku personally recommend untuk profesional yang ingin serius di bidang digital.'
     },
@@ -529,7 +529,7 @@ document.addEventListener('DOMContentLoaded', function () {
       name: 'Asran Shady',
       handle: '@gashady',
       category: 'nomad',
-      role: 'Jurnalis & Mobile Worker',
+      role: 'Jurnalis dan Mobile Worker',
       badge: 'Fleksibilitas Kerja',
       avatar: 'https://sekolahwfa.com/img/testi/avatar-asran.webp',
       text: 'Sebagai orang yang pekerjaannya mobile, saya butuh skill yang bisa mendukung fleksibilitas itu. Sekolah WFA memberikan perspektif baru tentang bagaimana saya bisa diversifikasi pekerjaan tanpa meninggalkan passion saya di dunia jurnalistik. Kurikulumnya applicable, dan saya bisa langsung praktek. Kalau ditanya worth it atau tidak, jawabannya absolutely worth it.'
@@ -619,8 +619,8 @@ document.addEventListener('DOMContentLoaded', function () {
       name: 'David Lo',
       handle: '@davidlo.fit',
       category: 'nomad',
-      role: 'Fitness Coach & Remote Worker',
-      badge: 'Praktis & To The Point',
+      role: 'Fitness Coach dan Remote Worker',
+      badge: 'Praktis dan To The Point',
       avatar: 'https://sekolahwfa.com/img/testi/avatar-david.webp',
       text: "Gue udah coba berbagai course online, tapi Sekolah WFA beda level sih. Mereka tuh praktis banget, langsung to the point. Gak pake basa-basi teori yang bikin ngantuk. Sekarang gue bisa dapetin income dari mana aja, meanwhile gue lagi workout di gym manapun yang gue mau. Life's good, man."
     },
@@ -629,7 +629,7 @@ document.addEventListener('DOMContentLoaded', function () {
       name: 'Uci Afterhours',
       handle: '@digital.afterhours',
       category: 'creator',
-      role: 'Educator & Community Builder',
+      role: 'Educator dan Community Builder',
       badge: 'Ramah Pemula',
       avatar: 'https://sekolahwfa.com/img/testi/avatar-suci.webp',
       text: 'Hai semuanya! Jadi aku tuh passionate banget soal empower perempuan di bidang digital. Dan Sekolah WFA ini align banget sama misi aku. Yang bikin seneng, mereka tuh gak elitist. Bahasa yang dipakai juga gampang dipahami, cocok banget buat pemula. Aku udah ajak temen-temen di komunitas aku, dan mereka pada excited semua. Thankful banget nemu tempat belajar yang supportive kayak gini!'
@@ -791,7 +791,7 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   // ==========================================================================
-  // 5. APPLY LANGUAGE & BIND SWITCHER
+  // 5. APPLY LANGUAGE dan BIND SWITCHER
   // ==========================================================================
   function applyLanguage(lang) {
     currentLang = lang;
@@ -842,7 +842,7 @@ document.addEventListener('DOMContentLoaded', function () {
   applyLanguage(currentLang);
 
   // ==========================================================================
-  // 5. SCROLL PROGRESS, FLOATING BUTTON & MOBILE DRAWER
+  // 5. SCROLL PROGRESS, FLOATING BUTTON dan MOBILE DRAWER
   // ==========================================================================
   const progressBar = document.getElementById('reading-progress');
   const floatingBtn = document.getElementById('floating-join-wfa');
@@ -886,7 +886,7 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   // ==========================================================================
-  // 6. DESTINATION SEARCH, CHIPS & MODAL
+  // 6. DESTINATION SEARCH, CHIPS dan MODAL
   // ==========================================================================
   const destSearchInput = document.getElementById('dest-search-box');
   const destSearchClear = document.getElementById('dest-search-clear');
@@ -936,16 +936,16 @@ document.addEventListener('DOMContentLoaded', function () {
       score: { id: '★ 8.5 / 10 Skor Nomad', en: '★ 8.5 / 10 Nomad Score' },
       cost: '$600 - $1,200 / mo',
       wifi: {
-        id: '85+ Mbps · Cepat & stabil di kafe serta coworking Canggu & Ubud',
-        en: '85+ Mbps · Super fast in Canggu & Ubud coworking spaces'
+        id: '85+ Mbps · Cepat dan stabil di kafe serta coworking Canggu dan Ubud',
+        en: '85+ Mbps · Super fast in Canggu dan Ubud coworking spaces'
       },
       visa: {
         id: 'Mudah (B211A Visit Visa / Remote Worker E33G)',
         en: 'Easy (B211A Visit Visa / Remote Worker E33G)'
       },
       spots: {
-        id: 'Kafe spesialis di Canggu, Ubud, Pererenan & Uluwatu',
-        en: 'Canggu, Ubud, Pererenan & Uluwatu specialty cafes'
+        id: 'Kafe spesialis di Canggu, Ubud, Pererenan dan Uluwatu',
+        en: 'Canggu, Ubud, Pererenan dan Uluwatu specialty cafes'
       },
       tip: {
         id: 'Pilih tempat tinggal dekat Batu Bolong biar gampang cafe hopping, dan pastikan vila punya genset cadangan!',
@@ -968,8 +968,8 @@ document.addEventListener('DOMContentLoaded', function () {
         en: 'Digital Nomad Visa (6 Months) or 90-day Tourist'
       },
       spots: {
-        id: 'Coworking space di Shibuya, kafe Daikanyama & Kichijoji',
-        en: 'Shibuya coworking spaces, Daikanyama & Kichijoji'
+        id: 'Coworking space di Shibuya, kafe Daikanyama dan Kichijoji',
+        en: 'Shibuya coworking spaces, Daikanyama dan Kichijoji'
       },
       tip: {
         id: 'Kota paling aman dan transportasinya super tenang. Sewa Pocket Wi-Fi dan coba sensasi kerja di kissaten tradisional!',
@@ -984,16 +984,16 @@ document.addEventListener('DOMContentLoaded', function () {
       score: { id: '★ 8.5 / 10 Skor Nomad', en: '★ 8.5 / 10 Nomad Score' },
       cost: '$2,500+ / mo',
       wifi: {
-        id: '120+ Mbps · Tersedia gratis di coffee shop & perpustakaan kota',
-        en: '120+ Mbps · Readily available in coffee shops & libraries'
+        id: '120+ Mbps · Tersedia gratis di coffee shop dan perpustakaan kota',
+        en: '120+ Mbps · Readily available in coffee shops dan libraries'
       },
       visa: {
         id: 'ESTA Visa Waiver atau Visa Turis B1/B2',
         en: 'ESTA Visa Waiver or B1/B2 Visitor Visa'
       },
       spots: {
-        id: 'Brooklyn Public Library, kafe di DUMBO & Flatiron',
-        en: 'Brooklyn Public Library, DUMBO & Flatiron cafes'
+        id: 'Brooklyn Public Library, kafe di DUMBO dan Flatiron',
+        en: 'Brooklyn Public Library, DUMBO dan Flatiron cafes'
       },
       tip: {
         id: 'Energi kreatifnya luar biasa! Kerja dari kafe di Williamsburg atau DUMBO sambil nikmatin pemandangan skyline Manhattan.',
@@ -1016,8 +1016,8 @@ document.addEventListener('DOMContentLoaded', function () {
         en: 'Working Holiday Visa or NZeTA Visitor Visa'
       },
       spots: {
-        id: 'Kafe pinggir Danau Wakatipu di Queenstown & ruang kerja bersama di Auckland',
-        en: 'Queenstown lakefront cafes & Auckland shared spaces'
+        id: 'Kafe pinggir Danau Wakatipu di Queenstown dan ruang kerja bersama di Auckland',
+        en: 'Queenstown lakefront cafes dan Auckland shared spaces'
       },
       tip: {
         id: 'Buat pecinta alam: kerja pagi sambil mandang Danau Wakatipu, lalu sorenya hiking santai atau main ski!',
@@ -1120,7 +1120,7 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   // ==========================================================================
-  // 8. NEWSLETTER FORM & SCROLL REVEAL
+  // 8. NEWSLETTER FORM dan SCROLL REVEAL
   // ==========================================================================
   const newsletterForm = document.getElementById('newsletter-form');
   const newsletterMsg = document.getElementById('newsletter-msg');
@@ -1129,8 +1129,8 @@ document.addEventListener('DOMContentLoaded', function () {
     if (newsletterMsg) {
       newsletterMsg.textContent =
         currentLang === 'en'
-          ? 'Thank you! Check your inbox for WFA updates & checklist.'
-          : 'Terima kasih! Cek emailmu untuk update & checklist WFA terbaru.';
+          ? 'Thank you! Check your inbox for WFA updates dan checklist.'
+          : 'Terima kasih! Cek emailmu untuk update dan checklist WFA terbaru.';
     }
     newsletterForm.reset();
   });

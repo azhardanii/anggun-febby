@@ -1674,7 +1674,7 @@ video {
   position: relative;
   border-radius: 14px;
   overflow: hidden;
-  background: #FAFBEA;
+  background: linear-gradient(145deg, #FFF7CC 0%, #FCEB9C 100%);
   border: 1px solid var(--line);
   aspect-ratio: 1 / 1;
 }
@@ -3036,7 +3036,7 @@ video {
 .story-media-collage {
   min-width: 0;
   display: grid;
-  grid-template-columns: 1.48fr 0.88fr;
+  grid-template-columns: 1.55fr 0.72fr;
   gap: 14px;
   align-items: center;
 }
@@ -3156,7 +3156,7 @@ video {
   display: grid;
   grid-template-columns: 1fr;
   gap: 14px;
-  justify-items: center;
+  justify-items: start;
   padding: 4px 0;
 }
 
