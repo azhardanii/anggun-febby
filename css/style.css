@@ -1842,7 +1842,7 @@ video {
 
 .book-stage {
   position: relative;
-  background: linear-gradient(160deg, #FAFBEA 0%, #F2F6DF 100%);
+  background: linear-gradient(145deg, #FFF7CC 0%, #FCEB9C 100%);
   border: 1px solid var(--line);
   border-radius: 14px;
   height: 220px;
