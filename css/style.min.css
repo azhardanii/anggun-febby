@@ -1138,11 +1138,11 @@ video {
 }
 
 .pathway-card:nth-child(1) {
-  background: linear-gradient(135deg, rgba(207, 229, 107, 0.36) 0%, rgba(235, 246, 198, 0.82) 55%, rgba(207, 229, 107, 0.45) 100%);
+  background: linear-gradient(135deg, #CFE56B 0%, #DFEE9B 55%, #C6E05E 100%);
 }
 
 .pathway-card:nth-child(2) {
-  background: linear-gradient(135deg, rgba(255, 243, 176, 0.90) 0%, rgba(255, 249, 214, 0.94) 55%, rgba(255, 243, 176, 0.84) 100%);
+  background: linear-gradient(135deg, #FFE878 0%, #FFF3B0 55%, #FCE068 100%);
 }
 
 .pathway-card:nth-child(3) {
