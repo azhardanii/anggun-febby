@@ -3300,7 +3300,7 @@ video {
 
 .story-grid {
   display: grid;
-  grid-template-columns: 1.6fr 0.92fr;
+  grid-template-columns: 1.68fr 0.9fr;
   gap: clamp(24px, 3.6vw, 44px);
   align-items: center;
 }
@@ -3316,7 +3316,7 @@ video {
 .story-media-collage {
   min-width: 0;
   display: grid;
-  grid-template-columns: 1.55fr 0.72fr;
+  grid-template-columns: 1.42fr 0.88fr;
   gap: 14px;
   align-items: center;
 }
@@ -3443,7 +3443,7 @@ video {
 .story-photo-square {
   position: relative;
   width: 100%;
-  max-width: 190px;
+  max-width: 235px;
   aspect-ratio: 1 / 1;
 }
 
