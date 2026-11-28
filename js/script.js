@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', function () {
     id: {
       nav_tools: 'WFA Tools',
       nav_bundle: 'Coaching',
-      nav_reviews: 'Cerita nyata dari mereka',
+      nav_reviews: 'Cerita Nyata Dari Mereka',
       nav_destinations: 'Trip',
       nav_journal: 'Travel Journal',
       nav_story: 'Ceritaku',
@@ -105,13 +105,13 @@ document.addEventListener('DOMContentLoaded', function () {
       coaching_btn: 'Daftar Coaching →',
 
       testi_eyebrow: 'KATA MEREKA',
-      testi_title: 'Cerita nyata dari mereka',
+      testi_title: 'Cerita Nyata Dari Mereka',
       testi_sub: 'Cerita nyata dari teman-teman alumni Sekolah WFA yang sekarang bisa kerja dan berpenghasilan dari mana aja.',
       testi_more: 'Lihat Semua Testimoni',
       testi_less: 'Tampilkan Lebih Sedikit',
 
       comm_eyebrow: 'KOMUNITAS PEKERJA WFA',
-      comm_title: 'Kerja dari mana aja lebih seru kalau barengan.',
+      comm_title: 'Kerja Dari Mana Aja Lebih Seru Kalau Barengan.',
       comm_sub: 'Nggak perlu ngerasa sendirian. Di sini kita saling kenal, sharing tips hidup WFA, saling semangatin, sampai janjian coworking bareng.',
 
       dest_eyebrow: 'CATATAN PERJALANAN',
@@ -125,7 +125,7 @@ document.addEventListener('DOMContentLoaded', function () {
       dest_bridge_btn: 'Ngobrol di Komunitas →',
 
       stories_eyebrow: 'CERITA DI BALIK LAYAR',
-      stories_title: 'Dari Desa<br>Bisa Kerja Sambil Keliling Dunia',
+      stories_title: 'Dari Desa<br>Bisa Kerja Sambil<br>Keliling Dunia',
       stories_sub: 'Dulu, aku hanyalah anak desa yang harus berjuang lewat beasiswa demi bisa sekolah. Kini, aku bisa berkarya sebagai content creator, mendapat passive income dari produk digital, bekerja dengan klien lokal hingga internasional, dan bebas kerja dari mana saja sambil keliling dunia.',
       stories_follow: 'Cerita Selengkapnya',
 
