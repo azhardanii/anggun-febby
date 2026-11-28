@@ -125,7 +125,7 @@ document.addEventListener('DOMContentLoaded', function () {
       dest_bridge_btn: 'Ngobrol di Komunitas →',
 
       stories_eyebrow: 'CERITA DI BALIK LAYAR',
-      stories_title: 'Dari Desa Bisa Kerja Sambil Keliling Dunia',
+      stories_title: 'Dari Desa<br>Bisa Kerja Sambil Keliling Dunia',
       stories_sub: 'Dulu, aku hanyalah anak desa yang harus berjuang lewat beasiswa demi bisa sekolah. Kini, aku bisa berkarya sebagai content creator, mendapat passive income dari produk digital, bekerja dengan klien lokal hingga internasional, dan bebas kerja dari mana saja sambil keliling dunia.',
       stories_follow: 'Cerita Selengkapnya',
 
