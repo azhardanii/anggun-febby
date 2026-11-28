@@ -3215,6 +3215,101 @@ video {
 }
 
 /* ==========================================================================
+   SECTION 8.5: OPEN COLLABORATION & RATE CARD BANNER
+   ========================================================================== */
+.collab-cta-section {
+  padding: 24px 0 40px;
+  background: var(--bg);
+}
+
+.collab-cta-card {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(120deg, var(--lime), var(--sun));
+  color: var(--green);
+  border-radius: 28px;
+  padding: 48px;
+  display: grid;
+  grid-template-columns: 1.25fr 0.75fr;
+  gap: 32px;
+  align-items: center;
+  box-shadow: 0 20px 48px -8px rgba(46, 125, 63, 0.22);
+}
+
+.collab-cta-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url('../assets/open-collab.webp');
+  background-size: cover;
+  background-position: center center;
+  opacity: 0.22;
+  mix-blend-mode: multiply;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.collab-cta-copy,
+.collab-cta-action {
+  position: relative;
+  z-index: 2;
+}
+
+.collab-cta-copy .news-badge {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  padding: 4px 12px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.72);
+  color: var(--green);
+  border: 1px solid rgba(46, 125, 63, 0.25);
+  margin-bottom: 12px;
+}
+
+.collab-cta-copy h2 {
+  font-size: clamp(26px, 3.4vw, 36px);
+  color: var(--deep);
+  line-height: 1.22;
+  margin: 0 0 10px;
+  text-shadow: 0 1px 10px rgba(255, 255, 255, 0.45);
+}
+
+.collab-cta-copy p {
+  color: #1B5E2B;
+  font-size: 15.5px;
+  font-weight: 600;
+  line-height: 1.6;
+  margin: 0;
+  max-width: 56ch;
+}
+
+.collab-cta-action {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.collab-cta-btn {
+  background: var(--green);
+  color: var(--sun) !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.45) !important;
+  padding: 16px 30px;
+  font-size: 15.5px;
+  font-weight: 800;
+  border-radius: 999px;
+  box-shadow: 0 14px 30px -6px rgba(27, 94, 43, 0.36);
+  transition: transform 0.25s var(--ease-fluid), box-shadow 0.25s var(--ease-fluid), background 0.25s ease;
+}
+
+.collab-cta-btn:hover {
+  background: #1B5E2B;
+  color: #FFFFFF !important;
+  transform: translateY(-3px);
+  box-shadow: 0 20px 38px -6px rgba(27, 94, 43, 0.45);
+}
+
+/* ==========================================================================
    SECTION 9: FAQ (BESPOKE INTERACTIVE ACCORDIONS + QUICK SUPPORT CALLOUT)
    ========================================================================== */
 .faq-section {
@@ -3722,6 +3817,7 @@ video {
   .featured-offer-shell,
   .journal-grid,
   .closing-action-hub,
+  .collab-cta-card,
   .news {
     grid-template-columns: 1fr;
   }
@@ -3916,6 +4012,21 @@ video {
 
   .news {
     padding: 28px;
+  }
+
+  .collab-cta-card {
+    padding: 28px 20px;
+    border-radius: 22px;
+    gap: 20px;
+  }
+
+  .collab-cta-action {
+    justify-content: stretch;
+  }
+
+  .collab-cta-btn {
+    width: 100%;
+    justify-content: center;
   }
 
   .floating-text-desktop {
