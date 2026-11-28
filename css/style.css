@@ -2540,24 +2540,6 @@ video {
   margin-bottom: 16px;
 }
 
-.travel-title-accent {
-  position: relative;
-  display: inline-block;
-}
-
-.travel-title-accent::after {
-  content: '';
-  position: absolute;
-  left: -4px;
-  right: -4px;
-  bottom: -4px;
-  height: 7px;
-  background: linear-gradient(90deg, #F7D84A 0%, #FFE66D 70%, rgba(247, 216, 74, 0.3) 100%);
-  border-radius: 999px;
-  z-index: -1;
-  transform: rotate(-1deg);
-}
-
 .travel-hero-lead {
   font-size: 14.5px;
   line-height: 1.62;
@@ -2589,25 +2571,7 @@ video {
 
 .travel-hero-collage {
   position: relative;
-  padding: 28px 20px 26px 0;
-}
-
-.travel-doodle-note {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  gap: 8px;
-  margin-bottom: 8px;
-  color: var(--deep);
-  font-size: 12.5px;
-  font-style: italic;
-  font-weight: 600;
-}
-
-.travel-plane-svg {
-  width: 96px;
-  height: 24px;
-  flex-shrink: 0;
+  padding: 8px 20px 26px 0;
 }
 
 .travel-photo-main {
