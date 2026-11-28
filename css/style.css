@@ -54,8 +54,8 @@ body {
   background: var(--bg);
   color: var(--green);
   font-family: var(--font-sans);
-  font-size: 16px;
-  line-height: 1.6;
+  font-size: 14.5px;
+  line-height: 1.56;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   scrollbar-width: none;
@@ -146,7 +146,7 @@ video {
 
 .section-heading {
   font-family: var(--font-serif);
-  font-size: clamp(28px, 4vw, 40px);
+  font-size: clamp(24px, 3vw, 33px);
   font-weight: 800;
   letter-spacing: -0.02em;
   margin-bottom: 10px;
@@ -161,8 +161,8 @@ video {
 .section-lead {
   color: var(--green);
   max-width: 58ch;
-  font-size: 16px;
-  line-height: 1.6;
+  font-size: 14px;
+  line-height: 1.55;
 }
 
 .centered-lead {
@@ -624,12 +624,12 @@ video {
 
 .hero-title {
   font-family: var(--font-serif);
-  font-size: clamp(44px, 5.8vw, 84px);
+  font-size: clamp(38px, 4.8vw, 68px);
   font-weight: 800;
   letter-spacing: -0.025em;
   line-height: 1.06;
   color: var(--green);
-  margin-bottom: 20px;
+  margin-bottom: 18px;
   text-shadow: 0 1px 2px rgba(255, 255, 255, 0.85);
 }
 
@@ -642,7 +642,7 @@ video {
 
 .hero-sub {
   font-family: var(--font-sans);
-  font-size: clamp(14px, 0.96vw, 15.5px);
+  font-size: clamp(13px, 0.9vw, 14.5px);
   color: var(--green);
   max-width: min(39vw, 570px);
   margin-bottom: 28px;
@@ -1354,10 +1354,10 @@ video {
 
 .free-starter-title {
   font-family: var(--font-serif);
-  font-size: clamp(26px, 2.8vw, 36px);
+  font-size: clamp(22px, 2.3vw, 30px);
   line-height: 1.15;
   color: #FFFFFF;
-  margin-bottom: 14px;
+  margin-bottom: 12px;
 }
 
 .free-starter-title span {
@@ -1365,10 +1365,10 @@ video {
 }
 
 .free-starter-desc {
-  font-size: 15px;
-  line-height: 1.62;
+  font-size: 13.5px;
+  line-height: 1.56;
   color: rgba(244, 248, 220, 0.92);
-  margin-bottom: 18px;
+  margin-bottom: 16px;
 }
 
 .free-starter-desc strong {
@@ -1379,15 +1379,15 @@ video {
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 8px;
-  margin-bottom: 24px;
+  gap: 7px;
+  margin-bottom: 20px;
 }
 
 .free-starter-points li {
   display: flex;
   align-items: center;
   gap: 10px;
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 600;
   color: #FFFFFF;
 }
@@ -1522,13 +1522,13 @@ video {
 }
 
 .toolkit-title {
-  font: 800 16px/1.28 var(--font-sans);
+  font: 800 14.5px/1.28 var(--font-sans);
   color: var(--green);
   margin: 0;
 }
 
 .toolkit-subtitle {
-  font-size: 12.5px;
+  font-size: 12px;
   line-height: 1.45;
   color: var(--muted);
   margin: 0;
@@ -1768,7 +1768,7 @@ video {
 }
 
 .product-card-title {
-  font: 800 18px/1.2 var(--font-sans);
+  font: 800 16px/1.24 var(--font-sans);
   color: var(--green);
   margin: 0;
 }
@@ -2256,9 +2256,9 @@ video {
 }
 
 .testi-quote {
-  font: 500 14.5px/1.68 var(--font-sans);
+  font: 500 13px/1.6 var(--font-sans);
   color: #244628;
-  margin: 0 0 18px;
+  margin: 0 0 16px;
   flex: 1;
 }
 
@@ -2743,21 +2743,21 @@ video {
 }
 
 .journal-card-title {
-  font: 800 20px/1.25 var(--font-serif);
+  font: 800 17.5px/1.25 var(--font-serif);
   color: var(--green);
-  margin-bottom: 12px;
+  margin-bottom: 10px;
   letter-spacing: -0.01em;
 }
 
 .journal-card-lead .journal-card-title {
-  font-size: 20px;
+  font-size: 17.5px;
 }
 
 .journal-card-excerpt {
-  font-size: 13.5px;
-  line-height: 1.6;
+  font-size: 12.5px;
+  line-height: 1.55;
   color: #4A5B4C;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
   flex: 1;
 }
 
@@ -3263,7 +3263,7 @@ video {
 }
 
 .collab-cta-copy h2 {
-  font-size: clamp(26px, 3.4vw, 36px);
+  font-size: clamp(22px, 2.8vw, 30px);
   color: var(--deep);
   line-height: 1.22;
   margin: 0 0 10px;
@@ -3272,9 +3272,9 @@ video {
 
 .collab-cta-copy p {
   color: #1B5E2B;
-  font-size: 15.5px;
+  font-size: 13.5px;
   font-weight: 600;
-  line-height: 1.6;
+  line-height: 1.55;
   margin: 0;
   max-width: 56ch;
 }
@@ -3323,10 +3323,10 @@ video {
 }
 
 .faq-heading {
-  font-size: clamp(28px, 4vw, 40px);
+  font-size: clamp(24px, 3vw, 33px);
   font-weight: 800;
   color: var(--green);
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
 
 .faq-list {
@@ -3418,8 +3418,8 @@ video {
 
 .faq-body p {
   color: var(--green);
-  font-size: 15px;
-  line-height: 1.7;
+  font-size: 13.5px;
+  line-height: 1.62;
   margin: 0;
 }
 
@@ -3457,7 +3457,7 @@ video {
 }
 
 .news-copy h2 {
-  font-size: clamp(26px, 3.4vw, 36px);
+  font-size: clamp(22px, 2.8vw, 30px);
   color: var(--green);
   line-height: 1.25;
   margin: 0 0 10px;
@@ -3465,8 +3465,8 @@ video {
 
 .news-copy p {
   color: #1F4F2A;
-  font-size: 15px;
-  line-height: 1.6;
+  font-size: 13.5px;
+  line-height: 1.56;
   margin: 0;
 }
 
