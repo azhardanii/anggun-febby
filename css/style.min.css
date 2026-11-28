@@ -1268,6 +1268,191 @@ video {
 }
 
 /* ==========================================================================
+   SECTION 1.5: FREE / PAY-WHAT-YOU-WANT STARTER PRODUCT
+   ========================================================================== */
+.free-starter-section {
+  background: var(--bg);
+  padding: 28px 0 36px;
+}
+
+.free-starter-card {
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 0.92fr 1.08fr;
+  gap: clamp(24px, 4vw, 48px);
+  align-items: center;
+  background: linear-gradient(135deg, #1B5E2B 0%, #246D34 55%, #2E7D3F 100%);
+  border: 1.5px solid rgba(247, 216, 74, 0.42);
+  border-radius: 28px;
+  padding: clamp(24px, 3.6vw, 44px);
+  color: var(--on-deep);
+  box-shadow: 0 22px 52px -10px rgba(27, 94, 43, 0.34),
+    inset 0 1px 1px rgba(255, 255, 255, 0.16);
+}
+
+.free-starter-card::before {
+  content: '';
+  position: absolute;
+  top: -35%;
+  right: -12%;
+  width: 380px;
+  height: 380px;
+  background: radial-gradient(circle, rgba(247, 216, 74, 0.22) 0%, rgba(207, 229, 107, 0.08) 45%, transparent 72%);
+  pointer-events: none;
+}
+
+.free-starter-media,
+.free-starter-copy {
+  position: relative;
+  z-index: 2;
+  min-width: 0;
+}
+
+.free-starter-img-frame {
+  position: relative;
+  background: rgba(255, 255, 255, 0.96);
+  border: 2px solid rgba(247, 216, 74, 0.55);
+  border-radius: 22px;
+  padding: 8px;
+  box-shadow: 0 18px 40px rgba(14, 46, 20, 0.28);
+  transition: transform 0.32s var(--ease-fluid);
+}
+
+.free-starter-card:hover .free-starter-img-frame {
+  transform: translateY(-4px) scale(1.01);
+}
+
+.free-starter-img-frame img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 15px;
+  display: block;
+}
+
+.free-starter-float-badge {
+  position: absolute;
+  top: 18px;
+  left: 18px;
+  background: var(--sun);
+  color: var(--deep);
+  font-size: 12px;
+  font-weight: 800;
+  padding: 6px 14px;
+  border-radius: 999px;
+  box-shadow: 0 8px 20px rgba(20, 48, 31, 0.22);
+}
+
+.free-starter-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 5px 14px;
+  border-radius: 999px;
+  background: rgba(247, 216, 74, 0.16);
+  border: 1px solid rgba(247, 216, 74, 0.48);
+  color: var(--sun);
+  font-size: 11.5px;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  margin-bottom: 14px;
+}
+
+.free-starter-title {
+  font-family: var(--font-serif);
+  font-size: clamp(26px, 2.8vw, 36px);
+  line-height: 1.15;
+  color: #FFFFFF;
+  margin-bottom: 14px;
+}
+
+.free-starter-title span {
+  color: var(--sun);
+}
+
+.free-starter-desc {
+  font-size: 15px;
+  line-height: 1.62;
+  color: rgba(244, 248, 220, 0.92);
+  margin-bottom: 18px;
+}
+
+.free-starter-desc strong {
+  color: var(--sun);
+}
+
+.free-starter-points {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.free-starter-points li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #FFFFFF;
+}
+
+.free-starter-points li span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: rgba(207, 229, 107, 0.22);
+  color: var(--sun);
+  font-size: 12px;
+  font-weight: 800;
+  flex-shrink: 0;
+}
+
+.free-starter-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.free-starter-btn {
+  background: linear-gradient(135deg, #FFE458 0%, #F7D84A 65%, #F2C938 100%);
+  color: var(--deep) !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.75) !important;
+  padding: 15px 28px;
+  font-size: 15.5px;
+  font-weight: 800;
+  box-shadow: 0 14px 30px -4px rgba(14, 46, 20, 0.36);
+}
+
+.free-starter-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 20px 38px -4px rgba(14, 46, 20, 0.45),
+    0 0 0 2px rgba(255, 255, 255, 0.85);
+}
+
+.free-starter-price-note {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.free-starter-price-note strong {
+  font-size: 15px;
+  font-weight: 800;
+  color: var(--sun);
+}
+
+.free-starter-price-note span {
+  font-size: 12.5px;
+  color: rgba(244, 248, 220, 0.82);
+}
+
+/* ==========================================================================
    SECTION 2: PRODUK POPULER / WFA TOOLS (4 CARDS + DIRECT LYNK.ID CTA)
    ========================================================================== */
 .products-section {
@@ -3379,6 +3564,7 @@ video {
   }
 
   .pathways-trio,
+  .free-starter-card,
   .bgrid,
   .coaching-grid,
   .story-grid,
@@ -3505,6 +3691,21 @@ video {
 
   .pathways-band {
     padding: 40px 0 24px;
+  }
+
+  .free-starter-section {
+    padding: 16px 0 28px;
+  }
+
+  .free-starter-card {
+    padding: 22px 18px;
+    border-radius: 22px;
+    gap: 20px;
+  }
+
+  .free-starter-btn {
+    width: 100%;
+    justify-content: center;
   }
 
   .products-grid,
